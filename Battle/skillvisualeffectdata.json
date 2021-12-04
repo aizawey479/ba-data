@@ -840,7 +840,6 @@
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
-            "BoneNameCustom": "",
             "IsAttachToTarget": true
           },
           "PrefabPath": "FX_Common_Explo_Sml2_Variant",
@@ -1142,7 +1141,6 @@
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
-            "BoneNameCustom": "",
             "IsAttachToTarget": true
           },
           "PrefabPath": "FX_Common_Explo_Sml2_Variant",
@@ -1434,7 +1432,6 @@
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
-            "BoneNameCustom": "",
             "IsAttachToTarget": true
           },
           "PrefabPath": "FX_Common_Explo_Sml2_Variant",
@@ -1826,7 +1823,6 @@
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 1,
             "BoneName": 1,
-            "BoneNameCustom": "",
             "IsAttachToTarget": true
           },
           "PrefabPath": "FX_GuardTower_Decagram_Grenade_NomalAttack_Variant",
@@ -1841,7 +1837,6 @@
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
-            "BoneNameCustom": "",
             "PositionOffset": {
               "x": 0,
               "y": 0.25,
@@ -15767,6 +15762,174 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -150101750,
+    "SkillUniqueNameToBind": "MeguOnsenDevFTEx01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "MeguOnsenDevFTEx01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Megu_OnsenDev_FT_EX01_Projectile_01_Variant",
+          "name": "Megu_OnsenDev_FT01_Ex01_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "MeguOnsenDevFTEx01Entity02",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Megu_OnsenDev_FT_EX01_Hit_Explosion_01_Variant",
+          "name": "Megu_OnsenDev_FT01_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Megu_OnsenDev_FT01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -2006659713,
+    "SkillUniqueNameToBind": "MeguOnsenDevFTNormal01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "MeguOnsenDevFTNormal01Entity01",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "RemoveWhenSkillCancel": true,
+          "PrefabPath": "FX_Muzzle_FT_Variant",
+          "name": "FT01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "MeguOnsenDevFTNormal01Entity02",
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_FT_Normal_Variant",
+          "name": "FT01_Normal01_VisualEffect02_CommonHit"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Megu_OnsenDev_FT01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": -17068763,
     "SkillUniqueNameToBind": "NunYustinaAREx01",
     "MaxLevelToBind": 10,
@@ -16356,8 +16519,8 @@
     "LogicEffectVisuals": [
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
-        "LogicEffectName": "Perorozilla01_Ex01_Effect02",
-        "StartEffect": {
+        "LogicEffectName": "Perorozilla01_Ex01_Effect04",
+        "LoopEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
@@ -16399,7 +16562,7 @@
           },
           "EndPositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
+            "PositionSource": 2,
             "BoneNameCustom": ""
           },
           "FacingType": 1,
@@ -16410,7 +16573,7 @@
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
+            "PositionSource": 2,
             "BoneNameCustom": ""
           },
           "PrefabPath": "FX_Perorozilla_Original_EX2_Hit_Explosion_Variant",
@@ -16432,212 +16595,58 @@
     "EntityEffects": [
       {
         "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Ex03_Projectile01",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0.8,
-              "z": 0
-            }
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Projectile_01_Variant",
-          "name": "Perorozilla01_Ex03_VisualSkillEntity01_Blue"
-        },
-        "SplashEffect": {
+        "EntityName": "Perorozilla01Ex03Circle02Spawn",
+        "CreationEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
             "BoneNameCustom": ""
           },
-          "PrefabPath": "FX_Perorozilla_EX03_Hit_01_Variant",
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_01_Variant",
           "name": "Perorozilla01_Ex03_VisaulEffect01_Blue"
         }
       },
       {
         "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Ex03_Projectile02",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0.8,
-              "z": 0
-            }
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Projectile_04_Variant",
-          "name": "Perorozilla01_Ex03_VisualSkillEntity04_Gold"
-        },
-        "SplashEffect": {
+        "EntityName": "Perorozilla01Ex03Circle03Spawn",
+        "CreationEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
             "BoneNameCustom": ""
           },
-          "PrefabPath": "FX_Perorozilla_EX03_Hit_04_Variant",
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_04_Variant",
           "name": "Perorozilla01_Ex03_VisaulEffect04_Gold"
         }
       },
       {
         "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Ex03_Projectile03",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0.8,
-              "z": 0
-            }
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Projectile_02_Variant",
-          "name": "Perorozilla01_Ex03_VisualSkillEntity02_Yellow"
-        },
-        "SplashEffect": {
+        "EntityName": "Perorozilla01Ex03Circle04Spawn",
+        "CreationEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
             "BoneNameCustom": ""
           },
-          "PrefabPath": "FX_Perorozilla_EX03_Hit_02_Variant",
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_02_Variant",
           "name": "Perorozilla01_Ex03_VisaulEffect02_Yellow"
         }
       },
       {
         "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Ex03_Projectile04",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0.8,
-              "z": 0
-            }
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Projectile_03_Variant",
-          "name": "Perorozilla01_Ex03_VisualSkillEntity03_Red"
-        },
-        "SplashEffect": {
+        "EntityName": "Perorozilla01Ex03Circle05Spawn",
+        "CreationEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 3,
             "BoneNameCustom": ""
           },
-          "PrefabPath": "FX_Perorozilla_EX03_Hit_03_Variant",
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_03_Variant",
           "name": "Perorozilla01_Ex03_VisaulEffect03_Red"
-        }
-      },
-      {
-        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Ex03_Projectile05",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0.8,
-              "z": 0
-            }
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Projectile_04_Variant",
-          "name": "Perorozilla01_Ex03_VisualSkillEntity04_Gold"
-        },
-        "SplashEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": ""
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Hit_04_Variant",
-          "name": "Perorozilla01_Ex03_VisaulEffect04_Gold"
-        }
-      },
-      {
-        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Ex03_Projectile06",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0.8,
-              "z": 0
-            }
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Projectile_01_Variant",
-          "name": "Perorozilla01_Ex03_VisualSkillEntity01_Blue"
-        },
-        "SplashEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": ""
-          },
-          "PrefabPath": "FX_Perorozilla_EX03_Hit_01_Variant",
-          "name": "Perorozilla01_Ex03_VisaulEffect01_Blue"
         }
       }
     ],
@@ -16647,13 +16656,337 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1367049703,
+    "SkillUniqueNameToBind": "Perorozilla01Ex04",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex04Circle02Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_01_Variant",
+          "name": "Perorozilla01_Ex04_VisaulEffect01_Blue"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex04Circle03Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_04_Variant",
+          "name": "Perorozilla01_Ex04_VisaulEffect04_Gold"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex04Circle04Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_02_Variant",
+          "name": "Perorozilla01_Ex04_VisaulEffect02_Yellow"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_Ex04_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1367050100,
+    "SkillUniqueNameToBind": "Perorozilla01Ex05",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex05Circle02Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_01_Variant",
+          "name": "Perorozilla01_Ex05_VisaulEffect01_Blue"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex05Circle03Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_03_Variant",
+          "name": "Perorozilla01_Ex05_VisaulEffect03_Red"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex05Circle04Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_02_Variant",
+          "name": "Perorozilla01_Ex05_VisaulEffect02_Yellow"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex05Circle05Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_04_Variant",
+          "name": "Perorozilla01_Ex05_VisaulEffect04_Gold"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_Ex05_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1367050509,
+    "SkillUniqueNameToBind": "Perorozilla01Ex06",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex06Circle02Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_01_Variant",
+          "name": "Perorozilla01_Ex06_VisaulEffect01_Blue"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex06Circle03Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_04_Variant",
+          "name": "Perorozilla01_Ex06_VisaulEffect04_Gold"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex06Circle04Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_02_Variant",
+          "name": "Perorozilla01_Ex06_VisaulEffect02_Yellow"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_Ex06_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1367050906,
+    "SkillUniqueNameToBind": "Perorozilla01Ex07",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex07Circle02Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_04_Variant",
+          "name": "Perorozilla01_Ex07_VisaulEffect04_Gold"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex07Circle03Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_03_Variant",
+          "name": "Perorozilla01_Ex07_VisaulEffect03_Red"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex07Circle04Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_01_Variant",
+          "name": "Perorozilla01_Ex07_VisaulEffect01_Blue"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex07Circle05Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_02_Variant",
+          "name": "Perorozilla01_Ex07_VisaulEffect02_Yellow"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_Ex07_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1367054467,
+    "SkillUniqueNameToBind": "Perorozilla01Ex08",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex08Circle02Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_01_Variant",
+          "name": "Perorozilla01_Ex08_VisaulEffect01_Blue"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex08Circle03Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_04_Variant",
+          "name": "Perorozilla01_Ex08_VisaulEffect04_Gold"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Perorozilla01Ex08Circle04Spawn",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Perorozilla_Original_EX3_Hit_02_Variant",
+          "name": "Perorozilla01_Ex08_VisaulEffect02_Yellow"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_Ex08_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": -1367054880,
     "SkillUniqueNameToBind": "Perorozilla01Ex09",
     "MaxLevelToBind": 10,
     "GuidePrefabPath": "",
     "ActionEffects": [],
     "EntityEffects": [],
-    "LogicEffectVisuals": [],
+    "LogicEffectVisuals": [
+      {
+        "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
+        "LogicEffectName": "Perorozilla01_Ex09_Effect02",
+        "StartEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "AlignRotationOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.5
+            }
+          },
+          "PrefabPath": "FX_Perorozilla_Peroro_MiddleSize_Death_Variant",
+          "name": "Perorozilla01_Ex09_VisualEffect01"
+        },
+        "StackCountEffectList": []
+      }
+    ],
     "BattleItems": [],
     "name": "Perorozilla01_Ex09_SkillVisual01"
   },
@@ -16690,7 +17023,8 @@
           },
           "EndPositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
+            "PositionSource": 2,
+            "BoneName": 2,
             "BoneNameCustom": ""
           },
           "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Projectile_Variant",
@@ -16703,26 +17037,67 @@
             "PositionSource": 1,
             "BoneName": 1,
             "BoneNameCustom": "",
-            "AlignRotationOffset": {
-              "x": 0,
-              "y": 90,
-              "z": 0
-            },
             "AlignDirection": 3
           },
           "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Muzzle_Variant",
           "name": "Perorozilla01_Normal01_VisualEffect01"
-        }
-      },
-      {
-        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "Perorozilla01Normal01Entity02",
-        "CreationEffect": {
+        },
+        "HitWoodEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": ""
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Hit_Start_Variant",
+          "name": "Perorozilla01_Normal01_VisualEffect02"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Hit_Start_Variant",
+          "name": "Perorozilla01_Normal01_VisualEffect02"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Hit_Start_Variant",
+          "name": "Perorozilla01_Normal01_VisualEffect02"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Hit_Start_Variant",
+          "name": "Perorozilla01_Normal01_VisualEffect02"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
           },
           "PrefabPath": "FX_Perorozilla_Original_NormalAttack_Hit_Start_Variant",
           "name": "Perorozilla01_Normal01_VisualEffect02"
@@ -16732,6 +17107,582 @@
     "LogicEffectVisuals": [],
     "BattleItems": [],
     "name": "Perorozilla01_Normal01_SkillVisualData01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424080296,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424080689,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424081102,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx03",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex03_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424081503,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx04",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex04_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424081900,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx05",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex05_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424082277,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx06",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex06_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424082674,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx07",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex07_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424083075,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx08",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex08_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -424083488,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx09",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex09_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459013238,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx10",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex10_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459013639,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx11",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex11_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459014036,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx12",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex12_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459014445,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx13",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex13_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459014842,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx14",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex14_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459015243,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx15",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex15_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459015624,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx16",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex16_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459016017,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx17",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex17_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459016430,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx18",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex18_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1459016831,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx19",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex19_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801020715,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx20",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex20_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801020318,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx21",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex21_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801019917,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx22",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex22_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801019504,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx23",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex23_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801019111,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx24",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex24_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801018730,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx25",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex25_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801018329,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx26",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex26_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801017932,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx27",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex27_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801017523,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx28",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex28_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1801017126,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx29",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex29_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766087368,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx30",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex30_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766086975,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx31",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex31_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766086562,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx32",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex32_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766086161,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx33",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex33_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766085764,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx34",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex34_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766085387,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx35",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex35_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766084990,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx36",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex36_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766084589,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx37",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex37_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766084176,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx38",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex38_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 766083783,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx39",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex39_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579313839,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx40",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex40_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579314236,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx41",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex41_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579314613,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx42",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex42_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579315010,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx43",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex43_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579315411,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx44",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex44_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579315824,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx45",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex45_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579316217,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx46",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex46_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579316598,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx47",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex47_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -579316999,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSizeEx48",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize01_Ex48_SkillVisual01"
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
@@ -16909,6 +17860,270 @@
     "LogicEffectVisuals": [],
     "BattleItems": [],
     "name": "Perorozilla01_MiddleSize01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 289878322,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize02Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize02_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 289879509,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize02Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize02_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 286931407,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize03Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize03_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 286931800,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize03Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize03_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 287336724,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize04Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize04_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 287336347,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize04Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize04_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 287743649,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize05Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize05_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 287742478,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize05Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize05_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 288149006,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize06Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize06_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 288150177,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize06Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize06_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 285202075,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize07Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize07_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 285202452,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize07Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize07_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 292315104,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize08Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize08_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 292314711,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize08Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize08_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 292722045,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize09Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize09_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 292720858,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize09Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize09_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1745654649,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize10Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize10_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1745654252,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize10Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize10_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1746061578,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize11Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize11_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1746060371,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize11Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize11_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1746466899,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize12Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize12_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1746468106,
+    "SkillUniqueNameToBind": "Perorozilla01MiddleSize12Ex02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Perorozilla01_MiddleSize12_Ex02_SkillVisual01"
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
@@ -29480,6 +30695,73 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -981954868,
+    "SkillUniqueNameToBind": "CH0083Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0083Ex01Entity01",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "RemoveWhenSkillCancel": true,
+          "PrefabPath": "FX_Ako_Original_Ex01_Buff_Variant",
+          "name": "CH0083_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0083_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 958369324,
+    "SkillUniqueNameToBind": "CH0083Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0083Public01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 7,
+              "z": 0
+            }
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Public_Healpack_Projectile_Variant",
+          "name": "CH0083_Public01_VisualSkillEntity01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0083_Public01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": -1555007825,
     "SkillUniqueNameToBind": "ArisEx01",
     "MaxLevelToBind": 10,
@@ -30743,6 +32025,132 @@
           },
           "PrefabPath": "FX_Common_Dodge_AR_Variant",
           "name": "SMG01_Normal01_VisualEffect07_HitMiss"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0104TESTentity02",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_SMG_Variant",
+          "name": "SMG01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Wood_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect06_HitWood"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect05_HitStone"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect03_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Metal_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect04_HitMetal"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_AR_Variant",
+          "name": "SMG01_Normal01_VisualEffect07_HitMiss"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0104TESTentity03",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Akari_Original_Ex01_Hit_Explosion_Variant",
+          "name": "CH0104_TESTVisualEffect01"
         }
       }
     ],
@@ -38901,6 +40309,57 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1847815089,
+    "SkillUniqueNameToBind": "CH9999Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_CH9999_Original_01",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH9999_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 707292645,
+    "SkillUniqueNameToBind": "CH9999Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH9999Public01Entity01",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Public_CH9999_Buff_Start_Variant",
+          "name": "CH9999_Public01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH9999_Public01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -674477873,
+    "SkillUniqueNameToBind": "SM999901Passive01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "SM999901_Passive01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": 364656896,
     "SkillUniqueNameToBind": "CH0115Ex01",
     "MaxLevelToBind": 10,
@@ -39644,6 +41103,239 @@
       }
     ],
     "name": "Mutsuki01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 363032372,
+    "SkillUniqueNameToBind": "CH0155Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0155_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1475723718,
+    "SkillUniqueNameToBind": "CH0155Normal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "SMG_BulletEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_SMG_Variant",
+          "name": "SMG01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Wood_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect06_HitWood"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect05_HitStone"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect03_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Metal_Hit_SMG_Normal_Variant",
+          "name": "SMG01_Normal01_VisualEffect04_HitMetal"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_AR_Variant",
+          "name": "SMG01_Normal01_VisualEffect07_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0155_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1347037440,
+    "SkillUniqueNameToBind": "CH0155Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0155Public01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_CH0155_Motion_Mesh_Public_Pie_Projectile_01_Variant",
+          "name": "CH0155_Public01_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0155Public01Entity02",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_CH0155_Motion_Mesh_Public_Pie_Projectile_02_Variant",
+          "name": "CH0155_Public01_VisualSkillEntity02"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0155Public01Entity03",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_CH0155_Motion_Mesh_Public_Pie_Projectile_03_Variant",
+          "name": "CH0155_Public01_VisualSkillEntity03"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [
+      {
+        "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
+        "LogicEffectName": "CH0155_Public01_Effect01",
+        "StartEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0155_Motion_Mesh_Public_Hit_Variant",
+          "name": "CH0155_Public01_VisualEffect01"
+        },
+        "StackCountEffectList": []
+      }
+    ],
+    "BattleItems": [],
+    "name": "CH0155_Public01_SkillVisual01"
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
@@ -43744,8 +45436,7 @@
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneNameCustom": ""
+            "PositionSource": 1
           },
           "PrefabPath": "FX_Tsurugi_Original_Ex01_Hit_Shot_Variant",
           "name": "Tsurugi01_Normal02_VisualEffect01"

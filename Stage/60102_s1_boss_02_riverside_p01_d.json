@@ -4,7 +4,7 @@
     "Position": {
       "x": 0,
       "y": 0,
-      "z": 0
+      "z": 22.1
     },
     "Events": [
       {
@@ -26,11 +26,42 @@
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-            "ID": 1,
+            "ID": 15,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
             "ZoomSpeed": 1,
-            "RailPoints": [],
+            "RailPoints": [
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0.5,
+                  "z": 22.1
+                },
+                "MinCameraDistance": 35.00049,
+                "MaxCameraDistance": 42.00081,
+                "CameraForward": {
+                  "x": -0.8034655,
+                  "y": -0.426620662,
+                  "z": 0.4152567
+                }
+              },
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0.5,
+                  "z": 86.1
+                },
+                "MinCameraDistance": 35.00049,
+                "MaxCameraDistance": 42.00081,
+                "CameraForward": {
+                  "x": -0.8034655,
+                  "y": -0.426620662,
+                  "z": 0.4152567
+                }
+              }
+            ],
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
@@ -151,137 +182,6 @@
             "WaitExecuteEnd": false
           }
         ]
-      },
-      {
-        "EventName": "2-1AreaOn",
-        "Operator": 0,
-        "Conditions": [],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "2-2AreaOn",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-1"
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "3-1AreaOn",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-2"
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-            "SpawnTemplateId": "",
-            "Shape": 1,
-            "Target": 4,
-            "Trigger": 0,
-            "StayTime": 0,
-            "Position": {
-              "x": 0,
-              "y": 0,
-              "z": 53
-            },
-            "Rect": {
-              "Direction": {
-                "x": 0,
-                "y": 0
-              },
-              "Width": 10,
-              "Height": 1
-            },
-            "Circle": {
-              "Radius": 11
-            },
-            "InactivateWhenStart": false,
-            "ConditionID": ""
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "3-2AreaOn",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead3-1"
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "3-2Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
       }
     ]
   },
@@ -291,7 +191,7 @@
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 5
+        "z": 27.1
       },
       "Events": [
         {
@@ -329,18 +229,33 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 1,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "Hanae",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 600000,
+              "CoolDownInMilliSeconds": 24000,
               "SyncUseSkillGroupId": 1,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
-              "SyncUseSkillGroupId": 1,
-              "SkillSlot": "ExSkill01",
+              "SyncUseSkillGroupId": 11,
+              "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "Hanae",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 28000,
+              "SyncUseSkillGroupId": 11,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -362,18 +277,33 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 2,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "Hanako",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 600000,
+              "CoolDownInMilliSeconds": 16000,
               "SyncUseSkillGroupId": 2,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
-              "SyncUseSkillGroupId": 2,
-              "SkillSlot": "ExSkill01",
+              "SyncUseSkillGroupId": 12,
+              "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "Hanako",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 22000,
+              "SyncUseSkillGroupId": 12,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -395,18 +325,33 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 4,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "Hihumi",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 600000,
+              "CoolDownInMilliSeconds": 48000,
               "SyncUseSkillGroupId": 4,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
-              "SyncUseSkillGroupId": 4,
-              "SkillSlot": "ExSkill01",
+              "SyncUseSkillGroupId": 14,
+              "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "Hihumi",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 30000,
+              "SyncUseSkillGroupId": 14,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -428,18 +373,33 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 3,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "Azusa",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 600000,
+              "CoolDownInMilliSeconds": 24000,
               "SyncUseSkillGroupId": 3,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
-              "SyncUseSkillGroupId": 3,
-              "SkillSlot": "ExSkill01",
+              "SyncUseSkillGroupId": 13,
+              "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "Azusa",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 30000,
+              "SyncUseSkillGroupId": 13,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -461,18 +421,33 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 5,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "Koharu",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 600000,
+              "CoolDownInMilliSeconds": 18000,
               "SyncUseSkillGroupId": 5,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
-              "SyncUseSkillGroupId": 5,
-              "SkillSlot": "ExSkill01",
+              "SyncUseSkillGroupId": 15,
+              "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "Koharu",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 20000,
+              "SyncUseSkillGroupId": 15,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -494,18 +469,33 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 6,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "Hasumi",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
-              "CoolDownInMilliSeconds": 600000,
+              "CoolDownInMilliSeconds": 32000,
               "SyncUseSkillGroupId": 6,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
-              "SyncUseSkillGroupId": 6,
-              "SkillSlot": "ExSkill01",
+              "SyncUseSkillGroupId": 16,
+              "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "Hasumi",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 30000,
+              "SyncUseSkillGroupId": 16,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -513,38 +503,16 @@
       ],
       "Obstacles": [
         {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.223,
-            "y": 0,
-            "z": 10.8619995
-          },
-          "Forward": {
-            "x": 0.06401481,
-            "y": 0,
-            "z": 0.997948945
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "Riverside_Motorcycle",
           "Position": {
-            "x": -1.84,
+            "x": -2.66,
             "y": 0,
-            "z": 14.02
+            "z": 35.97
           },
           "Forward": {
-            "x": -0.998804569,
+            "x": -0.9546919,
             "y": 0,
-            "z": 0.04888155
+            "z": -0.297596067
           },
           "ActiveEnemyPointIndices": [
             3
@@ -557,33 +525,11 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": 2.59,
-            "y": 0,
-            "z": 10.7800007
-          },
-          "Forward": {
-            "x": 0.386649132,
-            "y": 0,
-            "z": 0.9222269
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "Riverside_Fence",
           "Position": {
             "x": -0.84346664,
             "y": 0,
-            "z": 10.8360176
+            "z": 33.8040161
           },
           "Forward": {
             "x": -0.1470322,
@@ -605,7 +551,7 @@
           "Position": {
             "x": 0.477329552,
             "y": 0,
-            "z": 6.77501631
+            "z": 28.8750172
           },
           "Forward": {
             "x": 0.09001008,
@@ -627,7 +573,7 @@
           "Position": {
             "x": 1.80478382,
             "y": 0,
-            "z": 14.621644
+            "z": 36.7216454
           },
           "Forward": {
             "x": 0.586331964,
@@ -647,31 +593,9 @@
         {
           "UniqueName": "Riverside_Fence",
           "Position": {
-            "x": 0.529,
+            "x": 0.23,
             "y": 0,
-            "z": 17.01
-          },
-          "Forward": {
-            "x": 0.06401481,
-            "y": 0,
-            "z": 0.997948945
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.05,
-            "y": 0,
-            "z": 14.31
+            "z": 37.6900024
           },
           "Forward": {
             "x": -0.597588241,
@@ -714,12 +638,12 @@
                 "Hihumi"
               ],
               "MovePoints": [],
-              "TileX": 33,
-              "TileY": 99,
+              "TileX": 26,
+              "TileY": 211,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.48,
-                "y": 15.26
+                "x": -2.72,
+                "y": 37.65
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -756,11 +680,11 @@
               ],
               "MovePoints": [],
               "TileX": 37,
-              "TileY": 88,
+              "TileY": 199,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.52,
-                "y": 13.02
+                "x": -0.53,
+                "y": 35.3
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -797,11 +721,11 @@
               ],
               "MovePoints": [],
               "TileX": 47,
-              "TileY": 121,
+              "TileY": 232,
               "PositionHeight": 0,
               "Position": {
                 "x": 1.39,
-                "y": 19.74
+                "y": 41.84
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -838,11 +762,11 @@
               ],
               "MovePoints": [],
               "TileX": 34,
-              "TileY": 120,
+              "TileY": 231,
               "PositionHeight": 0,
               "Position": {
                 "x": -1.21,
-                "y": 19.54
+                "y": 41.64
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -879,11 +803,11 @@
               ],
               "MovePoints": [],
               "TileX": 47,
-              "TileY": 101,
+              "TileY": 211,
               "PositionHeight": 0,
               "Position": {
                 "x": 1.46,
-                "y": 15.61
+                "y": 37.71
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -918,13 +842,34 @@
               "SpawnCommandIdList": [
                 "Hasumi"
               ],
-              "MovePoints": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 217,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -0.99000144,
+                    "y": 38.8000031
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
               "TileX": 38,
-              "TileY": 102,
+              "TileY": 298,
               "PositionHeight": 0,
               "Position": {
                 "x": -0.39,
-                "y": 15.98
+                "y": 55.11
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -946,902 +891,6 @@
           "SpawnPoints": []
         }
       ]
-    },
-    {
-      "SectionID": 2,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 25
-      },
-      "Events": [],
-      "Obstacles": [
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.19,
-            "y": 0,
-            "z": 26.94
-          },
-          "Forward": {
-            "x": -0.04810313,
-            "y": 0,
-            "z": 0.998842359
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Motorcycle",
-          "Position": {
-            "x": 3.6,
-            "y": 0,
-            "z": 34.7399979
-          },
-          "Forward": {
-            "x": -0.815242231,
-            "y": 0,
-            "z": -0.579120159
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            4
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": -0.5345438,
-            "y": 0,
-            "z": 30.9684124
-          },
-          "Forward": {
-            "x": 0.5000778,
-            "y": 0,
-            "z": 0.8659805
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": -2.61,
-            "y": 0,
-            "z": 30.74
-          },
-          "Forward": {
-            "x": 0.541159868,
-            "y": 0,
-            "z": 0.840919733
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.3876997,
-            "y": 0,
-            "z": 27.0483837
-          },
-          "Forward": {
-            "x": -0.2905352,
-            "y": 0,
-            "z": 0.9568643
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.72,
-            "y": 0,
-            "z": 30.92
-          },
-          "Forward": {
-            "x": -0.208386317,
-            "y": 0,
-            "z": 0.9780466
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 2.44,
-            "y": 0,
-            "z": 30.75
-          },
-          "Forward": {
-            "x": 0.285173774,
-            "y": 0,
-            "z": 0.9584758
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 1.05,
-            "y": 0,
-            "z": 33.97
-          },
-          "Forward": {
-            "x": -0.038633395,
-            "y": 0,
-            "z": 0.999253452
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.46,
-            "y": 0,
-            "z": 34.09
-          },
-          "Forward": {
-            "x": 0.285173774,
-            "y": 0,
-            "z": 0.9584758
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 1.15,
-            "y": 0,
-            "z": 37.07
-          },
-          "Forward": {
-            "x": -0.038633395,
-            "y": 0,
-            "z": 0.999253452
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.43,
-            "y": 0,
-            "z": 37.05
-          },
-          "Forward": {
-            "x": -0.038633395,
-            "y": 0,
-            "z": 0.999253452
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -2.64,
-            "y": 0,
-            "z": 38.97
-          },
-          "Forward": {
-            "x": -0.55788213,
-            "y": 0,
-            "z": 0.8299202
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -3.17,
-            "y": 0,
-            "z": 38.7399979
-          },
-          "Forward": {
-            "x": -0.23780176,
-            "y": 0,
-            "z": 0.9713137
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 1.32,
-            "y": 0,
-            "z": 40.67
-          },
-          "Forward": {
-            "x": -0.460515678,
-            "y": 0,
-            "z": 0.887651563
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.75,
-            "y": 0,
-            "z": 40.5
-          },
-          "Forward": {
-            "x": -0.134895891,
-            "y": 0,
-            "z": 0.9908598
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Motorcycle",
-          "Position": {
-            "x": 2.27,
-            "y": 0,
-            "z": 42.66
-          },
-          "Forward": {
-            "x": -0.612750232,
-            "y": 0,
-            "z": 0.790276647
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": -1.75,
-            "y": 0,
-            "z": 34.5100021
-          },
-          "Forward": {
-            "x": 0.6203754,
-            "y": 0,
-            "z": 0.784305036
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": -1.45426261,
-            "y": 0,
-            "z": 37.6163254
-          },
-          "Forward": {
-            "x": -0.782731235,
-            "y": 0,
-            "z": 0.6223599
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": -0.75,
-            "y": 0,
-            "z": 41.03
-          },
-          "Forward": {
-            "x": -0.617412,
-            "y": 0,
-            "z": 0.78664
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": 3.20438814,
-            "y": 0,
-            "z": 38.5522842
-          },
-          "Forward": {
-            "x": -0.145521939,
-            "y": 0,
-            "z": 0.989355
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": -2.423077,
-            "y": 5.58793545e-09,
-            "z": 42.4338722
-          },
-          "Forward": {
-            "x": 0.2814097,
-            "y": 0,
-            "z": 0.9595877
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        }
-      ],
-      "EnemySpawnPointGroupList": [
-        {
-          "GroupName": "SpawnPointParent2-1",
-          "SpawnPoints": []
-        },
-        {
-          "GroupName": "SpawnPointParent2-2",
-          "SpawnPoints": []
-        }
-      ]
-    },
-    {
-      "SectionID": 3,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 45
-      },
-      "Events": [],
-      "Obstacles": [
-        {
-          "UniqueName": "Riverside_Motorcycle",
-          "Position": {
-            "x": 0.362,
-            "y": 0,
-            "z": 50.619
-          },
-          "Forward": {
-            "x": -0.589591265,
-            "y": 0,
-            "z": 0.807701766
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": 2.06,
-            "y": 0,
-            "z": 54.75
-          },
-          "Forward": {
-            "x": 0.965715468,
-            "y": 0,
-            "z": 0.259602845
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": 1.738,
-            "y": 0,
-            "z": 57.905
-          },
-          "Forward": {
-            "x": 0.91319,
-            "y": 0,
-            "z": 0.407534122
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Motorcycle",
-          "Position": {
-            "x": -2.777,
-            "y": 0,
-            "z": 59.326
-          },
-          "Forward": {
-            "x": -0.9169535,
-            "y": 0,
-            "z": -0.398994148
-          },
-          "ActiveEnemyPointIndices": [
-            5
-          ],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Motorcycle",
-          "Position": {
-            "x": 3.16269612,
-            "y": 0,
-            "z": 62.3245354
-          },
-          "Forward": {
-            "x": 0.331547737,
-            "y": 0,
-            "z": -0.9434385
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": -2.327,
-            "y": 0,
-            "z": 50.956
-          },
-          "Forward": {
-            "x": -0.696917236,
-            "y": 0,
-            "z": 0.7171516
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_01",
-          "Position": {
-            "x": -1.347,
-            "y": 0,
-            "z": 61.598
-          },
-          "Forward": {
-            "x": -0.9998163,
-            "y": 0,
-            "z": -0.0191664118
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": -2.517323,
-            "y": 0,
-            "z": 62.36875
-          },
-          "Forward": {
-            "x": -0.710349739,
-            "y": 0,
-            "z": 0.7038489
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.408701,
-            "y": 0,
-            "z": 47.1918945
-          },
-          "Forward": {
-            "x": -0.3855864,
-            "y": 0,
-            "z": 0.922671735
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.351,
-            "y": 0,
-            "z": 50.836998
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 3.545,
-            "y": 0,
-            "z": 51.598
-          },
-          "Forward": {
-            "x": -0.352504134,
-            "y": 0,
-            "z": 0.935810268
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.631,
-            "y": 0,
-            "z": 54.108
-          },
-          "Forward": {
-            "x": 0.531000137,
-            "y": 0,
-            "z": 0.8473717
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.06,
-            "y": 0,
-            "z": 53.95
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.654,
-            "y": 0,
-            "z": 56.944
-          },
-          "Forward": {
-            "x": -0.507389247,
-            "y": 0,
-            "z": 0.861717
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": -0.454,
-            "y": 0,
-            "z": 60.47
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Fence",
-          "Position": {
-            "x": 0.115,
-            "y": 0,
-            "z": 60.624
-          },
-          "Forward": {
-            "x": -0.491022855,
-            "y": 0,
-            "z": 0.8711467
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Motorcycle",
-          "Position": {
-            "x": -2.78,
-            "y": 0,
-            "z": 58.756
-          },
-          "Forward": {
-            "x": -0.9169535,
-            "y": 0,
-            "z": -0.398994148
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Riverside_Stone_02",
-          "Position": {
-            "x": -2.32,
-            "y": 0,
-            "z": 54.15
-          },
-          "Forward": {
-            "x": 0.9973617,
-            "y": 0,
-            "z": -0.0725922361
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        }
-      ],
-      "EnemySpawnPointGroupList": [
-        {
-          "GroupName": "SpawnPointParent3-1",
-          "SpawnPoints": []
-        },
-        {
-          "GroupName": "SpawnPointParent3-2",
-          "SpawnPoints": []
-        }
-      ]
     }
   ],
   "Formations": [
@@ -1851,7 +900,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 0
+        "y": 22.1
       },
       "Forward": {
         "x": 0,
@@ -1866,7 +915,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 24
+        "y": 46.1
       },
       "Forward": {
         "x": 0,
@@ -1881,7 +930,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 44
+        "y": 66.1
       },
       "Forward": {
         "x": 0,
@@ -1896,7 +945,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 64
+        "y": 86.1
       },
       "Forward": {
         "x": 0,
@@ -1916,7 +965,7 @@
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 13
+        "z": 35.1
       },
       "RadiusSqr": 0,
       "Position2D": {
@@ -1932,7 +981,7 @@
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 20
+        "z": 42.1
       },
       "RadiusSqr": 0,
       "Position2D": {
@@ -1948,7 +997,7 @@
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 33
+        "z": 55.1
       },
       "RadiusSqr": 0,
       "Position2D": {
@@ -1964,7 +1013,7 @@
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 40
+        "z": 62.1
       },
       "RadiusSqr": 0,
       "Position2D": {
@@ -1980,7 +1029,7 @@
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 53
+        "z": 75.1
       },
       "RadiusSqr": 0,
       "Position2D": {
