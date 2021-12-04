@@ -69,6 +69,16 @@
               "Interval": 100,
               "CommandID": "11",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand01",
+              "SkillLevel": 1,
+              "ExecuterLevel": 50,
+              "CharacterGroup": 1,
+              "CommandID": "UseSkillPoint",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -79,6 +89,7 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
               "ConditionID": "912"
             }
           ],
@@ -92,52 +103,7 @@
           ]
         }
       ],
-      "Obstacles": [
-        {
-          "UniqueName": "Common_Baricade",
-          "Position": {
-            "x": 0,
-            "y": 0,
-            "z": 12.387
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Common_Baricade",
-          "Position": {
-            "x": 2.913,
-            "y": 0,
-            "z": 12.387
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        }
-      ],
+      "Obstacles": [],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent1-1",
@@ -145,7 +111,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Terror_Ambrosius_Communio_C",
+                "SpawnTemplateId": "Hieronymus_default_VeryEasy",
                 "AIId": 0,
                 "AppearAction": false
               },
@@ -171,6 +137,32 @@
               "ConditionIdList": [],
               "CommandIdList": [
                 "11"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 85,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 12.5599995
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillPoint"
               ],
               "EntityId": {
                 "uniqueId": 0

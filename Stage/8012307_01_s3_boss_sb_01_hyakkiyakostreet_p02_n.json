@@ -1,0 +1,2361 @@
+{
+  "Version": "1.0",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 3,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "StartSection3",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": true,
+            "ConditionID": "ConditionDead2-2"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 3,
+            "SetConditionCommandOnly": false,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": true,
+            "ConditionID": "ConditionDead3-2"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": true,
+            "ConditionID": "ConditionDead1-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-1AreaOn",
+        "Operator": 0,
+        "Conditions": [],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": true,
+            "ConditionID": "ConditionDead2-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 53
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 11
+            },
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": true,
+            "ConditionID": "ConditionDead3-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "Events": [],
+      "Obstacles": [
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 1.16,
+            "y": 0,
+            "z": 11.1100006
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -2.63,
+            "y": 0,
+            "z": 7.64
+          },
+          "Forward": {
+            "x": -0.9433653,
+            "y": 0,
+            "z": -0.331755877
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": 2.92,
+            "y": 0,
+            "z": 12.13
+          },
+          "Forward": {
+            "x": -0.5186875,
+            "y": 0,
+            "z": 0.8549639
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 2.44,
+            "y": 0,
+            "z": 7.82
+          },
+          "Forward": {
+            "x": -0.996375263,
+            "y": 0,
+            "z": 0.08506682
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 1.27,
+            "y": 0,
+            "z": 17.01
+          },
+          "Forward": {
+            "x": -0.9884447,
+            "y": 0,
+            "z": -0.151581869
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": -3.37,
+            "y": 0,
+            "z": 21.66
+          },
+          "Forward": {
+            "x": -0.8991867,
+            "y": 0,
+            "z": -0.437565237
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent1-1",
+          "SpawnPoints": []
+        },
+        {
+          "GroupName": "SpawnPointParent1-2",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 25
+      },
+      "Events": [
+        {
+          "EventName": "Spawn2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 33
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-1",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": true,
+              "ConditionID": "ConditionDead2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -1.06,
+            "y": 0,
+            "z": 30.86
+          },
+          "Forward": {
+            "x": -0.987323165,
+            "y": 0,
+            "z": -0.158722818
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 0.14,
+            "y": 0,
+            "z": 30.79
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 2.88,
+            "y": 0,
+            "z": 28.05
+          },
+          "Forward": {
+            "x": -0.8991867,
+            "y": 0,
+            "z": -0.437565237
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": 2.97,
+            "y": 0,
+            "z": 35.85
+          },
+          "Forward": {
+            "x": 0.105654389,
+            "y": 0,
+            "z": 0.9944029
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -2.44,
+            "y": 0,
+            "z": 42.81
+          },
+          "Forward": {
+            "x": -0.9977338,
+            "y": 0,
+            "z": 0.06728493
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 2.87,
+            "y": 0,
+            "z": 38.86
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent2-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 37,
+              "TileY": 188,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.57,
+                "y": 33
+              },
+              "Direction": {
+                "x": 0.0174524654,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 189,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.56,
+                "y": 33.37
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 213,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.41,
+                "y": 38.19
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 210,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.89,
+                "y": 37.59
+              },
+              "Direction": {
+                "x": 0.06975647,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 208,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.72,
+                "y": 37.11
+              },
+              "Direction": {
+                "x": 0.052335795,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 53,
+              "TileY": 210,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.66,
+                "y": 37.53
+              },
+              "Direction": {
+                "x": 0.052335795,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent2-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 222,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.01,
+                "y": 39.94
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 224,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.9,
+                "y": 40.27
+              },
+              "Direction": {
+                "x": 0.08715567,
+                "y": -0.9961947
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 51,
+              "TileY": 224,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.11,
+                "y": 40.37
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 46,
+              "TileY": 239,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.18000007,
+                "y": 43.3799973
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 52,
+              "TileY": 236,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.4,
+                "y": 42.78
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 247,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.73,
+                "y": 44.9
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+      },
+      "Events": [
+        {
+          "EventName": "Spawn3-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 53
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-1",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-1MovePoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": true,
+              "ConditionID": "ConditionDead3-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Kill3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": true,
+              "ConditionID": "ConditionDeadBoss"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "AniSpawnWave3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 7500,
+              "TriggerRateOver": 0,
+              "TriggerMaxCount": 1,
+              "ConditionID": "BossHPChanged"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 2000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "propKey": 1,
+              "animationName": "Hyakkiyakostreet_Door_01_Open",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 500,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaveLoop, Assembly-CSharp",
+              "UniqueId": "",
+              "Waves": [
+                {
+                  "SpawnPointCommandId": "CommandSpawnWave3-2",
+                  "EndCount": 0,
+                  "WaveDelay": 10000,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                }
+              ],
+              "OnAddEntityAction": null,
+              "CommandID": "",
+              "CurWaveNum": 0,
+              "CurrProcess": null,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Kill3-2WhenEndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": true,
+              "ConditionID": "ConditionDead3-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -3.53,
+            "y": 0,
+            "z": 50.06
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -0.98,
+            "y": 0,
+            "z": 51.02
+          },
+          "Forward": {
+            "x": -0.368219972,
+            "y": 0,
+            "z": 0.9297387
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 3.09,
+            "y": 0,
+            "z": 54.2
+          },
+          "Forward": {
+            "x": -0.9894756,
+            "y": 0,
+            "z": -0.144699946
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 0.2,
+            "y": 0,
+            "z": 58.58
+          },
+          "Forward": {
+            "x": -0.9977338,
+            "y": 0,
+            "z": 0.06728493
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 3.28,
+            "y": 0,
+            "z": 56.36
+          },
+          "Forward": {
+            "x": -0.281739026,
+            "y": 0,
+            "z": 0.9594911
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -1.42,
+            "y": 0,
+            "z": 47.17
+          },
+          "Forward": {
+            "x": 0.0281566754,
+            "y": 0,
+            "z": 0.9996035
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -2.46,
+            "y": 0,
+            "z": 58.41
+          },
+          "Forward": {
+            "x": -0.16196467,
+            "y": 0,
+            "z": 0.986796558
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 0.95,
+            "y": 0,
+            "z": 58.7600021
+          },
+          "Forward": {
+            "x": -0.9894756,
+            "y": 0,
+            "z": -0.144699946
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent3-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 46,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.19,
+                "y": 53.08
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.74,
+                "y": 53.17
+              },
+              "Direction": {
+                "x": 0.0174524654,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 27,
+              "TileY": 306,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.64,
+                "y": 56.7399979
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 37,
+              "TileY": 306,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.58,
+                "y": 56.7399979
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 50,
+              "TileY": 307,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.98,
+                "y": 56.93
+              },
+              "Direction": {
+                "x": 0.0174524654,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 16,
+                  "TileY": 287,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.75913048,
+                    "y": 52.9698143
+                  },
+                  "Direction": {
+                    "x": -0.0348996259,
+                    "y": -0.999390841
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 24,
+                  "TileY": 293,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -3.13891125,
+                    "y": 54.093956
+                  },
+                  "Direction": {
+                    "x": -0.0348996259,
+                    "y": -0.999390841
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 6,
+              "TileY": 287,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.77,
+                "y": 52.98
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1MovePoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 16,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.754752,
+                    "y": 54.35138
+                  },
+                  "Direction": {
+                    "x": -0.017452402,
+                    "y": -0.999847651
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 24,
+                  "TileY": 298,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -3.14138246,
+                    "y": 55.10334
+                  },
+                  "Direction": {
+                    "x": -0.017452402,
+                    "y": -0.999847651
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 5,
+              "TileY": 293,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.97,
+                "y": 54.07
+              },
+              "Direction": {
+                "x": -0.017452402,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1MovePoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent3-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 46,
+              "TileY": 327,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.19,
+                "y": 60.94
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_SG_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 327,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.87,
+                "y": 60.9
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 29,
+              "TileY": 349,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.26,
+                "y": 65.34
+              },
+              "Direction": {
+                "x": 0.052335795,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 23,
+              "TileY": 352,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.42999983,
+                "y": 65.9799957
+              },
+              "Direction": {
+                "x": -0.05233597,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Yukata_StreetGhostes_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 58,
+              "TileY": 347,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.55,
+                "y": 64.94
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "YukataHanya_StreetGhostes_SR_C",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2",
+                "ConditionDeadBoss",
+                "BossHPChanged"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 343,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.03,
+                "y": 64
+              },
+              "Direction": {
+                "x": -0.05233597,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave3-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                    "AIId": 0,
+                    "AppearAction": false
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 22,
+                  "TileY": 309,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -3.7,
+                    "y": 57.23
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 8,
+              "TileY": 312,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.4,
+                "y": 57.87
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                    "AIId": 0,
+                    "AppearAction": false
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 62,
+                  "TileY": 320,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.34,
+                    "y": 59.54
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 55,
+                  "TileY": 318,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.93000031,
+                    "y": 59.09
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 317,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.36,
+                "y": 58.9899979
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                    "AIId": 0,
+                    "AppearAction": false
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 24,
+                  "TileY": 319,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -3.18,
+                    "y": 59.23
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 9,
+              "TileY": 321,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.11,
+                "y": 59.65
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Yukata_StreetGhostes_SG_M",
+                    "AIId": 0,
+                    "AppearAction": false
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 55,
+                  "TileY": 343,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 3.0199995,
+                    "y": 64.06999
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 53,
+                  "TileY": 337,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.57999945,
+                    "y": 62.7999954
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 56,
+              "TileY": 373,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.19,
+                "y": 70.34
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 40
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 42
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 44
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 64
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 13
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 20
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 33
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 40
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 53
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-2Area",
+      "Radius": 1500,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 57
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}

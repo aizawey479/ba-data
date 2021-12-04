@@ -1,0 +1,2288 @@
+{
+  "Version": "1.1",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 2,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "StartSection3",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead2-2"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 3,
+            "SetConditionCommandOnly": false,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead3-2"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead1-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead2-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead2-2"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 53
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 11
+            },
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "ConditionID": "ConditionDead3-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "Events": [],
+      "Obstacles": [
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -0.21,
+            "y": 0,
+            "z": 11.0897322
+          },
+          "Forward": {
+            "x": -0.3300711,
+            "y": 0,
+            "z": 0.9439561
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -3.44,
+            "y": 0,
+            "z": 19.18
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": -0.78,
+            "y": 0,
+            "z": 17.14
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": 3.2,
+            "y": 0,
+            "z": 20.29
+          },
+          "Forward": {
+            "x": -0.38386175,
+            "y": 0,
+            "z": 0.923390567
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 2.97,
+            "y": 0,
+            "z": 19.5600014
+          },
+          "Forward": {
+            "x": -0.8991867,
+            "y": 0,
+            "z": -0.437565237
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent1-1",
+          "SpawnPoints": []
+        },
+        {
+          "GroupName": "SpawnPointParent1-2",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 25
+      },
+      "Events": [
+        {
+          "EventName": "Spawn2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 33
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-1",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": "ConditionDead2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -1.06,
+            "y": 0,
+            "z": 30.86
+          },
+          "Forward": {
+            "x": -0.987323165,
+            "y": 0,
+            "z": -0.158722818
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": 3.18,
+            "y": 0,
+            "z": 27.77
+          },
+          "Forward": {
+            "x": -0.507928431,
+            "y": 0,
+            "z": 0.8613993
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": -3.03,
+            "y": 0,
+            "z": 35
+          },
+          "Forward": {
+            "x": -0.9894756,
+            "y": 0,
+            "z": -0.144699946
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -2.49,
+            "y": 0,
+            "z": 42.81
+          },
+          "Forward": {
+            "x": -0.9977338,
+            "y": 0,
+            "z": 0.06728493
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 0.81,
+            "y": 0,
+            "z": 37.3
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 2.86,
+            "y": 0,
+            "z": 42.63
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": -3.61,
+            "y": 0,
+            "z": 30.85
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -3.45,
+            "y": 0,
+            "z": 44.7
+          },
+          "Forward": {
+            "x": -0.368219972,
+            "y": 0,
+            "z": 0.9297387
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 3.52,
+            "y": 0,
+            "z": 38.84
+          },
+          "Forward": {
+            "x": -0.9060257,
+            "y": 0,
+            "z": -0.4232226
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 1.95,
+            "y": 0,
+            "z": 42.1200027
+          },
+          "Forward": {
+            "x": -0.3839581,
+            "y": 0,
+            "z": 0.9233505
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent2-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 37,
+              "TileY": 188,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.57,
+                "y": 33
+              },
+              "Direction": {
+                "x": -0.0523359776,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 190,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.45,
+                "y": 33.41
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 201,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.67,
+                "y": 35.6
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 203,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.82,
+                "y": 36.09
+              },
+              "Direction": {
+                "x": -0.0174523816,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 216,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.08,
+                "y": 38.79
+              },
+              "Direction": {
+                "x": -0.0174523983,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 23,
+              "TileY": 213,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.34,
+                "y": 38.06
+              },
+              "Direction": {
+                "x": -0.0174523983,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent2-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 44,
+              "TileY": 222,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.78,
+                "y": 39.94
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 35,
+              "TileY": 226,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.07,
+                "y": 40.75
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 57,
+              "TileY": 222,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.35,
+                "y": 39.94
+              },
+              "Direction": {
+                "x": -0.0174523983,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 241,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.39,
+                "y": 43.6299973
+              },
+              "Direction": {
+                "x": 0.06975647,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 53,
+              "TileY": 245,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.67,
+                "y": 44.59
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 32,
+              "TileY": 250,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.65,
+                "y": 45.47
+              },
+              "Direction": {
+                "x": -0.0523359776,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+      },
+      "Events": [
+        {
+          "EventName": "Spawn3-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 53
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-1",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": "ConditionDead3-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Kill3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": "ConditionDeadBoss"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnWave3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 7500,
+              "TriggerRateOver": 0,
+              "TriggerMaxCount": 1,
+              "ConditionID": "BossHPChanged"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaveLoop, Assembly-CSharp",
+              "UniqueId": "",
+              "Waves": [
+                {
+                  "SpawnPointCommandId": "CommandSpawnWave3-2",
+                  "EndCount": 0,
+                  "WaveDelay": 20000,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                }
+              ],
+              "OnAddEntityAction": null,
+              "CommandID": "",
+              "CurWaveNum": 0,
+              "CurrProcess": null,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Kill3-2WhenEndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": "ConditionDead3-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 2.84,
+            "y": 0,
+            "z": 50.22
+          },
+          "Forward": {
+            "x": -0.281739026,
+            "y": 0,
+            "z": 0.9594911
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -3.32,
+            "y": 0,
+            "z": 54.76
+          },
+          "Forward": {
+            "x": 0.385216415,
+            "y": 0,
+            "z": 0.9228263
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -1.14,
+            "y": 0,
+            "z": 51.13
+          },
+          "Forward": {
+            "x": -0.368219972,
+            "y": 0,
+            "z": 0.9297387
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": 2.41,
+            "y": 0,
+            "z": 47.54
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": 3.07,
+            "y": 0,
+            "z": 59.24
+          },
+          "Forward": {
+            "x": -0.281739026,
+            "y": 0,
+            "z": 0.9594911
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_01",
+          "Position": {
+            "x": -1.72,
+            "y": 0,
+            "z": 61.02
+          },
+          "Forward": {
+            "x": 0.126772553,
+            "y": 0,
+            "z": 0.9919318
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": 1.28,
+            "y": 0,
+            "z": 59.55
+          },
+          "Forward": {
+            "x": -0.368219972,
+            "y": 0,
+            "z": 0.9297387
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -3.22,
+            "y": 0,
+            "z": 66.45
+          },
+          "Forward": {
+            "x": 0.138685286,
+            "y": 0,
+            "z": 0.9903365
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -3.42,
+            "y": 0,
+            "z": 69.24
+          },
+          "Forward": {
+            "x": 0.9863556,
+            "y": 0,
+            "z": 0.16462858
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_03",
+          "Position": {
+            "x": -2.67,
+            "y": 0,
+            "z": 69.71
+          },
+          "Forward": {
+            "x": 0.9978176,
+            "y": 0,
+            "z": -0.0660310462
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": -2.01,
+            "y": 0,
+            "z": 70.08
+          },
+          "Forward": {
+            "x": -0.368219972,
+            "y": 0,
+            "z": 0.9297387
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Hyakkiyakostreet_box_02",
+          "Position": {
+            "x": 2.96,
+            "y": 0,
+            "z": 69.7299957
+          },
+          "Forward": {
+            "x": 0.325779468,
+            "y": 0,
+            "z": 0.9454458
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent3-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.39,
+                "y": 53.06
+              },
+              "Direction": {
+                "x": 0.0523358025,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.76,
+                "y": 53.06
+              },
+              "Direction": {
+                "x": -0.0174523983,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 25,
+              "TileY": 305,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.99,
+                "y": 56.56
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 32,
+              "TileY": 303,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.53,
+                "y": 56.16
+              },
+              "Direction": {
+                "x": 0.087155655,
+                "y": -0.9961947
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 314,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.76,
+                "y": 58.32
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 314,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.27,
+                "y": 58.32
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead3-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 49,
+              "TileY": 314,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.86,
+                "y": 58.32
+              },
+              "Direction": {
+                "x": -0.0174523983,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent3-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 43,
+              "TileY": 324,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.51,
+                "y": 60.2399979
+              },
+              "Direction": {
+                "x": 0.0174524616,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 52,
+              "TileY": 325,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.34,
+                "y": 60.44
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 30,
+              "TileY": 322,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.02,
+                "y": 59.93
+              },
+              "Direction": {
+                "x": 0.0523358025,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 51,
+              "TileY": 339,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.13,
+                "y": 63.23
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 30,
+              "TileY": 339,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.91,
+                "y": 63.23
+              },
+              "Direction": {
+                "x": 0.0523358025,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 55,
+              "TileY": 346,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.96,
+                "y": 64.76
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_Nun_Yustina_SR_C",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2",
+                "ConditionDeadBoss",
+                "BossHPChanged"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 353,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.06,
+                "y": 66.04
+              },
+              "Direction": {
+                "x": 0.0523358025,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave3-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.74,
+                "y": 62.6399956
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.51,
+                "y": 62.73
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [],
+              "TileX": 24,
+              "TileY": 334,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.13,
+                "y": 62.23
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 10000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Terror_Nun_Yustina_SMG_M",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "CommandKillWave3-2"
+              ],
+              "MovePoints": [],
+              "TileX": 55,
+              "TileY": 334,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.09,
+                "y": 62.2099953
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnWave3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 20
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 24
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 44
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 64
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 13
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 20
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 33
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 40
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 53
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-2Area",
+      "Radius": 1500,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 57
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}

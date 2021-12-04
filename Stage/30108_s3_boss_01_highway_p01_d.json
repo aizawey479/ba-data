@@ -60,6 +60,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "911"
           },
           {
@@ -98,6 +99,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "912"
           }
         ],
@@ -122,6 +124,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "921"
           },
           {
@@ -174,6 +177,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "922"
           }
         ],
@@ -198,6 +202,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "931"
           }
         ],
@@ -218,31 +223,37 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "32"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "991"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "992"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "993"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "994"
           },
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "995"
           }
         ],
@@ -281,6 +292,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "911"
           },
           {
@@ -347,6 +359,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "912"
           }
         ],
@@ -374,6 +387,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "921"
           },
           {
@@ -429,6 +443,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "922"
           },
           {
@@ -481,6 +496,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "931"
           }
         ],
@@ -783,6 +799,45 @@
               "SkillSlot": "PublicSkill01",
               "IsAdd": true,
               "CommandID": "5555",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 25.97
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "211",
               "WaitExecuteEnd": false
             }
           ]
@@ -1449,6 +1504,45 @@
               "WaitExecuteEnd": false
             }
           ]
+        },
+        {
+          "EventName": "Spawn2-11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 25.97
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "211",
+              "WaitExecuteEnd": false
+            }
+          ]
         }
       ],
       "Obstacles": [],
@@ -1754,6 +1848,45 @@
           ]
         },
         {
+          "EventName": "Spawn2-11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 26
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "211",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
           "EventName": "BossSpawn2-1",
           "Operator": 0,
           "Conditions": [
@@ -1815,8 +1948,22 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": true,
               "CommandID": "52",
               "WaitExecuteEnd": false
             },
@@ -1827,8 +1974,22 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": true,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": true,
               "CommandID": "54",
               "WaitExecuteEnd": false
             },
@@ -1885,6 +2046,13 @@
               "isAdd": true,
               "CommandID": "51",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -1931,6 +2099,13 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": false,
               "CommandID": "52",
               "WaitExecuteEnd": false
             }
@@ -1981,6 +2156,13 @@
               "isAdd": true,
               "CommandID": "53",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -2027,6 +2209,13 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneForcedIdle",
+              "isAdd": false,
               "CommandID": "54",
               "WaitExecuteEnd": false
             }
@@ -2324,6 +2513,45 @@
               "WaitExecuteEnd": false
             }
           ]
+        },
+        {
+          "EventName": "Spawn3-11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 46.03
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "311",
+              "WaitExecuteEnd": false
+            }
+          ]
         }
       ],
       "Obstacles": [
@@ -2467,9 +2695,9 @@
             "z": 35.4899979
           },
           "Forward": {
-            "x": 0.0474802181,
+            "x": 0.04748403,
             "y": 0,
-            "z": -0.998872161
+            "z": -0.998872
           },
           "ActiveEnemyPointIndices": [
             0
@@ -2590,7 +2818,12 @@
                 "uniqueId": 0
               },
               "Active": false
-            },
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent2-11",
+          "SpawnPoints": [
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
@@ -2606,12 +2839,12 @@
                 "21"
               ],
               "MovePoints": [],
-              "TileX": 46,
-              "TileY": 200,
+              "TileX": 44,
+              "TileY": 214,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.1455127,
-                "y": 35.4
+                "x": 0.87,
+                "y": 38.22
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2619,7 +2852,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "21"
+                "211"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2641,12 +2874,12 @@
                 "21"
               ],
               "MovePoints": [],
-              "TileX": 25,
-              "TileY": 198,
+              "TileX": 28,
+              "TileY": 212,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.985,
-                "y": 35.163002
+                "x": -2.4,
+                "y": 37.983
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2654,7 +2887,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "21"
+                "211"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -3184,6 +3417,45 @@
               "WaitExecuteEnd": false
             }
           ]
+        },
+        {
+          "EventName": "Spawn3-11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 46.03
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "311",
+              "WaitExecuteEnd": false
+            }
+          ]
         }
       ],
       "Obstacles": [],
@@ -3705,6 +3977,45 @@
               "WaitExecuteEnd": false
             }
           ]
+        },
+        {
+          "EventName": "Spawn3-11",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 46
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 9
+              },
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "311",
+              "WaitExecuteEnd": false
+            }
+          ]
         }
       ],
       "Obstacles": [
@@ -3782,7 +4093,7 @@
             "z": 49.96
           },
           "Forward": {
-            "x": -0.0462352447,
+            "x": -0.0462352671,
             "y": 0,
             "z": 0.9989306
           },
@@ -3870,7 +4181,7 @@
             "z": 57.83
           },
           "Forward": {
-            "x": -0.0462352447,
+            "x": -0.0462352671,
             "y": 0,
             "z": 0.9989306
           },
@@ -3993,7 +4304,12 @@
                 "uniqueId": 0
               },
               "Active": false
-            },
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent3-11",
+          "SpawnPoints": [
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
@@ -4009,12 +4325,12 @@
                 "31"
               ],
               "MovePoints": [],
-              "TileX": 28,
-              "TileY": 295,
+              "TileX": 31,
+              "TileY": 317,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.36,
-                "y": 54.45
+                "x": -1.82,
+                "y": 58.84
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -4022,7 +4338,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "31"
+                "311"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -4044,12 +4360,12 @@
                 "31"
               ],
               "MovePoints": [],
-              "TileX": 38,
-              "TileY": 301,
+              "TileX": 48,
+              "TileY": 318,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.4,
-                "y": 55.75
+                "x": 1.53,
+                "y": 59.13
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -4057,7 +4373,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "31"
+                "311"
               ],
               "EntityId": {
                 "uniqueId": 0

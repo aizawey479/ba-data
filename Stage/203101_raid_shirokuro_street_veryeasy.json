@@ -38,12 +38,12 @@
                   "y": 1.45,
                   "z": 16.01
                 },
-                "MinCameraDistance": 53,
-                "MaxCameraDistance": 53,
+                "MinCameraDistance": 53.0065,
+                "MaxCameraDistance": 53.0065,
                 "CameraForward": {
-                  "x": -0.6977434,
-                  "y": -0.38783738,
-                  "z": 0.602275968
+                  "x": -0.6977382,
+                  "y": -0.3879033,
+                  "z": 0.6022396
                 }
               },
               {
@@ -53,12 +53,12 @@
                   "y": 1.45,
                   "z": 28.41
                 },
-                "MinCameraDistance": 53,
-                "MaxCameraDistance": 53,
+                "MinCameraDistance": 53.0065,
+                "MaxCameraDistance": 53.0065,
                 "CameraForward": {
-                  "x": -0.6977434,
-                  "y": -0.38783738,
-                  "z": 0.602275968
+                  "x": -0.6977382,
+                  "y": -0.3879033,
+                  "z": 0.6022396
                 }
               }
             ],
@@ -81,6 +81,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDeadKuro"
           }
         ],
@@ -128,7 +129,8 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
-              "Phase": 5,
+              "Phase": 4,
+              "MaxTriggerCount": -1,
               "ConditionID": "Shiro"
             }
           ],
@@ -148,7 +150,8 @@
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
-              "Phase": 0,
+              "Phase": 6,
+              "MaxTriggerCount": -1,
               "ConditionID": "Shiro"
             }
           ],
@@ -169,6 +172,7 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
               "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDeadShiro"
             }
           ],
@@ -293,12 +297,12 @@
                     "y": 1.45,
                     "z": 127.76
                   },
-                  "MinCameraDistance": 53,
-                  "MaxCameraDistance": 53,
+                  "MinCameraDistance": 53.0065,
+                  "MaxCameraDistance": 53.0065,
                   "CameraForward": {
-                    "x": -0.6977434,
-                    "y": -0.38783738,
-                    "z": 0.602275968
+                    "x": -0.6977382,
+                    "y": -0.3879033,
+                    "z": 0.6022396
                   }
                 },
                 {
@@ -308,12 +312,12 @@
                     "y": 1.45,
                     "z": 133.24
                   },
-                  "MinCameraDistance": 53,
-                  "MaxCameraDistance": 53,
+                  "MinCameraDistance": 53.0065,
+                  "MaxCameraDistance": 53.0065,
                   "CameraForward": {
-                    "x": -0.6977434,
-                    "y": -0.38783738,
-                    "z": 0.602275968
+                    "x": -0.6977382,
+                    "y": -0.3879033,
+                    "z": 0.6022396
                   }
                 }
               ],
@@ -451,6 +455,7 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
               "Phase": 11,
+              "MaxTriggerCount": -1,
               "ConditionID": "Kuro"
             }
           ],
@@ -471,6 +476,7 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
               "Phase": 7,
+              "MaxTriggerCount": -1,
               "ConditionID": "Kuro"
             }
           ],
