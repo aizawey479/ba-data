@@ -1,5 +1,5 @@
 {
-  "Version": "1.0",
+  "Version": "1.1",
   "Global": {
     "Position": {
       "x": 1.74,
@@ -73,6 +73,7 @@
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
             "ConditionID": "Binah"
           }
         ],
@@ -459,7 +460,7 @@
       ],
       "Obstacles": [
         {
-          "UniqueName": "Common_CarWhite",
+          "UniqueName": "Common_CarWhite_Low",
           "Position": {
             "x": -11.6500006,
             "y": 0,
@@ -479,7 +480,7 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Common_CarSuv",
+          "UniqueName": "Common_CarSuv_Low",
           "Position": {
             "x": -20.98,
             "y": 0,
@@ -492,64 +493,6 @@
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [
-            "DestroyObstacle"
-          ],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Common_CarBlack",
-          "Position": {
-            "x": -21.22,
-            "y": 0,
-            "z": -7.137001
-          },
-          "Forward": {
-            "x": 0.215814844,
-            "y": 0,
-            "z": 0.9764343
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Common_CarGrey",
-          "Position": {
-            "x": -23.28,
-            "y": 0,
-            "z": -4.85700035
-          },
-          "Forward": {
-            "x": -0.502628446,
-            "y": 0,
-            "z": 0.864502549
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Common_CarWhite",
-          "Position": {
-            "x": -9.74,
-            "y": 0,
-            "z": -8.887001
-          },
-          "Forward": {
-            "x": -0.84850204,
-            "y": 0,
-            "z": 0.5291921
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
           "ConditionIdList": [],
           "CommandIdList": [
             "DestroyObstacle"
@@ -579,9 +522,9 @@
         {
           "UniqueName": "Common_Baricade",
           "Position": {
-            "x": -10.5700006,
+            "x": -11.58,
             "y": 0,
-            "z": 1.10299969
+            "z": 0.6729994
           },
           "Forward": {
             "x": -0.8872244,
@@ -597,11 +540,31 @@
           "SubObstacles": []
         },
         {
+          "UniqueName": "Common_CarWhite_Low",
+          "Position": {
+            "x": -10.52,
+            "y": 0,
+            "z": -9.457001
+          },
+          "Forward": {
+            "x": -0.935369849,
+            "y": 0,
+            "z": -0.353671044
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "DestroyObstacle"
+          ],
+          "SubObstacles": []
+        },
+        {
           "UniqueName": "Common_Baricade",
           "Position": {
-            "x": -9.51,
+            "x": -10.5199995,
             "y": 0,
-            "z": -0.0170001984
+            "z": -0.4470005
           },
           "Forward": {
             "x": -0.949165165,
@@ -657,16 +620,16 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Common_CarSuv",
+          "UniqueName": "Common_CarSuv_Low",
           "Position": {
-            "x": -0.110000014,
+            "x": -2.11,
             "y": 0,
-            "z": -8.290001
+            "z": -7.82699966
           },
           "Forward": {
-            "x": -0.811951041,
+            "x": -0.7906388,
             "y": 0,
-            "z": -0.5837255
+            "z": 0.6122829
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -677,27 +640,7 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Common_CarBlack",
-          "Position": {
-            "x": -2.3,
-            "y": 0,
-            "z": -7.300003
-          },
-          "Forward": {
-            "x": 0.215814844,
-            "y": 0,
-            "z": 0.9764343
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [
-            "DestroyObstacle"
-          ],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Common_CarWhite",
+          "UniqueName": "Common_CarWhite_Low",
           "Position": {
             "x": 12.4699993,
             "y": 0,
@@ -717,7 +660,7 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Common_CarGrey",
+          "UniqueName": "Common_CarGrey_Low",
           "Position": {
             "x": 15.97,
             "y": 0,
@@ -735,6 +678,26 @@
             "DestroyObstacle"
           ],
           "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarBlack_Low",
+          "Position": {
+            "x": -0.289999962,
+            "y": 0,
+            "z": -9.537001
+          },
+          "Forward": {
+            "x": -0.7661341,
+            "y": 0,
+            "z": -0.642680764
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "DestroyObstacle"
+          ],
+          "SubObstacles": []
         }
       ],
       "EnemySpawnPointGroupList": [
@@ -744,7 +707,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Binah_default_Normal",
+                "SpawnTemplateId": "Binah_Street_Normal",
                 "AIId": 0,
                 "AppearAction": false
               },
@@ -866,9 +829,9 @@
             "z": -11.6530037
           },
           "Forward": {
-            "x": 0.469022,
+            "x": 0.46903044,
             "y": 0,
-            "z": -0.88318646
+            "z": -0.883182
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -881,9 +844,9 @@
         {
           "UniqueName": "Common_Baricade",
           "Position": {
-            "x": 2.88,
+            "x": 2.11000013,
             "y": 0,
-            "z": -8.830002
+            "z": -10.34
           },
           "Forward": {
             "x": 0.903732955,
@@ -906,9 +869,9 @@
             "z": -15.1200027
           },
           "Forward": {
-            "x": 0.469022,
+            "x": 0.46903044,
             "y": 0,
-            "z": -0.88318646
+            "z": -0.883182
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1093,9 +1056,9 @@
             "z": -96.28
           },
           "Forward": {
-            "x": 0.136091828,
+            "x": 0.136103168,
             "y": 0,
-            "z": -0.990696251
+            "z": -0.990694642
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1113,9 +1076,9 @@
             "z": -99.4799957
           },
           "Forward": {
-            "x": 0.122019485,
+            "x": 0.122030839,
             "y": 0,
-            "z": -0.9925277
+            "z": -0.9925263
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1133,9 +1096,9 @@
             "z": -98.77
           },
           "Forward": {
-            "x": 0.5991183,
+            "x": 0.599126458,
             "y": 0,
-            "z": -0.800660551
+            "z": -0.8006544
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1153,9 +1116,9 @@
             "z": -94.95
           },
           "Forward": {
-            "x": 0.165957421,
+            "x": 0.165968716,
             "y": 0,
-            "z": -0.9861329
+            "z": -0.986131
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1173,9 +1136,9 @@
             "z": -93.1199951
           },
           "Forward": {
-            "x": 0.371108174,
+            "x": 0.371118367,
             "y": 0,
-            "z": -0.928589642
+            "z": -0.9285856
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -1247,8 +1210,8 @@
       "IgnorePathFind": false,
       "Index": 0,
       "Position": {
-        "x": -9.35,
-        "y": -1.41
+        "x": -9.95,
+        "y": -1.67
       },
       "Forward": {
         "x": 0,

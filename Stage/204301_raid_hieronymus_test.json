@@ -1,0 +1,410 @@
+{
+  "Version": "Hieronymus_test",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 11,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 1.45,
+                  "z": 127.76
+                },
+                "MinCameraDistance": 52.0001678,
+                "MaxCameraDistance": 52.0001678,
+                "CameraForward": {
+                  "x": -0.8034655,
+                  "y": -0.426620662,
+                  "z": 0.4152567
+                }
+              },
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0.45,
+                  "y": 1.45,
+                  "z": 133.24
+                },
+                "MinCameraDistance": 52.0001678,
+                "MaxCameraDistance": 52.0001678,
+                "CameraForward": {
+                  "x": -0.8034655,
+                  "y": -0.426620662,
+                  "z": 0.4152567
+                }
+              }
+            ],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 1,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDeadHieronymus"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [
+        {
+          "EventName": "SpawnKuro",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnHieronymus",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSKill",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand01",
+              "SkillLevel": 1,
+              "ExecuterLevel": 17,
+              "CharacterGroup": 1,
+              "CommandID": "HieronymusSkill01",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand01",
+              "SkillLevel": 1,
+              "ExecuterLevel": 17,
+              "CharacterGroup": 1,
+              "CommandID": "HieronymusSkill02",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 0,
+            "y": 0,
+            "z": 133.84
+          },
+          "Forward": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": -3.15,
+            "y": 0,
+            "z": 134.12
+          },
+          "Forward": {
+            "x": 0.99510473,
+            "y": 0,
+            "z": -0.09882599
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 2.59,
+            "y": 0,
+            "z": 134.199982
+          },
+          "Forward": {
+            "x": 0.992274046,
+            "y": 0,
+            "z": 0.124065347
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 0,
+            "y": 0,
+            "z": 131.07
+          },
+          "Forward": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": -3.48,
+            "y": 0,
+            "z": 131.35
+          },
+          "Forward": {
+            "x": 0.99510473,
+            "y": 0,
+            "z": -0.09882599
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 3.09,
+            "y": 0,
+            "z": 131.43
+          },
+          "Forward": {
+            "x": 0.992274046,
+            "y": 0,
+            "z": 0.124065347
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Hieronymus_default_VeryEasy",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDeadHieronymus",
+                "Hieronymus"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 55,
+              "TileY": 680,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 135.94
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnHieronymus"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 680,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.7,
+                "y": 135.9
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "HieronymusSkill01"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 76,
+              "TileY": 680,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.3,
+                "y": 135.9
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "HieronymusSkill02"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 125.37
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 1,
+      "Position": {
+        "x": 0,
+        "y": 136.37
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
+}
