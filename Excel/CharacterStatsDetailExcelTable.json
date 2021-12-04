@@ -2,11 +2,11 @@
   "DataList": [
     {
       "Id": 1,
-      "Devname": "공격력",
-      "DevName2": "방어력",
+      "Devname": "MAXHP",
+      "DevName2": "공격력",
       "DetailShowStats": [
-        "AttackPower",
-        "DefensePower"
+        "MaxHP",
+        "AttackPower"
       ],
       "IsStatsPercent": [
         false,
@@ -15,10 +15,10 @@
     },
     {
       "Id": 2,
-      "Devname": "생명력",
+      "Devname": "방어력",
       "DevName2": "회복력",
       "DetailShowStats": [
-        "MaxHP",
+        "DefensePower",
         "HealPower"
       ],
       "IsStatsPercent": [
@@ -80,11 +80,11 @@
     },
     {
       "Id": 7,
-      "Devname": "시가전적응",
+      "Devname": "코스트 리젠",
       "DevName2": "야전적응",
       "DetailShowStats": [
-        "OutdoorBattleAdaptation",
-        "StreetBattleAdaptation"
+        "RegenCost",
+        "OutdoorBattleAdaptation"
       ],
       "IsStatsPercent": [
         false,
@@ -94,12 +94,13 @@
     {
       "Id": 8,
       "Devname": "실내전적응",
-      "DevName2": "빈칸",
+      "DevName2": "시가전적응",
       "DetailShowStats": [
         "IndoorBattleAdaptation",
-        "None"
+        "StreetBattleAdaptation"
       ],
       "IsStatsPercent": [
+        false,
         false
       ]
     }
