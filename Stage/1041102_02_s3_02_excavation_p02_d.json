@@ -1,0 +1,1515 @@
+{
+  "Version": "1.1",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": 0
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": 0,
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 1,
+            "RailPoints": [],
+            "CommandID": 0,
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 1,
+            "SetConditionCommandOnly": false,
+            "CommandID": 0,
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "Events": [
+        {
+          "EventName": "Spawn1-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": 1
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 11,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn1-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 911
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 12,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartNextSection",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 912
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 2,
+              "SetConditionCommandOnly": false,
+              "CommandID": 0,
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": -0.200000033,
+            "y": 0,
+            "z": 21.31
+          },
+          "Forward": {
+            "x": 0.9978792,
+            "y": 0,
+            "z": 0.06509325
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Barrel",
+          "Position": {
+            "x": -1.97,
+            "y": 0,
+            "z": 14.87
+          },
+          "Forward": {
+            "x": 0.0289617255,
+            "y": 0,
+            "z": 0.9995805
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 1.29,
+            "y": 0,
+            "z": 10.9400005
+          },
+          "Forward": {
+            "x": 0.972771645,
+            "y": 0,
+            "z": 0.231765732
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": 1.23,
+            "y": 0,
+            "z": 17.86
+          },
+          "Forward": {
+            "x": 0.3632364,
+            "y": 0,
+            "z": 0.931697
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent1-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                911
+              ],
+              "SpawnCommandIdList": [
+                1
+              ],
+              "MovePoints": [],
+              "TileX": 56,
+              "TileY": 92,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.15,
+                "y": 13.9
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                11
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                911
+              ],
+              "SpawnCommandIdList": [
+                1
+              ],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 93,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.597,
+                "y": 14.011
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                11
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                911
+              ],
+              "SpawnCommandIdList": [
+                1
+              ],
+              "MovePoints": [],
+              "TileX": 39,
+              "TileY": 93,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.19,
+                "y": 14.0089989
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                11
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                911
+              ],
+              "SpawnCommandIdList": [
+                1
+              ],
+              "MovePoints": [],
+              "TileX": 42,
+              "TileY": 102,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.402,
+                "y": 15.893
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                11
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                911
+              ],
+              "SpawnCommandIdList": [
+                1
+              ],
+              "MovePoints": [],
+              "TileX": 50,
+              "TileY": 105,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.092,
+                "y": 16.48
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                11
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                911
+              ],
+              "SpawnCommandIdList": [
+                1
+              ],
+              "MovePoints": [],
+              "TileX": 43,
+              "TileY": 108,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.53,
+                "y": 17.09
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                11
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent1-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 42,
+              "TileY": 122,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.452,
+                "y": 19.92
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 30,
+              "TileY": 134,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.97,
+                "y": 22.3
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 134,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.629,
+                "y": 22.3
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 39,
+              "TileY": 136,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.12,
+                "y": 22.77
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 141,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.932,
+                "y": 23.782
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 33,
+              "TileY": 140,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.46,
+                "y": 23.43
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                912
+              ],
+              "SpawnCommandIdList": [
+                12
+              ],
+              "MovePoints": [],
+              "TileX": 56,
+              "TileY": 142,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.19,
+                "y": 23.95
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                12
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 25
+      },
+      "Events": [
+        {
+          "EventName": "Spawn2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": 1
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 21,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 921
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 22,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "EndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 922
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "BattleEndType": 4,
+              "CommandID": 99,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartNextSection",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 922
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 3,
+              "SetConditionCommandOnly": false,
+              "CommandID": 0,
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 2.12000012,
+            "y": 0,
+            "z": 28.6400013
+          },
+          "Forward": {
+            "x": 0.2990555,
+            "y": 0,
+            "z": -0.954235733
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Desert_Truck",
+          "Position": {
+            "x": -4.03,
+            "y": 0,
+            "z": 37.9899979
+          },
+          "Forward": {
+            "x": -0.369747162,
+            "y": 0,
+            "z": 0.9291324
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BarrelLying",
+          "Position": {
+            "x": -2.83,
+            "y": 0,
+            "z": 41.84
+          },
+          "Forward": {
+            "x": -0.257976174,
+            "y": 0,
+            "z": 0.9661513
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Desert_Truck",
+          "Position": {
+            "x": -2.73,
+            "y": 0,
+            "z": 28.01
+          },
+          "Forward": {
+            "x": 0.2890179,
+            "y": 0,
+            "z": 0.9573237
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -1.34,
+            "y": 0,
+            "z": 36.4899979
+          },
+          "Forward": {
+            "x": -0.09584585,
+            "y": 0,
+            "z": 0.9953962
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent2-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 188,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 33
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 188,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.705,
+                "y": 33
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 26,
+              "TileY": 203,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.9,
+                "y": 36.0300026
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 212,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.28,
+                "y": 37.99
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 53,
+              "TileY": 212,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.51,
+                "y": 37.99
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent2-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 46,
+              "TileY": 223,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.11,
+                "y": 40
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 32,
+              "TileY": 229,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 41.25
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 236,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.42,
+                "y": 42.72
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_AR_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 35,
+              "TileY": 237,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.01,
+                "y": 42.95
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 35,
+              "TileY": 243,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.01,
+                "y": 44.1299973
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 243,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.41,
+                "y": 44.1299973
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+      },
+      "Events": [
+        {
+          "EventName": "Spawn3-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": 1
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 31,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 931
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 32,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "EndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 932
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "BattleEndType": 4,
+              "CommandID": 99,
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 0.96,
+            "y": 0,
+            "z": 49.34
+          },
+          "Forward": {
+            "x": -0.0949770659,
+            "y": 0,
+            "z": 0.995479465
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 0.21,
+            "y": 0,
+            "z": 54.44
+          },
+          "Forward": {
+            "x": -0.9010771,
+            "y": 0,
+            "z": -0.433658928
+          },
+          "ActiveEnemyPointIndices": [
+            0
+          ],
+          "ActivePlayerPointIndices": [
+            1
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BarrelLying",
+          "Position": {
+            "x": -2.81,
+            "y": 0,
+            "z": 50.66
+          },
+          "Forward": {
+            "x": -0.9460855,
+            "y": 0,
+            "z": 0.323917061
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 0.72,
+            "y": 0,
+            "z": 60.89
+          },
+          "Forward": {
+            "x": 0.925203264,
+            "y": 0,
+            "z": 0.379471958
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -2.54,
+            "y": 0,
+            "z": 59.5100021
+          },
+          "Forward": {
+            "x": -0.0265258737,
+            "y": 0,
+            "z": 0.999648154
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent3-1",
+          "SpawnPoints": []
+        },
+        {
+          "GroupName": "SpawnPointParent3-2",
+          "SpawnPoints": []
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 0
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 24
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 44
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 64
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": []
+}

@@ -1,0 +1,1829 @@
+{
+  "Version": "1.0",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": 0
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": 0,
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 1,
+            "RailPoints": [],
+            "CommandID": 0,
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 1,
+            "SetConditionCommandOnly": false,
+            "CommandID": 0,
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 25
+      },
+      "Events": [
+        {
+          "EventName": "Spawn2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": 1
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 21,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 921
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 22,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartNextSection",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 922
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 2,
+              "SetConditionCommandOnly": false,
+              "CommandID": 0,
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 2.83,
+            "y": 0,
+            "z": 31.5
+          },
+          "Forward": {
+            "x": -0.178696185,
+            "y": 0,
+            "z": 0.9839043
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": -0.13,
+            "y": 0,
+            "z": 30.6
+          },
+          "Forward": {
+            "x": 0.98902595,
+            "y": 0,
+            "z": 0.1477421
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": -0.44,
+            "y": 0,
+            "z": 27.89
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BoxWood",
+          "Position": {
+            "x": 7.64,
+            "y": 0,
+            "z": 40.1
+          },
+          "Forward": {
+            "x": 0.0862829,
+            "y": 0,
+            "z": 0.996270657
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": -0.38,
+            "y": 0,
+            "z": 37.34
+          },
+          "Forward": {
+            "x": -0.219758168,
+            "y": 0,
+            "z": 0.9755544
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": -0.76,
+            "y": 0,
+            "z": 41.09
+          },
+          "Forward": {
+            "x": -0.00377896917,
+            "y": 0,
+            "z": 0.999992847
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 6.47,
+            "y": 0,
+            "z": 40.66
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarBlack",
+          "Position": {
+            "x": 5.98,
+            "y": 0,
+            "z": 29.9001369
+          },
+          "Forward": {
+            "x": 0.1293206,
+            "y": 0,
+            "z": 0.991602838
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 5.73,
+            "y": 0,
+            "z": 26.77
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": -2.8,
+            "y": 0,
+            "z": 38.05
+          },
+          "Forward": {
+            "x": 0.08483103,
+            "y": 0,
+            "z": 0.99639535
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Box02",
+          "Position": {
+            "x": -1.71,
+            "y": 0,
+            "z": 27.99
+          },
+          "Forward": {
+            "x": -0.232766688,
+            "y": 0,
+            "z": 0.97253263
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 3.38,
+            "y": 0,
+            "z": 27.7
+          },
+          "Forward": {
+            "x": 0.1702095,
+            "y": 0,
+            "z": 0.9854079
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Boxcart",
+          "Position": {
+            "x": -3.09,
+            "y": 0,
+            "z": 31.58
+          },
+          "Forward": {
+            "x": -0.1287956,
+            "y": 0,
+            "z": 0.991671145
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Bigbox",
+          "Position": {
+            "x": -3.658,
+            "y": 0,
+            "z": 34.87
+          },
+          "Forward": {
+            "x": -0.2027873,
+            "y": 0,
+            "z": 0.979222834
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -0.96,
+            "y": 0,
+            "z": 34.4
+          },
+          "Forward": {
+            "x": 0.0587833039,
+            "y": 0,
+            "z": 0.99827075
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -0.09,
+            "y": 0,
+            "z": 34.77
+          },
+          "Forward": {
+            "x": -0.149880484,
+            "y": 0,
+            "z": 0.988704145
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 2.51,
+            "y": 0,
+            "z": 35.12
+          },
+          "Forward": {
+            "x": -0.61056006,
+            "y": 0,
+            "z": 0.791969955
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 3.18,
+            "y": 0,
+            "z": 39.57
+          },
+          "Forward": {
+            "x": -0.175366849,
+            "y": 0,
+            "z": 0.98450315
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Box02",
+          "Position": {
+            "x": -3.16,
+            "y": 0,
+            "z": 42.1
+          },
+          "Forward": {
+            "x": -0.123601474,
+            "y": 0,
+            "z": 0.9923319
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent2-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Blackmarket_Shield_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 187,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 32.86
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 201,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.852448,
+                "y": 35.7149544
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 51,
+              "TileY": 205,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.14842653,
+                "y": 36.56655
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 30,
+              "TileY": 199,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.07,
+                "y": 35.35
+              },
+              "Direction": {
+                "x": 0.0174524635,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 43,
+              "TileY": 202,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.64,
+                "y": 35.89
+              },
+              "Direction": {
+                "x": 0.06975647,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                921
+              ],
+              "SpawnCommandIdList": [
+                21
+              ],
+              "MovePoints": [],
+              "TileX": 23,
+              "TileY": 205,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.41140461,
+                "y": 36.5591
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                21
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent2-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Blackmarket_Shield_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 33,
+              "TileY": 221,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.36,
+                "y": 39.75
+              },
+              "Direction": {
+                "x": 0.06975647,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Blackmarket_Shield_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 43,
+              "TileY": 223,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.58,
+                "y": 40.09
+              },
+              "Direction": {
+                "x": 0.0523358,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 22,
+              "TileY": 237,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.54713774,
+                "y": 42.8942375
+              },
+              "Direction": {
+                "x": -0.0174524,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 53,
+              "TileY": 235,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.53,
+                "y": 42.47
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                922
+              ],
+              "SpawnCommandIdList": [
+                22
+              ],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 235,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.143621534,
+                "y": 42.50735
+              },
+              "Direction": {
+                "x": 0.0523358,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                22
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+      },
+      "Events": [
+        {
+          "EventName": "Spawn3-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": 1
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 31,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn3-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 931
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": 32,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "EndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "ConditionID": 932
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "BattleEndType": 4,
+              "CommandID": 99,
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 2.81,
+            "y": 0,
+            "z": 62.65
+          },
+          "Forward": {
+            "x": -0.0142985918,
+            "y": 0,
+            "z": 0.9998978
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 2.94,
+            "y": 0,
+            "z": 55.79
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 0.2899996,
+            "y": 0,
+            "z": 50.09
+          },
+          "Forward": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 5.26,
+            "y": 0,
+            "z": 58.03
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 2.59,
+            "y": 0,
+            "z": 51.78
+          },
+          "Forward": {
+            "x": 0.7313377,
+            "y": 0,
+            "z": 0.6820155
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 5.85,
+            "y": 0,
+            "z": 46.51
+          },
+          "Forward": {
+            "x": -0.9990797,
+            "y": 0,
+            "z": -0.04289245
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Box01",
+          "Position": {
+            "x": -2.9,
+            "y": 0,
+            "z": 51.6
+          },
+          "Forward": {
+            "x": -0.8813034,
+            "y": 0,
+            "z": 0.472550839
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -2.12,
+            "y": 0,
+            "z": 47.68
+          },
+          "Forward": {
+            "x": -0.141419575,
+            "y": 0,
+            "z": 0.989949763
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 2.38,
+            "y": 0,
+            "z": 47.22
+          },
+          "Forward": {
+            "x": 0.0273978431,
+            "y": 0,
+            "z": 0.9996246
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Boxcart",
+          "Position": {
+            "x": -2.91,
+            "y": 0,
+            "z": 58.83
+          },
+          "Forward": {
+            "x": -0.2273312,
+            "y": 0,
+            "z": 0.9738175
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -2.78,
+            "y": 0,
+            "z": 55.71
+          },
+          "Forward": {
+            "x": -0.146083042,
+            "y": 0,
+            "z": 0.989272356
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -0.77,
+            "y": 0,
+            "z": 57.12
+          },
+          "Forward": {
+            "x": -0.465923667,
+            "y": 0,
+            "z": 0.884824932
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -0.89,
+            "y": 0,
+            "z": 54.61
+          },
+          "Forward": {
+            "x": 0.133986011,
+            "y": 0,
+            "z": 0.990983248
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 1.95,
+            "y": 0,
+            "z": 57.18
+          },
+          "Forward": {
+            "x": 0.372987479,
+            "y": 0,
+            "z": 0.927836359
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Backstreet_Box02",
+          "Position": {
+            "x": -0.91,
+            "y": 0,
+            "z": 61.3
+          },
+          "Forward": {
+            "x": 0.127756774,
+            "y": 0,
+            "z": 0.991805553
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 0.22,
+            "y": 0,
+            "z": 61.6200027
+          },
+          "Forward": {
+            "x": -0.302369863,
+            "y": 0,
+            "z": 0.9531907
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent3-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Blackmarket_Shield_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                931
+              ],
+              "SpawnCommandIdList": [
+                31
+              ],
+              "MovePoints": [],
+              "TileX": 37,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.52,
+                "y": 53
+              },
+              "Direction": {
+                "x": -0.0174524,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                31
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                931
+              ],
+              "SpawnCommandIdList": [
+                31
+              ],
+              "MovePoints": [],
+              "TileX": 35,
+              "TileY": 298,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.9718972,
+                "y": 55.1014061
+              },
+              "Direction": {
+                "x": 0.0174524635,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                31
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                931
+              ],
+              "SpawnCommandIdList": [
+                31
+              ],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 298,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.37,
+                "y": 55.17
+              },
+              "Direction": {
+                "x": 0.0174524635,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                31
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                931
+              ],
+              "SpawnCommandIdList": [
+                31
+              ],
+              "MovePoints": [],
+              "TileX": 54,
+              "TileY": 303,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.80700016,
+                "y": 56.133
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                31
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                931
+              ],
+              "SpawnCommandIdList": [
+                31
+              ],
+              "MovePoints": [],
+              "TileX": 27,
+              "TileY": 292,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.69,
+                "y": 53.8
+              },
+              "Direction": {
+                "x": -0.06975664,
+                "y": -0.9975641
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                31
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                931
+              ],
+              "SpawnCommandIdList": [
+                31
+              ],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 296,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.27,
+                "y": 54.7
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                31
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent3-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Blackmarket_Shield_E",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                932
+              ],
+              "SpawnCommandIdList": [
+                32
+              ],
+              "MovePoints": [],
+              "TileX": 35,
+              "TileY": 321,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.08,
+                "y": 59.7
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                32
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                932
+              ],
+              "SpawnCommandIdList": [
+                32
+              ],
+              "MovePoints": [],
+              "TileX": 26,
+              "TileY": 330,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.74,
+                "y": 61.48
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                32
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                932
+              ],
+              "SpawnCommandIdList": [
+                32
+              ],
+              "MovePoints": [],
+              "TileX": 44,
+              "TileY": 326,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.83,
+                "y": 60.79
+              },
+              "Direction": {
+                "x": -0.0174524,
+                "y": -0.999847651
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                32
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                932
+              ],
+              "SpawnCommandIdList": [
+                32
+              ],
+              "MovePoints": [],
+              "TileX": 54,
+              "TileY": 327,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.74,
+                "y": 60.93
+              },
+              "Direction": {
+                "x": -0.0348996259,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                32
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_Blackmarket_AR_M",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                932
+              ],
+              "SpawnCommandIdList": [
+                32
+              ],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 335,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.07,
+                "y": 62.57
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                32
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Blackmarket_RL_C",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                932
+              ],
+              "SpawnCommandIdList": [
+                32
+              ],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 342,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.46,
+                "y": 63.8099976
+              },
+              "Direction": {
+                "x": 0.03489945,
+                "y": -0.999390841
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                32
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 20
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 44
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 64
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": []
+}
