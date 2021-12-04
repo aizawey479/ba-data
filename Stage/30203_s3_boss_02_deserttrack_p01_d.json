@@ -2542,14 +2542,14 @@
             {
               "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
               "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 1,
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
               "StayTime": 0,
               "Position": {
                 "x": 0,
                 "y": 0,
-                "z": 26.3
+                "z": 31.01
               },
               "Rect": {
                 "Direction": {
@@ -2560,13 +2560,41 @@
                 "Height": 1
               },
               "Circle": {
-                "Radius": 1
+                "Radius": 9
               },
               "InactivateWhenStart": false,
-              "ConditionID": "0"
+              "ConditionID": ""
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
@@ -4210,9 +4238,9 @@
             "z": 35.4899979
           },
           "Forward": {
-            "x": 0.047498554,
+            "x": 0.0474997461,
             "y": 0,
-            "z": -0.9988713
+            "z": -0.998871267
           },
           "ActiveEnemyPointIndices": [
             0
@@ -5564,7 +5592,7 @@
             "z": 49.96
           },
           "Forward": {
-            "x": -0.0462353937,
+            "x": -0.0462354,
             "y": 0,
             "z": 0.9989306
           },
@@ -5652,7 +5680,7 @@
             "z": 50.53
           },
           "Forward": {
-            "x": -0.0462353937,
+            "x": -0.0462354,
             "y": 0,
             "z": 0.9989306
           },
@@ -5674,7 +5702,7 @@
             "z": 57.46
           },
           "Forward": {
-            "x": -0.0462353937,
+            "x": -0.0462354,
             "y": 0,
             "z": 0.9989306
           },
@@ -5696,7 +5724,7 @@
             "z": 57.83
           },
           "Forward": {
-            "x": -0.0462353937,
+            "x": -0.0462354,
             "y": 0,
             "z": 0.9989306
           },

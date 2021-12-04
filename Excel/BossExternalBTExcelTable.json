@@ -7308,7 +7308,7 @@
       "TriggerArgument": "1",
       "BehaviorRate": 10000,
       "ExternalBehavior": "ClearNormalSkill",
-      "BehaviorArgument": "0"
+      "BehaviorArgument": "  "
     },
     {
       "CharacterId": 7302501,
@@ -15098,7 +15098,7 @@
       "TriggerArgument": "1",
       "BehaviorRate": 10000,
       "ExternalBehavior": "ClearNormalSkill",
-      "BehaviorArgument": "0"
+      "BehaviorArgument": "  "
     },
     {
       "CharacterId": 7402501,
@@ -15194,31 +15194,11 @@
       "CharacterId": 7304100,
       "AIPhase": 0,
       "ExternalBTNodeType": "Instant",
-      "ExternalBTTrigger": "HPUnder",
-      "TriggerArgument": "299999",
-      "BehaviorRate": 10000,
-      "ExternalBehavior": "ChangePhase",
-      "BehaviorArgument": "1"
-    },
-    {
-      "CharacterId": 7304100,
-      "AIPhase": 0,
-      "ExternalBTNodeType": "Instant",
-      "ExternalBTTrigger": "CheckPeriod",
-      "TriggerArgument": "1",
-      "BehaviorRate": 10000,
-      "ExternalBehavior": "ChangePhase",
-      "BehaviorArgument": "1"
-    },
-    {
-      "CharacterId": 7304100,
-      "AIPhase": 0,
-      "ExternalBTNodeType": "Instant",
       "ExternalBTTrigger": "OnSpawned",
       "TriggerArgument": null,
       "BehaviorRate": 10000,
       "ExternalBehavior": "SetMaxHPToParts",
-      "BehaviorArgument": "300000"
+      "BehaviorArgument": "70000,70000,70000"
     },
     {
       "CharacterId": 7304100,
@@ -15252,10 +15232,70 @@
     },
     {
       "CharacterId": 7304100,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "199999",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "70000,70000,70000"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304100,
       "AIPhase": 1,
       "ExternalBTNodeType": "Selector",
       "ExternalBTTrigger": "CheckPeriod",
-      "TriggerArgument": "2000",
+      "TriggerArgument": "20000",
       "BehaviorRate": 10000,
       "ExternalBehavior": "ActivatePart",
       "BehaviorArgument": null
@@ -15268,17 +15308,37 @@
       "TriggerArgument": "1000",
       "BehaviorRate": 10000,
       "ExternalBehavior": "AddActiveGauge",
-      "BehaviorArgument": "10"
+      "BehaviorArgument": "15"
     },
     {
       "CharacterId": 7304100,
       "AIPhase": 1,
       "ExternalBTNodeType": "Selector",
       "ExternalBTTrigger": "CheckActiveGaugeOver",
-      "TriggerArgument": "100",
+      "TriggerArgument": "900",
       "BehaviorRate": 10000,
       "ExternalBehavior": "UseSelectExSkill",
       "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "DestroyParts",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddGroggy",
+      "BehaviorArgument": "200000"
+    },
+    {
+      "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "ApplyGroggy",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "-900"
     },
     {
       "CharacterId": 7304100,
@@ -15312,6 +15372,966 @@
     },
     {
       "CharacterId": 7304100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Sequence",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ClearNormalSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304201,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304202"
+    },
+    {
+      "CharacterId": 7304201,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304203"
+    },
+    {
+      "CharacterId": 7304201,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304204"
+    },
+    {
+      "CharacterId": 7304201,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304205"
+    },
+    {
+      "CharacterId": 7304201,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304206"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "157500,157500,157500"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "449999",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "157500,157500,157500"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "20000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ActivatePart",
+      "BehaviorArgument": null
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "15"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckActiveGaugeOver",
+      "TriggerArgument": "900",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "DestroyParts",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddGroggy",
+      "BehaviorArgument": "450000"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "ApplyGroggy",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "-900"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3000,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7304200,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Sequence",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ClearNormalSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304301,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304302"
+    },
+    {
+      "CharacterId": 7304301,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304303"
+    },
+    {
+      "CharacterId": 7304301,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304304"
+    },
+    {
+      "CharacterId": 7304301,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304305"
+    },
+    {
+      "CharacterId": 7304301,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304306"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "350000,350000,350000"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "999999",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "350000,350000,350000"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "20000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ActivatePart",
+      "BehaviorArgument": null
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "15"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckActiveGaugeOver",
+      "TriggerArgument": "900",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "DestroyParts",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddGroggy",
+      "BehaviorArgument": "1000000"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "ApplyGroggy",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "-900"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3000,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7304300,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Sequence",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ClearNormalSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304401,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304402"
+    },
+    {
+      "CharacterId": 7304401,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304403"
+    },
+    {
+      "CharacterId": 7304401,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304404"
+    },
+    {
+      "CharacterId": 7304401,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304405"
+    },
+    {
+      "CharacterId": 7304401,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304406"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "595000,595000,595000"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "1699999",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "595000,595000,595000"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "20000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ActivatePart",
+      "BehaviorArgument": null
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "15"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckActiveGaugeOver",
+      "TriggerArgument": "900",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "DestroyParts",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddGroggy",
+      "BehaviorArgument": "1700000"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "ApplyGroggy",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "-900"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3000,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7304400,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Sequence",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ClearNormalSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304501,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304502"
+    },
+    {
+      "CharacterId": 7304501,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304503"
+    },
+    {
+      "CharacterId": 7304501,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304504"
+    },
+    {
+      "CharacterId": 7304501,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304505"
+    },
+    {
+      "CharacterId": 7304501,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectCharacterToDummy",
+      "BehaviorArgument": "7304506"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "2500000,2500000,2500000"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "7499999",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "SetMaxHPToParts",
+      "BehaviorArgument": "2500000,2500000,2500000"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "0,ExSkill01"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "1,ExSkill02"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "OnSpawned",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ConnectExSkillToParts",
+      "BehaviorArgument": "2,ExSkill03"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "20000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ActivatePart",
+      "BehaviorArgument": null
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "1000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "15"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckActiveGaugeOver",
+      "TriggerArgument": "900",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "DestroyParts",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddGroggy",
+      "BehaviorArgument": "7500000"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "ApplyGroggy",
+      "TriggerArgument": null,
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "-900"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3500,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7304500,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3000,
+      "ExternalBehavior": "AlivePartsUseExSkill",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7304500,
       "AIPhase": 1,
       "ExternalBTNodeType": "Sequence",
       "ExternalBTTrigger": "UseNormalSkill",

@@ -203,7 +203,7 @@
               "SpawnData": {
                 "SpawnTemplateId": "Shiro_Indoor_VeryHard",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -384,13 +384,14 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
+              "Milliseconds": 1550,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
@@ -414,7 +415,7 @@
               "SpawnData": {
                 "SpawnTemplateId": "Kuro_Indoor_VeryHard",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [

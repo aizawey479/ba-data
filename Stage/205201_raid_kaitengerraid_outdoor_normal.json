@@ -1,5 +1,5 @@
 {
-  "Version": "0.9",
+  "Version": "1.2",
   "Global": {
     "Position": {
       "x": 0,
@@ -26,7 +26,7 @@
           },
           {
             "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-            "ID": 2,
+            "ID": 12,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
             "ZoomSpeed": 1,
@@ -182,11 +182,472 @@
               "CharacterSpawnTemplateIdList": [],
               "CommandID": "",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "CommandID": "1000",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkill_Red",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 20000,
+              "SyncUseSkillGroupId": 1,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 1,
+              "SkillSlot": "PublicSkill02",
+              "IsAdd": true,
+              "CommandID": "KaitenrangerRed",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkill_Green",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 20000,
+              "SyncUseSkillGroupId": 2,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 2,
+              "SkillSlot": "PublicSkill02",
+              "IsAdd": true,
+              "CommandID": "KaitenrangerGreen",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkill_Black",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 12000,
+              "SyncUseSkillGroupId": 3,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 3,
+              "SkillSlot": "PublicSkill02",
+              "IsAdd": true,
+              "CommandID": "KaitenrangerBlack",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkill_Pink",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 30000,
+              "SyncUseSkillGroupId": 4,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 4,
+              "SkillSlot": "PublicSkill02",
+              "IsAdd": true,
+              "CommandID": "KaitenrangerPink",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkill_Yellow",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 15000,
+              "SyncUseSkillGroupId": 5,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 5,
+              "SkillSlot": "PublicSkill02",
+              "IsAdd": true,
+              "CommandID": "KaitenrangerYellow",
+              "WaitExecuteEnd": false
             }
           ]
         }
       ],
-      "Obstacles": [],
+      "Obstacles": [
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": 6.72,
+            "y": 0,
+            "z": 24.2
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": 7.83,
+            "y": 0,
+            "z": 25.51
+          },
+          "Forward": {
+            "x": -0.857924938,
+            "y": 0,
+            "z": 0.513775051
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_02",
+          "Position": {
+            "x": 6.32,
+            "y": 0,
+            "z": 18.62
+          },
+          "Forward": {
+            "x": 0.9259432,
+            "y": 0,
+            "z": -0.377662838
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_03",
+          "Position": {
+            "x": -6.33,
+            "y": 0,
+            "z": 14.54
+          },
+          "Forward": {
+            "x": -0.229774043,
+            "y": 0,
+            "z": 0.973244
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": -6.2,
+            "y": 0,
+            "z": 17.89
+          },
+          "Forward": {
+            "x": 0.2866419,
+            "y": 0,
+            "z": 0.9580378
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": 6.91,
+            "y": 0,
+            "z": 19.68
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": 6.98,
+            "y": 0,
+            "z": 21.99
+          },
+          "Forward": {
+            "x": -0.1012354,
+            "y": 0,
+            "z": 0.9948625
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": 7.05,
+            "y": 0,
+            "z": 20.46
+          },
+          "Forward": {
+            "x": -0.1012354,
+            "y": 0,
+            "z": 0.9948625
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": -6.92,
+            "y": 0,
+            "z": 19.4
+          },
+          "Forward": {
+            "x": -0.999403238,
+            "y": 0,
+            "z": -0.0345428847
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": 6.19,
+            "y": 0,
+            "z": 19.46
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_02",
+          "Position": {
+            "x": 1,
+            "y": 0,
+            "z": 27.07
+          },
+          "Forward": {
+            "x": 0.2775923,
+            "y": 0,
+            "z": 0.960698962
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": -6.69,
+            "y": 0,
+            "z": 25.09
+          },
+          "Forward": {
+            "x": -0.4613547,
+            "y": 0,
+            "z": 0.8872158
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_03",
+          "Position": {
+            "x": -3.38,
+            "y": 0,
+            "z": 23.8800011
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_02",
+          "Position": {
+            "x": -2.95,
+            "y": 0,
+            "z": 24.7
+          },
+          "Forward": {
+            "x": 0.7709305,
+            "y": 0,
+            "z": 0.63691926
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_01",
+          "Position": {
+            "x": 1.99,
+            "y": 0,
+            "z": 26.06
+          },
+          "Forward": {
+            "x": 0.838758051,
+            "y": 0,
+            "z": 0.544504344
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": -7.44,
+            "y": 0,
+            "z": 27.44
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Panel_01",
+          "Position": {
+            "x": -1.5,
+            "y": 0,
+            "z": 35.22
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "1000"
+          ],
+          "SubObstacles": []
+        }
+      ],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent",
@@ -201,15 +662,16 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "KillKaitenranger"
+                "KillKaitenranger",
+                "KaitenrangerBlack"
               ],
               "MovePoints": [],
-              "TileX": 34,
-              "TileY": 207,
+              "TileX": 25,
+              "TileY": 204,
               "PositionHeight": 0,
               "Position": {
-                "x": -4.04,
-                "y": 30.13
+                "x": -6,
+                "y": 29.48
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -234,15 +696,16 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "KillKaitenranger"
+                "KillKaitenranger",
+                "KaitenrangerGreen"
               ],
               "MovePoints": [],
-              "TileX": 70,
-              "TileY": 212,
+              "TileX": 73,
+              "TileY": 202,
               "PositionHeight": 0,
               "Position": {
-                "x": 3.11,
-                "y": 31.15
+                "x": 3.7,
+                "y": 28.98
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -267,15 +730,16 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "KillKaitenranger"
+                "KillKaitenranger",
+                "KaitenrangerYellow"
               ],
               "MovePoints": [],
-              "TileX": 55,
-              "TileY": 227,
+              "TileX": 64,
+              "TileY": 223,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.0100002289,
-                "y": 34.08
+                "x": 1.88,
+                "y": 33.34
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -300,15 +764,16 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "KillKaitenranger"
+                "KillKaitenranger",
+                "KaitenrangerPink"
               ],
               "MovePoints": [],
-              "TileX": 40,
-              "TileY": 220,
+              "TileX": 38,
+              "TileY": 223,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.97,
-                "y": 32.64
+                "x": -3.33,
+                "y": 33.2599945
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -333,15 +798,16 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "KillKaitenranger"
+                "KillKaitenranger",
+                "KaitenrangerRed"
               ],
               "MovePoints": [],
-              "TileX": 56,
-              "TileY": 207,
+              "TileX": 50,
+              "TileY": 197,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.329999954,
-                "y": 30
+                "x": -1,
+                "y": 28
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -367,14 +833,17 @@
               "SpawnConditionIdList": [
                 "ConditionDeadDummyBoss"
               ],
-              "SpawnCommandIdList": [],
+              "SpawnCommandIdList": [
+                "",
+                ""
+              ],
               "MovePoints": [],
-              "TileX": 48,
-              "TileY": 230,
+              "TileX": 75,
+              "TileY": 225,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.34,
-                "y": 34.58
+                "x": 4.13,
+                "y": 33.68
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -428,7 +897,7 @@
             },
             {
               "$type": "GroundCommandLocateCamera, Assembly-CSharp",
-              "ID": 7,
+              "ID": 13,
               "MaxCameraSpeed": 3,
               "RotationSpeed": 1,
               "ZoomSpeed": 1,
@@ -475,7 +944,7 @@
             },
             {
               "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
-              "TimelinePath": "Timeline/Timeline_Kuro_Original_OP",
+              "TimelinePath": "Timeline/Timeline_Kaitenranger_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
               "CommandID": "0",
@@ -541,7 +1010,7 @@
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
+              "Milliseconds": 1550,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
@@ -555,7 +1024,28 @@
           ]
         }
       ],
-      "Obstacles": [],
+      "Obstacles": [
+        {
+          "UniqueName": "Kaitenger_Panel_02",
+          "Position": {
+            "x": -1.2,
+            "y": 0,
+            "z": 108.259995
+          },
+          "Forward": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2000"
+          ],
+          "SubObstacles": []
+        }
+      ],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent",
@@ -606,7 +1096,272 @@
         "z": 112.6
       },
       "Events": [],
-      "Obstacles": [],
+      "Obstacles": [
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": 6.72,
+            "y": 0,
+            "z": 93.61
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": 5.77,
+            "y": 0,
+            "z": 88.89
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": 7.05,
+            "y": 0,
+            "z": 89.8699951
+          },
+          "Forward": {
+            "x": -0.1012354,
+            "y": 0,
+            "z": 0.9948625
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": -6.2,
+            "y": 0,
+            "z": 87.29999
+          },
+          "Forward": {
+            "x": 0.2866419,
+            "y": 0,
+            "z": 0.9580378
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": -7.13,
+            "y": 0,
+            "z": 90.04
+          },
+          "Forward": {
+            "x": -0.999403238,
+            "y": 0,
+            "z": -0.0345428847
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": 5.05,
+            "y": 0,
+            "z": 88.67
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": -6.23,
+            "y": 0,
+            "z": 95.7599945
+          },
+          "Forward": {
+            "x": -0.4613547,
+            "y": 0,
+            "z": 0.8872158
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_03",
+          "Position": {
+            "x": -6.33,
+            "y": 0,
+            "z": 83.95
+          },
+          "Forward": {
+            "x": -0.229774043,
+            "y": 0,
+            "z": 0.973244
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_02",
+          "Position": {
+            "x": -3.7,
+            "y": 0,
+            "z": 99.7299957
+          },
+          "Forward": {
+            "x": 0.2775923,
+            "y": 0,
+            "z": 0.960698962
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_03",
+          "Position": {
+            "x": 1.66,
+            "y": 0,
+            "z": 96.3
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_01",
+          "Position": {
+            "x": 2.75,
+            "y": 0,
+            "z": 97.2599945
+          },
+          "Forward": {
+            "x": 0.838758051,
+            "y": 0,
+            "z": 0.544504344
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_TankLorry_01",
+          "Position": {
+            "x": 8.76,
+            "y": 0,
+            "z": 94.96
+          },
+          "Forward": {
+            "x": -0.857924938,
+            "y": 0,
+            "z": 0.513775051
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Box_01",
+          "Position": {
+            "x": -5.86000061,
+            "y": 0,
+            "z": 99.5
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Kaitenger_Rock_01",
+          "Position": {
+            "x": -2.2,
+            "y": 0,
+            "z": 94.46
+          },
+          "Forward": {
+            "x": 0.999831855,
+            "y": 0,
+            "z": 0.0183386169
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent",
