@@ -374,6 +374,7 @@
             "Circle": {
               "Radius": 9
             },
+            "InactivateWhenStart": false,
             "ConditionID": ""
           },
           {
@@ -497,6 +498,7 @@
             "Circle": {
               "Radius": 9
             },
+            "InactivateWhenStart": false,
             "ConditionID": ""
           }
         ],
@@ -718,9 +720,9 @@
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": 0.261,
+                "x": 0.26,
                 "y": 0,
-                "z": 29.3100014
+                "z": 24.48
               },
               "Rect": {
                 "Direction": {
@@ -733,10 +735,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -757,9 +767,9 @@
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": 1.947,
+                "x": 1.946,
                 "y": 0,
-                "z": 29.348999
+                "z": 24.5189972
               },
               "Rect": {
                 "Direction": {
@@ -772,10 +782,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -870,6 +888,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             }
           ],
@@ -878,6 +897,156 @@
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
               "CommandID": "211",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableA-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 8000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 22.4
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "A1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnA-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 8000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "A1",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableA-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 8000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 22.4
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "A2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnA-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 8000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "A2",
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -1373,6 +1542,20 @@
           ],
           "Commands": [
             {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
               "CommandID": "51",
@@ -1539,10 +1722,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -1578,10 +1769,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -1661,9 +1860,9 @@
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": 0.261,
+                "x": 0.26,
                 "y": 0,
-                "z": 29.3100014
+                "z": 24.48
               },
               "Rect": {
                 "Direction": {
@@ -1676,6 +1875,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -1709,9 +1909,9 @@
               "Trigger": 1,
               "StayTime": 0,
               "Position": {
-                "x": 1.947,
+                "x": 1.946,
                 "y": 0,
-                "z": 29.348999
+                "z": 24.5189972
               },
               "Rect": {
                 "Direction": {
@@ -1724,6 +1924,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -1772,6 +1973,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             }
           ],
@@ -1780,6 +1982,156 @@
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
               "CommandID": "211",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableB-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 6000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 30.46
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "B1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnB-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 6000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "B1",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableB-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 6000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 30.46
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "B2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnB-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 6000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "B2",
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -1802,11 +2154,11 @@
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 50,
-              "TileY": 169,
+              "TileY": 145,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.97,
-                "y": 29.37
+                "x": 1.969,
+                "y": 24.539999
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1833,11 +2185,11 @@
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 41,
-              "TileY": 169,
+              "TileY": 145,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.264000058,
-                "y": 29.3310032
+                "x": 0.263000041,
+                "y": 24.5010014
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2036,6 +2388,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             },
             {
@@ -2079,6 +2432,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             }
           ],
@@ -2142,10 +2496,39 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": false,
@@ -2233,6 +2616,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -2272,6 +2656,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -2555,10 +2940,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -2594,10 +2987,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -2633,10 +3034,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -2672,10 +3081,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -2711,6 +3128,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -2759,6 +3177,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -2866,6 +3285,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -2914,6 +3334,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -2962,6 +3383,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -3010,6 +3432,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -3058,6 +3481,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -3106,6 +3530,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -3154,10 +3579,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -3193,10 +3626,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -3232,6 +3673,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             }
           ],
@@ -3240,6 +3682,306 @@
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
               "CommandID": "311",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableD-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 3000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 43.5
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "D1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnD-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 3000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "991"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "D1",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableD-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 3000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 43.5
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "D2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnD-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 3000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "992"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "D2",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableD-3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "993"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 43.5
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "D3"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnD-3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "993"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "D3",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetUntargetableD-4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "994"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Red_AR_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 43.5
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 15,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": true,
+              "ConditionID": "D4"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UntargetableAreaOnD-4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "994"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
+              "AreaConditionIdToActivate": "D4",
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -3430,9 +4172,9 @@
             "z": 35.4899979
           },
           "Forward": {
-            "x": 0.04749046,
+            "x": 0.0475040339,
             "y": 0,
-            "z": -0.9988717
+            "z": -0.998871
           },
           "ActiveEnemyPointIndices": [
             0
@@ -3797,10 +4539,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -3836,10 +4586,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -3875,10 +4633,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -3914,10 +4680,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -3953,6 +4727,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -4001,6 +4776,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -4049,6 +4825,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -4097,6 +4874,7 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
@@ -4145,6 +4923,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             }
           ],
@@ -4346,10 +5125,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -4385,10 +5172,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -4424,10 +5219,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -4463,10 +5266,18 @@
               "Circle": {
                 "Radius": 1
               },
+              "InactivateWhenStart": false,
               "ConditionID": "0"
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
               "IsForceIdleOn": true,
@@ -4502,6 +5313,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             },
             {
@@ -4545,6 +5357,7 @@
               "Circle": {
                 "Radius": 9
               },
+              "InactivateWhenStart": false,
               "ConditionID": ""
             }
           ],
@@ -4589,7 +5402,7 @@
             "z": 47.46
           },
           "Forward": {
-            "x": -0.4257794,
+            "x": -0.425779372,
             "y": 0,
             "z": 0.904827
           },
@@ -4633,7 +5446,7 @@
             "z": 49.96
           },
           "Forward": {
-            "x": -0.04623533,
+            "x": -0.0462354161,
             "y": 0,
             "z": 0.9989306
           },
@@ -4721,7 +5534,7 @@
             "z": 50.53
           },
           "Forward": {
-            "x": -0.04623533,
+            "x": -0.0462354161,
             "y": 0,
             "z": 0.9989306
           },
@@ -4743,7 +5556,7 @@
             "z": 57.46
           },
           "Forward": {
-            "x": -0.04623533,
+            "x": -0.0462354161,
             "y": 0,
             "z": 0.9989306
           },
@@ -4765,7 +5578,7 @@
             "z": 57.83
           },
           "Forward": {
-            "x": -0.04623533,
+            "x": -0.0462354161,
             "y": 0,
             "z": 0.9989306
           },
