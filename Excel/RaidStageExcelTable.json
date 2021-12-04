@@ -472,6 +472,60 @@
       "BossBGInfoKey": 3639039230
     },
     {
+      "Id": 15,
+      "RaidBossGroup": "Chesed",
+      "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Chesed_Lobby",
+      "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Chesed_LobbyBG",
+      "RaidCharacterId": 7301500,
+      "BossCharacterId": [
+        7301500
+      ],
+      "Difficulty": "Extreme",
+      "DifficultyOpenCondition": false,
+      "MaxPlayerCount": 1,
+      "StageCreateCostType": "ActionPoint",
+      "StageCreateCostAmount": 0,
+      "StageEnterCostType": "ActionPoint",
+      "StageEnterCostAmount": 0,
+      "RaidRoomLifeTime": 3600000,
+      "BattleDuration": 240000,
+      "GroundId": 202300005,
+      "GroundDevName": "Chesed",
+      "EnterTimeLine": null,
+      "TacticEnvironment": "None",
+      "SeasonDamageRatio": 960,
+      "DefaultClearScore": 4000000,
+      "MaximumScore": 6144000,
+      "PerSecondMinusScore": 64000,
+      "HPPercentScore": 5200000,
+      "RaidRewardGroupId": 204,
+      "RaidRewardDevName": "Chesed_Raid_Reward_Dummy",
+      "BattleReadyTimelinePath": [
+        "Timeline/FX_Chesed_OP_Enemies",
+        "Timeline/FX_Chesed_OP_Boss"
+      ],
+      "BattleReadyTimelinePhaseStart": [
+        0,
+        1
+      ],
+      "BattleReadyTimelinePhaseEnd": [
+        0,
+        1
+      ],
+      "VictoryTimelinePath": "Timeline/Timeline_Victory",
+      "PhaseChangeTimelinePath": "-1",
+      "TimeLinePhase": 2,
+      "EnterScenarioKey": 0,
+      "ClearScenarioKey": 0,
+      "ReviveParcelType": "Currency",
+      "ReviveParcelId": 1,
+      "ReviveParcelDevName": "GOLD",
+      "ReviveParcelAmount": 1800,
+      "InitSupplyCount": 2,
+      "ShowSkillCard": false,
+      "BossBGInfoKey": 3639039230
+    },
+    {
       "Id": 21,
       "RaidBossGroup": "ShiroKuro",
       "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Shirokuro_Lobby",
@@ -948,11 +1002,12 @@
     },
     {
       "Id": 41,
-      "RaidBossGroup": "Kitenger",
+      "RaidBossGroup": "Kaitenger",
       "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_Lobby",
       "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_LobbyBG",
       "RaidCharacterId": 7304100,
       "BossCharacterId": [
+        7304101,
         7304100
       ],
       "Difficulty": "Normal",
@@ -964,7 +1019,7 @@
       "StageEnterCostAmount": 0,
       "RaidRoomLifeTime": 3600000,
       "BattleDuration": 180000,
-      "GroundId": 204300001,
+      "GroundId": 205200001,
       "GroundDevName": "Kitenger",
       "EnterTimeLine": null,
       "TacticEnvironment": "None",
@@ -976,7 +1031,7 @@
       "RaidRewardGroupId": 100,
       "RaidRewardDevName": "Binah_Raid_Reward_Dummy",
       "BattleReadyTimelinePath": [
-        "Timeline/Raid_Binah_Timeline_Intro_V2"
+        "Timeline/Timeline_Kaitenranger_OP"
       ],
       "BattleReadyTimelinePhaseStart": [
         0
@@ -988,210 +1043,6 @@
       "PhaseChangeTimelinePath": "Timeline/Timeline_PhaseChange_Binah",
       "TimeLinePhase": 2,
       "EnterScenarioKey": 2624821838,
-      "ClearScenarioKey": 0,
-      "ReviveParcelType": "Currency",
-      "ReviveParcelId": 1,
-      "ReviveParcelDevName": "GOLD",
-      "ReviveParcelAmount": 1800,
-      "InitSupplyCount": 2,
-      "ShowSkillCard": true,
-      "BossBGInfoKey": 3920080884
-    },
-    {
-      "Id": 42,
-      "RaidBossGroup": "Kitenger",
-      "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_Lobby",
-      "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_LobbyBG",
-      "RaidCharacterId": 7304200,
-      "BossCharacterId": [
-        7304200
-      ],
-      "Difficulty": "Hard",
-      "DifficultyOpenCondition": false,
-      "MaxPlayerCount": 1,
-      "StageCreateCostType": "ActionPoint",
-      "StageCreateCostAmount": 0,
-      "StageEnterCostType": "ActionPoint",
-      "StageEnterCostAmount": 0,
-      "RaidRoomLifeTime": 3600000,
-      "BattleDuration": 180000,
-      "GroundId": 204300002,
-      "GroundDevName": "Kitenger",
-      "EnterTimeLine": null,
-      "TacticEnvironment": "None",
-      "SeasonDamageRatio": 720,
-      "DefaultClearScore": 500000,
-      "MaximumScore": 576000,
-      "PerSecondMinusScore": 8000,
-      "HPPercentScore": 746000,
-      "RaidRewardGroupId": 101,
-      "RaidRewardDevName": "Binah_Raid_Reward_Dummy",
-      "BattleReadyTimelinePath": [
-        "Timeline/Raid_Binah_Timeline_Intro_V2"
-      ],
-      "BattleReadyTimelinePhaseStart": [
-        0
-      ],
-      "BattleReadyTimelinePhaseEnd": [
-        100
-      ],
-      "VictoryTimelinePath": "Timeline/Timeline_Victory_Binah",
-      "PhaseChangeTimelinePath": "Timeline/Timeline_PhaseChange_Binah",
-      "TimeLinePhase": 2,
-      "EnterScenarioKey": 0,
-      "ClearScenarioKey": 0,
-      "ReviveParcelType": "Currency",
-      "ReviveParcelId": 1,
-      "ReviveParcelDevName": "GOLD",
-      "ReviveParcelAmount": 1800,
-      "InitSupplyCount": 2,
-      "ShowSkillCard": true,
-      "BossBGInfoKey": 3920080884
-    },
-    {
-      "Id": 43,
-      "RaidBossGroup": "Kitenger",
-      "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_Lobby",
-      "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_LobbyBG",
-      "RaidCharacterId": 7304300,
-      "BossCharacterId": [
-        7304300
-      ],
-      "Difficulty": "VeryHard",
-      "DifficultyOpenCondition": false,
-      "MaxPlayerCount": 1,
-      "StageCreateCostType": "ActionPoint",
-      "StageCreateCostAmount": 0,
-      "StageEnterCostType": "ActionPoint",
-      "StageEnterCostAmount": 0,
-      "RaidRoomLifeTime": 3600000,
-      "BattleDuration": 180000,
-      "GroundId": 204300003,
-      "GroundDevName": "Kitenger",
-      "EnterTimeLine": null,
-      "TacticEnvironment": "None",
-      "SeasonDamageRatio": 720,
-      "DefaultClearScore": 1000000,
-      "MaximumScore": 1152000,
-      "PerSecondMinusScore": 16000,
-      "HPPercentScore": 1492000,
-      "RaidRewardGroupId": 102,
-      "RaidRewardDevName": "Binah_Raid_Reward_Dummy",
-      "BattleReadyTimelinePath": [
-        "Timeline/Raid_Binah_Timeline_Intro_V2"
-      ],
-      "BattleReadyTimelinePhaseStart": [
-        0
-      ],
-      "BattleReadyTimelinePhaseEnd": [
-        100
-      ],
-      "VictoryTimelinePath": "Timeline/Timeline_Victory_Binah",
-      "PhaseChangeTimelinePath": "Timeline/Timeline_PhaseChange_Binah",
-      "TimeLinePhase": 2,
-      "EnterScenarioKey": 0,
-      "ClearScenarioKey": 0,
-      "ReviveParcelType": "Currency",
-      "ReviveParcelId": 1,
-      "ReviveParcelDevName": "GOLD",
-      "ReviveParcelAmount": 1800,
-      "InitSupplyCount": 2,
-      "ShowSkillCard": true,
-      "BossBGInfoKey": 3920080884
-    },
-    {
-      "Id": 44,
-      "RaidBossGroup": "Kitenger",
-      "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_Lobby",
-      "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_LobbyBG",
-      "RaidCharacterId": 7304400,
-      "BossCharacterId": [
-        7304400
-      ],
-      "Difficulty": "Hardcore",
-      "DifficultyOpenCondition": false,
-      "MaxPlayerCount": 1,
-      "StageCreateCostType": "ActionPoint",
-      "StageCreateCostAmount": 0,
-      "StageEnterCostType": "ActionPoint",
-      "StageEnterCostAmount": 0,
-      "RaidRoomLifeTime": 3600000,
-      "BattleDuration": 180000,
-      "GroundId": 204300004,
-      "GroundDevName": "Kitenger",
-      "EnterTimeLine": null,
-      "TacticEnvironment": "None",
-      "SeasonDamageRatio": 720,
-      "DefaultClearScore": 2000000,
-      "MaximumScore": 2304000,
-      "PerSecondMinusScore": 32000,
-      "HPPercentScore": 2984000,
-      "RaidRewardGroupId": 103,
-      "RaidRewardDevName": "Binah_Raid_Reward_Dummy",
-      "BattleReadyTimelinePath": [
-        "Timeline/Raid_Binah_Timeline_Intro_V2"
-      ],
-      "BattleReadyTimelinePhaseStart": [
-        0
-      ],
-      "BattleReadyTimelinePhaseEnd": [
-        100
-      ],
-      "VictoryTimelinePath": "Timeline/Timeline_Victory_Binah",
-      "PhaseChangeTimelinePath": "Timeline/Timeline_PhaseChange_Binah",
-      "TimeLinePhase": 2,
-      "EnterScenarioKey": 0,
-      "ClearScenarioKey": 0,
-      "ReviveParcelType": "Currency",
-      "ReviveParcelId": 1,
-      "ReviveParcelDevName": "GOLD",
-      "ReviveParcelAmount": 1800,
-      "InitSupplyCount": 2,
-      "ShowSkillCard": true,
-      "BossBGInfoKey": 3920080884
-    },
-    {
-      "Id": 45,
-      "RaidBossGroup": "Kitenger",
-      "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_Lobby",
-      "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Hieronymus_LobbyBG",
-      "RaidCharacterId": 7304500,
-      "BossCharacterId": [
-        7304500
-      ],
-      "Difficulty": "Extreme",
-      "DifficultyOpenCondition": false,
-      "MaxPlayerCount": 1,
-      "StageCreateCostType": "ActionPoint",
-      "StageCreateCostAmount": 0,
-      "StageEnterCostType": "ActionPoint",
-      "StageEnterCostAmount": 0,
-      "RaidRoomLifeTime": 3600000,
-      "BattleDuration": 180000,
-      "GroundId": 204300005,
-      "GroundDevName": "Kitenger",
-      "EnterTimeLine": null,
-      "TacticEnvironment": "None",
-      "SeasonDamageRatio": 720,
-      "DefaultClearScore": 4000000,
-      "MaximumScore": 4608000,
-      "PerSecondMinusScore": 64000,
-      "HPPercentScore": 5968000,
-      "RaidRewardGroupId": 104,
-      "RaidRewardDevName": "Binah_Raid_Reward_Dummy",
-      "BattleReadyTimelinePath": [
-        "Timeline/Raid_Binah_Timeline_Intro_V2"
-      ],
-      "BattleReadyTimelinePhaseStart": [
-        0
-      ],
-      "BattleReadyTimelinePhaseEnd": [
-        100
-      ],
-      "VictoryTimelinePath": "Timeline/Timeline_Victory_Binah",
-      "PhaseChangeTimelinePath": "Timeline/Timeline_PhaseChange_Binah",
-      "TimeLinePhase": 2,
-      "EnterScenarioKey": 0,
       "ClearScenarioKey": 0,
       "ReviveParcelType": "Currency",
       "ReviveParcelId": 1,
@@ -1595,6 +1446,60 @@
       "PerSecondMinusScore": 32000,
       "HPPercentScore": 2600000,
       "RaidRewardGroupId": 203,
+      "RaidRewardDevName": "Chesed_Raid_Reward_Dummy",
+      "BattleReadyTimelinePath": [
+        "Timeline/Timeline_Chesed_Outdoor_OP",
+        "Timeline/Timeline_Chesed_Outdoor_PhaseChange"
+      ],
+      "BattleReadyTimelinePhaseStart": [
+        0,
+        1
+      ],
+      "BattleReadyTimelinePhaseEnd": [
+        0,
+        1
+      ],
+      "VictoryTimelinePath": "Timeline/Timeline_Victory",
+      "PhaseChangeTimelinePath": "-1",
+      "TimeLinePhase": 2,
+      "EnterScenarioKey": 0,
+      "ClearScenarioKey": 0,
+      "ReviveParcelType": "Currency",
+      "ReviveParcelId": 1,
+      "ReviveParcelDevName": "GOLD",
+      "ReviveParcelAmount": 1800,
+      "InitSupplyCount": 2,
+      "ShowSkillCard": false,
+      "BossBGInfoKey": 3639039230
+    },
+    {
+      "Id": 1015,
+      "RaidBossGroup": "Chesed_Outdoor",
+      "PortraitPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Chesed_Lobby",
+      "BGPath": "UIs/02_Tactics/06_Raid/Boss_Portrait_Chesed_LobbyBG_Outdoor",
+      "RaidCharacterId": 7401500,
+      "BossCharacterId": [
+        7401500
+      ],
+      "Difficulty": "Extreme",
+      "DifficultyOpenCondition": false,
+      "MaxPlayerCount": 1,
+      "StageCreateCostType": "ActionPoint",
+      "StageCreateCostAmount": 0,
+      "StageEnterCostType": "ActionPoint",
+      "StageEnterCostAmount": 0,
+      "RaidRoomLifeTime": 3600000,
+      "BattleDuration": 240000,
+      "GroundId": 202200005,
+      "GroundDevName": "Chesed",
+      "EnterTimeLine": null,
+      "TacticEnvironment": "None",
+      "SeasonDamageRatio": 960,
+      "DefaultClearScore": 4000000,
+      "MaximumScore": 6144000,
+      "PerSecondMinusScore": 64000,
+      "HPPercentScore": 5200000,
+      "RaidRewardGroupId": 204,
       "RaidRewardDevName": "Chesed_Raid_Reward_Dummy",
       "BattleReadyTimelinePath": [
         "Timeline/Timeline_Chesed_Outdoor_OP",

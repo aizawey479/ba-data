@@ -1,0 +1,682 @@
+{
+  "Version": "0.9",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 2,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0.75,
+                  "z": 16.01
+                },
+                "MinCameraDistance": 42.00081,
+                "MaxCameraDistance": 42.00081,
+                "CameraForward": {
+                  "x": -0.8034655,
+                  "y": -0.426620662,
+                  "z": 0.4152567
+                }
+              },
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0.75,
+                  "z": 33.52
+                },
+                "MinCameraDistance": 42.00081,
+                "MaxCameraDistance": 42.00081,
+                "CameraForward": {
+                  "x": -0.8034655,
+                  "y": -0.426620662,
+                  "z": 0.4152567
+                }
+              }
+            ],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 1,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDeadKaitenFxMk0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "Events": [
+        {
+          "EventName": "SpawnKaitenranger",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnKaitenranger",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 100,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnKaitenrangerBoss",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartSection2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDeadDummyBoss"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 2,
+              "SetConditionCommandOnly": false,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "KillKaitenranger",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDeadDummyBoss"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "KillKaitenranger"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Kaitenranger_Black_HG_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "KillKaitenranger"
+              ],
+              "MovePoints": [],
+              "TileX": 34,
+              "TileY": 207,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.04,
+                "y": 30.13
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenranger"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Kaitenranger_Green_MG_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "KillKaitenranger"
+              ],
+              "MovePoints": [],
+              "TileX": 70,
+              "TileY": 212,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.11,
+                "y": 31.15
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenranger"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Kaitenranger_Yellow_SR_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "KillKaitenranger"
+              ],
+              "MovePoints": [],
+              "TileX": 55,
+              "TileY": 227,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.0100002289,
+                "y": 34.08
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenranger"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Kaitenranger_Pink_RL_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "KillKaitenranger"
+              ],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 220,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.97,
+                "y": 32.64
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenranger"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Kaitenranger_Red_AR_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [
+                "KillKaitenranger"
+              ],
+              "MovePoints": [],
+              "TileX": 56,
+              "TileY": 207,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.329999954,
+                "y": 30
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenranger"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Kaitenranger_Boss_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDeadDummyBoss"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 230,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.34,
+                "y": 34.58
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenrangerBoss"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [
+        {
+          "EventName": "InstantMove",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "DelayBeforeFadeOut": 0,
+              "DelayBeforeFadeIn": 1.8,
+              "VisualDelayFadeInStart": 0.2,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
+              "IsInstantMove": true,
+              "IsInterruptCurrentAction": true,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+              "ID": 7,
+              "MaxCameraSpeed": 3,
+              "RotationSpeed": 1,
+              "ZoomSpeed": 1,
+              "RailPoints": [
+                {
+                  "UseTableData": true,
+                  "Position": {
+                    "x": 0,
+                    "y": 1.85,
+                    "z": 91.39001
+                  },
+                  "MinCameraDistance": 52.9998474,
+                  "MaxCameraDistance": 52.9998474,
+                  "CameraForward": {
+                    "x": -0.697734833,
+                    "y": -0.387837529,
+                    "z": 0.602285743
+                  }
+                },
+                {
+                  "UseTableData": true,
+                  "Position": {
+                    "x": 0.45,
+                    "y": 1.85,
+                    "z": 101.07
+                  },
+                  "MinCameraDistance": 52.9998474,
+                  "MaxCameraDistance": 52.9998474,
+                  "CameraForward": {
+                    "x": -0.697734833,
+                    "y": -0.387837529,
+                    "z": 0.602285743
+                  }
+                }
+              ],
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 200,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "TimelinePath": "Timeline/Timeline_Kuro_Original_OP",
+              "UseGameTime": false,
+              "CanSkip": true,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnKaitenFxMk0",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 2000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnKaitenFxMk0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartSection3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 88.840004
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 13,
+                "Height": 5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 3,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "KaitenFxMk0_Normal",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDeadKaitenFxMk0",
+                "Kuro"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 54,
+              "TileY": 566,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.08,
+                "y": 101.89
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnKaitenFxMk0"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": []
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 16
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 29.46
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": true,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 89.00001
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 100
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
+}
