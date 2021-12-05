@@ -1,0 +1,3033 @@
+{
+  "Version": "1.0",
+  "Global": {
+    "Position": {
+      "x": 1.74,
+      "y": 0,
+      "z": 9.393
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 9,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 17.56
+                },
+                "MinCameraDistance": 35,
+                "MaxCameraDistance": 42,
+                "CameraForward": {
+                  "x": -0.8034659,
+                  "y": -0.426618159,
+                  "z": 0.415258348
+                }
+              },
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 42.47
+                },
+                "MinCameraDistance": 35,
+                "MaxCameraDistance": 42,
+                "CameraForward": {
+                  "x": -0.8034659,
+                  "y": -0.426618159,
+                  "z": 0.415258348
+                }
+              }
+            ],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 1,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
+            "GroupId": "WeekDungeonCombatStart_03_02",
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 1.74,
+        "y": 0,
+        "z": 15.3029995
+      },
+      "Events": [
+        {
+          "EventName": "Wave",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWave, Assembly-CSharp",
+              "UniqueId": "",
+              "ClearCondition": 1,
+              "Waves": [
+                {
+                  "SpawnPointCommandId": "1",
+                  "EndCount": 99,
+                  "WaveDelay": 0,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                },
+                {
+                  "SpawnPointCommandId": "2",
+                  "EndCount": 99,
+                  "WaveDelay": 1000,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                },
+                {
+                  "SpawnPointCommandId": "3",
+                  "EndCount": 99,
+                  "WaveDelay": 1000,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                },
+                {
+                  "SpawnPointCommandId": "4",
+                  "EndCount": 99,
+                  "WaveDelay": 1000,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                },
+                {
+                  "SpawnPointCommandId": "5",
+                  "EndCount": 99,
+                  "WaveDelay": 1000,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                },
+                {
+                  "SpawnPointCommandId": "6",
+                  "EndCount": 0,
+                  "WaveDelay": 0,
+                  "StartOperator": "",
+                  "ClearOperator": ""
+                }
+              ],
+              "StartWaveAction": null,
+              "ClearWaveAction": null,
+              "TotalCountChangedAction": null,
+              "AllClearAction": null,
+              "CommandID": "0",
+              "CurWaveNum": 0,
+              "CurrProcess": null,
+              "IsClearLastWave": false,
+              "TotalCount": 0,
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "EndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
+              "UniqueName": "",
+              "Step": 6,
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "BattleEndType": 4,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -2.84,
+            "y": 0,
+            "z": 17.653
+          },
+          "Forward": {
+            "x": -0.9871363,
+            "y": 0,
+            "z": -0.159881085
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -2.84,
+            "y": 0,
+            "z": 19.873
+          },
+          "Forward": {
+            "x": -0.9981348,
+            "y": 0,
+            "z": -0.061048355
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -3.37999988,
+            "y": 0,
+            "z": 21.953
+          },
+          "Forward": {
+            "x": 0.2890316,
+            "y": 0,
+            "z": 0.957319558
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -3.37999988,
+            "y": 0,
+            "z": 22.733
+          },
+          "Forward": {
+            "x": 0.529919267,
+            "y": 0,
+            "z": 0.8480481
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.2,
+            "y": 0,
+            "z": 16.203
+          },
+          "Forward": {
+            "x": -0.988651752,
+            "y": 0,
+            "z": 0.150225624
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -2.64,
+            "y": 0,
+            "z": 22.3429985
+          },
+          "Forward": {
+            "x": -0.9437433,
+            "y": 0,
+            "z": 0.330679029
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.72,
+            "y": 0,
+            "z": 22.6829987
+          },
+          "Forward": {
+            "x": 0.5000016,
+            "y": 0,
+            "z": -0.866024435
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.68999982,
+            "y": 0,
+            "z": 15.9129992
+          },
+          "Forward": {
+            "x": -0.9909832,
+            "y": 0,
+            "z": -0.133986115
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -2.84,
+            "y": 0,
+            "z": 29.493
+          },
+          "Forward": {
+            "x": -0.9998766,
+            "y": 0,
+            "z": -0.015707368
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -2.84,
+            "y": 0,
+            "z": 18.903
+          },
+          "Forward": {
+            "x": -0.9998766,
+            "y": 0,
+            "z": -0.015707368
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 3.13,
+            "y": 0,
+            "z": 20.612999
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -3.28,
+            "y": 0,
+            "z": 33.513
+          },
+          "Forward": {
+            "x": -0.9284858,
+            "y": 0,
+            "z": -0.3713678
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -2.85000014,
+            "y": 0,
+            "z": 30.853
+          },
+          "Forward": {
+            "x": -0.213030457,
+            "y": 0,
+            "z": -0.977045536
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 2.9,
+            "y": 0,
+            "z": 27.943
+          },
+          "Forward": {
+            "x": 0.5000016,
+            "y": 0,
+            "z": -0.866024435
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 3.24,
+            "y": 0,
+            "z": 29.963
+          },
+          "Forward": {
+            "x": 0.186695442,
+            "y": 0,
+            "z": 0.9824178
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_BigBox_01",
+          "Position": {
+            "x": -3.16,
+            "y": 0,
+            "z": 43.563
+          },
+          "Forward": {
+            "x": 0.0593081228,
+            "y": 0,
+            "z": -0.9982397
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -3.56000018,
+            "y": 0,
+            "z": 30.483
+          },
+          "Forward": {
+            "x": 0.5000016,
+            "y": 0,
+            "z": -0.866024435
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.28,
+            "y": 0,
+            "z": 19.293
+          },
+          "Forward": {
+            "x": -0.9437433,
+            "y": 0,
+            "z": 0.330679029
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.35,
+            "y": 0,
+            "z": 22.053
+          },
+          "Forward": {
+            "x": -0.9437433,
+            "y": 0,
+            "z": 0.330679029
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": 3.40999985,
+            "y": 0,
+            "z": 28.493
+          },
+          "Forward": {
+            "x": -0.213030457,
+            "y": 0,
+            "z": -0.977045536
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 3.13,
+            "y": 0,
+            "z": 20.223
+          },
+          "Forward": {
+            "x": -0.190809041,
+            "y": 0,
+            "z": 0.981627166
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.33000016,
+            "y": 0,
+            "z": 32.123
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.33000016,
+            "y": 0,
+            "z": 34.653
+          },
+          "Forward": {
+            "x": -0.027921645,
+            "y": 0,
+            "z": 0.9996101
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_Box_01",
+          "Position": {
+            "x": -3.57,
+            "y": 0,
+            "z": 42.2129974
+          },
+          "Forward": {
+            "x": 0.989015937,
+            "y": 0,
+            "z": -0.147809044
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 3.48,
+            "y": 0,
+            "z": 43.663002
+          },
+          "Forward": {
+            "x": 0.992861748,
+            "y": 0,
+            "z": 0.119270876
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 3.24,
+            "y": 0,
+            "z": 44.403
+          },
+          "Forward": {
+            "x": -0.312334925,
+            "y": 0,
+            "z": 0.949972034
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": -3.33000016,
+            "y": 0,
+            "z": 31.733
+          },
+          "Forward": {
+            "x": -0.190809041,
+            "y": 0,
+            "z": 0.981627166
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "SweeperFactory_KneeBox_01",
+          "Position": {
+            "x": 2.92,
+            "y": 0,
+            "z": 29.223
+          },
+          "Forward": {
+            "x": -0.270600528,
+            "y": 0,
+            "z": 0.9626917
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 267,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000024,
+                    "y": 48.822998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 35,
+              "TileY": 278,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1,
+                "y": 51.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 267,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.38418579e-07,
+                    "y": 48.822998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 278,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 51.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "4",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 45,
+                  "TileY": 267,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.9999998,
+                    "y": 48.822998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 45,
+              "TileY": 278,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1,
+                "y": 51.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 45,
+                  "TileY": 265,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.9999997,
+                    "y": 48.572998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 45,
+              "TileY": 283,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1,
+                "y": 52.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -3.57627869e-07,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 283,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 52.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000024,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 35,
+              "TileY": 283,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1,
+                "y": 52.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000048,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 35,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1,
+                "y": 53.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.76837158e-07,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 293,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 54.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000048,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 30,
+              "TileY": 295,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2,
+                "y": 54.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 46,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 1.24999952,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 46,
+              "TileY": 295,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.25,
+                "y": 54.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "3",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000048,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 35,
+              "TileY": 298,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1,
+                "y": 55.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "4",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -5.96046448e-07,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 300,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 55.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 45,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.999999344,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 45,
+              "TileY": 303,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1,
+                "y": 56.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 43,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.519999146,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 43,
+              "TileY": 310,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.52,
+                "y": 57.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 45,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.9999992,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 48,
+              "TileY": 310,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.5,
+                "y": 57.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 33,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.500001,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 33,
+              "TileY": 313,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.5,
+                "y": 58.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 33,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.500001,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 33,
+              "TileY": 318,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.5,
+                "y": 59.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 38,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -0.500000954,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 38,
+              "TileY": 320,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.5,
+                "y": 59.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 44,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.7499995,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 44,
+              "TileY": 290,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.75,
+                "y": 53.4929962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 48,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 1.49999952,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 48,
+              "TileY": 292,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.5,
+                "y": 53.9929962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "4",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000048,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 35,
+              "TileY": 294,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1,
+                "y": 54.2429962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.00000072,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 35,
+              "TileY": 300,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1,
+                "y": 55.4929962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -5.96046448e-07,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 296,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 54.7429962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 44,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.749999344,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 44,
+              "TileY": 300,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.75,
+                "y": 55.4929962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -7.15255737e-07,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 304,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 56.2429962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 48,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 1.4999994,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 48,
+              "TileY": 297,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.5,
+                "y": 54.9929962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 36,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -0.730000734,
+                    "y": 48.3129959
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 33,
+              "TileY": 302,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.48,
+                "y": 55.9929962
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 45,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.999999046,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 45,
+              "TileY": 320,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1,
+                "y": 59.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 41,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.249999166,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 41,
+              "TileY": 315,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.25,
+                "y": 58.503
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "1",
+                "3",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "Delay": 0,
+              "SpawnList": [
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                },
+                {
+                  "RandomAmount": 5000,
+                  "SpawnData": {
+                    "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_WEEK",
+                    "AIId": 0,
+                    "AppearAction": true
+                  }
+                }
+              ],
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 36,
+                  "TileY": 264,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -0.7500007,
+                    "y": 48.322998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 36,
+              "TileY": 308,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.75,
+                "y": 57.003
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 20
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 33
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 900,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 37.1
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}

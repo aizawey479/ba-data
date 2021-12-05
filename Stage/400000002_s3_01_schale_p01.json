@@ -1,0 +1,2185 @@
+{
+  "Version": "1.1",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": true,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 1,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "Boss_Run_A_1",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+            "ConditionID": "1"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+            "TriggerRateUnder": 9500,
+            "TriggerRateOver": 0,
+            "TriggerMaxCount": 1,
+            "ConditionID": "923"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "GroundCommandPlayScenario, Assembly-CSharp",
+            "ScenarioGroupIds": [
+              11007
+            ],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+            "IsInstantMove": false,
+            "IsInterruptCurrentAction": false,
+            "PointCommandID": "850",
+            "IsCommandWaitForMoveStart": false,
+            "IsCommandWaitForMoveEnd": false,
+            "CommandID": "23",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "Boss_ForceIdle_A",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+            "ConditionID": "1"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 0,
+            "Target": 1,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0.326,
+              "y": 0,
+              "z": 84.506
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 1,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 1
+            },
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+            "IsForceIdleOn": true,
+            "CommandID": "23",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+            "CharacterCommandIdList": [
+              "23"
+            ],
+            "CharacterSpawnTemplateIdList": [],
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 25
+      },
+      "Events": [
+        {
+          "EventName": "Spawn2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": "1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "21",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "921"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "22",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-3_Sc1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "921"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 56.11
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 12,
+                "Height": 3
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "23",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 2000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandPlayScenario, Assembly-CSharp",
+              "ScenarioGroupIds": [
+                11006
+              ],
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "tuto0_cover",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "suzumi",
+              "Shape": 0,
+              "Target": 5,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 1.73,
+                "y": 0,
+                "z": 50.579998
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 0.8,
+                "Height": 0.15
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandTutorial, Assembly-CSharp",
+              "CharacterId": 16003,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "DestroyObstacle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 49.2
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 12,
+                "Height": 0.1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "CommandID": "2000",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "StartNextSection",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "922"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "SectionID": 2,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 5.31,
+            "y": 0,
+            "z": 43.78
+          },
+          "Forward": {
+            "x": -0.9650165,
+            "y": 0,
+            "z": -0.2621893
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 5.49000025,
+            "y": 0,
+            "z": 44.6499977
+          },
+          "Forward": {
+            "x": -0.992332,
+            "y": 0,
+            "z": 0.123601355
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Mainstreet_Storesign",
+          "Position": {
+            "x": -2.53,
+            "y": 0,
+            "z": 52.45
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2000"
+          ],
+          "SubObstacles": [
+            {
+              "UniqueName": "Mainstreet_Storesign_Sub",
+              "Position": {
+                "x": -2.53,
+                "y": 0,
+                "z": 52.45
+              },
+              "Forward": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+              },
+              "ActiveEnemyPointIndices": [],
+              "ActivePlayerPointIndices": [
+                0
+              ],
+              "ConditionIdList": [],
+              "CommandIdList": [],
+              "SubObstacles": []
+            }
+          ]
+        },
+        {
+          "UniqueName": "Common_CarBlack",
+          "Position": {
+            "x": 5.81,
+            "y": 0,
+            "z": 53.8
+          },
+          "Forward": {
+            "x": 0.932930648,
+            "y": 0,
+            "z": 0.360056162
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -3.37,
+            "y": 0,
+            "z": 57.04
+          },
+          "Forward": {
+            "x": -0.8770622,
+            "y": 0,
+            "z": -0.48037678
+          },
+          "ActiveEnemyPointIndices": [
+            3
+          ],
+          "ActivePlayerPointIndices": [
+            2
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -4.35,
+            "y": 0,
+            "z": 57.91
+          },
+          "Forward": {
+            "x": -0.992332,
+            "y": 0,
+            "z": 0.123601355
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -1.09,
+            "y": 0,
+            "z": 56.61
+          },
+          "Forward": {
+            "x": -0.084895134,
+            "y": 0,
+            "z": 0.996389866
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": -0.28,
+            "y": 0,
+            "z": 62.17
+          },
+          "Forward": {
+            "x": 0.218435392,
+            "y": 0,
+            "z": 0.9758514
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 1.78,
+            "y": 0,
+            "z": 50.86
+          },
+          "Forward": {
+            "x": -0.119270407,
+            "y": 0,
+            "z": 0.9928618
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -3.74,
+            "y": 0,
+            "z": 63.09
+          },
+          "Forward": {
+            "x": 0.382683426,
+            "y": 0,
+            "z": 0.923879564
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -2.63,
+            "y": 0,
+            "z": 63.09
+          },
+          "Forward": {
+            "x": 0.06796583,
+            "y": 0,
+            "z": 0.997687638
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 2.13,
+            "y": 0,
+            "z": 63.78
+          },
+          "Forward": {
+            "x": 0.343612343,
+            "y": 0,
+            "z": 0.9391116
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": 2.5,
+            "y": 0,
+            "z": 54.4
+          },
+          "Forward": {
+            "x": 0.06209364,
+            "y": 0,
+            "z": 0.9980703
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 5.88,
+            "y": 0,
+            "z": 67.97
+          },
+          "Forward": {
+            "x": -0.416280955,
+            "y": 0,
+            "z": 0.909236
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarOrange",
+          "Position": {
+            "x": 5.71,
+            "y": 0,
+            "z": 62.32
+          },
+          "Forward": {
+            "x": 0.381024182,
+            "y": 0,
+            "z": 0.9245651
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2001"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 4.46,
+            "y": 0,
+            "z": 60.51
+          },
+          "Forward": {
+            "x": 0.534490168,
+            "y": 0,
+            "z": -0.84517473
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2000"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarBlack",
+          "Position": {
+            "x": 5.81,
+            "y": 0,
+            "z": 53.8
+          },
+          "Forward": {
+            "x": 0.932930648,
+            "y": 0,
+            "z": 0.360056162
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2001"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_VanBlue",
+          "Position": {
+            "x": -2.96,
+            "y": 0,
+            "z": 36.18
+          },
+          "Forward": {
+            "x": -0.9402881,
+            "y": 0,
+            "z": -0.340379626
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarOrange",
+          "Position": {
+            "x": 3.61,
+            "y": 0,
+            "z": 33.03
+          },
+          "Forward": {
+            "x": 0.381024182,
+            "y": 0,
+            "z": 0.9245651
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": -1.69,
+            "y": 0,
+            "z": 34.73
+          },
+          "Forward": {
+            "x": 0.59578985,
+            "y": 0,
+            "z": 0.803140342
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarBlack",
+          "Position": {
+            "x": -3.51,
+            "y": 0,
+            "z": 45.4
+          },
+          "Forward": {
+            "x": -0.5299194,
+            "y": 0,
+            "z": 0.848048031
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 2.24,
+            "y": 0,
+            "z": 59.65
+          },
+          "Forward": {
+            "x": 0.102792352,
+            "y": 0,
+            "z": 0.9947028
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 0.63,
+            "y": 0,
+            "z": 48.16
+          },
+          "Forward": {
+            "x": -0.0408291519,
+            "y": 0,
+            "z": 0.999166131
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarOrange",
+          "Position": {
+            "x": 7.21,
+            "y": 0,
+            "z": 78.55
+          },
+          "Forward": {
+            "x": -0.8854747,
+            "y": 0,
+            "z": -0.464687616
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent2-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "921"
+              ],
+              "SpawnCommandIdList": [
+                "21"
+              ],
+              "MovePoints": [],
+              "TileX": 60,
+              "TileY": 317,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.1,
+                "y": 54.2
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "21"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "921"
+              ],
+              "SpawnCommandIdList": [
+                "21"
+              ],
+              "MovePoints": [],
+              "TileX": 73,
+              "TileY": 335,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.69,
+                "y": 57.71
+              },
+              "Direction": {
+                "x": 0.05233534,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "21"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "921"
+              ],
+              "SpawnCommandIdList": [
+                "21"
+              ],
+              "MovePoints": [],
+              "TileX": 54,
+              "TileY": 334,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.08,
+                "y": 57.6
+              },
+              "Direction": {
+                "x": 0.05233534,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "21"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "921"
+              ],
+              "SpawnCommandIdList": [
+                "21"
+              ],
+              "MovePoints": [],
+              "TileX": 66,
+              "TileY": 335,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.25,
+                "y": 57.74
+              },
+              "Direction": {
+                "x": 0.05233534,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "21"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent2-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "922"
+              ],
+              "SpawnCommandIdList": [
+                "22"
+              ],
+              "MovePoints": [],
+              "TileX": 59,
+              "TileY": 348,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.92,
+                "y": 60.45
+              },
+              "Direction": {
+                "x": -0.0523355156,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "22"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "922"
+              ],
+              "SpawnCommandIdList": [
+                "22"
+              ],
+              "MovePoints": [],
+              "TileX": 49,
+              "TileY": 348,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.99,
+                "y": 60.4
+              },
+              "Direction": {
+                "x": -0.0523355156,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "22"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Wakamo_default_C",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "923"
+              ],
+              "SpawnCommandIdList": [
+                "23"
+              ],
+              "MovePoints": [],
+              "TileX": 53,
+              "TileY": 359,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.324776828,
+                "y": 62.6749725
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "23"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+      },
+      "Events": [
+        {
+          "EventName": "DestroyObstacle (1)",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "932"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "CommandID": "3000",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "DestroyObstacle (2)",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "933"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "CommandID": "3001",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "DestroyObstacle (3)",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": "2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "CommandID": "2001",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn3-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": "1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "31",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "tuto1_skill3_Spawn3-3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "931"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "hasumi",
+              "Shape": 0,
+              "Target": 5,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 71.49
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 12,
+                "Height": 6
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "ConditionID": "0"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetActiveSkillCardColider, Assembly-CSharp",
+              "Active": false,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandPlayScenario, Assembly-CSharp",
+              "ScenarioGroupIds": [
+                11003
+              ],
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "32",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "33",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "CommandID": "3003",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandPlayScenario, Assembly-CSharp",
+              "ScenarioGroupIds": [
+                11004
+              ],
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandAddSkillCost, Assembly-CSharp",
+              "cost": 10,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandChangeSkillCard, Assembly-CSharp",
+              "SkillCardIndex": 0,
+              "CharacterId": 13003,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 500,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandTutorial, Assembly-CSharp",
+              "CharacterId": 7910613,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetActiveSkillCardColider, Assembly-CSharp",
+              "Active": true,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "EndBattle",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "932"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "933"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "BattleEndType": 4,
+              "CommandID": "99",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Common_TireMiddle",
+          "Position": {
+            "x": 2.86,
+            "y": 0,
+            "z": 73.82
+          },
+          "Forward": {
+            "x": 0.978135347,
+            "y": 0,
+            "z": 0.207969308
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": -0.9,
+            "y": 0,
+            "z": 70.1
+          },
+          "Forward": {
+            "x": -0.137444735,
+            "y": 0,
+            "z": 0.99050945
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeMetal",
+          "Position": {
+            "x": 0.65,
+            "y": 0,
+            "z": 70.54
+          },
+          "Forward": {
+            "x": 0.275583863,
+            "y": 0,
+            "z": 0.961277
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarBlack",
+          "Position": {
+            "x": -8.04,
+            "y": 0,
+            "z": 73.92
+          },
+          "Forward": {
+            "x": -0.03681774,
+            "y": 0,
+            "z": 0.999322
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -1.89,
+            "y": 0,
+            "z": 74.72
+          },
+          "Forward": {
+            "x": -0.0920231,
+            "y": 0,
+            "z": 0.995756865
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": -3.64,
+            "y": 0,
+            "z": 75.29
+          },
+          "Forward": {
+            "x": 0.1598338,
+            "y": 0,
+            "z": 0.987143934
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_VanRed",
+          "Position": {
+            "x": -5.46,
+            "y": 0,
+            "z": 79.55
+          },
+          "Forward": {
+            "x": -0.9874138,
+            "y": 0,
+            "z": -0.158158064
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3000"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_VanBlue",
+          "Position": {
+            "x": 2.03,
+            "y": 0,
+            "z": 83
+          },
+          "Forward": {
+            "x": 0.9876979,
+            "y": 0,
+            "z": -0.156374231
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3001"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BaricadeJump",
+          "Position": {
+            "x": -3.18,
+            "y": 0,
+            "z": 72.15
+          },
+          "Forward": {
+            "x": -0.112682991,
+            "y": 0,
+            "z": 0.993631
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_TireMiddle",
+          "Position": {
+            "x": -4.6,
+            "y": 0,
+            "z": 78.6199951
+          },
+          "Forward": {
+            "x": -0.804479361,
+            "y": 0,
+            "z": -0.5939806
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_TireLow",
+          "Position": {
+            "x": -4.47,
+            "y": 0,
+            "z": 73.29
+          },
+          "Forward": {
+            "x": -0.285688341,
+            "y": 0,
+            "z": 0.9583226
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarBlack",
+          "Position": {
+            "x": 6.77,
+            "y": 0,
+            "z": 73.21
+          },
+          "Forward": {
+            "x": 0.8684584,
+            "y": 0,
+            "z": 0.49576202
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 3.47,
+            "y": 0,
+            "z": 80.17
+          },
+          "Forward": {
+            "x": -0.9892723,
+            "y": 0,
+            "z": 0.146083087
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 3.48,
+            "y": 0,
+            "z": 81.29
+          },
+          "Forward": {
+            "x": -0.906307757,
+            "y": 0,
+            "z": -0.42261833
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Baricade",
+          "Position": {
+            "x": 3.55,
+            "y": 0,
+            "z": 79.41
+          },
+          "Forward": {
+            "x": -0.6320294,
+            "y": 0,
+            "z": 0.7749444
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": -2.34,
+            "y": 0,
+            "z": 78.9
+          },
+          "Forward": {
+            "x": -0.9334553,
+            "y": 0,
+            "z": 0.3586937
+          },
+          "ActiveEnemyPointIndices": [
+            0
+          ],
+          "ActivePlayerPointIndices": [
+            1
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": -1.09,
+            "y": 0,
+            "z": 79.2
+          },
+          "Forward": {
+            "x": -0.9981348,
+            "y": 0,
+            "z": 0.06104839
+          },
+          "ActiveEnemyPointIndices": [
+            0
+          ],
+          "ActivePlayerPointIndices": [
+            1
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 1.15,
+            "y": 0,
+            "z": 78.89
+          },
+          "Forward": {
+            "x": -0.663926363,
+            "y": 0,
+            "z": -0.7477979
+          },
+          "ActiveEnemyPointIndices": [
+            0
+          ],
+          "ActivePlayerPointIndices": [
+            1
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Sandbag",
+          "Position": {
+            "x": 0.67,
+            "y": 0,
+            "z": 76.38
+          },
+          "Forward": {
+            "x": -0.9809551,
+            "y": 0,
+            "z": -0.1942344
+          },
+          "ActiveEnemyPointIndices": [
+            0
+          ],
+          "ActivePlayerPointIndices": [
+            1
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_Barrel",
+          "Position": {
+            "x": 1.18,
+            "y": 0,
+            "z": 81.95
+          },
+          "Forward": {
+            "x": -0.925474465,
+            "y": 0,
+            "z": 0.378810048
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_BarrelLying",
+          "Position": {
+            "x": -4.31,
+            "y": 0,
+            "z": 81.14
+          },
+          "Forward": {
+            "x": 0.173304215,
+            "y": 0,
+            "z": 0.984868348
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "3003"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": -5.67,
+            "y": 0,
+            "z": 73.33
+          },
+          "Forward": {
+            "x": -0.197657421,
+            "y": 0,
+            "z": 0.980271161
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2001"
+          ],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Common_CarWhite",
+          "Position": {
+            "x": 8.01,
+            "y": 0,
+            "z": 75.85
+          },
+          "Forward": {
+            "x": 0.168833062,
+            "y": 0,
+            "z": 0.985644639
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "2001"
+          ],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent3-1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "931"
+              ],
+              "SpawnCommandIdList": [
+                "31"
+              ],
+              "MovePoints": [],
+              "TileX": 54,
+              "TileY": 413,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.13,
+                "y": 73.41
+              },
+              "Direction": {
+                "x": 0.05233534,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "31"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "931"
+              ],
+              "SpawnCommandIdList": [
+                "31"
+              ],
+              "MovePoints": [],
+              "TileX": 42,
+              "TileY": 428,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.488,
+                "y": 76.4
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "31"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "931"
+              ],
+              "SpawnCommandIdList": [
+                "31"
+              ],
+              "MovePoints": [],
+              "TileX": 65,
+              "TileY": 427,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.122,
+                "y": 76.2709961
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "31"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_MG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "931"
+              ],
+              "SpawnCommandIdList": [
+                "31"
+              ],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 428,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.271,
+                "y": 76.466
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "31"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParent3-2",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "932"
+              ],
+              "SpawnCommandIdList": [
+                "32"
+              ],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 436,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.67,
+                "y": 77.9799957
+              },
+              "Direction": {
+                "x": 0.08715665,
+                "y": -0.9961947
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "32"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "932"
+              ],
+              "SpawnCommandIdList": [
+                "32"
+              ],
+              "MovePoints": [],
+              "TileX": 53,
+              "TileY": 437,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.26,
+                "y": 78.15
+              },
+              "Direction": {
+                "x": 0.08715665,
+                "y": -0.9961947
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "32"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "EnemyTSS_Crusader_PMC_C_TUTORIAL",
+                "AIId": 0,
+                "AppearAction": true
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "933"
+              ],
+              "SpawnCommandIdList": [
+                "33"
+              ],
+              "MovePoints": [],
+              "TileX": 50,
+              "TileY": 450,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.93,
+                "y": 80.72
+              },
+              "Direction": {
+                "x": -0.0523355156,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "33"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "",
+                "AIId": 0,
+                "AppearAction": false
+              },
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 57,
+              "TileY": 469,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.47,
+                "y": 84.57
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "850"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 40
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 64.01
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 84.01
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": []
+}
