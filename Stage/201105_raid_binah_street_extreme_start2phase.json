@@ -154,6 +154,7 @@
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 0.01,
+              "VisualDelayFadeInStart": 0,
               "CommandID": "0",
               "WaitExecuteEnd": false
             }
@@ -326,9 +327,9 @@
             "z": -11.6530037
           },
           "Forward": {
-            "x": 0.4690275,
+            "x": 0.46902895,
             "y": 0,
-            "z": -0.8831836
+            "z": -0.883182764
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -346,9 +347,9 @@
             "z": -15.1200027
           },
           "Forward": {
-            "x": 0.4690275,
+            "x": 0.46902895,
             "y": 0,
-            "z": -0.8831836
+            "z": -0.883182764
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -388,7 +389,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Binah_Street_Extreme",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [
@@ -440,6 +447,12 @@
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1550,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
               "SectionID": 3,
@@ -496,9 +509,9 @@
             "z": -96.28
           },
           "Forward": {
-            "x": 0.13609916,
+            "x": 0.136100814,
             "y": 0,
-            "z": -0.990695238
+            "z": -0.990695
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -516,9 +529,9 @@
             "z": -99.4799957
           },
           "Forward": {
-            "x": 0.122026816,
+            "x": 0.122028477,
             "y": 0,
-            "z": -0.9925268
+            "z": -0.9925266
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -536,9 +549,9 @@
             "z": -98.77
           },
           "Forward": {
-            "x": 0.5991238,
+            "x": 0.599124968,
             "y": 0,
-            "z": -0.8006564
+            "z": -0.800655544
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -556,9 +569,9 @@
             "z": -94.95
           },
           "Forward": {
-            "x": 0.165964723,
+            "x": 0.165966362,
             "y": 0,
-            "z": -0.986131668
+            "z": -0.9861314
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -576,9 +589,9 @@
             "z": -93.1199951
           },
           "Forward": {
-            "x": 0.371114165,
+            "x": 0.3711157,
             "y": 0,
-            "z": -0.928587258
+            "z": -0.9285866
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -598,7 +611,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
