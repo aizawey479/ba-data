@@ -67,7 +67,7 @@
           "Conditions": [
             {
               "$type": "GroundConditionWaitForSeconds, Assembly-CSharp",
-              "Milliseconds": 30000,
+              "Milliseconds": 15000,
               "ConditionID": "0"
             }
           ],
@@ -85,13 +85,18 @@
           "Conditions": [
             {
               "$type": "GroundConditionWaitForSeconds, Assembly-CSharp",
-              "Milliseconds": 32000,
+              "Milliseconds": 16000,
               "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": null,
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "ArenaObstacle01",
               "SkillLevel": 1,
@@ -146,9 +151,9 @@
         {
           "UniqueName": "School_Chair",
           "Position": {
-            "x": 1.70000017,
+            "x": -1.2,
             "y": 0,
-            "z": 31.28
+            "z": 33.5599976
           },
           "Forward": {
             "x": 0.948006034,
@@ -168,9 +173,9 @@
         {
           "UniqueName": "School_Chair",
           "Position": {
-            "x": -1.2,
+            "x": -1.7,
             "y": 0,
-            "z": 27.92
+            "z": 26
           },
           "Forward": {
             "x": -0.9480097,
