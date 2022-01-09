@@ -36,9 +36,30 @@
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
-            "SectionID": 3,
+            "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "StartSection2",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDead1-2"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 2,
+            "SetConditionCommandOnly": false,
+            "CommandID": "",
             "WaitExecuteEnd": false
           }
         ]
@@ -72,7 +93,7 @@
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead3-2"
+            "ConditionID": "ConditionDead2-2"
           }
         ],
         "Commands": [
@@ -87,7 +108,12 @@
       {
         "EventName": "1-1AreaOn",
         "Operator": 0,
-        "Conditions": [],
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
         "Commands": [
           {
             "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
@@ -131,7 +157,35 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDead1-2"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 33
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 11
+            },
+            "InactivateWhenStart": false,
             "ConditionID": ""
           }
         ],
@@ -183,40 +237,7 @@
       {
         "EventName": "3-1AreaOn",
         "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-2"
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-            "SpawnTemplateId": "",
-            "Shape": 1,
-            "Target": 4,
-            "Trigger": 0,
-            "StayTime": 0,
-            "Position": {
-              "x": 0,
-              "y": 0,
-              "z": 53
-            },
-            "Rect": {
-              "Direction": {
-                "x": 0,
-                "y": 0
-              },
-              "Width": 10,
-              "Height": 1
-            },
-            "Circle": {
-              "Radius": 11
-            },
-            "InactivateWhenStart": false,
-            "ConditionID": ""
-          }
-        ],
+        "Conditions": [],
         "Commands": [
           {
             "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
@@ -272,303 +293,525 @@
         "y": 0,
         "z": 5
       },
-      "Events": [],
-      "Obstacles": [
+      "Events": [
         {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": 3.327,
-            "y": 0,
-            "z": 10.996
-          },
-          "Forward": {
-            "x": -0.8908006,
-            "y": 0,
-            "z": -0.4543944
-          },
-          "ActiveEnemyPointIndices": [
-            3
+          "EventName": "Spawn1-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
           ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn1-1",
+              "WaitExecuteEnd": false
+            }
+          ]
         },
         {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 0.37,
-            "y": 0,
-            "z": 11.05
-          },
-          "Forward": {
-            "x": 0.3691254,
-            "y": 0,
-            "z": 0.9293796
-          },
-          "ActiveEnemyPointIndices": [
-            1
+          "EventName": "Spawn1-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead1-1"
+            }
           ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -2.85,
-            "y": 0,
-            "z": 7.45
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": -2.33,
-            "y": 0,
-            "z": 10.61
-          },
-          "Forward": {
-            "x": 0.481870681,
-            "y": 0,
-            "z": 0.87624234
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 2.88,
-            "y": 0,
-            "z": 7.45
-          },
-          "Forward": {
-            "x": -0.9449297,
-            "y": 0,
-            "z": -0.3272734
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": 3.07,
-            "y": 0,
-            "z": 14.51
-          },
-          "Forward": {
-            "x": -0.9692972,
-            "y": 0,
-            "z": 0.245892256
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -2.38,
-            "y": 0,
-            "z": 14.28
-          },
-          "Forward": {
-            "x": -0.309634835,
-            "y": 0,
-            "z": 0.950855553
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": -3.191607,
-            "y": 0,
-            "z": 18.2210655
-          },
-          "Forward": {
-            "x": -0.9730776,
-            "y": 0,
-            "z": 0.2304777
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 3.24,
-            "y": 0,
-            "z": 19.13
-          },
-          "Forward": {
-            "x": 0.9941496,
-            "y": 0,
-            "z": -0.108011819
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": 0.56,
-            "y": 0,
-            "z": 16.65
-          },
-          "Forward": {
-            "x": 0.0759178847,
-            "y": 0,
-            "z": -0.997114062
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -2.87,
-            "y": 0,
-            "z": 22.73
-          },
-          "Forward": {
-            "x": 0.999662161,
-            "y": 0,
-            "z": -0.0259913616
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 0.31,
-            "y": 0,
-            "z": 20.89
-          },
-          "Forward": {
-            "x": -0.309634835,
-            "y": 0,
-            "z": 0.950855553
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 3.25,
-            "y": 0,
-            "z": 23.08
-          },
-          "Forward": {
-            "x": -0.9917114,
-            "y": 0,
-            "z": 0.128485546
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn1-2",
+              "WaitExecuteEnd": false
+            }
+          ]
         }
       ],
+      "Obstacles": [],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent1-1",
-          "SpawnPoints": []
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 32,
+              "TileY": 87,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.68,
+                "y": 12.95
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 89,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.1,
+                "y": 13.32
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 89,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.65,
+                "y": 13.25
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 112,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.9,
+                "y": 17.93
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 113,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.32,
+                "y": 18.11
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "A",
+              "SpawnConditionIdList": [
+                "ConditionDead1-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 51,
+              "TileY": 114,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.28,
+                "y": 18.3800011
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
         },
         {
           "GroupName": "SpawnPointParent1-2",
-          "SpawnPoints": []
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_E",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 32,
+              "TileY": 135,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.61,
+                "y": 22.41
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 122,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.43,
+                "y": 19.99
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 23,
+              "TileY": 145,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.33,
+                "y": 24.55
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 39,
+              "TileY": 145,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.3,
+                "y": 24.4
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 50,
+              "TileY": 143,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.93,
+                "y": 24.17
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_MG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 33,
+              "TileY": 146,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.47,
+                "y": 24.65
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
         }
       ]
     },
@@ -633,9 +876,57 @@
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2-1"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 43
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 10
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
             }
           ],
           "Commands": [
+            {
+              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "DelayBeforeFadeOut": 0,
+              "DelayBeforeFadeIn": 1.5,
+              "VisualDelayFadeInStart": 0,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 0,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "TimelinePath": "Timeline/Timeline_KaitenFX01_Kaitenranger_AR_OP",
+              "UseGameTime": false,
+              "CanSkip": true,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
@@ -649,11 +940,559 @@
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent2-1",
-          "SpawnPoints": []
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_E",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 29,
+              "TileY": 197,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.2,
+                "y": 34.89
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 191,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.07,
+                "y": 33.78
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 49,
+              "TileY": 194,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.83,
+                "y": 34.28
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_MG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 30,
+              "TileY": 209,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -2.01,
+                "y": 37.37
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_MG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 35,
+              "TileY": 218,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.92,
+                "y": 39.0100021
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_MG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 51,
+              "TileY": 214,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.21,
+                "y": 38.39
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 44,
+              "TileY": 220,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.71,
+                "y": 39.44
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
         },
         {
           "GroupName": "SpawnPointParent2-2",
-          "SpawnPoints": []
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 33,
+              "TileY": 288,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.37,
+                "y": 53.08
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 47,
+              "TileY": 290,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.49,
+                "y": 53.48
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_MG_M",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 32,
+              "TileY": 303,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.51,
+                "y": 56.17
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_E",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 30,
+              "TileY": 298,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.97,
+                "y": 55.1200027
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_MG_M",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 31,
+              "TileY": 307,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.72,
+                "y": 56.89
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Terror_GasMask_Arius_GL_E",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 308,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.62,
+                "y": 57.03
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "KaitenFX01_Kaitenranger_AR_C",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "D",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 306,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.05,
+                "y": 56.7600021
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
         }
       ]
     },
@@ -664,455 +1503,16 @@
         "y": 0,
         "z": 45
       },
-      "Events": [
-        {
-          "EventName": "Spawn3-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": ""
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "",
-              "Shape": 1,
-              "Target": 4,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 53
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 10,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 11
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": ""
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 100,
-              "CommandID": "CommandSpawn3-1",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Spawn3-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "ConditionDead3-1"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 100,
-              "CommandID": "CommandSpawn3-2",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
-              "propKey": 1,
-              "animationName": "Sb_02_hotsprings_prop_21_1_Destroy",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        }
-      ],
-      "Obstacles": [
-        {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": -2.48,
-            "y": 0,
-            "z": 50.78
-          },
-          "Forward": {
-            "x": -0.9995232,
-            "y": 0,
-            "z": -0.0308759455
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": 3.52,
-            "y": 0,
-            "z": 54.86
-          },
-          "Forward": {
-            "x": -0.9997291,
-            "y": 0,
-            "z": 0.0232752562
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 0.68,
-            "y": 0,
-            "z": 51.03
-          },
-          "Forward": {
-            "x": 0.0167436562,
-            "y": 0,
-            "z": 0.9998598
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 0.23,
-            "y": 0,
-            "z": 57.16
-          },
-          "Forward": {
-            "x": 0.4622552,
-            "y": 0,
-            "z": 0.886746943
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -2.89,
-            "y": 0,
-            "z": 58.78
-          },
-          "Forward": {
-            "x": 0.997855365,
-            "y": 0,
-            "z": -0.0654572248
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -2.95,
-            "y": 0,
-            "z": 46.7
-          },
-          "Forward": {
-            "x": 0.8673983,
-            "y": 0,
-            "z": -0.497614443
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": 3.15,
-            "y": 0,
-            "z": 62.04
-          },
-          "Forward": {
-            "x": -0.14827843,
-            "y": 0,
-            "z": -0.988945663
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 3.61,
-            "y": 0,
-            "z": 58.96
-          },
-          "Forward": {
-            "x": 0.279352784,
-            "y": 0,
-            "z": 0.960188568
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -2.76,
-            "y": 0,
-            "z": 61.96
-          },
-          "Forward": {
-            "x": 0.279352784,
-            "y": 0,
-            "z": 0.960188568
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": -0.48,
-            "y": 0,
-            "z": 54.16
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -1.07,
-            "y": 0,
-            "z": 46.83
-          },
-          "Forward": {
-            "x": 0.9981265,
-            "y": 0,
-            "z": 0.061184328
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": 3.12,
-            "y": 0,
-            "z": 46.51
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -0.6,
-            "y": 0,
-            "z": 51.16
-          },
-          "Forward": {
-            "x": 0.279352784,
-            "y": 0,
-            "z": 0.960188568
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        }
-      ],
+      "Events": [],
+      "Obstacles": [],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent3-1",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "E",
-              "SpawnConditionIdList": [
-                "ConditionDead3-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 40,
-              "TileY": 271,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0,
-                "y": 49.7
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         },
         {
           "GroupName": "SpawnPointParent3-2",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 38,
-              "TileY": 315,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -0.43,
-                "y": 58.4
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         }
       ]
     }
@@ -1124,7 +1524,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 32.96
+        "y": 0
       },
       "Forward": {
         "x": 0,
@@ -1139,7 +1539,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 36.96
+        "y": 24
       },
       "Forward": {
         "x": 0,
@@ -1154,7 +1554,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 44
+        "y": 60
       },
       "Forward": {
         "x": 0,

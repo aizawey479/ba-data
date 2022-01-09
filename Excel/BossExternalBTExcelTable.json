@@ -26539,6 +26539,176 @@
       "BehaviorRate": 10000,
       "ExternalBehavior": "ChangePhase",
       "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 0,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "ApplyLogicEffectTemplateId",
+      "TriggerArgument": "Dummy_HOD_TemporaryDeadChangePhase01",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 1,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "ApplyLogicEffectTemplateId",
+      "TriggerArgument": "Dummy_HOD_TemporaryDeadChangePhase01",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 5000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 5000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "4",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Sequence",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "4",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ClearNormalSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "400",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckActiveGaugeOver",
+      "TriggerArgument": "100",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "4"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "50000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 2,
+      "ExternalBTNodeType": "Instant",
+      "ExternalBTTrigger": "HPUnder",
+      "TriggerArgument": "50000",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ChangePhase",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "2",
+      "BehaviorRate": 3333,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3333,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "SubNode",
+      "ExternalBTTrigger": "None",
+      "TriggerArgument": null,
+      "BehaviorRate": 3334,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "3"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "4",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "2"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "Sequence",
+      "ExternalBTTrigger": "UseNormalSkill",
+      "TriggerArgument": "4",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "ClearNormalSkill",
+      "BehaviorArgument": "0"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckPeriod",
+      "TriggerArgument": "200",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "AddActiveGauge",
+      "BehaviorArgument": "1"
+    },
+    {
+      "CharacterId": 7306100,
+      "AIPhase": 3,
+      "ExternalBTNodeType": "Selector",
+      "ExternalBTTrigger": "CheckActiveGaugeOver",
+      "TriggerArgument": "100",
+      "BehaviorRate": 10000,
+      "ExternalBehavior": "UseSelectExSkill",
+      "BehaviorArgument": "4"
     }
   ]
 }

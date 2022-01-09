@@ -36,30 +36,9 @@
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
-            "SectionID": 1,
-            "SetConditionCommandOnly": false,
-            "CommandID": "0",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "StartSection2",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead1-2"
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
             "SectionID": 2,
             "SetConditionCommandOnly": false,
-            "CommandID": "",
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -93,7 +72,7 @@
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead3-2"
+            "ConditionID": "ConditionDead3-1"
           }
         ],
         "Commands": [
@@ -106,115 +85,12 @@
         ]
       },
       {
-        "EventName": "1-1AreaOn",
+        "EventName": "2-2AreaOn",
         "Operator": 0,
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
             "ConditionID": ""
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "1-2AreaOn",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead1-1"
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "2-1AreaOn",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead1-2"
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-            "SpawnTemplateId": "",
-            "Shape": 1,
-            "Target": 4,
-            "Trigger": 0,
-            "StayTime": 0,
-            "Position": {
-              "x": 0,
-              "y": 0,
-              "z": 33
-            },
-            "Rect": {
-              "Direction": {
-                "x": 0,
-                "y": 0
-              },
-              "Width": 10,
-              "Height": 1
-            },
-            "Circle": {
-              "Radius": 11
-            },
-            "InactivateWhenStart": false,
-            "ConditionID": ""
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          },
-          {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
-            "OnOff": true,
-            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
-            "CommandID": "",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "2-2AreaOn",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-1"
           }
         ],
         "Commands": [
@@ -297,13 +173,39 @@
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead3-1"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "",
+            "Shape": 1,
+            "Target": 4,
+            "Trigger": 0,
+            "StayTime": 0,
+            "Position": {
+              "x": 0,
+              "y": 0,
+              "z": 53
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 11
+            },
+            "InactivateWhenStart": false,
+            "ConditionID": ""
           }
         ],
         "Commands": [
           {
             "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
             "OnOff": false,
-            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
@@ -326,131 +228,25 @@
         "y": 0,
         "z": 5
       },
-      "Events": [
-        {
-          "EventName": "Spawn1-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": ""
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 100,
-              "CommandID": "CommandSpawn1-1",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Spawn1-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "ConditionDead1-1"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 100,
-              "CommandID": "CommandSpawn1-2",
-              "WaitExecuteEnd": false
-            }
-          ]
-        }
-      ],
+      "Events": [],
       "Obstacles": [
         {
           "UniqueName": "Hotsprings_Standsignboard",
           "Position": {
-            "x": -3.18,
+            "x": 3.327,
             "y": 0,
-            "z": 10.99
+            "z": 15.996
           },
           "Forward": {
-            "x": -0.0321861058,
+            "x": -0.8908006,
             "y": 0,
-            "z": -0.9994819
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -3.49,
-            "y": 0,
-            "z": 14.31
-          },
-          "Forward": {
-            "x": 0.997742355,
-            "y": 0,
-            "z": -0.06715769
+            "z": -0.4543944
           },
           "ActiveEnemyPointIndices": [
             3
           ],
           "ActivePlayerPointIndices": [
-            0,
             2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": -3.39,
-            "y": 0,
-            "z": 18.75
-          },
-          "Forward": {
-            "x": 0.437148124,
-            "y": 0,
-            "z": 0.8993895
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": 3.3,
-            "y": 0,
-            "z": 15.22
-          },
-          "Forward": {
-            "x": 0.199836016,
-            "y": 0,
-            "z": -0.9798294
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -459,20 +255,20 @@
         {
           "UniqueName": "Hotsprings_Bathbaskets",
           "Position": {
-            "x": 3.075,
+            "x": -2.85,
             "y": 0,
-            "z": 18.295
+            "z": 12.45
           },
           "Forward": {
-            "x": 0.999015749,
+            "x": 0,
             "y": 0,
-            "z": 0.0443570577
+            "z": 1
           },
           "ActiveEnemyPointIndices": [
-            3
+            1
           ],
           "ActivePlayerPointIndices": [
-            2
+            0
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -483,84 +279,18 @@
           "Position": {
             "x": 2.88,
             "y": 0,
-            "z": 22.52
+            "z": 12.45
           },
           "Forward": {
-            "x": 0.9581092,
+            "x": -0.9449297,
             "y": 0,
-            "z": 0.286403149
+            "z": -0.3272734
           },
           "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
             2
           ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -1.14,
-            "y": 0,
-            "z": 16.78
-          },
-          "Forward": {
-            "x": -0.6031405,
-            "y": 0,
-            "z": 0.797634959
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
           "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 1.18,
-            "y": 0,
-            "z": 20.93
-          },
-          "Forward": {
-            "x": 0.330962151,
-            "y": 0,
-            "z": 0.943644047
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -2.65,
-            "y": 0,
-            "z": 21.64
-          },
-          "Forward": {
-            "x": 0.648376763,
-            "y": 0,
-            "z": -0.761319637
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
+            3
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -569,36 +299,36 @@
         {
           "UniqueName": "Hotsprings_Baskets",
           "Position": {
-            "x": -0.9,
+            "x": 3.07,
             "y": 0,
-            "z": 14.5
+            "z": 19.51
           },
           "Forward": {
-            "x": -0.4271843,
+            "x": -0.9692972,
             "y": 0,
-            "z": -0.904164553
+            "z": 0.245892256
           },
           "ActiveEnemyPointIndices": [
-            0
+            2
           ],
           "ActivePlayerPointIndices": [
-            1
+            3
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
           "SubObstacles": []
         },
         {
-          "UniqueName": "Hotsprings_Bathbaskets",
+          "UniqueName": "Hotsprings_Standsignboard",
           "Position": {
-            "x": 3.02,
+            "x": -2.94,
             "y": 0,
-            "z": 10.05
+            "z": 23.2210655
           },
           "Forward": {
-            "x": 0.9899779,
+            "x": -0.9730776,
             "y": 0,
-            "z": 0.141222313
+            "z": 0.2304777
           },
           "ActiveEnemyPointIndices": [
             3
@@ -613,36 +343,14 @@
         {
           "UniqueName": "Hotsprings_Bundletree",
           "Position": {
-            "x": -0.32,
+            "x": 3.24,
             "y": 0,
-            "z": 11.06
+            "z": 24.13
           },
           "Forward": {
-            "x": -0.262605727,
+            "x": 0.9941496,
             "y": 0,
-            "z": 0.964903235
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": -2.95,
-            "y": 0,
-            "z": 6.93
-          },
-          "Forward": {
-            "x": -0.9963112,
-            "y": 0,
-            "z": 0.0858139
+            "z": -0.108011819
           },
           "ActiveEnemyPointIndices": [
             3
@@ -657,14 +365,14 @@
         {
           "UniqueName": "Hotsprings_Bathbaskets",
           "Position": {
-            "x": 2.48148513,
+            "x": -3.46,
             "y": 0,
-            "z": 7.303611
+            "z": 27.26
           },
           "Forward": {
-            "x": -0.441171348,
+            "x": -0.309634835,
             "y": 0,
-            "z": 0.8974229
+            "z": 0.950855553
           },
           "ActiveEnemyPointIndices": [
             1
@@ -680,442 +388,11 @@
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent1-1",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                "ConditionDead1-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 30,
-              "TileY": 87,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.91,
-                "y": 12.95
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                "ConditionDead1-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 40,
-              "TileY": 88,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -0.1,
-                "y": 13.12
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                "ConditionDead1-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 51,
-              "TileY": 87,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 2.15,
-                "y": 12.85
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                "ConditionDead1-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 49,
-              "TileY": 115,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.77,
-                "y": 18.41
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                "ConditionDead1-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 31,
-              "TileY": 114,
-              "PositionHeight": 0.19,
-              "Position": {
-                "x": -1.84,
-                "y": 18.35
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "A",
-              "SpawnConditionIdList": [
-                "ConditionDead1-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 40,
-              "TileY": 114,
-              "PositionHeight": 0.19,
-              "Position": {
-                "x": 0.02,
-                "y": 18.35
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         },
         {
           "GroupName": "SpawnPointParent1-2",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "B",
-              "SpawnConditionIdList": [
-                "ConditionDead1-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 30,
-              "TileY": 122,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.07,
-                "y": 19.98
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "B",
-              "SpawnConditionIdList": [
-                "ConditionDead1-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 41,
-              "TileY": 122,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0.13,
-                "y": 19.98
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "B",
-              "SpawnConditionIdList": [
-                "ConditionDead1-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 54,
-              "TileY": 122,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 2.79,
-                "y": 19.98
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "B",
-              "SpawnConditionIdList": [
-                "ConditionDead1-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 52,
-              "TileY": 144,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 2.39,
-                "y": 24.31
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "B",
-              "SpawnConditionIdList": [
-                "ConditionDead1-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 33,
-              "TileY": 144,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.43,
-                "y": 24.33
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn1-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         }
       ]
     },
@@ -1145,7 +422,7 @@
               "Position": {
                 "x": 0,
                 "y": 0,
-                "z": 33
+                "z": 27
               },
               "Rect": {
                 "Direction": {
@@ -1184,9 +461,453 @@
           ],
           "Commands": [
             {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
               "CommandID": "CommandSpawn2-2",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-3",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillA2-1",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedA1"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterA1"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_ImmuneCrowdControl_Ally_300s",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterA1Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillB2-1",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedB1"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterB1"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_CriticalChanceResistPoint_Ally_300s_300_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterB1Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillC2-1",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedC1"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterC1"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_CriticalChanceResistPoint_Ally_300s_400_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterC1Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillF2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterF1"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_100_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterF1Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillA",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedA"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterA"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_CriticalChanceResistPoint_Ally_300s_500_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterAPoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillB",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedB"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterB"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_CriticalChanceResistPoint_Ally_300s_600_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterBPoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillC",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedC"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterC"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_CriticalChanceResistPoint_Ally_300s_700_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterCPoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillD",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedD"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterD"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_300_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterDPoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillE",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedE"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterE"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_400_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterEPoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillF",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck2-2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterF"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_5000_Fixed_2Ch",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterFPoint",
               "WaitExecuteEnd": false
             }
           ]
@@ -1194,110 +915,22 @@
       ],
       "Obstacles": [
         {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 2.85,
-            "y": 0,
-            "z": 41.22
-          },
-          "Forward": {
-            "x": 0.9937125,
-            "y": 0,
-            "z": -0.11196214
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 0.85,
-            "y": 0,
-            "z": 34.55
-          },
-          "Forward": {
-            "x": -0.367812485,
-            "y": 0,
-            "z": -0.9299
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "Hotsprings_Standsignboard",
           "Position": {
-            "x": -3.2,
+            "x": -3.065,
             "y": 0,
-            "z": 30.12
+            "z": 41.04
           },
           "Forward": {
-            "x": -0.5515959,
+            "x": -0.681317,
             "y": 0,
-            "z": -0.834111452
+            "z": -0.731988549
           },
           "ActiveEnemyPointIndices": [
             0
           ],
           "ActivePlayerPointIndices": [
             1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -3.24,
-            "y": 0,
-            "z": 26.58
-          },
-          "Forward": {
-            "x": 0.969639361,
-            "y": 0,
-            "z": 0.244539335
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 2.68,
-            "y": 0,
-            "z": 26.3
-          },
-          "Forward": {
-            "x": -0.5421384,
-            "y": 0,
-            "z": 0.840289235
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -1306,9 +939,9 @@
         {
           "UniqueName": "Hotsprings_Baskets",
           "Position": {
-            "x": 2.78,
+            "x": 3.84,
             "y": 0,
-            "z": 34.5
+            "z": 41.896
           },
           "Forward": {
             "x": 0,
@@ -1326,176 +959,22 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -1.011,
-            "y": 0,
-            "z": 30.828
-          },
-          "Forward": {
-            "x": 0.615570068,
-            "y": 0,
-            "z": 0.7880822
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 0.766,
-            "y": 0,
-            "z": 30.69
-          },
-          "Forward": {
-            "x": 0.218433991,
-            "y": 0,
-            "z": 0.9758517
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": 3.35,
-            "y": 0,
-            "z": 30.09
-          },
-          "Forward": {
-            "x": 1,
-            "y": 0,
-            "z": 0
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -3.33,
-            "y": 0,
-            "z": 33.85
-          },
-          "Forward": {
-            "x": 0.4529217,
-            "y": 0,
-            "z": -0.8915503
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -2.4,
-            "y": 0,
-            "z": 35.05
-          },
-          "Forward": {
-            "x": 0.4529217,
-            "y": 0,
-            "z": -0.8915503
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "Hotsprings_Baskets",
           "Position": {
-            "x": -0.68,
+            "x": -3.273,
             "y": 0,
-            "z": 36.53
+            "z": 37.09
           },
           "Forward": {
-            "x": 0.0607234426,
+            "x": 0,
             "y": 0,
-            "z": -0.99815464
+            "z": 1
           },
           "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
             1
           ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": -2.6,
-            "y": 0,
-            "z": 38.75
-          },
-          "Forward": {
-            "x": 0.992687345,
-            "y": 0,
-            "z": -0.120713755
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
           "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Standsignboard",
-          "Position": {
-            "x": -1.06,
-            "y": 0,
-            "z": 41.49
-          },
-          "Forward": {
-            "x": 0.184621915,
-            "y": 0,
-            "z": -0.9828096
-          },
-          "ActiveEnemyPointIndices": [
             0
-          ],
-          "ActivePlayerPointIndices": [
-            1
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -1504,253 +983,14 @@
       ],
       "EnemySpawnPointGroupList": [
         {
-          "GroupName": "SpawnPointParent2-1",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 48,
-              "TileY": 188,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.53,
-                "y": 33
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 37,
-              "TileY": 188,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -0.68,
-                "y": 33
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 27,
-              "TileY": 188,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.51,
-                "y": 33
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 32,
-              "TileY": 214,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.561,
-                "y": 38.27
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 38,
-              "TileY": 214,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -0.46,
-                "y": 38.27
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 51,
-              "TileY": 214,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 2.1,
-                "y": 38.27
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
-        },
-        {
           "GroupName": "SpawnPointParent2-2",
           "SpawnPoints": [
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "SpawnTemplateId": "Soldier_OnsenDev_SG_E_808Event_05",
                 "AIId": 0,
-                "AppearAction": false,
+                "AppearAction": true,
                 "SkillLevel": {
                   "ExSkill": [],
                   "PublicSkill": [],
@@ -1758,18 +998,259 @@
                   "ExtraPassiveSkill": []
                 }
               },
-              "SpawnAIGroupId": "D",
+              "SpawnAIGroupId": "B",
               "SpawnConditionIdList": [
-                "ConditionDead2-2"
+                "ConditionDead2-1",
+                "AliveCheck2-1",
+                "HPChangedB1"
               ],
-              "SpawnCommandIdList": [],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterB1",
+                "UseSkillCharacterF1"
+              ],
               "MovePoints": [],
-              "TileX": 30,
-              "TileY": 222,
+              "TileX": 29,
+              "TileY": 177,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.01,
-                "y": 39.94
+                "x": -2.29,
+                "y": 30.86
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_OnsenDev_SG_E_808Event_05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1",
+                "AliveCheck2-1",
+                "HPChangedA1"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterA1",
+                "UseSkillCharacterF1"
+              ],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 177,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.08999991,
+                "y": 30.86
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_OnsenDev_SG_E_808Event_05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1",
+                "AliveCheck2-1",
+                "HPChangedC1"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterC1",
+                "UseSkillCharacterF1"
+              ],
+              "MovePoints": [],
+              "TileX": 37,
+              "TileY": 179,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.64,
+                "y": 31.33
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 194,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.43,
+                "y": 34.21
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterF1Point"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 194,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.430000037,
+                "y": 34.21
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterA1Point"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 194,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.43,
+                "y": 34.21
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterB1Point"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 194,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.430000037,
+                "y": 34.21
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterC1Point"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_OnsenDev_GL_E_808Event_05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2",
+                "AliveCheck2-2",
+                "HPChangedA"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterA",
+                "UseSkillCharacterF"
+              ],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 211,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.14,
+                "y": 37.61
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1787,7 +1268,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "SpawnTemplateId": "Soldier_OnsenDev_SG_E_808Event_05",
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
@@ -1797,18 +1278,88 @@
                   "ExtraPassiveSkill": []
                 }
               },
-              "SpawnAIGroupId": "D",
+              "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                "ConditionDead2-2"
+                "ConditionDead2-2",
+                "AliveCheck2-2",
+                "HPChangedB"
               ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 39,
-              "TileY": 222,
+              "SpawnCommandIdList": [
+                "UseSkillCharacterB",
+                "UseSkillCharacterF"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 23,
+                  "TileY": 192,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -3.36000013,
+                    "y": 33.98
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 4,
+              "TileY": 195,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.27,
-                "y": 39.94
+                "x": -7.21,
+                "y": 34.46
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_OnsenDev_SG_E_808Event_05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2",
+                "AliveCheck2-2",
+                "HPChangedD"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterD",
+                "UseSkillCharacterF"
+              ],
+              "MovePoints": [],
+              "TileX": 54,
+              "TileY": 193,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.84,
+                "y": 34.0100021
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1826,7 +1377,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "SpawnTemplateId": "Soldier_OnsenDev_SG_E_808Event_05",
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
@@ -1836,18 +1387,88 @@
                   "ExtraPassiveSkill": []
                 }
               },
-              "SpawnAIGroupId": "D",
+              "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                "ConditionDead2-2"
+                "ConditionDead2-2",
+                "AliveCheck2-2",
+                "HPChangedC"
               ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 48,
-              "TileY": 222,
+              "SpawnCommandIdList": [
+                "UseSkillCharacterC",
+                "UseSkillCharacterF"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 26,
+                  "TileY": 203,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.75,
+                    "y": 36.16
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 9,
+              "TileY": 206,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.64,
-                "y": 39.94
+                "x": -6.15,
+                "y": 36.7
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Soldier_OnsenDev_GL_E_808Event_05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-2",
+                "AliveCheck2-2",
+                "HPChangedE"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterE",
+                "UseSkillCharacterF"
+              ],
+              "MovePoints": [],
+              "TileX": 50,
+              "TileY": 218,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.08,
+                "y": 39.19
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1863,30 +1484,17 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 52,
-              "TileY": 239,
+              "TileX": 38,
+              "TileY": 193,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.4,
-                "y": 43.2600021
+                "x": -0.430000037,
+                "y": 34.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1894,7 +1502,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawn2-2"
+                "UseSkillCharacterAPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1902,30 +1510,17 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 34,
-              "TileY": 240,
+              "TileX": 38,
+              "TileY": 193,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.2,
-                "y": 43.42
+                "x": -0.43,
+                "y": 34.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1933,7 +1528,111 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawn2-2"
+                "UseSkillCharacterBPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 193,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.43,
+                "y": 34.06
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterCPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 193,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.43,
+                "y": 34.06
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterDPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 193,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.43,
+                "y": 34.06
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterEPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 38,
+              "TileY": 193,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.43,
+                "y": 34.06
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterFPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1953,41 +1652,55 @@
       },
       "Events": [
         {
+          "EventName": "Spawn3-1 (1)",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "DelayBeforeFadeOut": 0,
+              "DelayBeforeFadeIn": 1.5,
+              "VisualDelayFadeInStart": 2,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 500,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "TimelinePath": "Timeline\\Timeline_KaitenFX01_Kaitenranger_AR_OP",
+              "UseGameTime": false,
+              "CanSkip": false,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
           "EventName": "Spawn3-1",
           "Operator": 0,
           "Conditions": [
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
               "ConditionID": ""
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "",
-              "Shape": 1,
-              "Target": 4,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 53
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 10,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 11
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": ""
             }
           ],
           "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1500,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 100,
@@ -2015,48 +1728,217 @@
               "WaitExecuteEnd": false
             }
           ]
+        },
+        {
+          "EventName": "UseSkillC",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedC2"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck3-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterC2"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_1000_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterC2Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillD",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedD2"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck3-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterD2"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_1000_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterD2Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillE",
+          "Operator": 1,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
+              "TriggerRateUnder": 5000,
+              "TriggerRateOver": -9999999,
+              "TriggerMaxCount": 1,
+              "ConditionID": "HPChangedE2"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck3-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 900,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterE2"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_1000_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterE2Point",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkillF",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheck, Assembly-CSharp",
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "ConditionID": "AliveCheck3-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterF2"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Buff_StatChange_AttackPower_Ally_300s_5000_Fixed_2Ch",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterF2Point",
+              "WaitExecuteEnd": false
+            }
+          ]
         }
       ],
       "Obstacles": [
         {
-          "UniqueName": "Hotsprings_Bundletree",
+          "UniqueName": "Hotsprings_Standsignboard",
           "Position": {
-            "x": -0.54,
+            "x": 2.56,
             "y": 0,
-            "z": 47.57
+            "z": 59.6099968
           },
           "Forward": {
-            "x": -0.367812485,
+            "x": -0.9997291,
             "y": 0,
-            "z": -0.9299
+            "z": 0.0232752562
           },
           "ActiveEnemyPointIndices": [
-            0
+            3
           ],
           "ActivePlayerPointIndices": [
-            1
+            2
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
           "SubObstacles": []
         },
         {
-          "UniqueName": "Hotsprings_Standsignboard",
+          "UniqueName": "Hotsprings_Bundletree",
           "Position": {
-            "x": -3.15,
+            "x": -3.85,
             "y": 0,
-            "z": 53.84
+            "z": 63.529995
           },
           "Forward": {
-            "x": 0.991693258,
+            "x": 0.997855365,
             "y": 0,
-            "z": -0.1286252
+            "z": -0.0654572248
           },
           "ActiveEnemyPointIndices": [
-            2
+            3
           ],
           "ActivePlayerPointIndices": [
-            3
+            2
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -2065,20 +1947,20 @@
         {
           "UniqueName": "Hotsprings_Baskets",
           "Position": {
-            "x": -3.03,
+            "x": 2.19,
             "y": 0,
-            "z": 47.19
+            "z": 66.78999
           },
           "Forward": {
-            "x": 0.47582677,
+            "x": -0.14827843,
             "y": 0,
-            "z": 0.879539
+            "z": -0.988945663
           },
           "ActiveEnemyPointIndices": [
-            1
+            0
           ],
           "ActivePlayerPointIndices": [
-            0
+            1
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -2087,130 +1969,20 @@
         {
           "UniqueName": "Hotsprings_Bathbaskets",
           "Position": {
-            "x": 2.42,
+            "x": -3.72,
             "y": 0,
-            "z": 47.06
+            "z": 66.70999
           },
           "Forward": {
-            "x": 0.366411716,
+            "x": 0.279352784,
             "y": 0,
-            "z": -0.9304528
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -2.99,
-            "y": 0,
-            "z": 50.2600021
-          },
-          "Forward": {
-            "x": 0.9988971,
-            "y": 0,
-            "z": -0.04695404
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 0.45,
-            "y": 0,
-            "z": 51.2600021
-          },
-          "Forward": {
-            "x": -0.164245158,
-            "y": 0,
-            "z": -0.986419559
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Baskets",
-          "Position": {
-            "x": 2.25,
-            "y": 0,
-            "z": 49.77
-          },
-          "Forward": {
-            "x": 0.47582677,
-            "y": 0,
-            "z": 0.879539
+            "z": 0.960188568
           },
           "ActiveEnemyPointIndices": [
             1
           ],
           "ActivePlayerPointIndices": [
             0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -0.34,
-            "y": 0,
-            "z": 54.44
-          },
-          "Forward": {
-            "x": -0.9909926,
-            "y": 0,
-            "z": -0.133916527
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 2.81,
-            "y": 0,
-            "z": 53.92
-          },
-          "Forward": {
-            "x": -0.9903818,
-            "y": 0,
-            "z": 0.138361588
-          },
-          "ActiveEnemyPointIndices": [
-            2
-          ],
-          "ActivePlayerPointIndices": [
-            3
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -2219,36 +1991,14 @@
         {
           "UniqueName": "Hotsprings_Standsignboard",
           "Position": {
-            "x": 0.4,
+            "x": 3.77,
             "y": 0,
-            "z": 56.8
+            "z": 55.529995
           },
           "Forward": {
-            "x": 0.172414243,
+            "x": -0.9995232,
             "y": 0,
-            "z": -0.9850245
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": -2.87,
-            "y": 0,
-            "z": 58.78
-          },
-          "Forward": {
-            "x": 0.9983596,
-            "y": 0,
-            "z": -0.05725492
+            "z": -0.0308759455
           },
           "ActiveEnemyPointIndices": [
             3
@@ -2263,86 +2013,20 @@
         {
           "UniqueName": "Hotsprings_Baskets",
           "Position": {
-            "x": -2.85,
+            "x": -1.77,
             "y": 0,
-            "z": 62.3
+            "z": 58.91
           },
           "Forward": {
-            "x": 0.308777064,
+            "x": 0,
             "y": 0,
-            "z": -0.951134443
+            "z": 1
           },
           "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
             1
           ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 0.31,
-            "y": 0,
-            "z": 60.97
-          },
-          "Forward": {
-            "x": 0.37783733,
-            "y": 0,
-            "z": -0.925871968
-          },
-          "ActiveEnemyPointIndices": [
+          "ActivePlayerPointIndices": [
             0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bundletree",
-          "Position": {
-            "x": 2.76,
-            "y": 0,
-            "z": 59.09
-          },
-          "Forward": {
-            "x": 0.999105036,
-            "y": 0,
-            "z": -0.04229808
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hotsprings_Bathbaskets",
-          "Position": {
-            "x": 2.84,
-            "y": 0,
-            "z": 62.64
-          },
-          "Forward": {
-            "x": 0.366411716,
-            "y": 0,
-            "z": -0.9304528
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -2356,9 +2040,9 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "SpawnTemplateId": "Soldier_OnsenDev_RL_E_808Event_05",
                 "AIId": 0,
-                "AppearAction": false,
+                "AppearAction": true,
                 "SkillLevel": {
                   "ExSkill": [],
                   "PublicSkill": [],
@@ -2368,16 +2052,42 @@
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                "ConditionDead3-1"
+                "ConditionDead3-1",
+                "HPChangedC2",
+                "AliveCheck3-1"
               ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 27,
-              "TileY": 287,
+              "SpawnCommandIdList": [
+                "UseSkillCharacterC2",
+                "UseSkillCharacterF2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 225,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.19000018,
+                    "y": 40.5300026
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 238,
               "PositionHeight": 0,
               "Position": {
-                "x": -2.57,
-                "y": 52.94
+                "x": -1.57999992,
+                "y": 43.0300026
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2395,9 +2105,9 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "SpawnTemplateId": "Soldier_OnsenDev_RL_C_808Event_05",
                 "AIId": 0,
-                "AppearAction": false,
+                "AppearAction": true,
                 "SkillLevel": {
                   "ExSkill": [],
                   "PublicSkill": [],
@@ -2407,16 +2117,42 @@
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                "ConditionDead3-1"
+                "ConditionDead3-1",
+                "HPChangedD2",
+                "AliveCheck3-1"
               ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 39,
-              "TileY": 287,
+              "SpawnCommandIdList": [
+                "UseSkillCharacterD2",
+                "UseSkillCharacterF2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 40,
+                  "TileY": 227,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.07999974,
+                    "y": 40.88
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 40,
+              "TileY": 242,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.29,
-                "y": 52.94
+                "x": 0.04,
+                "y": 43.88
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2434,9 +2170,9 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
+                "SpawnTemplateId": "Soldier_OnsenDev_RL_E_808Event_05",
                 "AIId": 0,
-                "AppearAction": false,
+                "AppearAction": true,
                 "SkillLevel": {
                   "ExSkill": [],
                   "PublicSkill": [],
@@ -2446,16 +2182,42 @@
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                "ConditionDead3-1"
+                "ConditionDead3-1",
+                "HPChangedE2",
+                "AliveCheck3-1"
               ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 48,
-              "TileY": 287,
+              "SpawnCommandIdList": [
+                "UseSkillCharacterE2",
+                "UseSkillCharacterF2"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 50,
+                  "TileY": 223,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 1.98999965,
+                    "y": 40.12
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 52,
+              "TileY": 235,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.68,
-                "y": 52.94
+                "x": 2.36,
+                "y": 42.56
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2471,30 +2233,17 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "E",
-              "SpawnConditionIdList": [
-                "ConditionDead3-1"
-              ],
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 48,
-              "TileY": 313,
+              "TileX": 42,
+              "TileY": 217,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.501,
-                "y": 58.147
+                "x": 0.460000038,
+                "y": 38.96
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2502,7 +2251,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawn3-1"
+                "UseSkillCharacterC2Point"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2510,30 +2259,17 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "E",
-              "SpawnConditionIdList": [
-                "ConditionDead3-1"
-              ],
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 33,
-              "TileY": 314,
+              "TileX": 42,
+              "TileY": 217,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.31,
-                "y": 58.28
+                "x": 0.460000038,
+                "y": 38.96
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2541,51 +2277,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawn3-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
-        },
-        {
-          "GroupName": "SpawnPointParent3-2",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 30,
-              "TileY": 323,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.93,
-                "y": 60.02
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-2"
+                "UseSkillCharacterD2Point"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2593,30 +2285,17 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 37,
-              "TileY": 322,
+              "TileX": 42,
+              "TileY": 217,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.62,
-                "y": 59.809
+                "x": 0.460000038,
+                "y": 38.96
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2624,7 +2303,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawn3-2"
+                "UseSkillCharacterE2Point"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2632,30 +2311,17 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SMG_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 50,
-              "TileY": 324,
+              "TileX": 42,
+              "TileY": 217,
               "PositionHeight": 0,
               "Position": {
-                "x": 2.09,
-                "y": 60.35
+                "x": 0.460000038,
+                "y": 38.96
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -2663,85 +2329,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawn3-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 26,
-              "TileY": 341,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.82,
-                "y": 63.7
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "SchoolGirl_Sukeban_SR_M",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 49,
-              "TileY": 344,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.73,
-                "y": 64.29
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-2"
+                "UseSkillCharacterF2Point"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -2760,7 +2348,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 0
+        "y": 12
       },
       "Forward": {
         "x": 0,
@@ -2790,7 +2378,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 44
+        "y": 58.92
       },
       "Forward": {
         "x": 0,
@@ -2819,61 +2407,13 @@
   "TemporaryCanUseSkillAreas": [
     {
       "IsHideVisual": false,
-      "CommandId": "1-1Area",
-      "Radius": 1100,
-      "GroupTag": 1,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 13
-      },
-      "RadiusSqr": 0,
-      "Position2D": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "IsHideVisual": false,
-      "CommandId": "1-2Area",
-      "Radius": 1800,
-      "GroupTag": 1,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 20
-      },
-      "RadiusSqr": 0,
-      "Position2D": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "IsHideVisual": false,
-      "CommandId": "2-1Area",
-      "Radius": 1100,
-      "GroupTag": 1,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 33
-      },
-      "RadiusSqr": 0,
-      "Position2D": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "IsHideVisual": false,
       "CommandId": "2-2Area",
       "Radius": 1800,
       "GroupTag": 1,
       "Position": {
         "x": 0,
         "y": 0,
-        "z": 40
+        "z": 34
       },
       "RadiusSqr": 0,
       "Position2D": {

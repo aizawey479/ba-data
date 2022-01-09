@@ -3,6 +3,7 @@
     "$type": "MX.Logic.Data.PassiveSkillData, Assembly-CSharp",
     "Duration": -1,
     "MaxTriggerCount": 1,
+    "TryCount": 0,
     "TriggerCondition": {
       "$type": "MX.Logic.Data.PassiveTriggerData, Assembly-CSharp",
       "Event": 1,
@@ -99,13 +100,14 @@
               "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
               "StartDelay": 0,
               "LogicEffectGroupIds": [
-                "CH0165_Passive01_Effect01"
+                "CH0165_Passive01_Effect01",
+                "CH0165_WeaponPassive01_Effect01"
               ],
-              "name": "CH0165_Passive01_LevelOneTimeAbility01",
+              "name": "CH0165_WeaponPassive01_LevelOneTimeAbility01",
               "hideFlags": 0
             }
           ],
-          "EntityName": "CH0165Passive01Entity01",
+          "EntityName": "CH0165WeaponPassive01Entity01",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
@@ -174,7 +176,7 @@
           },
           "HighlightOption": 0,
           "CheckSpawnPositionMovable": false,
-          "name": "CH0165_Passive01_LevelTargetSkillEntity01",
+          "name": "CH0165_WeaponPassive01_LevelTargetSkillEntity01",
           "hideFlags": 0
         }
       },

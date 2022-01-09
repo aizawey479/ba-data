@@ -958,7 +958,8 @@
           "PrefabPath": "FX_Chesed_Force_Up_01_Variant",
           "name": "Chesed01_Ex02_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -1139,7 +1140,8 @@
           "PrefabPath": "FX_Common_Warning_01_Variant",
           "name": "ChesedDroid_Decagram_AR01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -1440,7 +1442,8 @@
           "PrefabPath": "FX_Common_Warning_01_Variant",
           "name": "ChesedDrone_Decagram_Missile01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -1731,7 +1734,8 @@
           "PrefabPath": "FX_Common_Warning_01_Variant",
           "name": "ChesedDrone_Decagram_Vulcan01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -3199,7 +3203,8 @@
           "PrefabPath": "FX_Common_Attack_Up_01_Variant",
           "name": "Droid_Decagram_AR01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -3396,7 +3401,8 @@
           "PrefabPath": "FX_Droid_Yoheki_RL_Time_Bomb_Variant",
           "name": "Droid_Decagram_RL01_Ex03_VisualEffect02_TargetBoom"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -4504,6 +4510,256 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 900098520,
+    "SkillUniqueNameToBind": "DroidKurokameARNormal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Soldier_AR_BulletEntity",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Wood_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect05_HitWood"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect04_HitStone"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect02_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Metal_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect03_HitMetal"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Droid_Kurokame_AR01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1940063862,
+    "SkillUniqueNameToBind": "DroidKurokameRLExSkill01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "DroidKurokameRLExSkill01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Droid_Yoheki_RL_Rocket_01_Variant",
+          "name": "Droid_Kurokame_RL01_Ex01_VisualSkillEntity01_Rocket"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "DroidKurokameRLExSkill01Entity02",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Droid_Yoheki_RL_Rocket_Hit_01_Variant",
+          "name": "Droid_Kurokame_RL01_Ex01_VisualEffect01_Explosion"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Droid_Kurokame_RL01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1808088173,
+    "SkillUniqueNameToBind": "DroidKurokameRLNormal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "RL_BulletEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Droid_Yoheki_RL_Rocket_01a_Variant",
+          "name": "RL01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_RL_Variant",
+          "name": "RL01_Normal01_VisualEffect01_Fire"
+        },
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 4,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_RL_back_Variant",
+          "name": "RL01_Normal01_VisualEffect03_BackFire"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "RL_BulletEntity02",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.5,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_RL_Normal_Variant",
+          "name": "RL01_Normal01_VisualEffect02_Hit_Explosion"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Droid_Kurokame_RL01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": 1921230288,
     "SkillUniqueNameToBind": "DroidYohekiAREx01",
     "MaxLevelToBind": 10,
@@ -4525,7 +4781,8 @@
           "PrefabPath": "FX_Common_Attack_Up_01_Variant",
           "name": "Droid_Yoheki_AR01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -4818,7 +5075,8 @@
           "PrefabPath": "FX_Droid_Yoheki_RL_Time_Bomb_Variant",
           "name": "Droid_Yoheki_RL01_Ex03_VisualEffect02_TargetBoom"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -7160,7 +7418,8 @@
           "PrefabPath": "FX_EnemyTSS_Hidra_Target_01_Variant",
           "name": "EnemyTSS_Apache01_Ex01_VisualEffect01_Target"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -9119,6 +9378,121 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1655250919,
+    "SkillUniqueNameToBind": "GaurdTurretKurokameGrenedeEx01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "GaurdTurret_Kurokame_Grenede01_ProjectileEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": -0.5
+            }
+          },
+          "FacingType": 2,
+          "PrefabPath": "FX_GuardTower_Decagram_Grenade_Projectile_Variant",
+          "name": "GaurdTurret_Kurokame_Grenede01_Ex01_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "GaurdTurret_Kurokame_Grenede01_CircleEntity01",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 5
+          },
+          "PrefabPath": "FX_GuardTurret_Kurokame_Grenede_Ex01_Hit_Explosion_Variant",
+          "name": "GaurdTurret_Kurokame_Grenede01_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "GaurdTurret_Kurokame_Grenede01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1123136957,
+    "SkillUniqueNameToBind": "GaurdTurretKurokameGrenedeNormalSkill01",
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "GuardTowerGrenade_LevelTargetProjectileEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_GuardTower_Decagram_Grenade_Projectile_Variant",
+          "name": "GuardTowerGrenade01_Normal01_VisualSkillEntity01"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "IsAttachToTarget": true
+          },
+          "PrefabPath": "FX_GuardTower_Decagram_Grenade_NomalAttack_Variant",
+          "name": "GuardTowerGrenade01_Normal01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "GuardTowerGrenade_LevelCircleAreaEntity01",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.25,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_GuardTower_Decagram_Grenade_Hit_Explosion_Variant",
+          "name": "GuardTowerGrenade01_Normal01_VisualEffect02"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "GaurdTurret_Kurokame_Grenede01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": 1720441237,
     "SkillUniqueNameToBind": "GoliathDecagramVulcanNormal01",
     "MaxLevelToBind": 10,
@@ -9523,7 +9897,8 @@
           "PrefabPath": "FX_HeavyTank01_Helmet_Cannon_NormalAttack_Hit_Explosion_Variant",
           "name": "HeavyTank01HelmetCannon01_Normal01_VisualEffect01_Hiteffect"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -10844,7 +11219,8 @@
           "PrefabPath": "FX_Hieronymus_Original_EX2_Debuff_Loop_Variant",
           "name": "Hieronymus01_Ex02_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -10887,7 +11263,8 @@
           "PrefabPath": "FX_Hieronymus_Original_EX3_Hit_Start_Variant",
           "name": "Hieronymus01_Ex03_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -10943,11 +11320,39 @@
           "PrefabPath": "FX_Hieronymus_Original_Aura_Hit_Start_Variant",
           "name": "Hieronymus01_Passive01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
     "name": "Hieronymus01_Passive01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 650002685,
+    "SkillUniqueNameToBind": "HieronymusScenarioEx01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HieronymusScenarioEx01Entity01",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Hieronymus_Original_EX1_Hit_Explosion_Variant",
+          "name": "Hieronymus01ScenarioBattle01_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "Hieronymus01ScenarioBattle01_Ex01_SkillVisual01"
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
@@ -10973,7 +11378,8 @@
           "PrefabPath": "FX_Hieronymus_Original_HolyRelic_Buff_Loop_Variant",
           "name": "HieronymusRelic01_Passive01_VisualEffect01_Loop"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -11003,7 +11409,8 @@
           "PrefabPath": "FX_Hieronymus_Original_HolyRelic02_Buff_Loop_Variant",
           "name": "HieronymusRelic01_Passive02_VisualEffect01_Loop"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -11151,6 +11558,1179 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 746770180,
+    "SkillUniqueNameToBind": "HODNormal01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HOD01_Normal01_LevelTargetProjectileEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 5,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Projectile_Variant",
+          "name": "HOD01_Normal01_VisualSkillEntity01"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HOD01_Normal01_LevelTargetProjectileEntity02",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 4,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Projectile_Variant",
+          "name": "HOD01_Normal01_VisualSkillEntity02"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_Original_Motion_Normal_Hit_Variant",
+          "name": "HOD01_Normal01_VIsualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HOD01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -717369966,
+    "SkillUniqueNameToBind": "HODGuardTower_CannonNormal01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODGuardTower_Cannon01_LevelTargetProjectileEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_GuardTower_Decagram_Grenade_Projectile_Variant",
+          "name": "HODGuardTower_Cannon01_VIsualSkillEntity01"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_HOD_GuardTower_Cannon_Normal_Attack_Muzzle_Variant",
+          "name": "HODGuardTower_Cannon01_VisualEffect01"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HeavyTank01_Helmet_Cannon_EX01_Hit_Explosion_Variant",
+          "name": "HODGuardTower_Cannon01_VisualEffect02"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODGuardTower_Cannon01_LevelCircleAreaEntity01"
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODGuardTower_Cannon01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 61324339,
+    "SkillUniqueNameToBind": "HODGuardTower_RailgunNormal01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODGuardTower_Railgun01_LevelTargetProjectileEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_GuardTower_Railgun_Normal_Attack_Projectile_Variant",
+          "name": "HODGuardTower_Railgun01_VIsualSkillEntity01"
+        },
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_HOD_GuardTower_Railgun_Normal_Attack_Charge_Variant",
+          "name": "HODGuardTower_Railgun01_VisualEffect01"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HeavyTank01_Helmet_Cannon_EX01_Hit_Explosion_Variant",
+          "name": "HODGuardTower_Cannon01_VisualEffect02"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HeavyTank01_Helmet_Cannon_EX01_Hit_Explosion_Variant",
+          "name": "HODGuardTower_Cannon01_VisualEffect02"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HeavyTank01_Helmet_Cannon_EX01_Hit_Explosion_Variant",
+          "name": "HODGuardTower_Cannon01_VisualEffect02"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HeavyTank01_Helmet_Cannon_EX01_Hit_Explosion_Variant",
+          "name": "HODGuardTower_Cannon01_VisualEffect02"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODGuardTower_Railgun01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 641875054,
+    "SkillUniqueNameToBind": "HODTemporaryTowerEx01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [
+      {
+        "$type": "MX.Visual.Data.ActionEffect, Assembly-CSharp",
+        "Frame": 6,
+        "TriggerTag": "ActionRelease",
+        "StartEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Shot_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect02"
+        }
+      }
+    ],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_Ex01_LevelTargetBounceProjectileEntity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Projectile_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualSkillEntity01"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_Ex01_LevelTargetBounceProjectileEntity02",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Projectile_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualSkillEntity02"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_Ex01_LevelTargetBounceProjectileEntity03",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Projectile_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualSkillEntity03"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_Ex01_LevelTargetBounceProjectileEntity04",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Projectile_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualSkillEntity04"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Ex01_Hit_Variant",
+          "name": "HODTemporaryTower01_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1276543630,
+    "SkillUniqueNameToBind": "HODTemporaryTowerExtraPassive01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_ExtraPassive01_LevelAuraEntity01",
+        "EndEffectAfterLoop": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "RemoveWhenLogicEffectIsOff": true,
+          "PrefabPath": "FX_HOD_TemporaryTower_Passive_SkillRange_01_Variant",
+          "name": "HODTemporaryTower01_ExtraPassive01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower01_ExtraPassive01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1276544029,
+    "SkillUniqueNameToBind": "HODTemporaryTowerExtraPassive02",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_ExtraPassive02_LevelAuraEntity01",
+        "EndEffectAfterLoop": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Passive_SkillRange_02_Variant",
+          "name": "HODTemporaryTower01_ExtraPassive02_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower01_ExtraPassive02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1276544424,
+    "SkillUniqueNameToBind": "HODTemporaryTowerExtraPassive03",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_ExtraPassive03_LevelAuraEntity01",
+        "EndEffectAfterLoop": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "RemoveWhenLogicEffectIsOff": true,
+          "PrefabPath": "FX_HOD_TemporaryTower_Passive_SkillRange_03_Variant",
+          "name": "HODTemporaryTower01_ExtraPassive03_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower01_ExtraPassive03_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1276544823,
+    "SkillUniqueNameToBind": "HODTemporaryTowerExtraPassive04",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_ExtraPassive04_LevelAuraEntity01",
+        "EndEffectAfterLoop": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "RemoveWhenLogicEffectIsOff": true,
+          "PrefabPath": "FX_HOD_TemporaryTower_Passive_SkillRange_04_Variant",
+          "name": "HODTemporaryTower01_ExtraPassive04_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower01_ExtraPassive04_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1276545218,
+    "SkillUniqueNameToBind": "HODTemporaryTowerExtraPassive05",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HODTemporaryTower01_ExtraPassive05_LevelAuraEntity01",
+        "EndEffectAfterLoop": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "RemoveWhenLogicEffectIsOff": true,
+          "PrefabPath": "FX_HOD_TemporaryTower_Passive_SkillRange_05_Variant",
+          "name": "HODTemporaryTower01_ExtraPassive05_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower01_ExtraPassive05_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1269891412,
+    "SkillUniqueNameToBind": "HODTemporaryTowerNormal01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Normal_Attack_Projectile_Variant",
+          "name": "HODTemporaryTower_VisualSkillEntity01"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Normal_Attack_Muzzle_Variant",
+          "name": "HODTemporaryTower_VisualEffect01"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Normal_Attack_Hit_Start_Variant",
+          "name": "HODTemporaryTower_VisualEffect02"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Normal_Attack_Hit_Start_Variant",
+          "name": "HODTemporaryTower_VisualEffect02"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Normal_Attack_Hit_Start_Variant",
+          "name": "HODTemporaryTower_VisualEffect02"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "AlignDirection": 2
+          },
+          "PrefabPath": "FX_HOD_TemporaryTower_Normal_Attack_Hit_Start_Variant",
+          "name": "HODTemporaryTower_VisualEffect02"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "HODTemporaryTower_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1948941402,
+    "SkillUniqueNameToBind": "KaitenFX01AREx01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01AREx01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 4,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_KaitenFX01_Kaitenranger_AR_EX01_Projectile_Missile_01_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Ex01_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01AREx01Entity02",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 5,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_KaitenFX01_Kaitenranger_AR_EX01_Projectile_Missile_02_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Ex01_VisualSkillEntity02"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01AREx01Entity03",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.5,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_Explosion_1M_Target_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01AREx01Entity04",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.5,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_Explosion_1M_Target_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "KaitenFX01_Kaitenranger_AR01_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -758774139,
+    "SkillUniqueNameToBind": "KaitenFX01AREx02",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01AREx02Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 4,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_KaitenFX01_Kaitenranger_AR_EX02_Projectile_Missile_01_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Ex02_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01AREx02Entity02",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_KaitenFX01_Kaitenranger_AR_EX02_Hit_Explosion_8M_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Ex02_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "KaitenFX01_Kaitenranger_AR01_Ex02_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1317115309,
+    "SkillUniqueNameToBind": "KaitenFX01ARNormal01",
+    "MaxLevelToBind": 1,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "Soldier_AR_BulletEntity",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Wood_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect05_HitWood"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect04_HitStone"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect02_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Metal_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect03_HitMetal"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "KaitenFX01_Kaitenranger_AR01_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1480292674,
+    "SkillUniqueNameToBind": "KaitenFX01ARPublic01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01ARPublic01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 4,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_KaitenFX01_Kaitenranger_AR_EX02_Projectile_Missile_01_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Public01_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "KaitenFX01ARPublic01Entity02",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_KaitenFX01_Kaitenranger_AR_EX02_Hit_Explosion_8M_Variant",
+          "name": "KaitenFX01_Kaitenranger_AR01_Public01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "KaitenFX01_Kaitenranger_AR01_Public01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": 1579366311,
     "SkillUniqueNameToBind": "KaitenFxMk0ExSkill01",
     "MaxLevelToBind": 10,
@@ -11251,7 +12831,8 @@
           "PrefabPath": "FX_KaitenFX_MK0_EX03_Shield_Loop_Variant",
           "name": "KaitenFxMk001_Ex03_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -11454,7 +13035,8 @@
           "PrefabPath": "FX_KaitenFX_MK0_Parts_01_End_Variant",
           "name": "KaitenFxMk001_Passive01_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -11504,7 +13086,8 @@
           "PrefabPath": "FX_KaitenFX_MK0_Parts_02_End_Variant",
           "name": "KaitenFxMk001_Passive02_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -11554,7 +13137,8 @@
           "PrefabPath": "FX_KaitenFX_MK0_Parts_03_End_Variant",
           "name": "KaitenFxMk001_Passive03_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -16863,7 +18447,8 @@
           "PrefabPath": "FX_Perorozilla_Original_EX1_Hit_Loop_Variant",
           "name": "Perorozilla01_Ex01_VisualEffectData01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -17312,7 +18897,8 @@
           "PrefabPath": "FX_Perorozilla_Peroro_MiddleSize_Death_Variant",
           "name": "Perorozilla01_Ex09_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -18540,7 +20126,8 @@
           "PrefabPath": "FX_Common_Snow_Mark_Apply_Variant",
           "name": "RoyalGuard_RedWinter_AR01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -18718,7 +20305,8 @@
           "PrefabPath": "FX_Common_Snow_Mark_Ing_Variant",
           "name": "RoyalGuard_RedWinter_GL01_Ex01_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -18734,7 +20322,8 @@
           "PrefabPath": "FX_Common_Snow_Mark_Apply_Variant",
           "name": "RoyalGuard_RedWinter_GL01_Ex01_VisualEffect04"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -19018,7 +20607,8 @@
           "PrefabPath": "FX_Common_Snow_Mark_Apply_Variant",
           "name": "RoyalGuard_RedWinter_AR01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -19958,7 +21548,8 @@
           "PrefabPath": "FX_SchoolGirl02_Sukeban_SR_Ex01_Motion_Buff_Ing_Variant",
           "name": "SchoolGirl_Sukeban_SR01_Ex01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -26636,7 +28227,8 @@
           "PrefabPath": "FX_Common_Snow_Mark_Ing_Variant",
           "name": "RoyalGuard_RedWinter_GL01_Ex01_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -26652,7 +28244,8 @@
           "PrefabPath": "FX_Common_Snow_Mark_Apply_Variant",
           "name": "RoyalGuard_RedWinter_GL01_Ex01_VisualEffect04"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -31648,7 +33241,8 @@
           "PrefabPath": "FX_Public_Aris_Original_Gauge03_Variant",
           "name": "Aris01_Ex01_VisualEffect02_GaugeOneToZero"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -31665,7 +33259,8 @@
           "PrefabPath": "FX_Public_Aris_Original_Gauge04_Variant",
           "name": "Aris01_Ex01_VisualEffect03_GaugeTwoToZero"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -31864,7 +33459,8 @@
           "PrefabPath": "FX_Public_Aris_Original_Pulsegun_Level1_Variant",
           "name": "Aris01_Public01_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -31895,7 +33491,8 @@
           "PrefabPath": "FX_Public_Aris_Original_Pulsegun_Level2_Variant",
           "name": "Aris01_Public01_VisualEffect04"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -32184,6 +33781,608 @@
     "LogicEffectVisuals": [],
     "BattleItems": [],
     "name": "Aru01_Public01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 1662005333,
+    "SkillUniqueNameToBind": "CH0084Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_CH0084_Original_01",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 4,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity01"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity02",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity03",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity04",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity05",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity06",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity07",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity08",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity09",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity10",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Ex01Entity11",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 7,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Projectile_01_Variant",
+          "name": "CH0084_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0.8,
+              "z": 0
+            }
+          },
+          "PrefabPath": "FX_Aru_Newyear_EX01_Hit_Explosion_01_Variant",
+          "name": "CH0084_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0084_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1652486249,
+    "SkillUniqueNameToBind": "CH0084Normal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "SR_BulletEntity",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_SR_Normal_Variant",
+          "name": "SR01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_SR_Variant",
+          "name": "SR01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            },
+            "AlignRotationOffset": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            },
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Wood_Hit_SR_Normal_Variant",
+          "name": "SR01_Normal01_VisualEffect02_HitWood"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            },
+            "AlignRotationOffset": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            },
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Stone_Hit_SR_Normal_Variant",
+          "name": "SR01_Normal01_VisualEffect03_HitStone"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            },
+            "AlignRotationOffset": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            },
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Common_Hit_SR_Normal_Variant",
+          "name": "SR01_Normal01_VisualEffect04_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            },
+            "AlignRotationOffset": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            },
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Metal_Hit_SR_Normal_Variant",
+          "name": "SR01_Normal01_VisualEffect05_HitMetal"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            },
+            "AlignRotationOffset": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            },
+            "AlignDirection": 3
+          },
+          "PrefabPath": "FX_Common_Dodge_SR_Variant",
+          "name": "SR01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0084_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 945113545,
+    "SkillUniqueNameToBind": "CH0084Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Public01Entity01",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Public_Aru_Newyear_Projectile_01_Variant",
+          "name": "CH0084_Public01_VisualSkillEntity01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0084Public01Entity02",
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Public_Aru_Newyear_Hit_Explosion_01_Variant",
+          "name": "CH0084_Pulbic01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0084_Pulbic01_SkillVisual01"
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
@@ -32803,132 +35002,6 @@
           "PrefabPath": "FX_Common_Dodge_AR_Variant",
           "name": "SMG01_Normal01_VisualEffect07_HitMiss"
         }
-      },
-      {
-        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "CH0104TESTentity02",
-        "SkillEntity": {
-          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
-          "StartPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": ""
-          },
-          "EndPositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 2,
-            "BoneName": 2,
-            "BoneNameCustom": ""
-          },
-          "PrefabPath": "FX_Common_Projectile_SMG_Normal_Variant",
-          "name": "SMG01_Normal01_VisualSkillEntity01_Bullet"
-        },
-        "FireEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 1,
-            "BoneName": 1,
-            "BoneNameCustom": "",
-            "AlignDirection": 1
-          },
-          "PrefabPath": "FX_Muzzle_SMG_Variant",
-          "name": "SMG01_Normal01_VisualEffect01_Fire"
-        },
-        "HitWoodEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 2,
-            "BoneName": 2,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0.3
-            }
-          },
-          "PrefabPath": "FX_Wood_Hit_SMG_Normal_Variant",
-          "name": "SMG01_Normal01_VisualEffect06_HitWood"
-        },
-        "HitStoneEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 2,
-            "BoneName": 2,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0.3
-            }
-          },
-          "PrefabPath": "FX_Stone_Hit_SMG_Normal_Variant",
-          "name": "SMG01_Normal01_VisualEffect05_HitStone"
-        },
-        "HitFleshEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 2,
-            "BoneName": 2,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0.3
-            }
-          },
-          "PrefabPath": "FX_Common_Hit_SMG_Normal_Variant",
-          "name": "SMG01_Normal01_VisualEffect03_HitFlesh"
-        },
-        "HitMetalEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 2,
-            "BoneName": 2,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0,
-              "y": 0,
-              "z": 0.3
-            }
-          },
-          "PrefabPath": "FX_Metal_Hit_SMG_Normal_Variant",
-          "name": "SMG01_Normal01_VisualEffect04_HitMetal"
-        },
-        "MissEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 2,
-            "BoneNameCustom": "",
-            "PositionOffset": {
-              "x": 0.2,
-              "y": 0,
-              "z": 0.05
-            }
-          },
-          "PrefabPath": "FX_Common_Dodge_AR_Variant",
-          "name": "SMG01_Normal01_VisualEffect07_HitMiss"
-        }
-      },
-      {
-        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
-        "EntityName": "CH0104TESTentity03",
-        "FireEffect": {
-          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
-          "PositionSetting": {
-            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
-            "PositionSource": 3,
-            "BoneNameCustom": ""
-          },
-          "PrefabPath": "FX_Akari_Original_Ex01_Hit_Explosion_Variant",
-          "name": "CH0104_TESTVisualEffect01"
-        }
       }
     ],
     "LogicEffectVisuals": [],
@@ -32974,7 +35047,8 @@
           "PrefabPath": "FX_Kotama_Original_Ex01_Buff_Start_Variant",
           "name": "Kotama01_Ex01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -33704,7 +35778,8 @@
           "PrefabPath": "FX_CH0164_Public_Target_01_Variant",
           "name": "CH0164_Public01_VisualEffect02_Dummy"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -33727,7 +35802,8 @@
             "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
             "PositionSource": 1,
             "BoneName": 1,
-            "BoneNameCustom": ""
+            "BoneNameCustom": "",
+            "AlignDirection": 1
           },
           "PrefabPath": "FX_CH0164_Tank_NormalAttack_Muzzle_01_Variant",
           "name": "SM0164_Normal01_VisualEffect01"
@@ -33913,7 +35989,8 @@
           "PrefabPath": "FX_CH0163_EX01_Motion_Mesh_Hit_Variant",
           "name": "CH0163_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -34090,7 +36167,8 @@
           "PrefabPath": "FX_CH0163_Motion_Mesh_Public_Hit_Variant",
           "name": "CH0163_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -34358,7 +36436,8 @@
           "PrefabPath": "FX_Eimi_Original_Ex01_Motion_Buff_Variant",
           "name": "Eimi01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -36367,7 +38446,8 @@
           "PrefabPath": "FX_Public_Motion_Peroro_Hit_Variant",
           "name": "Hihumi01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -36985,7 +39065,8 @@
           "PrefabPath": "FX_CH0063_Public_Loop_Variant",
           "name": "CH0063_Public01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -38016,7 +40097,7 @@
     "LogicEffectVisuals": [
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
-        "LogicEffectName": "Midori_Ex01_Effect02",
+        "LogicEffectName": "CH0064_Public01_Effect02",
         "StartEffect": {
           "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
           "PositionSetting": {
@@ -38030,7 +40111,8 @@
           "PrefabPath": "FX_Public_CH0064_Debuff_Start_01_Variant",
           "name": "CH0064_Public01_VisualEffect02_Start"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -39109,7 +41191,8 @@
           "PrefabPath": "FX_Karin_Original_Ex01_Hit_Target_Variant",
           "name": "Karin01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -40374,7 +42457,8 @@
           "PrefabPath": "FX_Public_Healpack_Hit_Start_Variant",
           "name": "CH0057_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -40419,7 +42503,8 @@
           "PrefabPath": "FX_Kotama_Original_Ex01_Buff_Start_Variant",
           "name": "Kotama01_Ex01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -40448,7 +42533,8 @@
           "PrefabPath": "FX_Public_Motion_Wiretapping_Variant",
           "name": "Kotama01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -40724,7 +42810,8 @@
           "PrefabPath": "FX_Maki_Original_Ex01_Motion_Hit_01_Variant",
           "name": "Maki01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -40914,7 +43001,8 @@
           "PrefabPath": "FX_Public_Paint_Fall_01_Variant",
           "name": "Maki01_Public01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -41073,7 +43161,8 @@
           "PrefabPath": "FX_Mashiro_Original_Ex01_Hit_Fail_Variant",
           "name": "Mashiro01_Ex01_VisualEffect02_Normalhit"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -41090,7 +43179,8 @@
           "PrefabPath": "FX_Mashiro_Original_Ex01_Hit_Explosion_Variant",
           "name": "Mashiro01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -41285,7 +43375,8 @@
           "PrefabPath": "FX_Midori_Original_Ex01_Hit_Variant",
           "name": "Midori01_Ex01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -41314,7 +43405,8 @@
           "PrefabPath": "FX_Midori_Original_Motion_Buff_01_Variant",
           "name": "Midori01_ExtraPassive01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -41759,7 +43851,8 @@
           "PrefabPath": "FX_Public_Mimori_Original_Hit_Start_1_Variant",
           "name": "CH0115_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -41880,7 +43973,8 @@
           "PrefabPath": "FX_Momoi_Original_Motion_Buff_01_Variant",
           "name": "Momoi01_ExtraPassive01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -42309,6 +44403,279 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 275717898,
+    "SkillUniqueNameToBind": "CH0085Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_Mutsuki_Newyear_01",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0085Ex01Entity01",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_EX1_Explosion_Variant",
+          "name": "CH0085_Ex01_VisualEffect01"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_EX1_Hit_Start_Variant",
+          "name": "CH0085_Ex01_VisualEffect02"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_EX1_Hit_Start_Variant",
+          "name": "CH0085_Ex01_VisualEffect02"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_EX1_Hit_Start_Variant",
+          "name": "CH0085_Ex01_VisualEffect02"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_EX1_Hit_Start_Variant",
+          "name": "CH0085_Ex01_VisualEffect02"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0085_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1659541132,
+    "SkillUniqueNameToBind": "CH0085Normal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "HMG_BulletEntity",
+        "SkillEntity": {
+          "$type": "MX.Visual.Data.VisualSkillEntityData, Assembly-CSharp",
+          "StartPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_HMG_Normal_Variant",
+          "name": "HMG01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_MG_Variant",
+          "name": "HMG01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Wood_Hit_HMG_Normal_Variant",
+          "name": "HMG01_Normal01_VisualEffect05_HitWood"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_HMG_Normal_Variant",
+          "name": "HMG01_Normal01_VisualEffect04_HitStone"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_HMG_Normal_Variant",
+          "name": "HMG01_Normal01_VisualEffect02_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Metal_Hit_HMG_Normal_Variant",
+          "name": "HMG01_Normal01_VisualEffect03_HitMetal"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_HMG_Variant",
+          "name": "HMG01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0085_Normal01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": 739873902,
+    "SkillUniqueNameToBind": "CH0085Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0085Public01Entity01",
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_Public_Hit_Start_Variant",
+          "name": "CH0085_Public01_VisualEffect01"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_Public_Hit_Start_Variant",
+          "name": "CH0085_Public01_VisualEffect01"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_Public_Hit_Start_Variant",
+          "name": "CH0085_Public01_VisualEffect01"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Mutsuki_Newyear_Public_Hit_Start_Variant",
+          "name": "CH0085_Public01_VisualEffect01"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_HMG_Variant",
+          "name": "HMG01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0085_Public01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": 363032372,
     "SkillUniqueNameToBind": "CH0155Ex01",
     "MaxLevelToBind": 10,
@@ -42535,7 +44902,8 @@
           "PrefabPath": "FX_CH0155_Motion_Mesh_Public_Hit_Variant",
           "name": "CH0155_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -43378,7 +45746,8 @@
           "PrefabPath": "FX_Public_Raider_Target_1_Variant",
           "name": "Nodoka01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -43483,7 +45852,8 @@
           "PrefabPath": "FX_SM016501_Public_Heal_1_Variant",
           "name": "CH0165_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -43499,7 +45869,8 @@
           "PrefabPath": "FX_SM016501_Public_Heal_2_Variant",
           "name": "CH0165_Public01_VisualEffect02"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -43515,7 +45886,8 @@
           "PrefabPath": "FX_SM016501_Public_Heal_3_Variant",
           "name": "CH0165_Public01_VisualEffect03"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -44482,6 +46854,131 @@
   },
   {
     "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -1088214052,
+    "SkillUniqueNameToBind": "CH0090Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_Serika_Newyear_01",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0090Ex01Entity03_Dummy",
+        "CreationEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_Serika_Newyear_Ex01_Spawn_Variant",
+          "name": "CH0090_Ex01_VisualEffect01"
+        }
+      },
+      {
+        "$type": "MX.Visual.Data.EntityEffect, Assembly-CSharp",
+        "EntityName": "CH0090Ex01Entity01",
+        "HitWoodEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_Serika_Newyear_Ex01_Hit_Variant",
+          "name": "CH0090_Ex01_VisualEffect02"
+        },
+        "HitStoneEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_Serika_Newyear_Ex01_Hit_Variant",
+          "name": "CH0090_Ex01_VisualEffect02"
+        },
+        "HitFleshEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_Serika_Newyear_Ex01_Hit_Variant",
+          "name": "CH0090_Ex01_VisualEffect02"
+        },
+        "HitMetalEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_Serika_Newyear_Ex01_Hit_Variant",
+          "name": "CH0090_Ex01_VisualEffect02"
+        },
+        "MissEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0090_Ex01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
+    "SkillIdToBind": -638549712,
+    "SkillUniqueNameToBind": "CH0090Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [
+      {
+        "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
+        "LogicEffectName": "CH0090_Public01_Effect01",
+        "StartEffect": {
+          "$type": "MX.Visual.Data.VisualEffectData, Assembly-CSharp",
+          "PositionSetting": {
+            "$type": "MX.Visual.Data.PositionSetting, Assembly-CSharp",
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "IsAttachToTarget": true
+          },
+          "PrefabPath": "FX_Serika_Newyear_Public_Buff_Start_Variant",
+          "name": "CH0090_Public01_VisualEffect01"
+        },
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
+      }
+    ],
+    "BattleItems": [],
+    "name": "CH0090_Public01_SkillVisual01"
+  },
+  {
+    "$type": "MX.Visual.Data.SkillVisualData, Assembly-CSharp",
     "SkillIdToBind": 1317430078,
     "SkillUniqueNameToBind": "SerinaEx01",
     "MaxLevelToBind": 10,
@@ -45180,7 +47677,8 @@
           "PrefabPath": "FX_Shizuko_Original_Teaset_Public_Variant",
           "name": "Shizuko01_Public01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -46387,7 +48885,8 @@
           "PrefabPath": "FX_Tomoe_Original_Ex01_Motion_Mesh_Target_Buffset_Variant",
           "name": "Tomoe01_Ex01_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -47123,7 +49622,8 @@
           "PrefabPath": "FX_CH0060_EX01_Motion_loop_Variant",
           "name": "CH0060_Ex01_VIsualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -47460,7 +49960,8 @@
           "PrefabPath": "FX_CH0060_Normal_Hit_Start_Variant",
           "name": "CH0060_Normal02_VisualEffect01"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -48605,7 +51106,8 @@
               "name": "Wakamo01_Ex01_VisualEffect06"
             }
           }
-        ]
+        ],
+        "AccumulateEffectList": []
       },
       {
         "$type": "MX.Visual.Data.LogicEffectVisual, Assembly-CSharp",
@@ -48620,7 +51122,8 @@
           "PrefabPath": "FX_Wacamo_Original_Ex01_Hit_Finish_Variant",
           "name": "Wakamo01_Ex01_VisualEffect07"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
@@ -49934,7 +52437,8 @@
           "PrefabPath": "FX_Heli_Apache_Ex01_Target_01_Variant",
           "name": "Helicopter_Apache_03_Ex01_VisualEffect01_Target"
         },
-        "StackCountEffectList": []
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
       }
     ],
     "BattleItems": [],
