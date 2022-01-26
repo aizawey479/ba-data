@@ -24,7 +24,7 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 101,
+        "Frame": 115,
         "DamageDistributeRate": 0,
         "Entity": {
           "$type": "MX.Logic.Data.LevelCharacterEntityData, Assembly-CSharp",
@@ -32,18 +32,18 @@
           "SuccessionFromCasterCharacterWeapon": false,
           "UniqueName": "Hod_TemporaryTower_Summon_Hard",
           "AngleOffset": 0,
-          "Duration": 0,
-          "DestroyAlreadyExist": false,
+          "Duration": 99999,
+          "DestroyAlreadyExist": true,
           "InitialAreaSpawnerEntity": {
             "$type": "MX.Logic.Data.AreaSpawnerData, Assembly-CSharp",
             "Duration": 61,
             "EntityTimeline": [
               {
                 "$type": "MX.Logic.Data.AreaTimelineData, Assembly-CSharp",
-                "Frame": 50,
+                "Frame": 40,
                 "AreaData": {
                   "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
-                  "Radius": 300,
+                  "Radius": 450,
                   "AttachTarget": false,
                   "AllowDuplicateHit": false,
                   "ApplyOnStay": false,
@@ -74,7 +74,7 @@
                   "ApplyType": 4,
                   "DecideTiming": 1,
                   "EntitySpawnIncludeOutOfRangeInputTarget": false,
-                  "SpawnPositionType": "Invoker",
+                  "SpawnPositionType": "InputPosition",
                   "SpawnWorldPosition": {
                     "x": 0,
                     "y": 0
@@ -84,9 +84,9 @@
                     "y": 0
                   },
                   "PositionRandomOffsetRange": 0,
-                  "OffsetDirectionType": "Invoker",
-                  "SpawnDirectionType": "Invoker",
-                  "OverrideTargetingRule": false,
+                  "OffsetDirectionType": "Input",
+                  "SpawnDirectionType": "Input",
+                  "OverrideTargetingRule": true,
                   "TargetSortRule": {
                     "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
                     "SortCriteria": "Distance",
@@ -148,7 +148,7 @@
             "ApplyType": 4,
             "DecideTiming": 1,
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
-            "SpawnPositionType": "Invoker",
+            "SpawnPositionType": "InputPosition",
             "SpawnWorldPosition": {
               "x": 0,
               "y": 0
@@ -158,8 +158,8 @@
               "y": 0
             },
             "PositionRandomOffsetRange": 0,
-            "OffsetDirectionType": "Invoker",
-            "SpawnDirectionType": "Invoker",
+            "OffsetDirectionType": "Input",
+            "SpawnDirectionType": "Input",
             "OverrideTargetingRule": false,
             "TargetSortRule": {
               "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
@@ -226,8 +226,8 @@
             "y": 0
           },
           "PositionOffset": {
-            "x": 10,
-            "y": 0
+            "x": 0,
+            "y": 7
           },
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "Invoker",
@@ -300,14 +300,14 @@
         "Entity": null
       }
     ],
-    "Range": 2000,
+    "Range": 1500,
     "Angle": 0,
     "CheckCanUseSkillPoint": false,
     "IsWeaponMountAfterSkill": false,
-    "InvokerDirection": "Invoker",
+    "InvokerDirection": "WorldPosition",
     "InvokerDirectionWorldPosition": {
-      "x": 0,
-      "y": 0
+      "x": -27,
+      "y": 10.74
     },
     "RootMotionMoveData": null,
     "MainEntityData": {
@@ -316,18 +316,18 @@
       "SuccessionFromCasterCharacterWeapon": false,
       "UniqueName": "Hod_TemporaryTower_Summon_Hard",
       "AngleOffset": 0,
-      "Duration": 0,
-      "DestroyAlreadyExist": false,
+      "Duration": 99999,
+      "DestroyAlreadyExist": true,
       "InitialAreaSpawnerEntity": {
         "$type": "MX.Logic.Data.AreaSpawnerData, Assembly-CSharp",
         "Duration": 61,
         "EntityTimeline": [
           {
             "$type": "MX.Logic.Data.AreaTimelineData, Assembly-CSharp",
-            "Frame": 50,
+            "Frame": 40,
             "AreaData": {
               "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
-              "Radius": 300,
+              "Radius": 450,
               "AttachTarget": false,
               "AllowDuplicateHit": false,
               "ApplyOnStay": false,
@@ -358,7 +358,7 @@
               "ApplyType": 4,
               "DecideTiming": 1,
               "EntitySpawnIncludeOutOfRangeInputTarget": false,
-              "SpawnPositionType": "Invoker",
+              "SpawnPositionType": "InputPosition",
               "SpawnWorldPosition": {
                 "x": 0,
                 "y": 0
@@ -368,9 +368,9 @@
                 "y": 0
               },
               "PositionRandomOffsetRange": 0,
-              "OffsetDirectionType": "Invoker",
-              "SpawnDirectionType": "Invoker",
-              "OverrideTargetingRule": false,
+              "OffsetDirectionType": "Input",
+              "SpawnDirectionType": "Input",
+              "OverrideTargetingRule": true,
               "TargetSortRule": {
                 "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
                 "SortCriteria": "Distance",
@@ -432,7 +432,7 @@
         "ApplyType": 4,
         "DecideTiming": 1,
         "EntitySpawnIncludeOutOfRangeInputTarget": false,
-        "SpawnPositionType": "Invoker",
+        "SpawnPositionType": "InputPosition",
         "SpawnWorldPosition": {
           "x": 0,
           "y": 0
@@ -442,8 +442,8 @@
           "y": 0
         },
         "PositionRandomOffsetRange": 0,
-        "OffsetDirectionType": "Invoker",
-        "SpawnDirectionType": "Invoker",
+        "OffsetDirectionType": "Input",
+        "SpawnDirectionType": "Input",
         "OverrideTargetingRule": false,
         "TargetSortRule": {
           "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
@@ -510,8 +510,8 @@
         "y": 0
       },
       "PositionOffset": {
-        "x": 10,
-        "y": 0
+        "x": 0,
+        "y": 7
       },
       "PositionRandomOffsetRange": 0,
       "OffsetDirectionType": "Invoker",
@@ -578,7 +578,7 @@
     },
     "EssentialCandidateRule": {
       "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-      "TargetSide": "Self",
+      "TargetSide": "Enemy",
       "TargetingType": "Target",
       "ApplyEntityType": 1,
       "MaxTargetCount": 1

@@ -24,7 +24,7 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 26,
+        "Frame": 66,
         "DamageDistributeRate": 0,
         "Entity": {
           "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
@@ -32,7 +32,10 @@
           "AttachTarget": false,
           "AllowDuplicateHit": false,
           "ApplyOnStay": false,
-          "Duration": 0,
+          "Duration": 1,
+          "HitFrames": [
+            1
+          ],
           "CollisionProperty": {
             "$type": "MX.Logic.Data.AreaCollisionProperty, Assembly-CSharp",
             "TransformType": "None",
@@ -43,7 +46,7 @@
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
-          "DecideTiming": 1,
+          "DecideTiming": 0,
           "EntitySpawnIncludeOutOfRangeInputTarget": false,
           "SpawnPositionType": "InputPosition",
           "SpawnWorldPosition": {
@@ -143,7 +146,8 @@
               "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
               "StartDelay": 0,
               "LogicEffectGroupIds": [
-                "HOD01_Ex01_Effect01"
+                "HOD01_Ex01_Effect01",
+                "HOD01_Ex01_Effect02"
               ],
               "name": "HOD01_Ex01_LevelOneTimeAbility01",
               "hideFlags": 0
@@ -153,7 +157,7 @@
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
-          "DecideTiming": 1,
+          "DecideTiming": 0,
           "EntitySpawnIncludeOutOfRangeInputTarget": false,
           "SpawnPositionType": "InputPosition",
           "SpawnWorldPosition": {
@@ -239,10 +243,10 @@
     "Angle": 0,
     "CheckCanUseSkillPoint": false,
     "IsWeaponMountAfterSkill": false,
-    "InvokerDirection": "Invoker",
+    "InvokerDirection": "WorldPosition",
     "InvokerDirectionWorldPosition": {
-      "x": 0,
-      "y": 0
+      "x": -27,
+      "y": 10.74
     },
     "RootMotionMoveData": null,
     "MainEntityData": {
@@ -266,7 +270,8 @@
           "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
           "StartDelay": 0,
           "LogicEffectGroupIds": [
-            "HOD01_Ex01_Effect01"
+            "HOD01_Ex01_Effect01",
+            "HOD01_Ex01_Effect02"
           ],
           "name": "HOD01_Ex01_LevelOneTimeAbility01",
           "hideFlags": 0
@@ -276,7 +281,7 @@
       "SpawnRate": 10000,
       "SpawnDelay": 0,
       "ApplyType": 4,
-      "DecideTiming": 1,
+      "DecideTiming": 0,
       "EntitySpawnIncludeOutOfRangeInputTarget": false,
       "SpawnPositionType": "InputPosition",
       "SpawnWorldPosition": {

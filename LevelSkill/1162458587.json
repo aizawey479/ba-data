@@ -34,9 +34,9 @@
       "$type": "MX.Logic.Skills.TargetFindRule, Assembly-CSharp",
       "Sort": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-        "SortCriteria": "None",
+        "SortCriteria": "Distance",
         "SortParameter": null,
-        "OrderBy": "None"
+        "OrderBy": "Lowest"
       },
       "EssentialCandidate": {
         "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
@@ -92,7 +92,7 @@
           "y": 0
         },
         "Frame": 1,
-        "DamageDistributeRate": 0,
+        "DamageDistributeRate": 10000,
         "Entity": {
           "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
           "Abilities": [
@@ -106,7 +106,7 @@
               "hideFlags": 0
             }
           ],
-          "EntityName": "",
+          "EntityName": "CH0115Passive01Entity01",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
@@ -127,9 +127,9 @@
           "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
+            "SortCriteria": "Distance",
             "SortParameter": null,
-            "OrderBy": "None"
+            "OrderBy": "Lowest"
           },
           "EssentialCandidateRule": {
             "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
@@ -187,7 +187,7 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 30,
+        "Frame": 11,
         "DamageDistributeRate": 0,
         "Entity": null
       }
