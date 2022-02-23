@@ -1,0 +1,4589 @@
+{
+  "Version": "1.0",
+  "Global": {
+    "Position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "Events": [
+      {
+        "EventName": "SpawnPlayer",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "IsEnemy": false,
+            "IgnoreSkillCardShuffle": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "ID": 1,
+            "MaxCameraSpeed": 3,
+            "RotationSpeed": 1,
+            "ZoomSpeed": 1,
+            "RailPoints": [],
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "SectionID": 3,
+            "SetConditionCommandOnly": false,
+            "CommandID": "0",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "EndBattle",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "EnemyDead"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-1AreaOn",
+        "Operator": 0,
+        "Conditions": [],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "1-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDead1-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-1AreaOn",
+        "Operator": 0,
+        "Conditions": [],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "1-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "2-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDead2-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-1AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "ConditionID": ""
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "2-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "3-2AreaOn",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "DeadCheck": 0,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDead3-1"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": false,
+            "TemporaryCanUseSkillAreaCommandId": "3-1Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "OnOff": true,
+            "TemporaryCanUseSkillAreaCommandId": "3-2Area",
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
+      }
+    ]
+  },
+  "Sections": [
+    {
+      "SectionID": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "Events": [],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent1-1",
+          "SpawnPoints": []
+        },
+        {
+          "GroupName": "SpawnPointParent1-2",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 2,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 25
+      },
+      "Events": [
+        {
+          "EventName": "Spawn2-1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 1,
+              "Target": 4,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 33
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 10,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-1",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "Spawn2-2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead2-1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn2-2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent2-1",
+          "SpawnPoints": []
+        },
+        {
+          "GroupName": "SpawnPointParent2-2",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+      },
+      "Events": [
+        {
+          "EventName": "SpawnBoss",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 50.28
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 20,
+                "Height": 4
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-1",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 30000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "CommandSpawn3-2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "KillJyaco",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "BossDead"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "CharacterCommandIdList": [
+                "RedWinter"
+              ],
+              "CharacterSpawnTemplateIdList": [],
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "synkuseSkill_Cherino",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 51.02
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 20,
+                "Height": 4
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 25000,
+              "SyncUseSkillGroupId": 9990,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9990,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "CommandCherino",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 180000,
+              "SyncUseSkillGroupId": 9991,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9991,
+              "SkillSlot": "PublicSkill01",
+              "IsAdd": true,
+              "CommandID": "CommandCherino",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "synkuseSkill_Tomoe",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 51.02
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 20,
+                "Height": 4
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 31000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 5000,
+              "SyncUseSkillGroupId": 9999,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "CommandTomoe",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 6000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9999,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": false,
+              "CommandID": "CommandTomoe",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "CoolDownInMilliSeconds": 15000,
+              "SyncUseSkillGroupId": 9998,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "SyncUseSkillGroupId": 9998,
+              "SkillSlot": "ExSkill01",
+              "IsAdd": true,
+              "CommandID": "CommandTomoe",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSkill_DebuffCherino",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 0,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "TomoeDead"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterA"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Debuff_StatChange_DefensePower_Ally_300s_50_Ratio",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterAPoint",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterA"
+              ],
+              "CreateCharacterStat": true,
+              "CharacterId": 18001002,
+              "CharacterLevel": 1,
+              "CharacterGrade": 1,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_CrowdControl_Stunned_Ally_20s",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterAPoint",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterA"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Debuff_StatChange_CriticalChanceResistPoint_Ally_300s_800_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterAPoint",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [
+                "UseSkillCharacterA"
+              ],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "EventChallenge_Debuff_StatChange_DamagedRatio_Ally_200s_10000_Fixed",
+              "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
+              "CommandID": "UseSkillCharacterAPoint",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnFirstWave (1)",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 43.5000038
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 20,
+                "Height": 4
+              },
+              "Circle": {
+                "Radius": 11
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "Wave_1",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_SMG_2 (1)",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_SMG_Wave_1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_SMG_2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_SMG_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_SMG_Wave_2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_SMG_3",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_SMG_4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_SMG_Wave_3"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_SMG_4",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_SMG_6",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_SMG_Wave_5"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_SMG_6",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_SMG_5",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_SMG_Wave_4"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_SMG_5",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_Sergeant_2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_Sergeant_Wave_1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 25000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_Sergeant_2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_Sergeant_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_Sergeant_Wave_2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 25000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_Sergeant_3",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_GL_2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_GL_Wave_1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_GL_2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_GL_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_GL_Wave_2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_GL_3",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_GL_4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_GL_Wave_3"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_GL_4",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_GL_5",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_GL_Wave_4"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_GL_5",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_AR_2",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_AR_Wave_1"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_AR_2",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_AR_3",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_AR_Wave_2"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_AR_3",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_AR_4",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_AR_Wave_3"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_AR_4",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawWave_AR_5",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "DeadCheck": 1,
+              "CheckSummonedCharacterDead": false,
+              "ConditionID": "ConditionDead_AR_Wave_4"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 5000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 100,
+              "CommandID": "SpwanWave_AR_5",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Redwinter_CarSnow_02",
+          "Position": {
+            "x": 0.35,
+            "y": 0,
+            "z": 60.82
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_CarSnow_02",
+          "Position": {
+            "x": 3.33,
+            "y": 0,
+            "z": 60.82
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_CarSnow_02",
+          "Position": {
+            "x": -3.44,
+            "y": 0,
+            "z": 50.96
+          },
+          "Forward": {
+            "x": -0.9817468,
+            "y": 0,
+            "z": 0.190192565
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            6
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade01_02",
+          "Position": {
+            "x": -0.9699999,
+            "y": 0,
+            "z": 52.42
+          },
+          "Forward": {
+            "x": 0.373935848,
+            "y": 0,
+            "z": 0.9274546
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade01_02",
+          "Position": {
+            "x": 0.49,
+            "y": 0,
+            "z": 52.23
+          },
+          "Forward": {
+            "x": -0.002983858,
+            "y": 0,
+            "z": 0.9999955
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade01_02",
+          "Position": {
+            "x": 1.87,
+            "y": 0,
+            "z": 52.3309975
+          },
+          "Forward": {
+            "x": -0.293374926,
+            "y": 0,
+            "z": 0.955997467
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade02_02",
+          "Position": {
+            "x": 0.08,
+            "y": 0,
+            "z": 49.22
+          },
+          "Forward": {
+            "x": -0.439894468,
+            "y": 0,
+            "z": 0.8980495
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Snowman_02",
+          "Position": {
+            "x": -2.62,
+            "y": 0,
+            "z": 53.52
+          },
+          "Forward": {
+            "x": 0.966580153,
+            "y": 0,
+            "z": -0.256364584
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade02_02",
+          "Position": {
+            "x": 3.02,
+            "y": 0,
+            "z": 47.79
+          },
+          "Forward": {
+            "x": 0.3412043,
+            "y": 0,
+            "z": 0.93998915
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Snowman_02",
+          "Position": {
+            "x": -1.68,
+            "y": 0,
+            "z": 48.05
+          },
+          "Forward": {
+            "x": 0.9855358,
+            "y": 0,
+            "z": -0.1694672
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Snowman_02",
+          "Position": {
+            "x": 1.91,
+            "y": 0,
+            "z": 49.99
+          },
+          "Forward": {
+            "x": 0.42973122,
+            "y": 0,
+            "z": 0.902956843
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade02_02",
+          "Position": {
+            "x": -2.29,
+            "y": 0,
+            "z": 55.15
+          },
+          "Forward": {
+            "x": -0.439894468,
+            "y": 0,
+            "z": 0.8980495
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_CarSnow_02",
+          "Position": {
+            "x": -6.54,
+            "y": 0,
+            "z": 56.08
+          },
+          "Forward": {
+            "x": -0.741955638,
+            "y": 0,
+            "z": 0.670448959
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [
+            {
+              "UniqueName": "Redwinter_CarSnow_02",
+              "Position": {
+                "x": -2.85,
+                "y": 0,
+                "z": 60.82
+              },
+              "Forward": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+              },
+              "ActiveEnemyPointIndices": [],
+              "ActivePlayerPointIndices": [],
+              "ConditionIdList": [],
+              "CommandIdList": [],
+              "SubObstacles": []
+            }
+          ]
+        },
+        {
+          "UniqueName": "Redwinter_Snowman_02",
+          "Position": {
+            "x": 0.47,
+            "y": 0,
+            "z": 54.04
+          },
+          "Forward": {
+            "x": 0.748700261,
+            "y": 0,
+            "z": 0.662908733
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade02_02",
+          "Position": {
+            "x": -0.76,
+            "y": 0,
+            "z": 57
+          },
+          "Forward": {
+            "x": 0.150156081,
+            "y": 0,
+            "z": 0.9886623
+          },
+          "ActiveEnemyPointIndices": [
+            1
+          ],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade02_02",
+          "Position": {
+            "x": -0.67,
+            "y": 0,
+            "z": 50.62
+          },
+          "Forward": {
+            "x": 0.33797732,
+            "y": 0,
+            "z": 0.941154242
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Snowman_02",
+          "Position": {
+            "x": 1.67,
+            "y": 0,
+            "z": 46.71
+          },
+          "Forward": {
+            "x": -0.298090279,
+            "y": 0,
+            "z": 0.9545377
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Baricade02_02",
+          "Position": {
+            "x": -0.98,
+            "y": 0,
+            "z": 46.26
+          },
+          "Forward": {
+            "x": 0.213284984,
+            "y": 0,
+            "z": 0.976990044
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Redwinter_Snowman_02",
+          "Position": {
+            "x": 1.22,
+            "y": 0,
+            "z": 56.03
+          },
+          "Forward": {
+            "x": 0.762469351,
+            "y": 0,
+            "z": -0.647024333
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParentBoss",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Cherino_default_C_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "BossDead",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkillCharacterA",
+                "CommandCherino",
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 41,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.208999753,
+                    "y": 55.3150024
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 39,
+              "TileY": 315,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.26,
+                "y": 58.4
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Tomoe_default_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "TomoeDead",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "CommandTomoe",
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 49,
+                  "TileY": 312,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 1.75999951,
+                    "y": 57.93
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 47,
+              "TileY": 339,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.47,
+                "y": 63.32
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 248,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 45
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "UseSkillCharacterAPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave_1",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_1",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 17,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.50776768,
+                    "y": 55.34063
+                  },
+                  "Direction": {
+                    "x": 0.0523358,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 288,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.06671071,
+                    "y": 53.1176758
+                  },
+                  "Direction": {
+                    "x": 0.0523358,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 18,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.5,
+                "y": 61.8799973
+              },
+              "Direction": {
+                "x": 0.0523358,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SMGJyaco",
+                "Wave_1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_1",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.21481085,
+                    "y": 56.5228043
+                  },
+                  "Direction": {
+                    "x": 0.0523358,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 41,
+                  "TileY": 287,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 0.284419775,
+                    "y": 52.9463654
+                  },
+                  "Direction": {
+                    "x": 0.0523358,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 34,
+              "TileY": 330,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.21,
+                "y": 61.59
+              },
+              "Direction": {
+                "x": 0.0523358,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SMGJyaco",
+                "Wave_1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_1",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 63,
+                  "TileY": 303,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.594496,
+                    "y": 56.0617371
+                  },
+                  "Direction": {
+                    "x": 0.0523358,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 50,
+                  "TileY": 289,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.05528831,
+                    "y": 53.30507
+                  },
+                  "Direction": {
+                    "x": 0.0523358,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 63,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.6,
+                "y": 61.8799973
+              },
+              "Direction": {
+                "x": 0.0523358,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SMGJyaco",
+                "Wave_1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinterSergeant_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_Sergeant_Wave_1",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 32,
+                  "TileY": 295,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.58000076,
+                    "y": 54.5500031
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 62.72
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SergeantJyaco",
+                "Wave_1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_GL_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_GL_Wave_1",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 20,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.02000046,
+                    "y": 56.59
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 25,
+                  "TileY": 302,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.94000053,
+                    "y": 55.84
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 7,
+              "TileY": 319,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.53,
+                "y": 59.39
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "GLJyaco",
+                "Wave_1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_AR_Wave_1",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 53,
+                  "TileY": 287,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.60999966,
+                    "y": 52.98
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 324,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.46,
+                "y": 60.21
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "ARJyaco",
+                "Wave_1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave_2 (1)",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_2",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 17,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.530357,
+                    "y": 55.36952
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 27,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.57591462,
+                    "y": 54.3804474
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 18,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.5,
+                "y": 61.86
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_2",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.21481085,
+                    "y": 56.5028076
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.01263809,
+                    "y": 55.70229
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 34,
+              "TileY": 330,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.21,
+                "y": 61.5700035
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_2",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 63,
+                  "TileY": 303,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.58032274,
+                    "y": 56.1211052
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 52,
+                  "TileY": 293,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.36136961,
+                    "y": 54.1322479
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 63,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.6,
+                "y": 61.86
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinterSergeant_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_Sergeant_Wave_2",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 32,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.58000076,
+                    "y": 54.29
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 62.7000046
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_Sergeant_2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_GL_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_GL_Wave_2",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 20,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.02000046,
+                    "y": 56.5700035
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 25,
+                  "TileY": 302,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.94000053,
+                    "y": 55.8200035
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 7,
+              "TileY": 319,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.53,
+                "y": 59.3700027
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_GL_2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_AR_Wave_2",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 56,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 3.19999933,
+                    "y": 55.6100044
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 323,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.46,
+                "y": 60.1900024
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_AR_2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave_3",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_3",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 17,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.52826357,
+                    "y": 55.3695679
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 27,
+                  "TileY": 295,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.57591462,
+                    "y": 54.4204445
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 18,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.5,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_3",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.21481085,
+                    "y": 56.5428047
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.01263809,
+                    "y": 55.7422867
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 34,
+              "TileY": 331,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.21,
+                "y": 61.61
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_3",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 63,
+                  "TileY": 303,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.58032274,
+                    "y": 56.1611023
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 52,
+                  "TileY": 293,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.36136961,
+                    "y": 54.17225
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 63,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.6,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinterSergeant_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_Sergeant_Wave_3",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 32,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.58000076,
+                    "y": 54.329998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 62.74
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_Sergeant_3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_GL_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_GL_Wave_3",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 20,
+                  "TileY": 306,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.02000046,
+                    "y": 56.61
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 25,
+                  "TileY": 302,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.94000053,
+                    "y": 55.86
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 7,
+              "TileY": 320,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.53,
+                "y": 59.41
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_GL_3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_AR_Wave_3",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 56,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 3.19999933,
+                    "y": 55.65
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 324,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.46,
+                "y": 60.23
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_AR_3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave_4",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_4",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 17,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.52826357,
+                    "y": 55.3695679
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 27,
+                  "TileY": 295,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.57591462,
+                    "y": 54.4204445
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 18,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.5,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_4"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_4",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.21481085,
+                    "y": 56.5428047
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.01263809,
+                    "y": 55.7422867
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 34,
+              "TileY": 331,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.21,
+                "y": 61.61
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_4"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_4",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 63,
+                  "TileY": 303,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.58032274,
+                    "y": 56.1611023
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 52,
+                  "TileY": 293,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.36136961,
+                    "y": 54.17225
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 63,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.6,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_4"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinterSergeant_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_Sergeant_Wave_4",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 32,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.58000076,
+                    "y": 54.329998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 62.74
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_Sergeant_4"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_GL_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_GL_Wave_4",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 20,
+                  "TileY": 306,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.02000046,
+                    "y": 56.61
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 25,
+                  "TileY": 302,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.94000053,
+                    "y": 55.86
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 7,
+              "TileY": 320,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.53,
+                "y": 59.41
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_GL_4"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_AR_Wave_4",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 56,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 3.19999933,
+                    "y": 55.65
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 324,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.46,
+                "y": 60.23
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_AR_4"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave_5",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_5",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 17,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.52826357,
+                    "y": 55.3695679
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 27,
+                  "TileY": 295,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.57591462,
+                    "y": 54.4204445
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 18,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.5,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_5",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.21481085,
+                    "y": 56.5428047
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.01263809,
+                    "y": 55.7422867
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 34,
+              "TileY": 331,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.21,
+                "y": 61.61
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_5",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 63,
+                  "TileY": 303,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.58032274,
+                    "y": 56.1611023
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 52,
+                  "TileY": 293,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.36136961,
+                    "y": 54.17225
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 63,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.6,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinterSergeant_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_Sergeant_Wave_5",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 32,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.58000076,
+                    "y": 54.329998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 62.74
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_Sergeant_5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_GL_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_GL_Wave_5",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 20,
+                  "TileY": 306,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.02000046,
+                    "y": 56.61
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 25,
+                  "TileY": 302,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.94000053,
+                    "y": 55.86
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 7,
+              "TileY": 320,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.53,
+                "y": 59.41
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_GL_5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_AR_Wave_5",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 56,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 3.19999933,
+                    "y": 55.65
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 324,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.46,
+                "y": 60.23
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_AR_5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        },
+        {
+          "GroupName": "SpawnPointParentWave_6",
+          "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_6",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 17,
+                  "TileY": 299,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.52826357,
+                    "y": 55.3695679
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 27,
+                  "TileY": 295,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.57591462,
+                    "y": 54.4204445
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 18,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -4.5,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_6",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 34,
+                  "TileY": 305,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.21481085,
+                    "y": 56.5428047
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 35,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.01263809,
+                    "y": 55.7422867
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 34,
+              "TileY": 331,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.21,
+                "y": 61.61
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_SMG_M_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_SMG_Wave_6",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 63,
+                  "TileY": 303,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 4.58032274,
+                    "y": 56.1611023
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 52,
+                  "TileY": 293,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 2.36136961,
+                    "y": 54.17225
+                  },
+                  "Direction": {
+                    "x": 0.0523358062,
+                    "y": -0.99862957
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 63,
+              "TileY": 332,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 4.6,
+                "y": 61.8999977
+              },
+              "Direction": {
+                "x": 0.0523358062,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_SMG_6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinterSergeant_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_Sergeant_Wave_6",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 32,
+                  "TileY": 294,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -1.58000076,
+                    "y": 54.329998
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 32,
+              "TileY": 336,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.58,
+                "y": 62.74
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_Sergeant_6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_GL_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_GL_Wave_6",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 20,
+                  "TileY": 306,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -4.02000046,
+                    "y": 56.61
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                },
+                {
+                  "NeedFindPath": false,
+                  "TileX": 25,
+                  "TileY": 302,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": -2.94000053,
+                    "y": 55.86
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 7,
+              "TileY": 320,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -6.53,
+                "y": 59.41
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_GL_6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "RoyalGuard_RedWinter_AR_E_802Event05",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "E",
+              "SpawnConditionIdList": [
+                "ConditionDead_AR_Wave_6",
+                "EnemyDead"
+              ],
+              "SpawnCommandIdList": [
+                "RedWinter"
+              ],
+              "MovePoints": [
+                {
+                  "NeedFindPath": false,
+                  "TileX": 56,
+                  "TileY": 301,
+                  "PositionHeight": 0,
+                  "Position": {
+                    "x": 3.19999933,
+                    "y": 55.65
+                  },
+                  "Direction": {
+                    "x": -8.742278e-08,
+                    "y": -1
+                  },
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
+                  "EntityId": {
+                    "uniqueId": 0
+                  },
+                  "Active": false
+                }
+              ],
+              "TileX": 77,
+              "TileY": 324,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 7.46,
+                "y": 60.23
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "SpwanWave_AR_6"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Formations": [
+    {
+      "SectionIndex": 0,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 34.77
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 1,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 38.77
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 2,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 44
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 64
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    }
+  ],
+  "EnemyFormations": [],
+  "TemporaryCanUseSkillAreas": [
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 13
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "1-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 20
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 33
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "2-2Area",
+      "Radius": 1800,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 40
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-1Area",
+      "Radius": 1100,
+      "GroupTag": 1,
+      "Position": {
+        "x": -1.3,
+        "y": 0,
+        "z": 55.78
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "IsHideVisual": false,
+      "CommandId": "3-2Area",
+      "Radius": 1500,
+      "GroupTag": 1,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 57
+      },
+      "RadiusSqr": 0,
+      "Position2D": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}

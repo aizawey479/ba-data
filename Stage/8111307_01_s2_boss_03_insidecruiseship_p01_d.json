@@ -261,6 +261,154 @@
             "WaitExecuteEnd": false
           }
         ]
+      },
+      {
+        "EventName": "Wakamo_ForceIdle_A_1",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "Wakamo_default_C_811Event_01",
+            "Shape": 0,
+            "Target": 3,
+            "Trigger": 1,
+            "StayTime": 0,
+            "Position": {
+              "x": 0.45,
+              "y": 0,
+              "z": 56.55
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 1
+            },
+            "InactivateWhenStart": false,
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+            "IsForceIdleOn": true,
+            "CommandID": "51",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+            "EmojiEvent": 9,
+            "LoopCount": 50,
+            "IsPlay": false,
+            "CommandID": "51",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+            "heroStatus": "Untargetable",
+            "isAdd": false,
+            "CommandID": "51",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+            "heroStatus": "ImmuneConcentratedTarget",
+            "isAdd": false,
+            "CommandID": "51",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+            "Skip": false,
+            "CommandID": "51",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+            "IsForceIdleOn": false,
+            "CommandID": "51",
+            "WaitExecuteEnd": false
+          }
+        ]
+      },
+      {
+        "EventName": "Wakamo_ForceIdle_A_2",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "SpawnTemplateId": "Wakamo_default_C_811Event_01",
+            "Shape": 0,
+            "Target": 3,
+            "Trigger": 1,
+            "StayTime": 0,
+            "Position": {
+              "x": 0.45,
+              "y": 0,
+              "z": 66.07
+            },
+            "Rect": {
+              "Direction": {
+                "x": 0,
+                "y": 0
+              },
+              "Width": 10,
+              "Height": 1
+            },
+            "Circle": {
+              "Radius": 1
+            },
+            "InactivateWhenStart": false,
+            "ConditionID": "0"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+            "IsForceIdleOn": true,
+            "CommandID": "52",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandCharacterEmojiRepeat, Assembly-CSharp",
+            "EmojiEvent": 9,
+            "LoopCount": 50,
+            "IsPlay": false,
+            "CommandID": "52",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+            "heroStatus": "Untargetable",
+            "isAdd": false,
+            "CommandID": "52",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+            "heroStatus": "ImmuneConcentratedTarget",
+            "isAdd": false,
+            "CommandID": "52",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+            "Skip": false,
+            "CommandID": "52",
+            "WaitExecuteEnd": false
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+            "IsForceIdleOn": false,
+            "CommandID": "52",
+            "WaitExecuteEnd": false
+          }
+        ]
       }
     ]
   },
@@ -686,6 +834,16 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "IsInstantMove": false,
+              "IsInterruptCurrentAction": false,
+              "PointCommandID": "851",
+              "IsCommandWaitForMoveStart": false,
+              "IsCommandWaitForMoveEnd": false,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
               "heroStatus": "Untargetable",
               "isAdd": true,
@@ -702,56 +860,6 @@
             {
               "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
               "Skip": true,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
-              "IsInstantMove": false,
-              "IsInterruptCurrentAction": false,
-              "PointCommandID": "851",
-              "IsCommandWaitForMoveStart": false,
-              "IsCommandWaitForMoveEnd": false,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Wakamo_ForceIdle_A_1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Wakamo_default_C_811Event_01",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0.45,
-                "y": 0,
-                "z": 56.55
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 1,
-                "Height": 1
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": "0"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
-              "IsForceIdleOn": true,
               "CommandID": "51",
               "WaitExecuteEnd": false
             }
@@ -1424,7 +1532,7 @@
                   "ExtraPassiveSkill": []
                 }
               },
-              "SpawnAIGroupId": "D",
+              "SpawnAIGroupId": "U",
               "SpawnConditionIdList": [
                 "991",
                 "ConditionDead3-2"
@@ -2495,7 +2603,7 @@
                   "TileY": 306,
                   "PositionHeight": 0.71,
                   "Position": {
-                    "x": 2.22769356,
+                    "x": 2.2276938,
                     "y": 56.7650528
                   },
                   "Direction": {
