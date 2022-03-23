@@ -651,6 +651,25 @@
               "isAdd": true,
               "CommandID": "51",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -703,6 +722,25 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
               "CommandID": "52",
               "WaitExecuteEnd": false
             }
@@ -897,156 +935,6 @@
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
               "CommandID": "211",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "SetUntargetableA-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 8000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "991"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Red_AR_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 24
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "A1"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnA-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 8000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "991"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "A1",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "SetUntargetableA-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 8000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "992"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 24
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "A2"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnA-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 8000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "992"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "A2",
-              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -1305,7 +1193,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -1340,7 +1234,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -1375,7 +1275,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_AR_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -1410,7 +1316,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_AR_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -1450,7 +1362,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Red_AR_C_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -1487,7 +1405,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -1532,9 +1456,35 @@
       },
       "Events": [
         {
-          "EventName": "SectionStart",
+          "EventName": "Boss_ForceIdle_A_51_End",
           "Operator": 0,
           "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Red_AR_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": -0.923,
+                "y": 0,
+                "z": 24.285
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": "0"
+            },
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
               "ConditionID": "2"
@@ -1549,32 +1499,43 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "53",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "54",
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "IsForceIdleOn": false,
+              "CommandID": "51",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "Boss_ForceIdle_A_all_End",
+          "EventName": "Boss_ForceIdle_A_52_End",
           "Operator": 0,
           "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
+              "Shape": 0,
+              "Target": 3,
+              "Trigger": 1,
+              "StayTime": 0,
+              "Position": {
+                "x": 0.763,
+                "y": 0,
+                "z": 24.3239975
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 1,
+                "Height": 1
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": "0"
+            },
             {
               "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
               "ConditionID": "2"
@@ -1582,9 +1543,10 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
-              "IsForceIdleOn": false,
-              "CommandID": "51",
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": false,
+              "CommandID": "52",
               "WaitExecuteEnd": false
             },
             {
@@ -1664,6 +1626,25 @@
               "isAdd": true,
               "CommandID": "51",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -1716,6 +1697,25 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneConcentratedTarget",
               "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
               "CommandID": "52",
               "WaitExecuteEnd": false
             }
@@ -2011,156 +2011,6 @@
               "WaitExecuteEnd": false
             }
           ]
-        },
-        {
-          "EventName": "SetUntargetableB-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 6000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "991"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Red_AR_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 30
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "B1"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnB-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 6000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "991"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "B1",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "SetUntargetableB-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 6000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "992"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 30
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "B2"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnB-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 6000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "992"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "B2",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
         }
       ],
       "Obstacles": [],
@@ -2173,7 +2023,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -2204,7 +2060,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -2240,7 +2102,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -2275,7 +2143,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -2310,7 +2184,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -2345,7 +2225,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -2387,46 +2273,6 @@
         "z": 25
       },
       "Events": [
-        {
-          "EventName": "SectionStart",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": "3"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "53",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "54",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
         {
           "EventName": "Spawn2-1",
           "Operator": 0,
@@ -2793,6 +2639,25 @@
               "isAdd": false,
               "CommandID": "51",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
+              "CommandID": "51",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -2852,6 +2717,25 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneForcedIdle",
               "isAdd": false,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "52",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
               "CommandID": "52",
               "WaitExecuteEnd": false
             }
@@ -2915,6 +2799,25 @@
               "isAdd": false,
               "CommandID": "53",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
+              "CommandID": "53",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -2974,6 +2877,25 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneForcedIdle",
               "isAdd": false,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 3000,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "heroStatus": "Untargetable",
+              "isAdd": true,
+              "CommandID": "54",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "Skip": true,
               "CommandID": "54",
               "WaitExecuteEnd": false
             }
@@ -3751,306 +3673,6 @@
               "WaitExecuteEnd": false
             }
           ]
-        },
-        {
-          "EventName": "SetUntargetableD-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 3000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "991"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Red_AR_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 40
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "D1"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnD-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 3000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "991"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "D1",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "SetUntargetableD-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 3000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "992"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Yellow_SR_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 40
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "D2"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnD-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 3000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "992"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "D2",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "SetUntargetableD-3",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 5000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "993"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 40
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "D3"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "53",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnD-3",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 5000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "993"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "D3",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "SetUntargetableD-4",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 5000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "994"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
-              "Shape": 0,
-              "Target": 3,
-              "Trigger": 1,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 40
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 15,
-                "Height": 10
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": true,
-              "ConditionID": "D4"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": true,
-              "CommandID": "54",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UntargetableAreaOnD-4",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, Assembly-CSharp",
-              "TriggerRateUnder": 5000,
-              "TriggerRateOver": -9999999,
-              "TriggerMaxCount": 1,
-              "ConditionID": "994"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 6000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandActivateArea, Assembly-CSharp",
-              "AreaConditionIdToActivate": "D4",
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
         }
       ],
       "Obstacles": [
@@ -4238,9 +3860,9 @@
             "z": 35.4899979
           },
           "Forward": {
-            "x": 0.0474971272,
+            "x": 0.0475007,
             "y": 0,
-            "z": -0.9988714
+            "z": -0.9988712
           },
           "ActiveEnemyPointIndices": [
             0
@@ -4262,7 +3884,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4297,7 +3925,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4337,7 +3971,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_AR_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4372,7 +4012,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_AR_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4412,7 +4058,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Black_HG_C_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4449,7 +4101,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Pink_RL_C_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4491,7 +4149,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -4522,7 +4186,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -4560,46 +4230,6 @@
         "z": 25
       },
       "Events": [
-        {
-          "EventName": "SectionStart",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": "4"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "53",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "54",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
         {
           "EventName": "Spawn2-2",
           "Operator": 0,
@@ -4857,7 +4487,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_AR_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4892,7 +4528,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_AR_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4927,7 +4569,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -4962,7 +4610,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -5002,7 +4656,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -5033,7 +4693,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -5064,7 +4730,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -5095,7 +4767,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -5133,46 +4811,6 @@
         "z": 45
       },
       "Events": [
-        {
-          "EventName": "SectionStart",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": "5"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "51",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "52",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "53",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
-              "heroStatus": "Untargetable",
-              "isAdd": false,
-              "CommandID": "54",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
         {
           "EventName": "Boss_ForceIdle_D_1",
           "Operator": 0,
@@ -5521,7 +5159,7 @@
             "z": 49.96
           },
           "Forward": {
-            "x": -0.0462353751,
+            "x": -0.0462353975,
             "y": 0,
             "z": 0.9989306
           },
@@ -5609,7 +5247,7 @@
             "z": 50.53
           },
           "Forward": {
-            "x": -0.0462353751,
+            "x": -0.0462353975,
             "y": 0,
             "z": 0.9989306
           },
@@ -5631,7 +5269,7 @@
             "z": 57.46
           },
           "Forward": {
-            "x": -0.0462353751,
+            "x": -0.0462353975,
             "y": 0,
             "z": 0.9989306
           },
@@ -5653,7 +5291,7 @@
             "z": 57.83
           },
           "Forward": {
-            "x": -0.0462353751,
+            "x": -0.0462353975,
             "y": 0,
             "z": 0.9989306
           },
@@ -5677,7 +5315,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
@@ -5712,7 +5356,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
@@ -5752,7 +5402,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
@@ -5787,7 +5443,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": true
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
@@ -6011,7 +5673,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -6048,7 +5716,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -6085,7 +5759,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -6122,7 +5802,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Soldier_Yoheki_SG_M_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -6164,7 +5850,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Green_MG_C_WEEK",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [
@@ -6206,7 +5898,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -6237,7 +5935,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -6268,7 +5972,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
@@ -6299,7 +6009,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
