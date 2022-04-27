@@ -176,6 +176,11 @@
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand01",
               "SkillLevel": 1,
@@ -186,6 +191,11 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand06",
               "SkillLevel": 1,
@@ -300,9 +310,9 @@
             "z": 34.08
           },
           "Forward": {
-            "x": 0.338805,
+            "x": 0.33880654,
             "y": 0,
-            "z": -0.940856636
+            "z": -0.94085604
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -358,9 +368,9 @@
             "z": 23.81
           },
           "Forward": {
-            "x": 0.6018836,
+            "x": 0.601884544,
             "y": 0,
-            "z": -0.798583865
+            "z": -0.79858315
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -382,10 +392,10 @@
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
-                  "ExSkill": null,
-                  "PublicSkill": null,
-                  "PassiveSkill": null,
-                  "ExtraPassiveSkill": null
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
                 }
               },
               "SpawnAIGroupId": "C",
@@ -619,7 +629,7 @@
           ]
         },
         {
-          "EventName": "UseSKill",
+          "EventName": "UseSKill_RelicCount1",
           "Operator": 0,
           "Conditions": [
             {
@@ -647,11 +657,26 @@
               },
               "InactivateWhenStart": false,
               "ConditionID": "0"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, Assembly-CSharp",
+              "SpawnTemplateIds": [
+                "Hieronymus_HolyRelic_Normal"
+              ],
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "StartCharacterCountBeforeCheck": 0,
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand01",
               "SkillLevel": 1,
@@ -662,6 +687,70 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand06",
+              "SkillLevel": 1,
+              "ExecuterLevel": 17,
+              "CharacterGroup": 1,
+              "CommandID": "2phase_HieronymusSkill06",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSKill_RelicCount0",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 92.7599945
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 13,
+                "Height": 5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": "0"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, Assembly-CSharp",
+              "SpawnTemplateIds": [
+                "Hieronymus_HolyRelic_Normal"
+              ],
+              "AliveCharacterCount": 0,
+              "TriggerMaxCount": 1,
+              "StartCharacterCountBeforeCheck": 0,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand06",
               "SkillLevel": 1,
@@ -702,9 +791,9 @@
             "z": 107.9
           },
           "Forward": {
-            "x": 0.338805,
+            "x": 0.33880654,
             "y": 0,
-            "z": -0.940856636
+            "z": -0.94085604
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -916,10 +1005,10 @@
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
-                  "ExSkill": null,
-                  "PublicSkill": null,
-                  "PassiveSkill": null,
-                  "ExtraPassiveSkill": null
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
                 }
               },
               "SpawnAIGroupId": "\u0000",

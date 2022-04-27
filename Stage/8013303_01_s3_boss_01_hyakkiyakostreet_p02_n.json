@@ -1247,7 +1247,7 @@
                     "y": 54.35138
                   },
                   "Direction": {
-                    "x": -0.0174524076,
+                    "x": -0.01745241,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -1267,7 +1267,7 @@
                     "y": 55.10334
                   },
                   "Direction": {
-                    "x": -0.0174524076,
+                    "x": -0.01745241,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -1286,7 +1286,7 @@
                 "y": 54.07
               },
               "Direction": {
-                "x": -0.0174524076,
+                "x": -0.01745241,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
@@ -1363,6 +1363,49 @@
         {
           "GroupName": "SpawnPointParent3-2",
           "SpawnPoints": [
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "YukataHanya_StreetGhostes_SR_C_801Event_03",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2",
+                "ConditionDeadBoss",
+                "BossHPChanged"
+              ],
+              "SpawnCommandIdList": [
+                "UseSkill_AttackPower"
+              ],
+              "MovePoints": [],
+              "TileX": 40,
+              "TileY": 343,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.03,
+                "y": 64
+              },
+              "Direction": {
+                "x": -0.0523359552,
+                "y": -0.99862957
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
@@ -1474,7 +1517,7 @@
                 "y": 65.55
               },
               "Direction": {
-                "x": 0.0523357838,
+                "x": 0.05233578,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
@@ -1515,7 +1558,7 @@
                 "y": 65.9799957
               },
               "Direction": {
-                "x": -0.05233596,
+                "x": -0.0523359552,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
@@ -1558,49 +1601,6 @@
               "Direction": {
                 "x": -0.06975664,
                 "y": -0.9975641
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "YukataHanya_StreetGhostes_SR_C_801Event_03",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2",
-                "ConditionDeadBoss",
-                "BossHPChanged"
-              ],
-              "SpawnCommandIdList": [
-                "UseSkill_AttackPower"
-              ],
-              "MovePoints": [],
-              "TileX": 40,
-              "TileY": 343,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0.03,
-                "y": 64
-              },
-              "Direction": {
-                "x": -0.05233596,
-                "y": -0.99862957
               },
               "ConditionIdList": [],
               "CommandIdList": [

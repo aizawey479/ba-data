@@ -1,0 +1,226 @@
+[
+  {
+    "$type": "MX.Logic.Data.PassiveSkillData, Assembly-CSharp",
+    "Duration": -1,
+    "MaxTriggerCount": -1,
+    "TryCount": 0,
+    "TriggerCondition": {
+      "$type": "MX.Logic.Data.PassiveTriggerData, Assembly-CSharp",
+      "Event": 105,
+      "Parameters": "30",
+      "ConditionExpression": "",
+      "TriggerRate": 10000,
+      "EchelonConstraint": {
+        "$type": "MX.Logic.Data.EchelonConstraint, Assembly-CSharp",
+        "CountConstraint": {
+          "$type": "MX.Logic.Data.CountConstraint, Assembly-CSharp",
+          "Count": 0,
+          "DiffOperator": 0
+        },
+        "SchoolConstraint": {
+          "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+          "School": 0,
+          "IncludeType": 0
+        },
+        "WeaponConstraint": {
+          "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+          "Weapon": 0,
+          "IncludeType": 0
+        },
+        "IsEmpty": true
+      }
+    },
+    "TriggerSourceFindRule": {
+      "$type": "MX.Logic.Skills.TargetFindRule, Assembly-CSharp",
+      "Sort": {
+        "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
+        "SortCriteria": "Distance",
+        "SortStat": 0,
+        "SortParameter": null,
+        "OrderBy": "Lowest"
+      },
+      "EssentialCandidate": {
+        "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
+        "TargetSide": "Self",
+        "TargetingType": "Target",
+        "ApplyEntityType": 13,
+        "MaxTargetCount": 1
+      },
+      "OptionalCandidate": {
+        "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+        "AliveState": 0,
+        "SchoolConstraint": {
+          "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+          "School": 0,
+          "IncludeType": 0
+        },
+        "WeaponConstraint": {
+          "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+          "Weapon": 18,
+          "IncludeType": 1
+        },
+        "SquadTypeConstraint": {
+          "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+          "SquadType": 0,
+          "IncludeType": 0
+        },
+        "AdaptationConstraint": {
+          "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+          "AdaptationType": 0,
+          "AdaptationValues": [],
+          "IncludeType": 0
+        },
+        "BulletConstraint": {
+          "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+          "BulletType": 5,
+          "IncludeType": 0
+        },
+        "TagConstraint": {
+          "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+          "IncludeType": 0
+        },
+        "CoverState": 0
+      }
+    },
+    "SkillTargetType": 3,
+    "EntityTimeline": [
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "Tag": "ActionStart",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 0,
+        "DamageDistributeRate": 0,
+        "Entity": null
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 1,
+        "DamageDistributeRate": 0,
+        "Entity": {
+          "$type": "MX.Logic.Data.LevelTargetAttachedEntityData, Assembly-CSharp",
+          "Abilities": [
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "TimeAttack_Enemy_Damage_DamageByMaxHP_TriggerPeriodic_01"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.HpRateModifierData, Assembly-CSharp",
+                  "Operator": 5,
+                  "HpRate": 150,
+                  "IncludeType": 1,
+                  "CheckTarget": 0,
+                  "name": "Enemy_Damage_DamageByMaxHP_TriggerPeriodic_HpRateModifier01",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "Enemy_Damage_DamageByMaxHP_TriggerPeriodic_LevelOneTimeAbility01",
+              "hideFlags": 0
+            }
+          ],
+          "EntityName": "Enemy_Damage_DamageByMaxHP_TriggerPeriodic_LevelTargetAttachedEntity01",
+          "SpawnRate": 10000,
+          "SpawnDelay": 0,
+          "ApplyType": 4,
+          "DecideTiming": 0,
+          "EntitySpawnIncludeOutOfRangeInputTarget": false,
+          "SpawnPositionType": "Invoker",
+          "SpawnWorldPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionRandomOffsetRange": 0,
+          "OffsetDirectionType": "None",
+          "SpawnDirectionType": "None",
+          "OverrideTargetingRule": true,
+          "TargetSortRule": {
+            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
+            "SortCriteria": "Distance",
+            "SortStat": 0,
+            "SortParameter": null,
+            "OrderBy": "Lowest"
+          },
+          "EssentialCandidateRule": {
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
+            "TargetSide": "Self",
+            "TargetingType": "Target",
+            "ApplyEntityType": 13,
+            "MaxTargetCount": 1
+          },
+          "OptionalCandidateRule": {
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+            "AliveState": 0,
+            "SchoolConstraint": {
+              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+              "School": 0,
+              "IncludeType": 0
+            },
+            "WeaponConstraint": {
+              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+              "Weapon": 18,
+              "IncludeType": 1
+            },
+            "SquadTypeConstraint": {
+              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+              "SquadType": 0,
+              "IncludeType": 0
+            },
+            "AdaptationConstraint": {
+              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+              "AdaptationType": 0,
+              "AdaptationValues": [],
+              "IncludeType": 0
+            },
+            "BulletConstraint": {
+              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+              "BulletType": 5,
+              "IncludeType": 0
+            },
+            "TagConstraint": {
+              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+              "IncludeType": 0
+            },
+            "CoverState": 0
+          },
+          "HighlightOption": 0,
+          "CheckSpawnPositionMovable": false,
+          "name": "Enemy_Damage_DamageByMaxHP_TriggerPeriodic_LevelTargetAttachedEntity01",
+          "hideFlags": 0
+        }
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "Tag": "ActionEnd",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 2,
+        "DamageDistributeRate": 0,
+        "Entity": null
+      }
+    ],
+    "GroupName": "Enemy_Damage_DamageByMaxHP_TriggerPeriodic_PassiveSkill01",
+    "MaxLevel": 1,
+    "SkillId": 2032710128,
+    "name": "Enemy_Damage_DamageByMaxHP_TriggerPeriodic_PassiveSkill01",
+    "hideFlags": 0
+  }
+]

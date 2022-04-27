@@ -38,12 +38,12 @@
                   "y": 1.45,
                   "z": 19.7199841
                 },
-                "MinCameraDistance": 52.0001678,
-                "MaxCameraDistance": 52.0001678,
+                "MinCameraDistance": 52,
+                "MaxCameraDistance": 52,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               },
               {
@@ -53,12 +53,12 @@
                   "y": 1.45,
                   "z": 28.4199886
                 },
-                "MinCameraDistance": 52.0001678,
-                "MaxCameraDistance": 52.0001678,
+                "MinCameraDistance": 52,
+                "MaxCameraDistance": 52,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               }
             ],
@@ -176,6 +176,11 @@
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": null,
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand04",
               "SkillLevel": 1,
@@ -186,6 +191,11 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": null,
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand09",
               "SkillLevel": 1,
@@ -722,7 +732,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "Hieronymus_default_HardCore",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
@@ -840,12 +856,12 @@
                     "y": 1.45,
                     "z": 93.34
                   },
-                  "MinCameraDistance": 52.0001678,
-                  "MaxCameraDistance": 52.0001678,
+                  "MinCameraDistance": 52,
+                  "MaxCameraDistance": 52,
                   "CameraForward": {
-                    "x": -0.8034655,
-                    "y": -0.426620662,
-                    "z": 0.4152567
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
                   }
                 },
                 {
@@ -855,12 +871,12 @@
                     "y": 1.45,
                     "z": 102.04
                   },
-                  "MinCameraDistance": 52.0001678,
-                  "MaxCameraDistance": 52.0001678,
+                  "MinCameraDistance": 52,
+                  "MaxCameraDistance": 52,
                   "CameraForward": {
-                    "x": -0.8034655,
-                    "y": -0.426620662,
-                    "z": 0.4152567
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
                   }
                 }
               ],
@@ -938,7 +954,7 @@
           ]
         },
         {
-          "EventName": "UseSKill",
+          "EventName": "UseSKill_RelicCount1",
           "Operator": 0,
           "Conditions": [
             {
@@ -951,7 +967,7 @@
               "Position": {
                 "x": 0,
                 "y": 0,
-                "z": 92.75
+                "z": 92.7599945
               },
               "Rect": {
                 "Direction": {
@@ -966,11 +982,26 @@
               },
               "InactivateWhenStart": false,
               "ConditionID": "0"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, Assembly-CSharp",
+              "SpawnTemplateIds": [
+                "Hieronymus_HolyRelic_HardCore"
+              ],
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "StartCharacterCountBeforeCheck": 0,
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand04",
               "SkillLevel": 1,
@@ -981,6 +1012,70 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand09",
+              "SkillLevel": 1,
+              "ExecuterLevel": 50,
+              "CharacterGroup": 1,
+              "CommandID": "2phase_HieronymusSkill09",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSKill_RelicCount0",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 0,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0,
+                "y": 0,
+                "z": 92.7599945
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 13,
+                "Height": 5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": "0"
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, Assembly-CSharp",
+              "SpawnTemplateIds": [
+                "Hieronymus_HolyRelic_HardCore"
+              ],
+              "AliveCharacterCount": 0,
+              "TriggerMaxCount": 1,
+              "StartCharacterCountBeforeCheck": 0,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand09",
               "SkillLevel": 1,
@@ -1070,7 +1165,7 @@
             "z": 97.815
           },
           "Forward": {
-            "x": -0.009106529,
+            "x": -0.009106531,
             "y": 0,
             "z": 0.9999585
           },
@@ -1318,7 +1413,13 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": null,
+                  "PublicSkill": null,
+                  "PassiveSkill": null,
+                  "ExtraPassiveSkill": null
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
