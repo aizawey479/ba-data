@@ -12,27 +12,27 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 16,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -313,7 +313,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandRemoveFromCameraTarget, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandRemoveFromCameraTarget, BlueArchive",
             "EntityCommandIds": [
               "Hod"
             ],
@@ -327,7 +327,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead1"
@@ -335,7 +335,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 2,
             "SetConditionCommandOnly": false,
             "CommandID": "",
@@ -348,13 +348,13 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2"
           },
           {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
             "SpawnTemplateId": "",
             "Shape": 1,
             "Target": 0,
@@ -382,7 +382,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 3,
             "SetConditionCommandOnly": false,
             "CommandID": "",
@@ -395,7 +395,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "Hod"
@@ -403,7 +403,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -426,31 +426,31 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": "1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 2000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandOperator, BlueArchive",
               "GroupId": "HOD_Start_01",
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 3500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandOperator, BlueArchive",
               "GroupId": "HOD_TemporaryTower_CrowdControlGauge_01",
               "CommandID": "",
               "WaitExecuteEnd": false
@@ -462,13 +462,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 10,
               "animationName": "Hod_01_BossState_01",
               "CommandID": "",
@@ -481,25 +481,25 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawn1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "Hod",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSkipUntargetableCheckInMove, BlueArchive",
               "Skip": true,
               "CommandID": "Hod",
               "WaitExecuteEnd": false
@@ -513,7 +513,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_default_Extreme",
                 "AIId": 0,
@@ -554,7 +554,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_TemporaryTower_Extreme",
                 "AIId": 0,
@@ -593,7 +593,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Railgun_Extreme",
                 "AIId": 0,
@@ -633,7 +633,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Railgun_Extreme",
                 "AIId": 0,
@@ -673,7 +673,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Railgun_Extreme",
                 "AIId": 0,
@@ -713,7 +713,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Railgun_Extreme",
                 "AIId": 0,
@@ -769,25 +769,25 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawn2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 100,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandRemoveFromCameraTarget, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandRemoveFromCameraTarget, BlueArchive",
               "EntityCommandIds": [
                 "RemoveCameraTower"
               ],
@@ -801,11 +801,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 0,
@@ -833,7 +833,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawn2TemporaryTower",
               "WaitExecuteEnd": false
@@ -845,20 +845,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 11,
               "animationName": "rb_01_hod_Leg_Door01_Open",
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 10,
               "animationName": "Hod_01_BossState_02",
               "CommandID": "",
@@ -871,13 +871,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandRemoveFromCameraTarget, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandRemoveFromCameraTarget, BlueArchive",
               "EntityCommandIds": [
                 "RemoveCameraTower"
               ],
@@ -891,7 +891,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 0,
@@ -919,7 +919,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": true,
               "CharacterId": 18001002,
@@ -940,7 +940,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 0,
@@ -968,7 +968,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 10,
               "animationName": "Hod_01_BossState_01",
               "CommandID": "",
@@ -981,7 +981,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2"
@@ -989,14 +989,14 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 12,
               "animationName": "rb_01_hod_Leg_Door02_Open",
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 10,
               "animationName": "Hod_01_BossState_02",
               "CommandID": "",
@@ -1011,7 +1011,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -1039,7 +1039,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_TemporaryTower_Extreme",
                 "AIId": 0,
@@ -1078,7 +1078,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Cannon_Extreme",
                 "AIId": 0,
@@ -1118,7 +1118,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Cannon_Extreme",
                 "AIId": 0,
@@ -1158,7 +1158,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Cannon_Extreme",
                 "AIId": 0,
@@ -1198,7 +1198,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Cannon_Extreme",
                 "AIId": 0,
@@ -1254,11 +1254,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 0,
@@ -1286,7 +1286,7 @@
           ],
           "Commands": [
             {
-              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "$type": "GroundCommandFadeOutIn, BlueArchive",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 1.8,
               "VisualDelayFadeInStart": 2,
@@ -1294,7 +1294,7 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
               "PointCommandID": "3PhaseHodPoint",
@@ -1304,14 +1304,14 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+              "$type": "GroundCommandLocateCamera, BlueArchive",
               "ID": 17,
               "MaxCameraSpeed": 3,
               "RotationSpeed": 1,
@@ -1343,7 +1343,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -1371,13 +1371,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1550,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 4,
               "SetConditionCommandOnly": false,
               "CommandID": "0",
@@ -1390,25 +1390,25 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawn3",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 50,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, BlueArchive",
               "IsForceIdleOn": true,
               "CommandID": "ForceIldeTower",
               "WaitExecuteEnd": false
@@ -1422,7 +1422,7 @@
           "GroupName": "SpawnPointParent3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Cannon_Extreme",
                 "AIId": 0,
@@ -1461,7 +1461,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hod_GuardTower_Cannon_Extreme",
                 "AIId": 0,
@@ -1516,13 +1516,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "$type": "GroundCommandPlayTimeline, BlueArchive",
               "TimelinePath": "Timeline/Timeline_Hod_Original_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
@@ -1530,13 +1530,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 2000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandOperator, BlueArchive",
               "GroupId": "HOD_CrowdControlGauge_01",
               "CommandID": "",
               "WaitExecuteEnd": false
@@ -1548,26 +1548,26 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatus, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, BlueArchive",
               "heroStatus": "Untargetable",
               "isAdd": false,
               "CommandID": "Hod",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 50,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [
                 "Hod"
               ],
@@ -1584,7 +1584,7 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceIdle, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceIdle, BlueArchive",
               "IsForceIdleOn": false,
               "CommandID": "ForceIldeTower",
               "WaitExecuteEnd": false
@@ -1596,13 +1596,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "DieGuardTower"
               ],
@@ -1619,7 +1619,7 @@
           "GroupName": "SpawnPointParent3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
@@ -1656,7 +1656,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],

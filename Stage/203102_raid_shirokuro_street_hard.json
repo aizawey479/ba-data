@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 7,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -66,7 +66,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -79,7 +79,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDeadKuro"
@@ -87,7 +87,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -110,13 +110,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawnShiro",
               "WaitExecuteEnd": false
@@ -128,7 +128,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, BlueArchive",
               "Phase": 4,
               "MaxTriggerCount": -1,
               "ConditionID": "Shiro"
@@ -136,7 +136,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 1,
               "animationName": "rb_shirokuro_light_GrayToRed_ani",
               "CommandID": "",
@@ -149,7 +149,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, BlueArchive",
               "Phase": 6,
               "MaxTriggerCount": -1,
               "ConditionID": "Shiro"
@@ -157,7 +157,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 1,
               "animationName": "rb_shirokuro_light_GrayToBlue_ani",
               "CommandID": "",
@@ -170,7 +170,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDeadShiro"
@@ -178,13 +178,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
               "CommandID": "",
@@ -199,7 +199,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Shiro_default_Hard",
                 "AIId": 0,
@@ -249,20 +249,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 1,
               "animationName": "rb_shirokuro_light_GrayToBlue_ani",
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "$type": "GroundCommandFadeOutIn, BlueArchive",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 1.8,
               "VisualDelayFadeInStart": 0.2,
@@ -270,14 +270,14 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+              "$type": "GroundCommandLocateCamera, BlueArchive",
               "ID": 7,
               "MaxCameraSpeed": 3,
               "RotationSpeed": 1,
@@ -318,13 +318,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 200,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "$type": "GroundCommandPlayTimeline, BlueArchive",
               "TimelinePath": "Timeline/Timeline_Kuro_Original_OP",
               "UseGameTime": false,
               "CanSkip": true,
@@ -338,19 +338,19 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 2000,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawnKuro",
               "WaitExecuteEnd": false
@@ -362,7 +362,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -390,13 +390,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1550,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 3,
               "SetConditionCommandOnly": false,
               "CommandID": "0",
@@ -411,7 +411,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kuro_default_Hard",
                 "AIId": 0,
@@ -461,7 +461,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, BlueArchive",
               "Phase": 11,
               "MaxTriggerCount": -1,
               "ConditionID": "Kuro"
@@ -469,7 +469,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 1,
               "animationName": "rb_shirokuro_light_GrayToRed_ani",
               "CommandID": "",
@@ -482,7 +482,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, BlueArchive",
               "Phase": 7,
               "MaxTriggerCount": -1,
               "ConditionID": "Kuro"
@@ -490,7 +490,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 1,
               "animationName": "rb_shirokuro_light_GrayToBlue_ani",
               "CommandID": "",

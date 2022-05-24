@@ -1,61 +1,76 @@
 [
   {
-    "$type": "MX.Logic.Data.TimelineSkillActionData, Assembly-CSharp",
+    "$type": "MX.Logic.Data.TimelineSkillActionData, BlueArchive",
     "DistributeType": 0,
     "RotateTurretOnly": false,
     "EntityTimeline": [
       {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
+        "Tag": "ActionStart",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 0,
+        "DamageDistributeRate": 0,
+        "Entity": null
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
         "Tag": "ActionRelease",
         "InvokerDirectionOverride": "None",
         "InvokerDirectionOverrideWorldPosition": {
           "x": 0,
           "y": 0
         },
-        "Frame": 30,
-        "DamageDistributeRate": 10000,
+        "Frame": 1,
+        "DamageDistributeRate": 0,
         "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetProjectileEntityData, Assembly-CSharp",
-          "TransitionType": "None",
-          "DestinationType": "InputBattleEntity",
-          "DestinationWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "DestinationPositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "DestinationPositionRandomOffsetRange": 0,
-          "DestinationOffsetDirectionType": "None",
-          "ReduceDamageRatePerHit": 0,
-          "MaxReducedDamageRate": 0,
-          "ProjectileType": "TargetCharacter",
-          "ShapeType": 3,
-          "Width": 25,
-          "Height": 25,
-          "Speed": 1300,
-          "FireDelayFrame": 0,
-          "IsStickToTargetAfterHit": false,
-          "Abilities": [
+          "$type": "MX.Logic.Data.LevelAuraEntityData, BlueArchive",
+          "AttachSpawnTarget": true,
+          "Duration": 936,
+          "Interval": 150,
+          "Radius": 500,
+          "RemoveEntityIfSameEntitySpawn": -1,
+          "RemoveEntityIfAttachSpawnTargetDie": true,
+          "AreaAbilities": [
             {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 35,
               "LogicEffectGroupIds": [
                 "CH0104_Ex01_Effect01"
               ],
               "name": "CH0104_Ex01_LevelOneTimeAbility01",
               "hideFlags": 0
+            },
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 30,
+              "LogicEffectGroupIds": [
+                "CH0104_Ex01_Effect02"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.CharacterIdConditionalModifierData, BlueArchive",
+                  "CharacterIdList": [
+                    10042
+                  ],
+                  "TargetSide": "Self",
+                  "IncludeType": 1,
+                  "CheckTarget": 1,
+                  "name": "CH0104_Ex01_CharacterIdConditionalModifier01",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "CH0104_Ex01_LevelOneTimeAbility02",
+              "hideFlags": 0
             }
           ],
-          "SplashDelayFrame": 0,
-          "SplashAreaEntityData": null,
-          "AreaSpawnerData": null,
-          "SkillEntitySpawnerData": null,
-          "EntityName": "CH0104ExSkill01Entity01",
+          "EntityName": "CH0104Ex01Entity01",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
-          "ApplyType": 2,
+          "ApplyType": 4,
           "DecideTiming": 0,
           "EntitySpawnIncludeOutOfRangeInputTarget": false,
           "SpawnPositionType": "Invoker",
@@ -69,1874 +84,131 @@
           },
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
-          "SpawnDirectionType": "ToTarget",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 0
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetProjectileEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 63,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
           "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
+            "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+            "SortCriteria": "Distance",
             "SortStat": 0,
             "SortParameter": null,
-            "OrderBy": "None"
+            "OrderBy": "Lowest"
           },
           "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+            "TargetSide": "Ally",
+            "TargetingType": "Position",
+            "ApplyEntityType": 5,
+            "MaxTargetCount": -1
           },
           "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
             "AliveState": 0,
             "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
               "School": 0,
               "IncludeType": 0
             },
             "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
               "Weapon": 0,
               "IncludeType": 0
             },
             "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
               "SquadType": 0,
               "IncludeType": 0
             },
             "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
               "AdaptationType": 0,
               "AdaptationValues": [],
               "IncludeType": 0
             },
             "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
               "BulletType": 5,
               "IncludeType": 0
             },
             "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
               "IncludeType": 0
             },
             "CoverState": 0
           },
-          "HighlightOption": 2,
+          "HighlightOption": 1,
           "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
+          "name": "CH0104_Ex01_LevelAuraEntity01",
           "hideFlags": 0
         }
       },
       {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 65,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 67,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 69,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 71,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 73,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 75,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 77,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 79,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 81,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 83,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 85,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 87,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 89,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 91,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 93,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 94,
-        "DamageDistributeRate": 555,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
-        "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
-        "InvokerDirectionOverrideWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "Frame": 96,
-        "DamageDistributeRate": 556,
-        "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "CH0104_Ex01_Effect01"
-              ],
-              "name": "CH0104_Ex01_LevelOneTimeAbility01",
-              "hideFlags": 0
-            }
-          ],
-          "EntityName": "CH0104ExSkill01Entity02",
-          "SpawnRate": 10000,
-          "SpawnDelay": 0,
-          "ApplyType": 2,
-          "DecideTiming": 0,
-          "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "InputBattleEntity",
-          "SpawnWorldPosition": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionOffset": {
-            "x": 0,
-            "y": 0
-          },
-          "PositionRandomOffsetRange": 0,
-          "OffsetDirectionType": "None",
-          "SpawnDirectionType": "None",
-          "OverrideTargetingRule": false,
-          "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-            "SortCriteria": "None",
-            "SortStat": 0,
-            "SortParameter": null,
-            "OrderBy": "None"
-          },
-          "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "None",
-            "TargetingType": "None",
-            "ApplyEntityType": 0,
-            "MaxTargetCount": 1
-          },
-          "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-            "AliveState": 0,
-            "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-              "School": 0,
-              "IncludeType": 0
-            },
-            "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-              "Weapon": 0,
-              "IncludeType": 0
-            },
-            "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-              "SquadType": 0,
-              "IncludeType": 0
-            },
-            "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-              "AdaptationType": 0,
-              "AdaptationValues": [],
-              "IncludeType": 0
-            },
-            "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-              "BulletType": 5,
-              "IncludeType": 0
-            },
-            "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-              "IncludeType": 0
-            },
-            "CoverState": 0
-          },
-          "HighlightOption": 2,
-          "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Ex01_LevelTargetEntity01",
-          "hideFlags": 0
-        }
-      },
-      {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
         "Tag": "ActionEnd",
         "InvokerDirectionOverride": "None",
         "InvokerDirectionOverrideWorldPosition": {
           "x": 0,
           "y": 0
         },
-        "Frame": 111,
+        "Frame": 96,
         "DamageDistributeRate": 0,
         "Entity": null
       }
     ],
-    "Range": 600,
+    "Range": 500,
     "Angle": 0,
     "CheckCanUseSkillPoint": false,
     "IsWeaponMountAfterSkill": false,
-    "InvokerDirection": "ToTarget",
+    "InvokerDirection": "Invoker",
     "InvokerDirectionWorldPosition": {
       "x": 0,
       "y": 0
     },
     "RootMotionMoveData": null,
     "MainEntityData": {
-      "$type": "MX.Logic.Data.LevelTargetProjectileEntityData, Assembly-CSharp",
-      "TransitionType": "None",
-      "DestinationType": "InputBattleEntity",
-      "DestinationWorldPosition": {
-        "x": 0,
-        "y": 0
-      },
-      "DestinationPositionOffset": {
-        "x": 0,
-        "y": 0
-      },
-      "DestinationPositionRandomOffsetRange": 0,
-      "DestinationOffsetDirectionType": "None",
-      "ReduceDamageRatePerHit": 0,
-      "MaxReducedDamageRate": 0,
-      "ProjectileType": "TargetCharacter",
-      "ShapeType": 3,
-      "Width": 25,
-      "Height": 25,
-      "Speed": 1300,
-      "FireDelayFrame": 0,
-      "IsStickToTargetAfterHit": false,
-      "Abilities": [
+      "$type": "MX.Logic.Data.LevelAuraEntityData, BlueArchive",
+      "AttachSpawnTarget": true,
+      "Duration": 936,
+      "Interval": 150,
+      "Radius": 500,
+      "RemoveEntityIfSameEntitySpawn": -1,
+      "RemoveEntityIfAttachSpawnTargetDie": true,
+      "AreaAbilities": [
         {
-          "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-          "StartDelay": 0,
+          "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+          "StartDelay": 35,
           "LogicEffectGroupIds": [
             "CH0104_Ex01_Effect01"
           ],
           "name": "CH0104_Ex01_LevelOneTimeAbility01",
           "hideFlags": 0
+        },
+        {
+          "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+          "StartDelay": 30,
+          "LogicEffectGroupIds": [
+            "CH0104_Ex01_Effect02"
+          ],
+          "Modifiers": [
+            {
+              "$type": "MX.Logic.Data.CharacterIdConditionalModifierData, BlueArchive",
+              "CharacterIdList": [
+                10042
+              ],
+              "TargetSide": "Self",
+              "IncludeType": 1,
+              "CheckTarget": 1,
+              "name": "CH0104_Ex01_CharacterIdConditionalModifier01",
+              "hideFlags": 0
+            }
+          ],
+          "name": "CH0104_Ex01_LevelOneTimeAbility02",
+          "hideFlags": 0
         }
       ],
-      "SplashDelayFrame": 0,
-      "SplashAreaEntityData": null,
-      "AreaSpawnerData": null,
-      "SkillEntitySpawnerData": null,
-      "EntityName": "CH0104ExSkill01Entity01",
+      "EntityName": "CH0104Ex01Entity01",
       "SpawnRate": 10000,
       "SpawnDelay": 0,
-      "ApplyType": 2,
+      "ApplyType": 4,
       "DecideTiming": 0,
       "EntitySpawnIncludeOutOfRangeInputTarget": false,
       "SpawnPositionType": "Invoker",
@@ -1950,113 +222,113 @@
       },
       "PositionRandomOffsetRange": 0,
       "OffsetDirectionType": "None",
-      "SpawnDirectionType": "ToTarget",
-      "OverrideTargetingRule": false,
+      "SpawnDirectionType": "None",
+      "OverrideTargetingRule": true,
       "TargetSortRule": {
-        "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-        "SortCriteria": "None",
+        "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+        "SortCriteria": "Distance",
         "SortStat": 0,
         "SortParameter": null,
-        "OrderBy": "None"
+        "OrderBy": "Lowest"
       },
       "EssentialCandidateRule": {
-        "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-        "TargetSide": "None",
-        "TargetingType": "None",
-        "ApplyEntityType": 0,
-        "MaxTargetCount": 0
+        "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+        "TargetSide": "Ally",
+        "TargetingType": "Position",
+        "ApplyEntityType": 5,
+        "MaxTargetCount": -1
       },
       "OptionalCandidateRule": {
-        "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+        "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
         "AliveState": 0,
         "SchoolConstraint": {
-          "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
           "School": 0,
           "IncludeType": 0
         },
         "WeaponConstraint": {
-          "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
           "Weapon": 0,
           "IncludeType": 0
         },
         "SquadTypeConstraint": {
-          "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
           "SquadType": 0,
           "IncludeType": 0
         },
         "AdaptationConstraint": {
-          "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
           "AdaptationType": 0,
           "AdaptationValues": [],
           "IncludeType": 0
         },
         "BulletConstraint": {
-          "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
           "BulletType": 5,
           "IncludeType": 0
         },
         "TagConstraint": {
-          "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
           "IncludeType": 0
         },
         "CoverState": 0
       },
-      "HighlightOption": 2,
+      "HighlightOption": 1,
       "CheckSpawnPositionMovable": false,
-      "name": "CH0104_Ex01_LevelTargetProjectileEntity01",
+      "name": "CH0104_Ex01_LevelAuraEntity01",
       "hideFlags": 0
     },
     "TargetSortRule": {
-      "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
+      "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
       "SortCriteria": "Distance",
       "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },
     "EssentialCandidateRule": {
-      "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-      "TargetSide": "Enemy",
+      "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+      "TargetSide": "Self",
       "TargetingType": "Target",
-      "ApplyEntityType": 5,
+      "ApplyEntityType": 1,
       "MaxTargetCount": 1
     },
     "OptionalCandidateRule": {
-      "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+      "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
       "AliveState": 0,
       "SchoolConstraint": {
-        "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
         "School": 0,
         "IncludeType": 0
       },
       "WeaponConstraint": {
-        "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
         "Weapon": 0,
         "IncludeType": 0
       },
       "SquadTypeConstraint": {
-        "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
         "SquadType": 0,
         "IncludeType": 0
       },
       "AdaptationConstraint": {
-        "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
         "AdaptationType": 0,
         "AdaptationValues": [],
         "IncludeType": 0
       },
       "BulletConstraint": {
-        "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
         "BulletType": 5,
         "IncludeType": 0
       },
       "TagConstraint": {
-        "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
         "IncludeType": 0
       },
       "CoverState": 0
     },
     "AutoUseRule": {
-      "$type": "MX.Logic.Skills.AutoUseRule, Assembly-CSharp",
+      "$type": "MX.Logic.Skills.AutoUseRule, BlueArchive",
       "ConditionType": "None",
       "ConditionArgument": "",
       "ConditionCheckTarget": 0,
@@ -2067,7 +339,7 @@
     },
     "GroupName": "CH0104Ex01",
     "MaxLevel": 10,
-    "Duration": 111,
+    "Duration": 96,
     "MinRange": 0,
     "SkillId": 416173234,
     "name": "CH0104_Ex01_TimelineSkillAction01",

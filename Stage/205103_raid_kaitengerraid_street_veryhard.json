@@ -1,5 +1,5 @@
 {
-  "Version": "",
+  "Version": "1.4",
   "Global": {
     "Position": {
       "x": 0,
@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 12,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -38,12 +38,12 @@
                   "y": 0.75,
                   "z": 16.01
                 },
-                "MinCameraDistance": 42.00081,
-                "MaxCameraDistance": 52.9998474,
+                "MinCameraDistance": 42,
+                "MaxCameraDistance": 53,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               },
               {
@@ -53,12 +53,12 @@
                   "y": 0.75,
                   "z": 33.52
                 },
-                "MinCameraDistance": 42.00081,
-                "MaxCameraDistance": 52.9998474,
+                "MinCameraDistance": 42,
+                "MaxCameraDistance": 53,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               }
             ],
@@ -66,7 +66,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -79,7 +79,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDeadKaitenFxMk0"
@@ -87,7 +87,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -110,25 +110,25 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawnKaitenranger",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 100,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawnKaitenrangerBoss",
               "WaitExecuteEnd": false
@@ -140,7 +140,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDeadDummyBoss"
@@ -148,13 +148,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
               "CommandID": "",
@@ -167,7 +167,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDeadDummyBoss"
@@ -175,7 +175,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "KillKaitenranger"
               ],
@@ -190,20 +190,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, BlueArchive",
               "CoolDownInMilliSeconds": 20000,
               "SyncUseSkillGroupId": 1,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, BlueArchive",
               "SyncUseSkillGroupId": 1,
               "SkillSlot": "PublicSkill02",
               "IsAdd": true,
@@ -217,20 +217,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, BlueArchive",
               "CoolDownInMilliSeconds": 20000,
               "SyncUseSkillGroupId": 2,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, BlueArchive",
               "SyncUseSkillGroupId": 2,
               "SkillSlot": "PublicSkill02",
               "IsAdd": true,
@@ -244,20 +244,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, BlueArchive",
               "CoolDownInMilliSeconds": 12000,
               "SyncUseSkillGroupId": 3,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, BlueArchive",
               "SyncUseSkillGroupId": 3,
               "SkillSlot": "PublicSkill02",
               "IsAdd": true,
@@ -271,20 +271,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, BlueArchive",
               "CoolDownInMilliSeconds": 30000,
               "SyncUseSkillGroupId": 4,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, BlueArchive",
               "SyncUseSkillGroupId": 4,
               "SkillSlot": "PublicSkill02",
               "IsAdd": true,
@@ -298,20 +298,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCreateSyncUseSkill, BlueArchive",
               "CoolDownInMilliSeconds": 15000,
               "SyncUseSkillGroupId": 5,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetSyncUseSkillGroup, BlueArchive",
               "SyncUseSkillGroupId": 5,
               "SkillSlot": "PublicSkill02",
               "IsAdd": true,
@@ -464,7 +464,7 @@
             "z": 23.6
           },
           "Forward": {
-            "x": -0.349658579,
+            "x": -0.3496586,
             "y": 0,
             "z": 0.9368772
           },
@@ -500,7 +500,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Black_HG_Street_VeryHard",
                 "AIId": 0,
@@ -540,7 +540,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Green_MG_Street_VeryHard",
                 "AIId": 0,
@@ -580,7 +580,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Yellow_SR_Street_VeryHard",
                 "AIId": 0,
@@ -620,7 +620,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Pink_RL_Street_VeryHard",
                 "AIId": 0,
@@ -660,7 +660,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Red_AR_Street_VeryHard",
                 "AIId": 0,
@@ -700,7 +700,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Kaitenranger_Boss_Street_VeryHard",
                 "AIId": 0,
@@ -758,13 +758,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "$type": "GroundCommandFadeOutIn, BlueArchive",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 1.8,
               "VisualDelayFadeInStart": 0.2,
@@ -772,14 +772,14 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+              "$type": "GroundCommandLocateCamera, BlueArchive",
               "ID": 13,
               "MaxCameraSpeed": 3,
               "RotationSpeed": 1,
@@ -792,12 +792,12 @@
                     "y": 1.85,
                     "z": 91.39001
                   },
-                  "MinCameraDistance": 52.9998474,
-                  "MaxCameraDistance": 52.9998474,
+                  "MinCameraDistance": 53,
+                  "MaxCameraDistance": 53,
                   "CameraForward": {
-                    "x": -0.697734833,
-                    "y": -0.387837529,
-                    "z": 0.602285743
+                    "x": -0.6977434,
+                    "y": -0.38783738,
+                    "z": 0.602275968
                   }
                 },
                 {
@@ -807,12 +807,12 @@
                     "y": 1.85,
                     "z": 101.07
                   },
-                  "MinCameraDistance": 52.9998474,
-                  "MaxCameraDistance": 52.9998474,
+                  "MinCameraDistance": 53,
+                  "MaxCameraDistance": 53,
                   "CameraForward": {
-                    "x": -0.697734833,
-                    "y": -0.387837529,
-                    "z": 0.602285743
+                    "x": -0.6977434,
+                    "y": -0.38783738,
+                    "z": 0.602275968
                   }
                 }
               ],
@@ -820,13 +820,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 200,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "$type": "GroundCommandPlayTimeline, BlueArchive",
               "TimelinePath": "Timeline/Timeline_Kaitenranger_Street_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
@@ -840,19 +840,19 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 2000,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawnKaitenFxMk0",
               "WaitExecuteEnd": false
@@ -864,7 +864,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -892,13 +892,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1550,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 3,
               "SetConditionCommandOnly": false,
               "CommandID": "0",
@@ -913,9 +913,9 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "KaitenFxMk0_VeryHard",
+                "SpawnTemplateId": "KaitenFxMk0_Street_VeryHard",
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
@@ -1031,7 +1031,7 @@
             "z": 99.2599945
           },
           "Forward": {
-            "x": -0.349658579,
+            "x": -0.3496586,
             "y": 0,
             "z": 0.9368772
           },
