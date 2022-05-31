@@ -1,5 +1,5 @@
 {
-  "Version": "0.9",
+  "Version": "1.3",
   "Global": {
     "Position": {
       "x": 0,
@@ -35,11 +35,11 @@
                 "UseTableData": true,
                 "Position": {
                   "x": 0,
-                  "y": 1.57,
-                  "z": 32.62
+                  "y": 2.57,
+                  "z": 31.5
                 },
-                "MinCameraDistance": 68.00017,
-                "MaxCameraDistance": 68.00017,
+                "MinCameraDistance": 75.00049,
+                "MaxCameraDistance": 75.00049,
                 "CameraForward": {
                   "x": -0.4669727,
                   "y": -0.404186666,
@@ -60,47 +60,6 @@
         ]
       },
       {
-        "EventName": "SetImmuneOff",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-            "SpawnTemplateId": "",
-            "Shape": 0,
-            "Target": 1,
-            "Trigger": 0,
-            "StayTime": 0,
-            "Position": {
-              "x": 0.00999999,
-              "y": 0,
-              "z": 103.67
-            },
-            "Rect": {
-              "Direction": {
-                "x": 0,
-                "y": 0
-              },
-              "Width": 0.5,
-              "Height": 0.5
-            },
-            "Circle": {
-              "Radius": 1
-            },
-            "InactivateWhenStart": false,
-            "ConditionID": ""
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
-            "heroStatus": "ImmuneGroggyGaugeAdd",
-            "isAdd": false,
-            "CommandID": "Hieronymus",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
         "EventName": "EndBattle",
         "Operator": 0,
         "Conditions": [
@@ -108,7 +67,7 @@
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDeadHieronymus"
+            "ConditionID": "ConditionDeadPerorozilla"
           }
         ],
         "Commands": [
@@ -132,7 +91,7 @@
       },
       "Events": [
         {
-          "EventName": "SpawnHieronymus",
+          "EventName": "SpawnPerorozilla",
           "Operator": 0,
           "Conditions": [
             {
@@ -144,7 +103,44 @@
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": "CommandSpawnHieronymus",
+              "CommandID": "CommandSpawnPerorozilla",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "Milliseconds": 1000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "HeliAnimation",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "ConditionID": ""
+            }
+          ],
+          "Commands": []
+        },
+        {
+          "EventName": "SpawnMiniPeroro",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionStatusCheck, Assembly-CSharp",
+              "StatusToCheck": "Groggy",
+              "MaxTriggerCount": 9999,
+              "ConditionID": "Perorozilla"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnMiniPeroro1",
               "WaitExecuteEnd": false
             }
           ]
@@ -154,10 +150,10 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "testcondition"
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "Phase": 1,
+              "MaxTriggerCount": 1,
+              "ConditionID": "Perorozilla"
             }
           ],
           "Commands": [
@@ -165,12 +161,12 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneGroggyGaugeAdd",
               "isAdd": true,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
+              "Milliseconds": 8000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
@@ -179,24 +175,6 @@
               "SectionID": 2,
               "SetConditionCommandOnly": false,
               "CommandID": "",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Spawnjako",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": ""
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 0,
-              "CommandID": "testcommand",
               "WaitExecuteEnd": false
             }
           ]
@@ -210,33 +188,39 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "Hieronymus_Street_Normal",
+                "SpawnTemplateId": "Perorozilla_default_Normal",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
               "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [
-                "ConditionDeadHieronymus",
-                "Hieronymus"
+                "ConditionDeadPerorozilla",
+                "Perorozilla"
               ],
               "SpawnCommandIdList": [
-                "Hieronymus"
+                "Perorozilla"
               ],
               "MovePoints": [],
               "TileX": 55,
-              "TileY": 203,
-              "PositionHeight": -11,
+              "TileY": 202,
+              "PositionHeight": 0,
               "Position": {
                 "x": 0,
-                "y": 40.5
+                "y": 40.46
               },
               "Direction": {
-                "x": -8.742278e-08,
+                "x": -8.742281e-08,
                 "y": -1
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawnHieronymus"
+                "CommandSpawnPerorozilla"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -246,24 +230,26 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "FoodTruck_GenbuStore_MG_C",
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize01",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
               "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "testcondition"
-              ],
-              "SpawnCommandIdList": [
-                "Hieronymus"
-              ],
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 82,
-              "TileY": 163,
+              "TileX": 57,
+              "TileY": 157,
               "PositionHeight": 0,
               "Position": {
-                "x": 5.52,
-                "y": 32.58
+                "x": 0.46,
+                "y": 31.48
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -271,7 +257,155 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "testcommand"
+                "CommandSpawnMiniPeroro1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize02",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 153,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.89,
+                "y": 30.57
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize03",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 69,
+              "TileY": 153,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.95,
+                "y": 30.67
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize04",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 162,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.29,
+                "y": 32.46
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 68,
+              "TileY": 163,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.7,
+                "y": 32.6
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -303,8 +437,8 @@
             {
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
-              "DelayBeforeFadeIn": 1.8,
-              "VisualDelayFadeInStart": 0.2,
+              "DelayBeforeFadeIn": 1.5,
+              "VisualDelayFadeInStart": 2,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
@@ -312,10 +446,10 @@
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
-              "PointCommandID": "2PhaseHieronymusPoint",
+              "PointCommandID": "2PhasePerorozillaPoint",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
@@ -336,11 +470,11 @@
                   "UseTableData": true,
                   "Position": {
                     "x": 0,
-                    "y": 1.45,
+                    "y": 2.45,
                     "z": 89.16
                   },
-                  "MinCameraDistance": 68.00017,
-                  "MaxCameraDistance": 68.00017,
+                  "MinCameraDistance": 75.00049,
+                  "MaxCameraDistance": 75.00049,
                   "CameraForward": {
                     "x": -0.4669727,
                     "y": -0.404186666,
@@ -353,13 +487,13 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 200,
+              "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
-              "TimelinePath": "timeline/timeline_hieronymus_street_phasechange",
+              "TimelinePath": "Timeline/Timeline_Perorozilla_Original_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
               "CommandID": "",
@@ -432,7 +566,48 @@
       },
       "Events": [
         {
-          "EventName": "Spawnjako",
+          "EventName": "SetImmuneOff",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 1,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0.00999999,
+                "y": 0,
+                "z": 98.661
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 0.5,
+                "Height": 0.5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneGroggyGaugeAdd",
+              "isAdd": false,
+              "CommandID": "Perorozilla",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "HeliAnimation",
           "Operator": 0,
           "Conditions": [
             {
@@ -442,9 +617,30 @@
           ],
           "Commands": [
             {
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "propKey": 24,
+              "animationName": "FX_Perorozilla_PhaseStart",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnMiniPeroro",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionStatusCheck, Assembly-CSharp",
+              "StatusToCheck": "Groggy",
+              "MaxTriggerCount": 9999,
+              "ConditionID": "Perorozilla"
+            }
+          ],
+          "Commands": [
+            {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": "testcommand",
+              "CommandID": "CommandSpawnMiniPeroro3",
               "WaitExecuteEnd": false
             }
           ]
@@ -454,10 +650,10 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "testcondition"
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "Phase": 2,
+              "MaxTriggerCount": 1,
+              "ConditionID": "Perorozilla"
             }
           ],
           "Commands": [
@@ -465,12 +661,12 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneGroggyGaugeAdd",
               "isAdd": true,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
+              "Milliseconds": 8000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
@@ -492,32 +688,34 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "FoodTruck_GenbuStore_MG_C",
+                "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "testcondition"
-              ],
-              "SpawnCommandIdList": [
-                "Hieronymus"
-              ],
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 82,
-              "TileY": 449,
+              "TileX": 55,
+              "TileY": 493,
               "PositionHeight": 0,
               "Position": {
-                "x": 5.52,
-                "y": 89.87
+                "x": 0,
+                "y": 98.691
               },
               "Direction": {
-                "x": -8.742278e-08,
+                "x": -8.742281e-08,
                 "y": -1
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "testcommand"
+                "2PhasePerorozillaPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -527,20 +725,26 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "",
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize01",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
-              "SpawnAIGroupId": "\u0000",
+              "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 55,
-              "TileY": 490,
-              "PositionHeight": -12.41,
+              "TileX": 57,
+              "TileY": 448,
+              "PositionHeight": 0,
               "Position": {
-                "x": 0,
-                "y": 98
+                "x": 0.46,
+                "y": 89.5
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -548,7 +752,155 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "2PhaseHieronymusPoint"
+                "CommandSpawnMiniPeroro3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize02",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 443,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.89,
+                "y": 88.590004
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize03",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 69,
+              "TileY": 443,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.95,
+                "y": 88.69
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize04",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 452,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.29,
+                "y": 90.48
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro3"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 68,
+              "TileY": 453,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.7,
+                "y": 90.62
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro3"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -580,8 +932,8 @@
             {
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
-              "DelayBeforeFadeIn": 1.8,
-              "VisualDelayFadeInStart": 0.2,
+              "DelayBeforeFadeIn": 1.5,
+              "VisualDelayFadeInStart": 2,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
@@ -589,10 +941,10 @@
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
-              "PointCommandID": "3PhaseHieronymusPoint",
+              "PointCommandID": "3PhasePerorozillaPoint",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
@@ -613,11 +965,11 @@
                   "UseTableData": true,
                   "Position": {
                     "x": 0,
-                    "y": 1.45,
+                    "y": 2.45,
                     "z": 141.65
                   },
-                  "MinCameraDistance": 68.00017,
-                  "MaxCameraDistance": 68.00017,
+                  "MinCameraDistance": 75.00049,
+                  "MaxCameraDistance": 75.00049,
                   "CameraForward": {
                     "x": -0.4669727,
                     "y": -0.404186666,
@@ -630,13 +982,13 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 200,
+              "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
-              "TimelinePath": "timeline/timeline_hieronymus_street_phasechange",
+              "TimelinePath": "Timeline/Timeline_Perorozilla_Original_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
               "CommandID": "",
@@ -709,7 +1061,48 @@
       },
       "Events": [
         {
-          "EventName": "Spawnjako",
+          "EventName": "SetImmuneOff",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 1,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0.00999999,
+                "y": 0,
+                "z": 150.599991
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 0.5,
+                "Height": 0.5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneGroggyGaugeAdd",
+              "isAdd": false,
+              "CommandID": "Perorozilla",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "HeliAnimation",
           "Operator": 0,
           "Conditions": [
             {
@@ -719,9 +1112,10 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 0,
-              "CommandID": "testcommand",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "propKey": 34,
+              "animationName": "FX_Perorozilla_PhaseStart",
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -731,10 +1125,10 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "testcondition"
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "Phase": 0,
+              "MaxTriggerCount": 1,
+              "ConditionID": "Perorozilla"
             }
           ],
           "Commands": [
@@ -742,12 +1136,12 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneGroggyGaugeAdd",
               "isAdd": true,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
+              "Milliseconds": 8000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
@@ -756,6 +1150,26 @@
               "SectionID": 6,
               "SetConditionCommandOnly": false,
               "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnMiniPeroro",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionStatusCheck, Assembly-CSharp",
+              "StatusToCheck": "Groggy",
+              "MaxTriggerCount": 9999,
+              "ConditionID": "Perorozilla"
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnMiniPeroro5",
               "WaitExecuteEnd": false
             }
           ]
@@ -769,32 +1183,34 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "FoodTruck_GenbuStore_MG_C",
+                "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "testcondition"
-              ],
-              "SpawnCommandIdList": [
-                "Hieronymus"
-              ],
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 82,
-              "TileY": 711,
+              "TileX": 55,
+              "TileY": 753,
               "PositionHeight": 0,
               "Position": {
-                "x": 5.52,
-                "y": 142.27
+                "x": 0,
+                "y": 150.56
               },
               "Direction": {
-                "x": -8.742278e-08,
+                "x": -8.742281e-08,
                 "y": -1
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "testcommand"
+                "3PhasePerorozillaPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -804,20 +1220,26 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "",
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize01",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
-              "SpawnAIGroupId": "\u0000",
+              "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 55,
-              "TileY": 750,
-              "PositionHeight": -12.41,
+              "TileX": 57,
+              "TileY": 707,
+              "PositionHeight": 0,
               "Position": {
-                "x": 0,
-                "y": 150
+                "x": 0.46,
+                "y": 141.340012
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -825,7 +1247,155 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "3PhaseHieronymusPoint"
+                "CommandSpawnMiniPeroro5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize02",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 702,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.89,
+                "y": 140.430023
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize03",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 69,
+              "TileY": 703,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.95,
+                "y": 140.530014
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize04",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 712,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.29,
+                "y": 142.32
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro5"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 68,
+              "TileY": 712,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.7,
+                "y": 142.460022
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro5"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -857,8 +1427,8 @@
             {
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
-              "DelayBeforeFadeIn": 1.8,
-              "VisualDelayFadeInStart": 0.2,
+              "DelayBeforeFadeIn": 1.5,
+              "VisualDelayFadeInStart": 2,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
@@ -866,10 +1436,10 @@
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
-              "PointCommandID": "1PhaseHieronymusPoint",
+              "PointCommandID": "1PhasePerorozillaPoint",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
@@ -890,11 +1460,11 @@
                   "UseTableData": true,
                   "Position": {
                     "x": 0,
-                    "y": 1.57,
+                    "y": 2.57,
                     "z": 32.62
                   },
-                  "MinCameraDistance": 68.00017,
-                  "MaxCameraDistance": 68.00017,
+                  "MinCameraDistance": 75.00049,
+                  "MaxCameraDistance": 75.00049,
                   "CameraForward": {
                     "x": -0.4669727,
                     "y": -0.404186666,
@@ -907,13 +1477,13 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 200,
+              "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
-              "TimelinePath": "timeline/timeline_hieronymus_street_phasechange",
+              "TimelinePath": "Timeline/Timeline_Perorozilla_Original_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
               "CommandID": "",
@@ -986,7 +1556,7 @@
       },
       "Events": [
         {
-          "EventName": "SpawnHieronymus",
+          "EventName": "HeliAnimation",
           "Operator": 0,
           "Conditions": [
             {
@@ -996,9 +1566,51 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 0,
-              "CommandID": "CommandSpawnHieronymus",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "propKey": 14,
+              "animationName": "FX_Perorozilla_PhaseStart",
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "SetImmuneOff",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 1,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0.00999999,
+                "y": 0,
+                "z": 40.43
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 0.5,
+                "Height": 0.5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "heroStatus": "ImmuneGroggyGaugeAdd",
+              "isAdd": false,
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             }
           ]
@@ -1008,10 +1620,10 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "testcondition"
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "Phase": 1,
+              "MaxTriggerCount": 1,
+              "ConditionID": "Perorozilla"
             }
           ],
           "Commands": [
@@ -1019,12 +1631,12 @@
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneGroggyGaugeAdd",
               "isAdd": true,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
+              "Milliseconds": 8000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
@@ -1038,19 +1650,21 @@
           ]
         },
         {
-          "EventName": "Spawnjako",
+          "EventName": "SpawnMiniPeroro",
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
-              "ConditionID": ""
+              "$type": "MX.Logic.Battles.GroundConditionStatusCheck, Assembly-CSharp",
+              "StatusToCheck": "Groggy",
+              "MaxTriggerCount": 9999,
+              "ConditionID": "Perorozilla"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
               "Interval": 0,
-              "CommandID": "testcommand",
+              "CommandID": "CommandSpawnMiniPeroro7",
               "WaitExecuteEnd": false
             }
           ]
@@ -1066,26 +1680,32 @@
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 55,
-              "TileY": 203,
-              "PositionHeight": -11,
+              "TileY": 202,
+              "PositionHeight": 0,
               "Position": {
                 "x": 0,
-                "y": 40.5
+                "y": 40.46
               },
               "Direction": {
-                "x": -8.742278e-08,
+                "x": -8.742281e-08,
                 "y": -1
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "1PhaseHieronymusPoint"
+                "1PhasePerorozillaPoint"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1095,24 +1715,26 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "FoodTruck_GenbuStore_MG_C",
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize01",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
               "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "testcondition"
-              ],
-              "SpawnCommandIdList": [
-                "Hieronymus"
-              ],
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 82,
-              "TileY": 163,
+              "TileX": 57,
+              "TileY": 157,
               "PositionHeight": 0,
               "Position": {
-                "x": 5.52,
-                "y": 32.58
+                "x": 0.46,
+                "y": 31.48
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1120,7 +1742,155 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "testcommand"
+                "CommandSpawnMiniPeroro7"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize02",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 153,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.89,
+                "y": 30.57
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro7"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize03",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 69,
+              "TileY": 153,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.95,
+                "y": 30.67
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro7"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize04",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 162,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.29,
+                "y": 32.46
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro7"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 68,
+              "TileY": 163,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.7,
+                "y": 32.6
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro7"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1152,8 +1922,8 @@
             {
               "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
               "DelayBeforeFadeOut": 0,
-              "DelayBeforeFadeIn": 1.8,
-              "VisualDelayFadeInStart": 0.2,
+              "DelayBeforeFadeIn": 1.5,
+              "VisualDelayFadeInStart": 2,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
@@ -1161,10 +1931,10 @@
               "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
-              "PointCommandID": "2PhaseHieronymusPoint-1",
+              "PointCommandID": "2PhasePerorozillaPoint-1",
               "IsCommandWaitForMoveStart": false,
               "IsCommandWaitForMoveEnd": false,
-              "CommandID": "Hieronymus",
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
             },
             {
@@ -1185,11 +1955,11 @@
                   "UseTableData": true,
                   "Position": {
                     "x": 0,
-                    "y": 1.45,
+                    "y": 2.45,
                     "z": 89.16
                   },
-                  "MinCameraDistance": 68.00017,
-                  "MaxCameraDistance": 68.00017,
+                  "MinCameraDistance": 75.00049,
+                  "MaxCameraDistance": 75.00049,
                   "CameraForward": {
                     "x": -0.4669727,
                     "y": -0.404186666,
@@ -1202,13 +1972,13 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 200,
+              "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
               "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
-              "TimelinePath": "timeline/timeline_hieronymus_street_phasechange",
+              "TimelinePath": "Timeline/Timeline_Perorozilla_Original_PhaseChange",
               "UseGameTime": false,
               "CanSkip": true,
               "CommandID": "",
@@ -1281,7 +2051,7 @@
       },
       "Events": [
         {
-          "EventName": "Spawnjako",
+          "EventName": "HeliAnimation",
           "Operator": 0,
           "Conditions": [
             {
@@ -1291,43 +2061,71 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
-              "Interval": 0,
-              "CommandID": "testcommand",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "propKey": 24,
+              "animationName": "FX_Perorozilla_PhaseStart",
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
         },
         {
-          "EventName": "StartSection10",
+          "EventName": "SetImmuneOff",
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "testcondition"
+              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "SpawnTemplateId": "",
+              "Shape": 0,
+              "Target": 1,
+              "Trigger": 0,
+              "StayTime": 0,
+              "Position": {
+                "x": 0.00999999,
+                "y": 0,
+                "z": 98.66
+              },
+              "Rect": {
+                "Direction": {
+                  "x": 0,
+                  "y": 0
+                },
+                "Width": 0.5,
+                "Height": 0.5
+              },
+              "Circle": {
+                "Radius": 1
+              },
+              "InactivateWhenStart": false,
+              "ConditionID": ""
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
               "heroStatus": "ImmuneGroggyGaugeAdd",
-              "isAdd": true,
-              "CommandID": "Hieronymus",
+              "isAdd": false,
+              "CommandID": "Perorozilla",
               "WaitExecuteEnd": false
-            },
+            }
+          ]
+        },
+        {
+          "EventName": "SpawnMiniPeroro",
+          "Operator": 0,
+          "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
-              "Milliseconds": 1000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
+              "$type": "MX.Logic.Battles.GroundConditionStatusCheck, Assembly-CSharp",
+              "StatusToCheck": "Groggy",
+              "MaxTriggerCount": 9999,
+              "ConditionID": "Perorozilla"
+            }
+          ],
+          "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
-              "SectionID": 10,
-              "SetConditionCommandOnly": false,
-              "CommandID": "",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "Interval": 0,
+              "CommandID": "CommandSpawnMiniPeroro9",
               "WaitExecuteEnd": false
             }
           ]
@@ -1341,32 +2139,34 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "FoodTruck_GenbuStore_MG_C",
+                "SpawnTemplateId": "",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "testcondition"
-              ],
-              "SpawnCommandIdList": [
-                "Hieronymus"
-              ],
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 82,
-              "TileY": 449,
+              "TileX": 55,
+              "TileY": 493,
               "PositionHeight": 0,
               "Position": {
-                "x": 5.52,
-                "y": 89.87
+                "x": 0,
+                "y": 98.691
               },
               "Direction": {
-                "x": -8.742278e-08,
+                "x": -8.742281e-08,
                 "y": -1
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "testcommand"
+                "2PhasePerorozillaPoint-1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1376,20 +2176,26 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
               "SpawnData": {
-                "SpawnTemplateId": "",
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize01",
                 "AIId": 0,
-                "AppearAction": false
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
               },
-              "SpawnAIGroupId": "\u0000",
+              "SpawnAIGroupId": "C",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 55,
-              "TileY": 490,
-              "PositionHeight": -12.41,
+              "TileX": 57,
+              "TileY": 448,
+              "PositionHeight": 0,
               "Position": {
-                "x": 0,
-                "y": 98
+                "x": 0.46,
+                "y": 89.5
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1397,7 +2203,155 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "2PhaseHieronymusPoint-1"
+                "CommandSpawnMiniPeroro9"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize02",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 45,
+              "TileY": 443,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.89,
+                "y": 88.590004
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro9"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize03",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 69,
+              "TileY": 443,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.95,
+                "y": 88.69
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro9"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize04",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 452,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.29,
+                "y": 90.48
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro9"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "SpawnData": {
+                "SpawnTemplateId": "Perorozilla_Peroro_SmallSize05",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 68,
+              "TileY": 453,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.7,
+                "y": 90.62
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawnMiniPeroro9"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1431,7 +2385,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 32.54
+        "y": 30.2
       },
       "Forward": {
         "x": 0,
@@ -1461,7 +2415,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 90
+        "y": 87.4
       },
       "Forward": {
         "x": 0,
@@ -1491,7 +2445,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 142.3
+        "y": 138.69
       },
       "Forward": {
         "x": 0,
@@ -1521,7 +2475,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 32.54
+        "y": 30.2
       },
       "Forward": {
         "x": 0,
@@ -1551,7 +2505,7 @@
       "Index": 0,
       "Position": {
         "x": 0,
-        "y": 90
+        "y": 87.4
       },
       "Forward": {
         "x": 0,

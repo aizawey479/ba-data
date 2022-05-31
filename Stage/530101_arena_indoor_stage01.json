@@ -67,8 +67,7 @@
           "Conditions": [
             {
               "$type": "GroundConditionWaitForSeconds, Assembly-CSharp",
-              "Seconds": 0,
-              "Milliseconds": 30000,
+              "Milliseconds": 15000,
               "ConditionID": "0"
             }
           ],
@@ -86,17 +85,23 @@
           "Conditions": [
             {
               "$type": "GroundConditionWaitForSeconds, Assembly-CSharp",
-              "Seconds": 0,
-              "Milliseconds": 32000,
+              "Milliseconds": 16000,
               "ConditionID": "0"
             }
           ],
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "TargetCharacterCommandId": null,
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "ArenaObstacle01",
               "SkillLevel": 1,
+              "ExecuterLevel": 1,
+              "CharacterGroup": 2,
               "CommandID": "999",
               "WaitExecuteEnd": false
             }
@@ -144,121 +149,11 @@
           ]
         },
         {
-          "UniqueName": "School_Baricade",
-          "Position": {
-            "x": -2.22999978,
-            "y": 0,
-            "z": 33.34
-          },
-          "Forward": {
-            "x": -0.374284625,
-            "y": 0,
-            "z": 0.927313864
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Baricade",
-          "Position": {
-            "x": 2.78,
-            "y": 0,
-            "z": 30.27
-          },
-          "Forward": {
-            "x": -0.999872446,
-            "y": 0,
-            "z": 0.0159729645
-          },
-          "ActiveEnemyPointIndices": [
-            3
-          ],
-          "ActivePlayerPointIndices": [
-            2
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "School_Chair",
           "Position": {
-            "x": -0.239999861,
+            "x": -1.2,
             "y": 0,
-            "z": 31.2033844
-          },
-          "Forward": {
-            "x": -0.632408142,
-            "y": 0,
-            "z": 0.7746353
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Desk",
-          "Position": {
-            "x": -0.489999533,
-            "y": 0,
-            "z": 34.8700027
-          },
-          "Forward": {
-            "x": -0.0148118408,
-            "y": 0,
-            "z": -0.9998903
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Desk",
-          "Position": {
-            "x": 2.21000051,
-            "y": 0,
-            "z": 33.8700027
-          },
-          "Forward": {
-            "x": 0.3476828,
-            "y": 0,
-            "z": -0.937612236
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Chair",
-          "Position": {
-            "x": 1.70000017,
-            "y": 0,
-            "z": 31.28
+            "z": 33.5599976
           },
           "Forward": {
             "x": 0.948006034,
@@ -276,121 +171,11 @@
           "SubObstacles": []
         },
         {
-          "UniqueName": "School_Baricade",
-          "Position": {
-            "x": 2.73,
-            "y": 0,
-            "z": 25.86
-          },
-          "Forward": {
-            "x": 0.3743073,
-            "y": 0,
-            "z": -0.9273047
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Desk",
-          "Position": {
-            "x": 0.99,
-            "y": 0,
-            "z": 24.33
-          },
-          "Forward": {
-            "x": 0.0148017406,
-            "y": 0,
-            "z": 0.999890447
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
           "UniqueName": "School_Chair",
           "Position": {
-            "x": 0.74,
+            "x": -1.7,
             "y": 0,
-            "z": 27.9966164
-          },
-          "Forward": {
-            "x": 0.6324234,
-            "y": 0,
-            "z": -0.7746229
-          },
-          "ActiveEnemyPointIndices": [
-            0
-          ],
-          "ActivePlayerPointIndices": [
-            1
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Desk",
-          "Position": {
-            "x": -1.71,
-            "y": 0,
-            "z": 25.33
-          },
-          "Forward": {
-            "x": -0.347657382,
-            "y": 0,
-            "z": 0.937621653
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Desk",
-          "Position": {
-            "x": 2.55,
-            "y": 0,
-            "z": 29.43
-          },
-          "Forward": {
-            "x": -0.7071068,
-            "y": 0,
-            "z": 0.7071067
-          },
-          "ActiveEnemyPointIndices": [
-            1
-          ],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "School_Chair",
-          "Position": {
-            "x": -1.2,
-            "y": 0,
-            "z": 27.92
+            "z": 26
           },
           "Forward": {
             "x": -0.9480097,
