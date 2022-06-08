@@ -30,7 +30,38 @@
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
             "ZoomSpeed": 1,
-            "RailPoints": [],
+            "RailPoints": [
+              {
+                "UseTableData": false,
+                "Position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "MinCameraDistance": 30,
+                "MaxCameraDistance": 35,
+                "CameraForward": {
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
+                }
+              },
+              {
+                "UseTableData": false,
+                "Position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 55.3
+                },
+                "MinCameraDistance": 30,
+                "MaxCameraDistance": 35,
+                "CameraForward": {
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
+                }
+              }
+            ],
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
@@ -212,6 +243,27 @@
             "WaitExecuteEnd": false
           }
         ]
+      },
+      {
+        "EventName": "EndBattle_2",
+        "Operator": 0,
+        "Conditions": [
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharacterHPChanged, BlueArchive",
+            "TriggerRateUnder": 1000,
+            "TriggerRateOver": -9999999,
+            "TriggerMaxCount": 1,
+            "ConditionID": "MikaCondition"
+          }
+        ],
+        "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
+            "BattleEndType": 4,
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          }
+        ]
       }
     ]
   },
@@ -321,9 +373,9 @@
             "z": 13.17
           },
           "Forward": {
-            "x": 0.0572928675,
+            "x": 0.05730453,
             "y": 0,
-            "z": -0.9983574
+            "z": -0.99835676
           },
           "ActiveEnemyPointIndices": [
             0
@@ -407,9 +459,9 @@
             "z": 9.49
           },
           "Forward": {
-            "x": 0.334931076,
+            "x": 0.334941864,
             "y": 0,
-            "z": -0.9422426
+            "z": -0.9422388
           },
           "ActiveEnemyPointIndices": [
             0
@@ -927,47 +979,6 @@
           ],
           "Commands": [
             {
-              "$type": "GroundCommandLocateCamera, BlueArchive",
-              "ID": 1,
-              "MaxCameraSpeed": 3,
-              "RotationSpeed": 1,
-              "ZoomSpeed": 1,
-              "RailPoints": [
-                {
-                  "UseTableData": false,
-                  "Position": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 34.2399979
-                  },
-                  "MinCameraDistance": 42,
-                  "MaxCameraDistance": 42,
-                  "CameraForward": {
-                    "x": -0.803465664,
-                    "y": -0.426617652,
-                    "z": 0.415259331
-                  }
-                },
-                {
-                  "UseTableData": false,
-                  "Position": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 45.36
-                  },
-                  "MinCameraDistance": 42,
-                  "MaxCameraDistance": 42,
-                  "CameraForward": {
-                    "x": -0.803465664,
-                    "y": -0.426617652,
-                    "z": 0.415259331
-                  }
-                }
-              ],
-              "CommandID": "0",
-              "WaitExecuteEnd": false
-            },
-            {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-2",
@@ -1017,9 +1028,66 @@
               "WaitExecuteEnd": false
             },
             {
+              "$type": "GroundCommandLocateCamera, BlueArchive",
+              "ID": 1,
+              "MaxCameraSpeed": 4,
+              "RotationSpeed": 1,
+              "ZoomSpeed": 1,
+              "RailPoints": [
+                {
+                  "UseTableData": false,
+                  "Position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 39.87
+                  },
+                  "MinCameraDistance": 42,
+                  "MaxCameraDistance": 42,
+                  "CameraForward": {
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
+                  }
+                }
+              ],
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
+              "Milliseconds": 2000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "MikaSpawn",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
+              "Milliseconds": 300,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandSetStatus, BlueArchive",
+              "heroStatus": "Immortal",
+              "isAdd": true,
+              "CommandID": "MikaCommand",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
+              "Milliseconds": 42000,
+              "CommandID": "",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
+              "BattleEndType": 4,
+              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -1038,7 +1106,7 @@
               "Position": {
                 "x": -1.78813934e-07,
                 "y": 0,
-                "z": 39.17
+                "z": 41.16
               },
               "Rect": {
                 "Direction": {
@@ -1134,9 +1202,9 @@
         {
           "UniqueName": "Common_BarrelLying",
           "Position": {
-            "x": -2.39,
+            "x": -2.05,
             "y": 0,
-            "z": 36.18
+            "z": 36.9899979
           },
           "Forward": {
             "x": 0.178500965,
@@ -1150,11 +1218,29 @@
           "SubObstacles": []
         },
         {
+          "UniqueName": "Ariusstreet_Car",
+          "Position": {
+            "x": -3.4,
+            "y": 0,
+            "z": 39.5399971
+          },
+          "Forward": {
+            "x": 0.33304134,
+            "y": 0,
+            "z": -0.9429122
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
           "UniqueName": "Common_Barrel",
           "Position": {
-            "x": -2.94,
+            "x": -2.6,
             "y": 0,
-            "z": 35.91
+            "z": 36.7199974
           },
           "Forward": {
             "x": -0.4608336,
@@ -1162,24 +1248,22 @@
             "z": 0.8874866
           },
           "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
+          "ActivePlayerPointIndices": [],
           "ConditionIdList": [],
           "CommandIdList": [],
           "SubObstacles": []
         },
         {
-          "UniqueName": "Ariusstreet_Car",
+          "UniqueName": "Ariusstreet_Baricade",
           "Position": {
-            "x": -3.4,
+            "x": -2.3,
             "y": 0,
-            "z": 39.03
+            "z": 33.1
           },
           "Forward": {
-            "x": 0.333029419,
+            "x": 0.9486899,
             "y": 0,
-            "z": -0.942916453
+            "z": 0.316207945
           },
           "ActiveEnemyPointIndices": [
             2
@@ -1196,7 +1280,7 @@
           "Position": {
             "x": 2.43,
             "y": 0,
-            "z": 36.64
+            "z": 35.66
           },
           "Forward": {
             "x": -0.09282644,
@@ -1208,6 +1292,28 @@
           ],
           "ActivePlayerPointIndices": [
             1
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": []
+        },
+        {
+          "UniqueName": "Ariusstreet_Baricade",
+          "Position": {
+            "x": -2.3,
+            "y": 0,
+            "z": 33.1
+          },
+          "Forward": {
+            "x": 0.9486899,
+            "y": 0,
+            "z": 0.316207945
+          },
+          "ActiveEnemyPointIndices": [
+            2
+          ],
+          "ActivePlayerPointIndices": [
+            3
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
@@ -1545,7 +1651,7 @@
           ]
         },
         {
-          "GroupName": "SpawnPointParentMikia",
+          "GroupName": "SpawnPointParentMika",
           "SpawnPoints": [
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
@@ -1562,18 +1668,21 @@
               },
               "SpawnAIGroupId": "D",
               "SpawnConditionIdList": [
+                "MikaCondition",
                 "MikaDead"
               ],
-              "SpawnCommandIdList": [],
+              "SpawnCommandIdList": [
+                "MikaCommand"
+              ],
               "MovePoints": [
                 {
                   "NeedFindPath": false,
                   "TileX": 50,
-                  "TileY": 219,
+                  "TileY": 227,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -0.140000582,
-                    "y": 39.25
+                    "x": -0.1400011,
+                    "y": 40.92
                   },
                   "Direction": {
                     "x": -8.742278e-08,
@@ -1588,11 +1697,11 @@
                 }
               ],
               "TileX": 50,
-              "TileY": 252,
+              "TileY": 290,
               "PositionHeight": 0,
               "Position": {
                 "x": -0.14,
-                "y": 45.82
+                "y": 53.55
               },
               "Direction": {
                 "x": -8.742278e-08,
