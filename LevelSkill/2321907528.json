@@ -3,6 +3,7 @@
     "$type": "MX.Logic.Data.TimelineSkillActionData, BlueArchive",
     "DistributeType": 0,
     "RotateTurretOnly": false,
+    "RotateInvokerDirectionEveryFrame": false,
     "EntityTimeline": [
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
@@ -29,6 +30,7 @@
           ],
           "SuccessionFromCasterEquip": true,
           "SuccessionFromCasterCharacterWeapon": true,
+          "SuccessionFromCasterCharacterGear": false,
           "UniqueName": "Utaha_Turret_Public",
           "AngleOffset": 0,
           "Duration": 600,
@@ -138,6 +140,8 @@
       "AllowDuplicateHit": false,
       "ApplyOnStay": false,
       "Duration": 0,
+      "RotateEntityDirectionEveryFrame": false,
+      "ApplyOffsetRotateEntityDirection": false,
       "CollisionProperty": {
         "$type": "MX.Logic.Data.AreaCollisionProperty, BlueArchive",
         "TransformType": "None",

@@ -3,6 +3,7 @@
     "$type": "MX.Logic.Data.TimelineSkillActionData, BlueArchive",
     "DistributeType": 0,
     "RotateTurretOnly": false,
+    "RotateInvokerDirectionEveryFrame": false,
     "EntityTimeline": [
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
@@ -41,6 +42,7 @@
           ],
           "SuccessionFromCasterEquip": true,
           "SuccessionFromCasterCharacterWeapon": true,
+          "SuccessionFromCasterCharacterGear": false,
           "UniqueName": "SM999901",
           "AngleOffset": 0,
           "Duration": 789,
@@ -59,6 +61,8 @@
                   "AllowDuplicateHit": false,
                   "ApplyOnStay": false,
                   "Duration": 5,
+                  "RotateEntityDirectionEveryFrame": false,
+                  "ApplyOffsetRotateEntityDirection": false,
                   "HitFrames": [
                     1
                   ],
@@ -331,6 +335,8 @@
       "AllowDuplicateHit": false,
       "ApplyOnStay": false,
       "Duration": 5,
+      "RotateEntityDirectionEveryFrame": false,
+      "ApplyOffsetRotateEntityDirection": false,
       "HitFrames": [
         1
       ],
