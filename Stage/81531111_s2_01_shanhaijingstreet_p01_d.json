@@ -91,9 +91,9 @@
         "Conditions": [
           {
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-            "DeadCheck": 1,
+            "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-2"
+            "ConditionID": "ConditionDead2-1"
           }
         ],
         "Commands": [
@@ -209,14 +209,7 @@
       {
         "EventName": "2-2AreaOn",
         "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-            "DeadCheck": 1,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-1"
-          }
-        ],
+        "Conditions": [],
         "Commands": [
           {
             "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
@@ -540,7 +533,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
+                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_M",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -556,11 +549,11 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 39,
+              "TileX": 34,
               "TileY": 88,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.27,
+                "x": -1.23,
                 "y": 13.02
               },
               "Direction": {
@@ -595,12 +588,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 33,
-              "TileY": 94,
+              "TileX": 34,
+              "TileY": 97,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.36,
-                "y": 14.23
+                "x": -1.27,
+                "y": 14.84
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -635,11 +628,11 @@
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 44,
-              "TileY": 94,
+              "TileY": 97,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.78,
-                "y": 14.23
+                "x": 0.87,
+                "y": 14.84
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -657,7 +650,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "SpawnTemplateId": "Droid_Kurokame_RL_E",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -673,12 +666,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 35,
-              "TileY": 105,
+              "TileX": 38,
+              "TileY": 108,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.97,
-                "y": 16.49
+                "x": -0.35,
+                "y": 17.1899986
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -696,7 +689,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_M",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -712,12 +705,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 43,
-              "TileY": 105,
+              "TileX": 44,
+              "TileY": 88,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.56,
-                "y": 16.49
+                "x": 0.77,
+                "y": 13.02
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -756,12 +749,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 39,
-              "TileY": 146,
+              "TileX": 44,
+              "TileY": 123,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.2,
-                "y": 24.76
+                "x": 0.76,
+                "y": 20
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -779,7 +772,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Drone_Kaiserpmc_Vulcan_M",
+                "SpawnTemplateId": "Droid_Kurokame_AR_M",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -796,11 +789,11 @@
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 31,
-              "TileY": 138,
+              "TileY": 132,
               "PositionHeight": 0,
               "Position": {
                 "x": -1.75,
-                "y": 23.05
+                "y": 21.83
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -818,7 +811,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Drone_Kaiserpmc_Vulcan_M",
+                "SpawnTemplateId": "Droid_Kurokame_AR_M",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -835,11 +828,11 @@
               "SpawnCommandIdList": [],
               "MovePoints": [],
               "TileX": 47,
-              "TileY": 138,
+              "TileY": 132,
               "PositionHeight": 0,
               "Position": {
                 "x": 1.38,
-                "y": 23.05
+                "y": 21.83
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -857,7 +850,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kurokame_AR_M",
+                "SpawnTemplateId": "Droid_Kurokame_RL_M",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -873,12 +866,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 43,
-              "TileY": 133,
+              "TileX": 44,
+              "TileY": 141,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.58,
-                "y": 22.07
+                "x": 0.73,
+                "y": 23.65
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -896,7 +889,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kurokame_AR_M",
+                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_E",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -912,12 +905,51 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 32,
-              "TileY": 130,
+              "TileX": 33,
+              "TileY": 123,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.69,
-                "y": 21.58
+                "x": -1.34,
+                "y": 20
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn1-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kurokame_RL_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "B",
+              "SpawnConditionIdList": [
+                "ConditionDead1-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 34,
+              "TileY": 141,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -1.2,
+                "y": 23.61
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -984,26 +1016,6 @@
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-1",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Spawn2-2",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-              "DeadCheck": 1,
-              "CheckSummonedCharacterDead": false,
-              "ConditionID": "ConditionDead2-1"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
-              "Interval": 100,
-              "CommandID": "CommandSpawn2-2",
               "WaitExecuteEnd": false
             }
           ]
@@ -1217,7 +1229,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
+                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_M",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -1233,51 +1245,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 44,
+              "TileX": 32,
               "TileY": 188,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.79,
-                "y": 33.03
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-1"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_Shield_E",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "C",
-              "SpawnConditionIdList": [
-                "ConditionDead2-1"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 33,
-              "TileY": 187,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.37999988,
-                "y": 32.98
+                "x": -1.64,
+                "y": 33.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1373,7 +1346,7 @@
             {
               "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_E",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -1389,12 +1362,90 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 41,
-              "TileY": 210,
+              "TileX": 42,
+              "TileY": 213,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.27,
-                "y": 37.43
+                "x": 0.46,
+                "y": 38.1
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
+              "SpawnData": {
+                "SpawnTemplateId": "Droid_Kaiserpmc_RL_E",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 216,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -0.89,
+                "y": 38.72
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn2-1"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
+              "SpawnData": {
+                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "C",
+              "SpawnConditionIdList": [
+                "ConditionDead2-1"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 48,
+              "TileY": 188,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 1.69,
+                "y": 33.06
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1413,242 +1464,7 @@
         },
         {
           "GroupName": "SpawnPointParent2-2",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_E",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 35,
-              "TileY": 242,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -0.97,
-                "y": 43.97
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 48,
-              "TileY": 237,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.55,
-                "y": 42.97
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "Droid_Kaiserpmc_RL_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 30,
-              "TileY": 237,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -2.01,
-                "y": 42.97
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "GuardTurret_Kurokame_Grenede_E",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 44,
-              "TileY": 242,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0.84,
-                "y": 43.97
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "Drone_Kaiserpmc_Vulcan_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 46,
-              "TileY": 225,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 1.28,
-                "y": 40.54
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
-              "SpawnData": {
-                "SpawnTemplateId": "Drone_Kaiserpmc_Vulcan_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "D",
-              "SpawnConditionIdList": [
-                "ConditionDead2-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 32,
-              "TileY": 225,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -1.6,
-                "y": 40.54
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn2-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         }
       ]
     },

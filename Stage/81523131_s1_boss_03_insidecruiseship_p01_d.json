@@ -26,40 +26,50 @@
           },
           {
             "$type": "GroundCommandLocateCamera, BlueArchive",
-            "ID": 1,
+            "ID": 2,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
             "ZoomSpeed": 1,
-            "RailPoints": [],
+            "RailPoints": [
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 46.4
+                },
+                "MinCameraDistance": 42,
+                "MaxCameraDistance": 42,
+                "CameraForward": {
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
+                }
+              },
+              {
+                "UseTableData": true,
+                "Position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 65.59
+                },
+                "MinCameraDistance": 42,
+                "MaxCameraDistance": 42,
+                "CameraForward": {
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
+                }
+              }
+            ],
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
             "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
-            "SectionID": 2,
-            "SetConditionCommandOnly": false,
-            "CommandID": "0",
-            "WaitExecuteEnd": false
-          }
-        ]
-      },
-      {
-        "EventName": "StartSection3",
-        "Operator": 0,
-        "Conditions": [
-          {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-            "DeadCheck": 1,
-            "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionDead2-2"
-          }
-        ],
-        "Commands": [
-          {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 3,
             "SetConditionCommandOnly": false,
-            "CommandID": "",
+            "CommandID": "0",
             "WaitExecuteEnd": false
           }
         ]
@@ -154,7 +164,7 @@
             "z": 7.08
           },
           "Forward": {
-            "x": -0.164695144,
+            "x": -0.164695159,
             "y": 0,
             "z": 0.9863445
           },
@@ -220,9 +230,9 @@
             "z": 19.35
           },
           "Forward": {
-            "x": -0.1424111,
+            "x": -0.1424114,
             "y": 0,
-            "z": 0.9898076
+            "z": 0.989807546
           },
           "ActiveEnemyPointIndices": [
             1
@@ -403,7 +413,7 @@
               "Position": {
                 "x": 0,
                 "y": 0,
-                "z": 144.6
+                "z": 54.55
               },
               "Rect": {
                 "Direction": {
@@ -423,7 +433,7 @@
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
-              "Milliseconds": 1500,
+              "Milliseconds": 3000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
@@ -436,7 +446,7 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
-              "Milliseconds": 3000,
+              "Milliseconds": 1500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
@@ -444,50 +454,6 @@
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-1-2",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Spawn3-1",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
-              "ConditionID": ""
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
-              "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 54.6
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 10,
-                "Height": 4
-              },
-              "Circle": {
-                "Radius": 11
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": ""
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
-              "Interval": 100,
-              "CommandID": "CommandSpawn3-1",
               "WaitExecuteEnd": false
             }
           ]
@@ -579,12 +545,6 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
-              "Milliseconds": 4000,
-              "CommandID": "",
-              "WaitExecuteEnd": false
-            },
-            {
               "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-1",
@@ -624,7 +584,7 @@
             "z": 49.9
           },
           "Forward": {
-            "x": -0.14245446,
+            "x": -0.142454535,
             "y": 0,
             "z": 0.989801347
           },
@@ -680,7 +640,7 @@
               },
               "SpawnAIGroupId": "E",
               "SpawnConditionIdList": [
-                "ConditionDead3-1"
+                "Boss"
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
@@ -732,30 +692,30 @@
               "MovePoints": [
                 {
                   "NeedFindPath": false,
-                  "TileX": 32,
+                  "TileX": 29,
                   "TileY": 306,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.70000076,
+                    "x": -2.1600008,
                     "y": 56.74
                   },
                   "Direction": {
                     "x": -8.742278e-08,
                     "y": -1
                   },
-                  "ConditionIdList": null,
-                  "CommandIdList": null,
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
                   "EntityId": {
                     "uniqueId": 0
                   },
                   "Active": false
                 }
               ],
-              "TileX": 32,
+              "TileX": 29,
               "TileY": 349,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.7,
+                "x": -2.16,
                 "y": 65.37
               },
               "Direction": {
@@ -794,30 +754,30 @@
               "MovePoints": [
                 {
                   "NeedFindPath": false,
-                  "TileX": 45,
+                  "TileX": 48,
                   "TileY": 306,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": 1.08999932,
+                    "x": 1.63999927,
                     "y": 56.74
                   },
                   "Direction": {
                     "x": -8.742278e-08,
                     "y": -1
                   },
-                  "ConditionIdList": null,
-                  "CommandIdList": null,
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
                   "EntityId": {
                     "uniqueId": 0
                   },
                   "Active": false
                 }
               ],
-              "TileX": 45,
+              "TileX": 48,
               "TileY": 349,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.09,
+                "x": 1.64,
                 "y": 65.37
               },
               "Direction": {
@@ -856,30 +816,30 @@
               "MovePoints": [
                 {
                   "NeedFindPath": false,
-                  "TileX": 32,
+                  "TileX": 29,
                   "TileY": 317,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.70000076,
+                    "x": -2.1600008,
                     "y": 58.8
                   },
                   "Direction": {
                     "x": -8.742278e-08,
                     "y": -1
                   },
-                  "ConditionIdList": null,
-                  "CommandIdList": null,
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
                   "EntityId": {
                     "uniqueId": 0
                   },
                   "Active": false
                 }
               ],
-              "TileX": 32,
+              "TileX": 29,
               "TileY": 360,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.7,
+                "x": -2.16,
                 "y": 67.43
               },
               "Direction": {
@@ -918,30 +878,30 @@
               "MovePoints": [
                 {
                   "NeedFindPath": false,
-                  "TileX": 45,
+                  "TileX": 48,
                   "TileY": 317,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": 1.08999932,
+                    "x": 1.63999927,
                     "y": 58.8
                   },
                   "Direction": {
                     "x": -8.742278e-08,
                     "y": -1
                   },
-                  "ConditionIdList": null,
-                  "CommandIdList": null,
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
                   "EntityId": {
                     "uniqueId": 0
                   },
                   "Active": false
                 }
               ],
-              "TileX": 45,
+              "TileX": 48,
               "TileY": 360,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.09,
+                "x": 1.64,
                 "y": 67.43
               },
               "Direction": {
@@ -980,30 +940,30 @@
               "MovePoints": [
                 {
                   "NeedFindPath": false,
-                  "TileX": 32,
+                  "TileX": 29,
                   "TileY": 325,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.70000076,
+                    "x": -2.1600008,
                     "y": 60.53
                   },
                   "Direction": {
                     "x": -8.742278e-08,
                     "y": -1
                   },
-                  "ConditionIdList": null,
-                  "CommandIdList": null,
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
                   "EntityId": {
                     "uniqueId": 0
                   },
                   "Active": false
                 }
               ],
-              "TileX": 32,
+              "TileX": 29,
               "TileY": 368,
               "PositionHeight": 0,
               "Position": {
-                "x": -1.7,
+                "x": -2.16,
                 "y": 69.16
               },
               "Direction": {
@@ -1042,30 +1002,30 @@
               "MovePoints": [
                 {
                   "NeedFindPath": false,
-                  "TileX": 45,
+                  "TileX": 48,
                   "TileY": 325,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": 1.08999932,
+                    "x": 1.63999927,
                     "y": 60.5300026
                   },
                   "Direction": {
                     "x": -8.742278e-08,
                     "y": -1
                   },
-                  "ConditionIdList": null,
-                  "CommandIdList": null,
+                  "ConditionIdList": [],
+                  "CommandIdList": [],
                   "EntityId": {
                     "uniqueId": 0
                   },
                   "Active": false
                 }
               ],
-              "TileX": 45,
+              "TileX": 48,
               "TileY": 368,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.09,
+                "x": 1.64,
                 "y": 69.16
               },
               "Direction": {
@@ -1110,11 +1070,11 @@
                 {
                   "NeedFindPath": false,
                   "TileX": 32,
-                  "TileY": 291,
+                  "TileY": 290,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.6099999,
-                    "y": 53.72
+                    "x": -1.50999975,
+                    "y": 53.48
                   },
                   "Direction": {
                     "x": -8.742278e-08,
@@ -1172,11 +1132,11 @@
                 {
                   "NeedFindPath": false,
                   "TileX": 32,
-                  "TileY": 295,
+                  "TileY": 293,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.6099999,
-                    "y": 54.42
+                    "x": -1.50999975,
+                    "y": 54.18
                   },
                   "Direction": {
                     "x": -8.742278e-08,
@@ -1234,11 +1194,11 @@
                 {
                   "NeedFindPath": false,
                   "TileX": 32,
-                  "TileY": 297,
+                  "TileY": 296,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.6099999,
-                    "y": 54.85
+                    "x": -1.50999975,
+                    "y": 54.61
                   },
                   "Direction": {
                     "x": -8.742278e-08,
@@ -1296,11 +1256,11 @@
                 {
                   "NeedFindPath": false,
                   "TileX": 32,
-                  "TileY": 299,
+                  "TileY": 298,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.6099999,
-                    "y": 55.25
+                    "x": -1.50999975,
+                    "y": 55.0100021
                   },
                   "Direction": {
                     "x": -8.742278e-08,

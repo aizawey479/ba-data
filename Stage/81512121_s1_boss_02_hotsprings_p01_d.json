@@ -116,6 +116,15 @@
         ],
         "Commands": [
           {
+            "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
+            "CharacterCommandIdList": [
+              "CommandKillWave1-1"
+            ],
+            "CharacterSpawnTemplateIdList": [],
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
+          {
             "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
@@ -273,7 +282,7 @@
               "UniqueId": "",
               "Waves": [
                 {
-                  "SpawnPointCommandId": "CommandSpawnWave1-5",
+                  "SpawnPointCommandId": "CommandSpawnWave1-1",
                   "EndCount": 2,
                   "WaveDelay": 4000,
                   "StartOperator": "",
@@ -284,47 +293,6 @@
               "CommandID": "",
               "CurWaveNum": 0,
               "CurrProcess": null,
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "Kill1-5WhenEndBattle",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": true,
-              "ConditionID": "ConditionDead1-1"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": true,
-              "ConditionID": "ConditionDead1-2"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": true,
-              "ConditionID": "ConditionDead1-3"
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
-              "DeadCheck": 0,
-              "CheckSummonedCharacterDead": true,
-              "ConditionID": "ConditionDead1-4"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
-              "CharacterCommandIdList": [
-                "CommandKillWave1-5"
-              ],
-              "CharacterSpawnTemplateIdList": [],
-              "CommandID": "",
               "WaitExecuteEnd": false
             }
           ]
@@ -581,9 +549,9 @@
             "z": 38.72
           },
           "Forward": {
-            "x": 0.6509033,
+            "x": 0.650906563,
             "y": 0,
-            "z": -0.759160638
+            "z": -0.759157836
           },
           "ActiveEnemyPointIndices": [
             0
@@ -647,9 +615,9 @@
             "z": 42.61
           },
           "Forward": {
-            "x": 0.13666223,
+            "x": 0.13666743,
             "y": 0,
-            "z": -0.9906177
+            "z": -0.990617
           },
           "ActiveEnemyPointIndices": [
             0
@@ -886,7 +854,7 @@
                 "y": 52.91
               },
               "Direction": {
-                "x": 0.0523357876,
+                "x": 0.0523357727,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
@@ -930,7 +898,7 @@
                 "y": 54.09
               },
               "Direction": {
-                "x": -0.0523359627,
+                "x": -0.0523359478,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
@@ -1094,11 +1062,11 @@
                   "TileY": 289,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -2.590805,
+                    "x": -2.59080887,
                     "y": 53.2719727
                   },
                   "Direction": {
-                    "x": 0.01745247,
+                    "x": 0.0174524765,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -1117,7 +1085,7 @@
                 "y": 53.18
               },
               "Direction": {
-                "x": 0.01745247,
+                "x": 0.0174524765,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
@@ -1154,11 +1122,11 @@
                   "TileY": 298,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -2.59063053,
+                    "x": -2.59063435,
                     "y": 55.12802
                   },
                   "Direction": {
-                    "x": -0.0174524058,
+                    "x": -0.0174524132,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -1177,7 +1145,7 @@
                 "y": 55.21
               },
               "Direction": {
-                "x": -0.0174524058,
+                "x": -0.0174524132,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
@@ -1218,7 +1186,7 @@
                     "y": 53.0080872
                   },
                   "Direction": {
-                    "x": 0.01745247,
+                    "x": 0.0174524765,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -1237,7 +1205,7 @@
                 "y": 53.0100021
               },
               "Direction": {
-                "x": 0.01745247,
+                "x": 0.0174524765,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
@@ -1278,7 +1246,7 @@
                     "y": 55.0419159
                   },
                   "Direction": {
-                    "x": -0.0174524058,
+                    "x": -0.0174524132,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -1297,7 +1265,7 @@
                 "y": 55.04
               },
               "Direction": {
-                "x": -0.0174524058,
+                "x": -0.0174524132,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
@@ -1336,7 +1304,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "CommandKillWave1-5"
+                "CommandKillWave1-1"
               ],
               "MovePoints": [],
               "TileX": 41,
@@ -1352,7 +1320,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawnWave1-5"
+                "CommandSpawnWave1-1"
               ],
               "EntityId": {
                 "uniqueId": 0
@@ -1381,7 +1349,7 @@
               "SpawnAIGroupId": "A",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [
-                "CommandKillWave1-5"
+                "CommandKillWave1-1"
               ],
               "MovePoints": [],
               "TileX": 35,
@@ -1397,7 +1365,7 @@
               },
               "ConditionIdList": [],
               "CommandIdList": [
-                "CommandSpawnWave1-5"
+                "CommandSpawnWave1-1"
               ],
               "EntityId": {
                 "uniqueId": 0

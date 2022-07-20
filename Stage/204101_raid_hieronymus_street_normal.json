@@ -38,12 +38,12 @@
                   "y": 1.45,
                   "z": 19.7199841
                 },
-                "MinCameraDistance": 52.0001678,
-                "MaxCameraDistance": 52.0001678,
+                "MinCameraDistance": 52,
+                "MaxCameraDistance": 52,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               },
               {
@@ -53,12 +53,12 @@
                   "y": 1.45,
                   "z": 28.4199886
                 },
-                "MinCameraDistance": 52.0001678,
-                "MaxCameraDistance": 52.0001678,
+                "MinCameraDistance": 52,
+                "MaxCameraDistance": 52,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               }
             ],
@@ -310,9 +310,9 @@
             "z": 34.08
           },
           "Forward": {
-            "x": 0.33880654,
+            "x": 0.338809,
             "y": 0,
-            "z": -0.94085604
+            "z": -0.940855145
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -368,9 +368,9 @@
             "z": 23.81
           },
           "Forward": {
-            "x": 0.601884544,
+            "x": 0.601886451,
             "y": 0,
-            "z": -0.79858315
+            "z": -0.7985817
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -514,12 +514,12 @@
                     "y": 1.45,
                     "z": 93.34
                   },
-                  "MinCameraDistance": 52.0001678,
-                  "MaxCameraDistance": 52.0001678,
+                  "MinCameraDistance": 52,
+                  "MaxCameraDistance": 52,
                   "CameraForward": {
-                    "x": -0.8034655,
-                    "y": -0.426620662,
-                    "z": 0.4152567
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
                   }
                 },
                 {
@@ -529,12 +529,12 @@
                     "y": 1.45,
                     "z": 102.04
                   },
-                  "MinCameraDistance": 52.0001678,
-                  "MaxCameraDistance": 52.0001678,
+                  "MinCameraDistance": 52,
+                  "MaxCameraDistance": 52,
                   "CameraForward": {
-                    "x": -0.8034655,
-                    "y": -0.426620662,
-                    "z": 0.4152567
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
                   }
                 }
               ],
@@ -627,37 +627,69 @@
               "WaitExecuteEnd": false
             }
           ]
+        }
+      ],
+      "Obstacles": [
+        {
+          "UniqueName": "Hieronymus_CarBlack",
+          "Position": {
+            "x": -5.88,
+            "y": 0,
+            "z": 99.340004
+          },
+          "Forward": {
+            "x": 0.661318064,
+            "y": 0,
+            "z": 0.7501056
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "DestoryObstacle"
+          ],
+          "SubObstacles": []
         },
+        {
+          "UniqueName": "Hieronymus_CarBlack",
+          "Position": {
+            "x": 4.63,
+            "y": 0,
+            "z": 107.9
+          },
+          "Forward": {
+            "x": 0.338809,
+            "y": 0,
+            "z": -0.940855145
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [],
+          "ConditionIdList": [],
+          "CommandIdList": [
+            "DestoryObstacle"
+          ],
+          "SubObstacles": []
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [
         {
           "EventName": "UseSKill_RelicCount1",
           "Operator": 0,
           "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
-              "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 92.7599945
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 13,
-                "Height": 5
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": "0"
-            },
             {
               "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, BlueArchive",
               "SpawnTemplateIds": [
@@ -707,32 +739,6 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
-              "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 92.7599945
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 13,
-                "Height": 5
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": "0"
-            },
-            {
               "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, BlueArchive",
               "SpawnTemplateIds": [
                 "Hieronymus_HolyRelic_Normal"
@@ -762,116 +768,6 @@
           ]
         }
       ],
-      "Obstacles": [
-        {
-          "UniqueName": "Hieronymus_CarBlack",
-          "Position": {
-            "x": -5.88,
-            "y": 0,
-            "z": 99.340004
-          },
-          "Forward": {
-            "x": 0.661318064,
-            "y": 0,
-            "z": 0.7501056
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [
-            "DestoryObstacle"
-          ],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hieronymus_CarBlack",
-          "Position": {
-            "x": 4.63,
-            "y": 0,
-            "z": 107.9
-          },
-          "Forward": {
-            "x": 0.33880654,
-            "y": 0,
-            "z": -0.94085604
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [],
-          "ConditionIdList": [],
-          "CommandIdList": [
-            "DestoryObstacle"
-          ],
-          "SubObstacles": []
-        }
-      ],
-      "EnemySpawnPointGroupList": [
-        {
-          "GroupName": "SpawnPointParent",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 36,
-              "TileY": 490,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -3.69,
-                "y": 97.94
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "2phase_HieronymusSkill01"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 72,
-              "TileY": 486,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 3.58,
-                "y": 97.15
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "2phase_HieronymusSkill06"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "SectionID": 3,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 112.6
-      },
-      "Events": [],
       "Obstacles": [
         {
           "UniqueName": "Hieronymus_rock_03",
@@ -1029,6 +925,58 @@
               "ConditionIdList": [],
               "CommandIdList": [
                 "2PhaseHieronymusPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 490,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.69,
+                "y": 97.94
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2phase_HieronymusSkill01"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 72,
+              "TileY": 486,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.58,
+                "y": 97.15
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2phase_HieronymusSkill06"
               ],
               "EntityId": {
                 "uniqueId": 0

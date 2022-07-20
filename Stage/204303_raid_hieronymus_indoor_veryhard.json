@@ -176,7 +176,7 @@
           "Commands": [
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
-              "TargetCharacterCommandId": null,
+              "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
               "CharacterLevel": 0,
@@ -191,7 +191,7 @@
             },
             {
               "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
-              "TargetCharacterCommandId": null,
+              "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
               "CharacterLevel": 0,
@@ -734,10 +734,10 @@
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
-                  "ExSkill": null,
-                  "PublicSkill": null,
-                  "PassiveSkill": null,
-                  "ExtraPassiveSkill": null
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
                 }
               },
               "SpawnAIGroupId": "C",
@@ -952,37 +952,28 @@
               "WaitExecuteEnd": false
             }
           ]
-        },
+        }
+      ],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [
         {
           "EventName": "UseSKill_RelicCount1",
           "Operator": 0,
           "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
-              "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 92.7599945
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 13,
-                "Height": 5
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": "0"
-            },
             {
               "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, BlueArchive",
               "SpawnTemplateIds": [
@@ -1032,32 +1023,6 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
-              "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 92.7599945
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 13,
-                "Height": 5
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": "0"
-            },
-            {
               "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, BlueArchive",
               "SpawnTemplateIds": [
                 "Hieronymus_HolyRelic_VeryHard"
@@ -1087,75 +1052,6 @@
           ]
         }
       ],
-      "Obstacles": [],
-      "EnemySpawnPointGroupList": [
-        {
-          "GroupName": "SpawnPointParent",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 36,
-              "TileY": 490,
-              "PositionHeight": 0,
-              "Position": {
-                "x": -3.69,
-                "y": 97.94
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "2phase_HieronymusSkill03"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 72,
-              "TileY": 486,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 3.58,
-                "y": 97.15
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "2phase_HieronymusSkill08"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "SectionID": 3,
-      "Position": {
-        "x": 0,
-        "y": 0,
-        "z": 112.6
-      },
-      "Events": [],
       "Obstacles": [
         {
           "UniqueName": "Hieronymus_bench_01",
@@ -1165,7 +1061,7 @@
             "z": 97.815
           },
           "Forward": {
-            "x": -0.009106529,
+            "x": -0.00910653453,
             "y": 0,
             "z": 0.9999585
           },
@@ -1415,10 +1311,10 @@
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
-                  "ExSkill": null,
-                  "PublicSkill": null,
-                  "PassiveSkill": null,
-                  "ExtraPassiveSkill": null
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
                 }
               },
               "SpawnAIGroupId": "\u0000",
@@ -1439,6 +1335,58 @@
               "ConditionIdList": [],
               "CommandIdList": [
                 "2PhaseHieronymusPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 36,
+              "TileY": 490,
+              "PositionHeight": 0,
+              "Position": {
+                "x": -3.69,
+                "y": 97.94
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2phase_HieronymusSkill03"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 72,
+              "TileY": 486,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 3.58,
+                "y": 97.15
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2phase_HieronymusSkill08"
               ],
               "EntityId": {
                 "uniqueId": 0
