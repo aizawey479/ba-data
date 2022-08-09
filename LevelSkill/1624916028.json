@@ -105,23 +105,65 @@
               ],
               "Modifiers": [
                 {
-                  "$type": "MX.Logic.Data.SchoolConditionalModifierData, BlueArchive",
-                  "SchoolConstraint": {
-                    "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
-                    "School": 7,
-                    "IncludeType": 1
-                  },
-                  "CountConstraint": {
-                    "$type": "MX.Logic.Data.CountConstraint, BlueArchive",
-                    "Count": 4,
-                    "DiffOperator": 1
-                  },
+                  "$type": "MX.Logic.Data.CountTagConditionalModifierData, BlueArchive",
+                  "IncludeType": 1,
+                  "TagConstraints": [
+                    "TagName0400"
+                  ],
+                  "Count": 2,
+                  "DiffOperator": 3,
                   "CheckTarget": 2,
-                  "name": "CH0103_ExtraPassive01_SchoolConditionalModifier01",
+                  "name": "CH0103_ExtraPassive01_CountTagConditionalModifier01",
                   "hideFlags": 0
                 }
               ],
               "name": "CH0103_ExtraPassive01_LevelOneTimeAbility01",
+              "hideFlags": 0
+            },
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "CH0103_ExtraPassive01_Effect02"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.CountTagConditionalModifierData, BlueArchive",
+                  "IncludeType": 1,
+                  "TagConstraints": [
+                    "TagName0400"
+                  ],
+                  "Count": 3,
+                  "DiffOperator": 3,
+                  "CheckTarget": 2,
+                  "name": "CH0103_ExtraPassive01_CountTagConditionalModifier02",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "CH0103_ExtraPassive01_LevelOneTimeAbility02",
+              "hideFlags": 0
+            },
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "CH0103_ExtraPassive01_Effect03"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.CountTagConditionalModifierData, BlueArchive",
+                  "IncludeType": 1,
+                  "TagConstraints": [
+                    "TagName0400"
+                  ],
+                  "Count": 4,
+                  "DiffOperator": 1,
+                  "CheckTarget": 2,
+                  "name": "CH0103_ExtraPassive01_CountTagConditionalModifier03",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "CH0103_ExtraPassive01_LevelOneTimeAbility03",
               "hideFlags": 0
             }
           ],
