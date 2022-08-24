@@ -3,7 +3,9 @@
     "$type": "MX.Logic.Data.PassiveSkillData, BlueArchive",
     "Duration": -1,
     "MaxTriggerCount": -1,
+    "CoolTimeNotTrigger": 0,
     "TryCount": 0,
+    "ResetTryCountUseSkill": false,
     "TriggerCondition": {
       "$type": "MX.Logic.Data.PassiveTriggerData, BlueArchive",
       "Event": 1,
@@ -119,20 +121,6 @@
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
@@ -175,8 +163,12 @@
                       3,
                       4,
                       5
-                    ],
-                    "TacticEntityTypeList": []
+                    ]
+                  },
+                  "CheckTacticEntityType": false,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
+                    "TacticEntityTypeList": null
                   },
                   "Operator": 1,
                   "CountMin": 1,
@@ -207,10 +199,14 @@
                     "List": [],
                     "CountTrueCondition": false
                   },
-                  "CheckTacticRole": true,
+                  "CheckTacticRole": false,
                   "TacticRole": {
                     "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticRoleCondition, BlueArchive",
-                    "TacticRoleList": [],
+                    "TacticRoleList": []
+                  },
+                  "CheckTacticEntityType": true,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
                     "TacticEntityTypeList": [
                       1
                     ]
@@ -234,8 +230,6 @@
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
-                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
@@ -275,8 +269,12 @@
                       3,
                       4,
                       5
-                    ],
-                    "TacticEntityTypeList": []
+                    ]
+                  },
+                  "CheckTacticEntityType": false,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
+                    "TacticEntityTypeList": null
                   },
                   "Operator": 1,
                   "CountMin": 2,
@@ -307,10 +305,14 @@
                     "List": [],
                     "CountTrueCondition": false
                   },
-                  "CheckTacticRole": true,
+                  "CheckTacticRole": false,
                   "TacticRole": {
                     "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticRoleCondition, BlueArchive",
-                    "TacticRoleList": [],
+                    "TacticRoleList": []
+                  },
+                  "CheckTacticEntityType": true,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
                     "TacticEntityTypeList": [
                       1
                     ]
@@ -369,8 +371,12 @@
                       3,
                       4,
                       5
-                    ],
-                    "TacticEntityTypeList": []
+                    ]
+                  },
+                  "CheckTacticEntityType": false,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
+                    "TacticEntityTypeList": null
                   },
                   "Operator": 1,
                   "CountMin": 3,
@@ -401,10 +407,14 @@
                     "List": [],
                     "CountTrueCondition": false
                   },
-                  "CheckTacticRole": true,
+                  "CheckTacticRole": false,
                   "TacticRole": {
                     "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticRoleCondition, BlueArchive",
-                    "TacticRoleList": [],
+                    "TacticRoleList": []
+                  },
+                  "CheckTacticEntityType": true,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
                     "TacticEntityTypeList": [
                       1
                     ]
@@ -426,6 +436,7 @@
               "StartDelay": 0,
               "LogicEffectGroupIds": [
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_01",
+                "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02",
                 "TimeAttack_Ally_Buff_StatChange_AttackPowerCostRegen_CountCharacter_02"
               ],
@@ -460,7 +471,11 @@
                       3,
                       4,
                       5
-                    ],
+                    ]
+                  },
+                  "CheckTacticEntityType": false,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
                     "TacticEntityTypeList": []
                   },
                   "Operator": 1,
@@ -492,10 +507,14 @@
                     "List": [],
                     "CountTrueCondition": false
                   },
-                  "CheckTacticRole": true,
+                  "CheckTacticRole": false,
                   "TacticRole": {
                     "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticRoleCondition, BlueArchive",
-                    "TacticRoleList": [],
+                    "TacticRoleList": []
+                  },
+                  "CheckTacticEntityType": true,
+                  "TacticEntityType": {
+                    "$type": "MX.Logic.Data.CountListCombinedModifierData+TacticEntityTypeCondition, BlueArchive",
                     "TacticEntityTypeList": [
                       1
                     ]

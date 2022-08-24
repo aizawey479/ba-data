@@ -260,7 +260,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_CarBlack",
@@ -270,15 +271,16 @@
             "z": 34.08
           },
           "Forward": {
-            "x": 0.3388099,
+            "x": 0.33881104,
             "y": 0,
-            "z": -0.940854847
+            "z": -0.94085443
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_IronPipe",
@@ -298,7 +300,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_CarBlack",
@@ -318,7 +321,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Baricade",
@@ -328,9 +332,9 @@
             "z": 23.81
           },
           "Forward": {
-            "x": 0.601887167,
+            "x": 0.6018881,
             "y": 0,
-            "z": -0.7985811
+            "z": -0.7985804
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -338,7 +342,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Baricade",
@@ -358,7 +363,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Baricade",
@@ -378,7 +384,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         }
       ],
       "EnemySpawnPointGroupList": [
@@ -648,7 +655,8 @@
           "CommandIdList": [
             "DestoryObstacle"
           ],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_CarBlack",
@@ -658,9 +666,9 @@
             "z": 107.9
           },
           "Forward": {
-            "x": 0.3388099,
+            "x": 0.33881104,
             "y": 0,
-            "z": -0.940854847
+            "z": -0.94085443
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -668,7 +676,8 @@
           "CommandIdList": [
             "DestoryObstacle"
           ],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         }
       ],
       "EnemySpawnPointGroupList": [
@@ -731,6 +740,13 @@
               "CharacterGroup": 1,
               "CommandID": "2phase_HieronymusSkill09",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
+              "SectionID": 4,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
             }
           ]
         },
@@ -764,132 +780,18 @@
               "CharacterGroup": 1,
               "CommandID": "2phase_HieronymusSkill09",
               "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
+              "SectionID": 4,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
             }
           ]
         }
       ],
-      "Obstacles": [
-        {
-          "UniqueName": "Hieronymus_rock_03",
-          "Position": {
-            "x": -5.26,
-            "y": 0,
-            "z": 102.39
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hieronymus_Tires",
-          "Position": {
-            "x": -1.86,
-            "y": 0,
-            "z": 97.78
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hieronymus_Stone1",
-          "Position": {
-            "x": 3.12,
-            "y": 0,
-            "z": 99.64
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hieronymus_Stone2",
-          "Position": {
-            "x": 0.88,
-            "y": 0,
-            "z": 97.74
-          },
-          "Forward": {
-            "x": 0,
-            "y": 0,
-            "z": 1
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hieronymus_Tires",
-          "Position": {
-            "x": -3.65,
-            "y": 0,
-            "z": 102.04
-          },
-          "Forward": {
-            "x": 0.7671046,
-            "y": 0,
-            "z": 0.64152205
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            3
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        },
-        {
-          "UniqueName": "Hieronymus_Stone1",
-          "Position": {
-            "x": -1,
-            "y": 0,
-            "z": 100.08
-          },
-          "Forward": {
-            "x": -0.5149135,
-            "y": 0,
-            "z": 0.857242167
-          },
-          "ActiveEnemyPointIndices": [],
-          "ActivePlayerPointIndices": [
-            0
-          ],
-          "ConditionIdList": [],
-          "CommandIdList": [],
-          "SubObstacles": []
-        }
-      ],
+      "Obstacles": [],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent",
@@ -986,6 +888,149 @@
           ]
         }
       ]
+    },
+    {
+      "SectionID": 4,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [],
+      "Obstacles": [
+        {
+          "UniqueName": "Hieronymus_rock_03",
+          "Position": {
+            "x": -5.26,
+            "y": 0,
+            "z": 102.39
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [],
+          "IsDummy": false
+        },
+        {
+          "UniqueName": "Hieronymus_Tires",
+          "Position": {
+            "x": -1.86,
+            "y": 0,
+            "z": 97.78
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [],
+          "IsDummy": false
+        },
+        {
+          "UniqueName": "Hieronymus_Stone1",
+          "Position": {
+            "x": 3.12,
+            "y": 0,
+            "z": 99.64
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [],
+          "IsDummy": false
+        },
+        {
+          "UniqueName": "Hieronymus_Stone2",
+          "Position": {
+            "x": 0.88,
+            "y": 0,
+            "z": 97.74
+          },
+          "Forward": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [],
+          "IsDummy": false
+        },
+        {
+          "UniqueName": "Hieronymus_Tires",
+          "Position": {
+            "x": -3.65,
+            "y": 0,
+            "z": 102.04
+          },
+          "Forward": {
+            "x": 0.7671046,
+            "y": 0,
+            "z": 0.64152205
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            3
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [],
+          "IsDummy": false
+        },
+        {
+          "UniqueName": "Hieronymus_Stone1",
+          "Position": {
+            "x": -1,
+            "y": 0,
+            "z": 100.08
+          },
+          "Forward": {
+            "x": -0.5149135,
+            "y": 0,
+            "z": 0.857242167
+          },
+          "ActiveEnemyPointIndices": [],
+          "ActivePlayerPointIndices": [
+            0
+          ],
+          "ConditionIdList": [],
+          "CommandIdList": [],
+          "SubObstacles": [],
+          "IsDummy": false
+        }
+      ],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
+          "SpawnPoints": []
+        }
+      ]
     }
   ],
   "Formations": [
@@ -1036,6 +1081,21 @@
     },
     {
       "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 102.4
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 4,
       "IgnorePathFind": false,
       "Index": 0,
       "Position": {
