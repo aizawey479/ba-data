@@ -108,6 +108,7 @@
             "TargetSortRule": {
               "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
               "SortCriteria": "Distance",
+              "SortStat": 0,
               "SortParameter": null,
               "OrderBy": "Lowest"
             },
@@ -182,6 +183,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "None",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "None"
           },
@@ -257,146 +259,48 @@
     },
     "RootMotionMoveData": null,
     "MainEntityData": {
-      "$type": "MX.Logic.Data.LevelTargetProjectileEntityData, Assembly-CSharp",
-      "TransitionType": "None",
-      "DestinationType": "InputPosition",
-      "DestinationWorldPosition": {
-        "x": 0,
-        "y": 0
+      "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
+      "Radius": 250,
+      "AttachTarget": false,
+      "AllowDuplicateHit": false,
+      "ApplyOnStay": false,
+      "Duration": 5,
+      "HitFrames": [
+        1
+      ],
+      "CollisionProperty": {
+        "$type": "MX.Logic.Data.AreaCollisionProperty, Assembly-CSharp",
+        "TransformType": "None",
+        "TransformCount": 0
       },
-      "DestinationPositionOffset": {
-        "x": 0,
-        "y": 0
-      },
-      "DestinationPositionRandomOffsetRange": 0,
-      "DestinationOffsetDirectionType": "Input",
-      "ReduceDamageRatePerHit": 0,
-      "MaxReducedDamageRate": 0,
-      "ProjectileType": "TargetPosition",
-      "ShapeType": 3,
-      "Width": 25,
-      "Height": 25,
-      "Speed": 1000,
-      "FireDelayFrame": 0,
-      "IsStickToTargetAfterHit": false,
-      "SplashDelayFrame": 0,
-      "SplashAreaEntityData": {
-        "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
-        "Radius": 250,
-        "AttachTarget": false,
-        "AllowDuplicateHit": false,
-        "ApplyOnStay": false,
-        "Duration": 5,
-        "HitFrames": [
-          1
-        ],
-        "CollisionProperty": {
-          "$type": "MX.Logic.Data.AreaCollisionProperty, Assembly-CSharp",
-          "TransformType": "None",
-          "TransformCount": 0
+      "CheckBlockHit": false,
+      "AreaAbilities": [
+        {
+          "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+          "StartDelay": 0,
+          "LogicEffectGroupIds": [
+            "CH0098_Ex01_Effect01"
+          ],
+          "name": "CH0098_Ex01_LevelOneTimeAbility01",
+          "hideFlags": 0
         },
-        "CheckBlockHit": false,
-        "AreaAbilities": [
-          {
-            "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-            "StartDelay": 0,
-            "LogicEffectGroupIds": [
-              "CH0098_Ex01_Effect01"
-            ],
-            "name": "CH0098_Ex01_LevelOneTimeAbility01",
-            "hideFlags": 0
-          },
-          {
-            "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-            "StartDelay": 1,
-            "LogicEffectGroupIds": [
-              "CH0098_Ex01_Effect02"
-            ],
-            "name": "CH0098_Ex01_LevelOneTimeAbility02",
-            "hideFlags": 0
-          }
-        ],
-        "EntityName": "CH0098Ex01Entity02",
-        "SpawnRate": 10000,
-        "SpawnDelay": 0,
-        "ApplyType": 4,
-        "DecideTiming": 0,
-        "EntitySpawnIncludeOutOfRangeInputTarget": false,
-        "SpawnPositionType": "InputPosition",
-        "SpawnWorldPosition": {
-          "x": 0,
-          "y": 0
-        },
-        "PositionOffset": {
-          "x": 0,
-          "y": 0
-        },
-        "PositionRandomOffsetRange": 0,
-        "OffsetDirectionType": "None",
-        "SpawnDirectionType": "None",
-        "OverrideTargetingRule": true,
-        "TargetSortRule": {
-          "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-          "SortCriteria": "Distance",
-          "SortParameter": null,
-          "OrderBy": "Lowest"
-        },
-        "EssentialCandidateRule": {
-          "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-          "TargetSide": "Enemy",
-          "TargetingType": "Position",
-          "ApplyEntityType": 7,
-          "MaxTargetCount": -1
-        },
-        "OptionalCandidateRule": {
-          "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
-          "AliveState": 0,
-          "SchoolConstraint": {
-            "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
-            "School": 0,
-            "IncludeType": 0
-          },
-          "WeaponConstraint": {
-            "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
-            "Weapon": 0,
-            "IncludeType": 0
-          },
-          "SquadTypeConstraint": {
-            "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
-            "SquadType": 0,
-            "IncludeType": 0
-          },
-          "AdaptationConstraint": {
-            "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
-            "AdaptationType": 0,
-            "AdaptationValues": [],
-            "IncludeType": 0
-          },
-          "BulletConstraint": {
-            "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
-            "BulletType": 5,
-            "IncludeType": 0
-          },
-          "TagConstraint": {
-            "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
-            "IncludeType": 0
-          },
-          "CoverState": 0
-        },
-        "HighlightOption": 2,
-        "CheckSpawnPositionMovable": false,
-        "name": "CH0098_Ex01_LevelCircleAreaEntity01",
-        "hideFlags": 0
-      },
-      "AreaSpawnerData": null,
-      "SkillEntitySpawnerData": null,
-      "EntityName": "CH0098Ex01Entity01",
+        {
+          "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+          "StartDelay": 1,
+          "LogicEffectGroupIds": [
+            "CH0098_Ex01_Effect02"
+          ],
+          "name": "CH0098_Ex01_LevelOneTimeAbility02",
+          "hideFlags": 0
+        }
+      ],
+      "EntityName": "CH0098Ex01Entity02",
       "SpawnRate": 10000,
       "SpawnDelay": 0,
-      "ApplyType": 2,
+      "ApplyType": 4,
       "DecideTiming": 0,
       "EntitySpawnIncludeOutOfRangeInputTarget": false,
-      "SpawnPositionType": "Invoker",
+      "SpawnPositionType": "InputPosition",
       "SpawnWorldPosition": {
         "x": 0,
         "y": 0
@@ -406,21 +310,22 @@
         "y": 0
       },
       "PositionRandomOffsetRange": 0,
-      "OffsetDirectionType": "Input",
-      "SpawnDirectionType": "Input",
-      "OverrideTargetingRule": false,
+      "OffsetDirectionType": "None",
+      "SpawnDirectionType": "None",
+      "OverrideTargetingRule": true,
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-        "SortCriteria": "None",
+        "SortCriteria": "Distance",
+        "SortStat": 0,
         "SortParameter": null,
-        "OrderBy": "None"
+        "OrderBy": "Lowest"
       },
       "EssentialCandidateRule": {
         "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-        "TargetSide": "None",
-        "TargetingType": "None",
-        "ApplyEntityType": 0,
-        "MaxTargetCount": 0
+        "TargetSide": "Enemy",
+        "TargetingType": "Position",
+        "ApplyEntityType": 7,
+        "MaxTargetCount": -1
       },
       "OptionalCandidateRule": {
         "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
@@ -457,14 +362,15 @@
         },
         "CoverState": 0
       },
-      "HighlightOption": 0,
+      "HighlightOption": 2,
       "CheckSpawnPositionMovable": false,
-      "name": "CH0098_Ex01_LevelTargetProjectileEntity01",
+      "name": "CH0098_Ex01_LevelCircleAreaEntity01",
       "hideFlags": 0
     },
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
       "SortCriteria": "Distance",
+      "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },

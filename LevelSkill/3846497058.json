@@ -12,7 +12,7 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 22,
+        "Frame": 23,
         "DamageDistributeRate": 10000,
         "Entity": {
           "$type": "MX.Logic.Data.LevelTargetProjectileEntityData, Assembly-CSharp",
@@ -32,8 +32,8 @@
           "MaxReducedDamageRate": 0,
           "ProjectileType": "TargetCharacter",
           "ShapeType": 3,
-          "Width": 50,
-          "Height": 50,
+          "Width": 15,
+          "Height": 15,
           "Speed": 400,
           "FireDelayFrame": 0,
           "IsStickToTargetAfterHit": false,
@@ -74,6 +74,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "None",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "None"
           },
@@ -166,8 +167,8 @@
       "MaxReducedDamageRate": 0,
       "ProjectileType": "TargetCharacter",
       "ShapeType": 3,
-      "Width": 50,
-      "Height": 50,
+      "Width": 15,
+      "Height": 15,
       "Speed": 400,
       "FireDelayFrame": 0,
       "IsStickToTargetAfterHit": false,
@@ -208,6 +209,7 @@
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "None",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "None"
       },
@@ -261,6 +263,7 @@
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
       "SortCriteria": "HPRate",
+      "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },
@@ -309,8 +312,8 @@
     "AutoUseRule": {
       "$type": "MX.Logic.Skills.AutoUseRule, Assembly-CSharp",
       "ConditionType": "Interval",
-      "ConditionArgument": "1050",
-      "ConditionCheckTarget": 5,
+      "ConditionArgument": "1350",
+      "ConditionCheckTarget": 0,
       "TryCount": 1,
       "TriggerRate": 10000,
       "MaxTriggerCount": -1,

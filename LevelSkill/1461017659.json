@@ -61,6 +61,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -121,10 +122,10 @@
           "y": 0
         },
         "Frame": 155,
-        "DamageDistributeRate": 0,
+        "DamageDistributeRate": 10000,
         "Entity": {
           "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
-          "Radius": 2000,
+          "Radius": 3500,
           "AttachTarget": false,
           "AllowDuplicateHit": false,
           "ApplyOnStay": false,
@@ -157,15 +158,40 @@
               ],
               "Modifiers": [
                 {
-                  "$type": "MX.Logic.Data.TacticEntityDamageModifierData, Assembly-CSharp",
-                  "Multiplier": 20,
-                  "TacticEntity": 4,
+                  "$type": "MX.Logic.Data.TacticEntityConditionalModifierData, Assembly-CSharp",
+                  "Constraint": {
+                    "$type": "MX.Logic.Data.TacticEntityConstraint, Assembly-CSharp",
+                    "TacticEntity": 8,
+                    "IncludeType": 2
+                  },
                   "CheckTarget": 1,
-                  "name": "HOD01_Ex04_TacticEntityDamageModifier01",
+                  "name": "HOD01_Ex04_TacticEntityConditionalModifier02",
                   "hideFlags": 0
                 }
               ],
               "name": "HOD01_Ex04_LevelOneTimeAbility01",
+              "hideFlags": 0
+            },
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "HOD01_Ex04_Effect03"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.TacticEntityConditionalModifierData, Assembly-CSharp",
+                  "Constraint": {
+                    "$type": "MX.Logic.Data.TacticEntityConstraint, Assembly-CSharp",
+                    "TacticEntity": 2,
+                    "IncludeType": 1
+                  },
+                  "CheckTarget": 1,
+                  "name": "HOD01_Ex04_TacticEntityConditionalModifier01",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "HOD01_Ex04_LevelOneTimeAbility03",
               "hideFlags": 0
             }
           ],
@@ -191,12 +217,13 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
           "EssentialCandidateRule": {
             "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "Ally_or_Enemy",
+            "TargetSide": "All_Except_Self",
             "TargetingType": "Position",
             "ApplyEntityType": 7,
             "MaxTargetCount": -1
@@ -244,6 +271,103 @@
       },
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 239,
+        "DamageDistributeRate": 10000,
+        "Entity": {
+          "$type": "MX.Logic.Data.LevelTargetAttachedEntityData, Assembly-CSharp",
+          "Abilities": [
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "HOD01_Ex04_Effect04"
+              ],
+              "name": "HOD01_Ex04_LevelOneTimeAbility04",
+              "hideFlags": 0
+            }
+          ],
+          "EntityName": "HOD01_Ex04_LevelTargetAttachedEntity02",
+          "SpawnRate": 10000,
+          "SpawnDelay": 0,
+          "ApplyType": 4,
+          "DecideTiming": 0,
+          "EntitySpawnIncludeOutOfRangeInputTarget": false,
+          "SpawnPositionType": "None",
+          "SpawnWorldPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionRandomOffsetRange": 0,
+          "OffsetDirectionType": "None",
+          "SpawnDirectionType": "None",
+          "OverrideTargetingRule": true,
+          "TargetSortRule": {
+            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
+            "SortCriteria": "Distance",
+            "SortStat": 0,
+            "SortParameter": null,
+            "OrderBy": "Lowest"
+          },
+          "EssentialCandidateRule": {
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
+            "TargetSide": "Self",
+            "TargetingType": "Target",
+            "ApplyEntityType": 1,
+            "MaxTargetCount": 1
+          },
+          "OptionalCandidateRule": {
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+            "AliveState": 0,
+            "SchoolConstraint": {
+              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+              "School": 0,
+              "IncludeType": 0
+            },
+            "WeaponConstraint": {
+              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+              "Weapon": 0,
+              "IncludeType": 0
+            },
+            "SquadTypeConstraint": {
+              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+              "SquadType": 0,
+              "IncludeType": 0
+            },
+            "AdaptationConstraint": {
+              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+              "AdaptationType": 0,
+              "AdaptationValues": [],
+              "IncludeType": 0
+            },
+            "BulletConstraint": {
+              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+              "BulletType": 5,
+              "IncludeType": 0
+            },
+            "TagConstraint": {
+              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+              "IncludeType": 0
+            },
+            "CoverState": 0
+          },
+          "HighlightOption": 0,
+          "CheckSpawnPositionMovable": false,
+          "name": "HOD01_Ex04_LevelTargetAttachedEntity02",
+          "hideFlags": 0
+        }
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
         "Tag": "ActionEnd",
         "InvokerDirectionOverride": "None",
         "InvokerDirectionOverrideWorldPosition": {
@@ -261,13 +385,13 @@
     "IsWeaponMountAfterSkill": false,
     "InvokerDirection": "Invoker",
     "InvokerDirectionWorldPosition": {
-      "x": 0,
-      "y": 0
+      "x": -27,
+      "y": 10.74
     },
     "RootMotionMoveData": null,
     "MainEntityData": {
       "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
-      "Radius": 2000,
+      "Radius": 3500,
       "AttachTarget": false,
       "AllowDuplicateHit": false,
       "ApplyOnStay": false,
@@ -300,15 +424,40 @@
           ],
           "Modifiers": [
             {
-              "$type": "MX.Logic.Data.TacticEntityDamageModifierData, Assembly-CSharp",
-              "Multiplier": 20,
-              "TacticEntity": 4,
+              "$type": "MX.Logic.Data.TacticEntityConditionalModifierData, Assembly-CSharp",
+              "Constraint": {
+                "$type": "MX.Logic.Data.TacticEntityConstraint, Assembly-CSharp",
+                "TacticEntity": 8,
+                "IncludeType": 2
+              },
               "CheckTarget": 1,
-              "name": "HOD01_Ex04_TacticEntityDamageModifier01",
+              "name": "HOD01_Ex04_TacticEntityConditionalModifier02",
               "hideFlags": 0
             }
           ],
           "name": "HOD01_Ex04_LevelOneTimeAbility01",
+          "hideFlags": 0
+        },
+        {
+          "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+          "StartDelay": 0,
+          "LogicEffectGroupIds": [
+            "HOD01_Ex04_Effect03"
+          ],
+          "Modifiers": [
+            {
+              "$type": "MX.Logic.Data.TacticEntityConditionalModifierData, Assembly-CSharp",
+              "Constraint": {
+                "$type": "MX.Logic.Data.TacticEntityConstraint, Assembly-CSharp",
+                "TacticEntity": 2,
+                "IncludeType": 1
+              },
+              "CheckTarget": 1,
+              "name": "HOD01_Ex04_TacticEntityConditionalModifier01",
+              "hideFlags": 0
+            }
+          ],
+          "name": "HOD01_Ex04_LevelOneTimeAbility03",
           "hideFlags": 0
         }
       ],
@@ -334,12 +483,13 @@
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "Distance",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "Lowest"
       },
       "EssentialCandidateRule": {
         "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-        "TargetSide": "Ally_or_Enemy",
+        "TargetSide": "All_Except_Self",
         "TargetingType": "Position",
         "ApplyEntityType": 7,
         "MaxTargetCount": -1
@@ -387,6 +537,7 @@
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
       "SortCriteria": "Distance",
+      "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },

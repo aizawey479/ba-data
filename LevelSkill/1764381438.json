@@ -61,10 +61,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -173,10 +174,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -285,10 +287,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -397,10 +400,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -509,10 +513,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -621,10 +626,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -733,10 +739,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -845,10 +852,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -957,10 +965,11 @@
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "None",
           "SpawnDirectionType": "Invoker",
-          "OverrideTargetingRule": false,
+          "OverrideTargetingRule": true,
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -1075,15 +1084,16 @@
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "Distance",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "Lowest"
       },
       "EssentialCandidateRule": {
         "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-        "TargetSide": "None",
-        "TargetingType": "None",
-        "ApplyEntityType": 0,
-        "MaxTargetCount": 0
+        "TargetSide": "Enemy",
+        "TargetingType": "Position",
+        "ApplyEntityType": 7,
+        "MaxTargetCount": -1
       },
       "OptionalCandidateRule": {
         "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
@@ -1128,6 +1138,7 @@
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
       "SortCriteria": "Distance",
+      "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },
@@ -1135,8 +1146,8 @@
       "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
       "TargetSide": "Enemy",
       "TargetingType": "Position",
-      "ApplyEntityType": 7,
-      "MaxTargetCount": -1
+      "ApplyEntityType": 5,
+      "MaxTargetCount": 1
     },
     "OptionalCandidateRule": {
       "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",

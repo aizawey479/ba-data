@@ -24,37 +24,52 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 159,
+        "Frame": 156,
         "DamageDistributeRate": 5000,
         "Entity": {
-          "$type": "MX.Logic.Data.LevelObbAreaEntityData, Assembly-CSharp",
-          "Width": 1000,
-          "Height": 200,
-          "AttachTarget": false,
-          "AllowDuplicateHit": false,
-          "ApplyOnStay": false,
-          "Duration": 2,
-          "HitFrames": [
-            1
-          ],
-          "CollisionProperty": {
-            "$type": "MX.Logic.Data.AreaCollisionProperty, Assembly-CSharp",
-            "TransformType": "None",
-            "TransformCount": 0
+          "$type": "MX.Logic.Data.LevelNontargetProjectileEntityData, Assembly-CSharp",
+          "AngleOffset": 0,
+          "ExpireDistance": 900,
+          "Piercing": true,
+          "BounceCondition": 0,
+          "BounceEntity": null,
+          "DestinationType": "Invoker",
+          "DestinationWorldPosition": {
+            "x": 0,
+            "y": 0
           },
-          "CheckBlockHit": false,
-          "AreaAbilities": [
+          "DestinationPositionOffset": {
+            "x": 2.4,
+            "y": 15
+          },
+          "DestinationPositionRandomOffsetRange": 0,
+          "DestinationOffsetDirectionType": "Invoker",
+          "ReduceDamageRatePerHit": 0,
+          "MaxReducedDamageRate": 0,
+          "ProjectileType": "Nontarget",
+          "ShapeType": 3,
+          "Width": 100,
+          "Height": 100,
+          "Speed": 2500,
+          "FireDelayFrame": 0,
+          "IsStickToTargetAfterHit": false,
+          "Abilities": [
             {
               "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
               "StartDelay": 0,
               "LogicEffectGroupIds": [
-                "HOD01_Ex02_Effect01"
+                "HOD01_Ex02_Effect01",
+                "HOD01_Ex02_Effect02"
               ],
               "name": "HOD01_Ex02_LevelOneTimeAbility01",
               "hideFlags": 0
             }
           ],
-          "EntityName": "HOD01_Ex02_LevelObbAreaEntity01",
+          "SplashDelayFrame": 0,
+          "SplashAreaEntityData": null,
+          "AreaSpawnerData": null,
+          "SkillEntitySpawnerData": null,
+          "EntityName": "HOD01_Ex02_LevelNonTargetProjectileEntity01",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
@@ -66,8 +81,8 @@
             "y": 0
           },
           "PositionOffset": {
-            "x": 0,
-            "y": 0
+            "x": -2.3,
+            "y": 4.5
           },
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "Invoker",
@@ -76,6 +91,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -83,7 +99,7 @@
             "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
             "TargetSide": "Enemy",
             "TargetingType": "Position",
-            "ApplyEntityType": 7,
+            "ApplyEntityType": 5,
             "MaxTargetCount": -1
           },
           "OptionalCandidateRule": {
@@ -123,7 +139,7 @@
           },
           "HighlightOption": 0,
           "CheckSpawnPositionMovable": false,
-          "name": "HOD01_Ex02_LevelObbAreaEntity01",
+          "name": "HOD01_Ex02_LevelNonTargetProjectileEntity01",
           "hideFlags": 0
         }
       },
@@ -135,37 +151,52 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 217,
+        "Frame": 208,
         "DamageDistributeRate": 5000,
         "Entity": {
-          "$type": "MX.Logic.Data.LevelObbAreaEntityData, Assembly-CSharp",
-          "Width": 1000,
-          "Height": 200,
-          "AttachTarget": false,
-          "AllowDuplicateHit": false,
-          "ApplyOnStay": false,
-          "Duration": 2,
-          "HitFrames": [
-            1
-          ],
-          "CollisionProperty": {
-            "$type": "MX.Logic.Data.AreaCollisionProperty, Assembly-CSharp",
-            "TransformType": "None",
-            "TransformCount": 0
+          "$type": "MX.Logic.Data.LevelNontargetProjectileEntityData, Assembly-CSharp",
+          "AngleOffset": 0,
+          "ExpireDistance": 900,
+          "Piercing": true,
+          "BounceCondition": 0,
+          "BounceEntity": null,
+          "DestinationType": "Invoker",
+          "DestinationWorldPosition": {
+            "x": 0,
+            "y": 0
           },
-          "CheckBlockHit": false,
-          "AreaAbilities": [
+          "DestinationPositionOffset": {
+            "x": -5.4,
+            "y": 15.3
+          },
+          "DestinationPositionRandomOffsetRange": 0,
+          "DestinationOffsetDirectionType": "Invoker",
+          "ReduceDamageRatePerHit": 0,
+          "MaxReducedDamageRate": 0,
+          "ProjectileType": "Nontarget",
+          "ShapeType": 3,
+          "Width": 100,
+          "Height": 100,
+          "Speed": 2500,
+          "FireDelayFrame": 0,
+          "IsStickToTargetAfterHit": false,
+          "Abilities": [
             {
               "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
               "StartDelay": 0,
               "LogicEffectGroupIds": [
-                "HOD01_Ex02_Effect01"
+                "HOD01_Ex02_Effect01",
+                "HOD01_Ex02_Effect02"
               ],
               "name": "HOD01_Ex02_LevelOneTimeAbility01",
               "hideFlags": 0
             }
           ],
-          "EntityName": "HOD01_Ex02_LevelObbAreaEntity02",
+          "SplashDelayFrame": 0,
+          "SplashAreaEntityData": null,
+          "AreaSpawnerData": null,
+          "SkillEntitySpawnerData": null,
+          "EntityName": "HOD01_Ex02_LevelNonTargetProjectileEntity02",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
@@ -177,8 +208,8 @@
             "y": 0
           },
           "PositionOffset": {
-            "x": 0,
-            "y": 0
+            "x": 2.1,
+            "y": 5.3
           },
           "PositionRandomOffsetRange": 0,
           "OffsetDirectionType": "Invoker",
@@ -187,6 +218,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -194,7 +226,7 @@
             "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
             "TargetSide": "Enemy",
             "TargetingType": "Position",
-            "ApplyEntityType": 7,
+            "ApplyEntityType": 5,
             "MaxTargetCount": -1
           },
           "OptionalCandidateRule": {
@@ -234,7 +266,7 @@
           },
           "HighlightOption": 0,
           "CheckSpawnPositionMovable": false,
-          "name": "HOD01_Ex02_LevelObbAreaEntity02",
+          "name": "HOD01_Ex02_LevelNonTargetProjectileEntity02",
           "hideFlags": 0
         }
       },
@@ -255,10 +287,10 @@
     "Angle": 0,
     "CheckCanUseSkillPoint": false,
     "IsWeaponMountAfterSkill": false,
-    "InvokerDirection": "Invoker",
+    "InvokerDirection": "WorldPosition",
     "InvokerDirectionWorldPosition": {
-      "x": 0,
-      "y": 0
+      "x": -27,
+      "y": 10.74
     },
     "RootMotionMoveData": null,
     "MainEntityData": {
@@ -283,7 +315,8 @@
           "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
           "StartDelay": 0,
           "LogicEffectGroupIds": [
-            "HOD01_Ex02_Effect01"
+            "HOD01_Ex02_Effect01",
+            "HOD01_Ex02_Effect02"
           ],
           "name": "HOD01_Ex02_LevelOneTimeAbility01",
           "hideFlags": 0
@@ -311,6 +344,7 @@
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "Distance",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "Lowest"
       },
@@ -364,14 +398,15 @@
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
       "SortCriteria": "Distance",
+      "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },
     "EssentialCandidateRule": {
       "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
       "TargetSide": "Enemy",
-      "TargetingType": "Target",
-      "ApplyEntityType": 1,
+      "TargetingType": "Position",
+      "ApplyEntityType": 3,
       "MaxTargetCount": 1
     },
     "OptionalCandidateRule": {

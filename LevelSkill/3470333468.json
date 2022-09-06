@@ -6,8 +6,8 @@
     "TryCount": 0,
     "TriggerCondition": {
       "$type": "MX.Logic.Data.PassiveTriggerData, Assembly-CSharp",
-      "Event": 17,
-      "Parameters": "Ex",
+      "Event": 105,
+      "Parameters": "1050",
       "ConditionExpression": "",
       "TriggerRate": 10000,
       "EchelonConstraint": {
@@ -35,6 +35,7 @@
       "Sort": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "Distance",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "Lowest"
       },
@@ -91,11 +92,26 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 0,
-        "DamageDistributeRate": 0,
+        "Frame": 1,
+        "DamageDistributeRate": 10000,
         "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
-          "Abilities": [
+          "$type": "MX.Logic.Data.LevelCircleAreaEntityData, Assembly-CSharp",
+          "Radius": 200,
+          "AttachTarget": false,
+          "AllowDuplicateHit": false,
+          "ApplyOnStay": false,
+          "Duration": 10,
+          "HitFrames": [
+            4,
+            7
+          ],
+          "CollisionProperty": {
+            "$type": "MX.Logic.Data.AreaCollisionProperty, Assembly-CSharp",
+            "TransformType": "RadiusIncrement",
+            "TransformCount": 2
+          },
+          "CheckBlockHit": true,
+          "AreaAbilities": [
             {
               "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
               "StartDelay": 0,
@@ -106,13 +122,13 @@
               "hideFlags": 0
             }
           ],
-          "EntityName": "",
+          "EntityName": "CH0115ExtraPassive01Entity01",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
-          "DecideTiming": 0,
+          "DecideTiming": 1,
           "EntitySpawnIncludeOutOfRangeInputTarget": false,
-          "SpawnPositionType": "None",
+          "SpawnPositionType": "Invoker",
           "SpawnWorldPosition": {
             "x": 0,
             "y": 0
@@ -128,15 +144,16 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
           "EssentialCandidateRule": {
             "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-            "TargetSide": "Self",
-            "TargetingType": "Target",
-            "ApplyEntityType": 1,
-            "MaxTargetCount": 1
+            "TargetSide": "Ally",
+            "TargetingType": "Position",
+            "ApplyEntityType": 5,
+            "MaxTargetCount": -1
           },
           "OptionalCandidateRule": {
             "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
@@ -175,7 +192,7 @@
           },
           "HighlightOption": 0,
           "CheckSpawnPositionMovable": false,
-          "name": "CH0115_ExtraPassive01_LevelTargetSkillEntity01",
+          "name": "CH0115_ExtraPassive01_LevelCircleAreaEntity01",
           "hideFlags": 0
         }
       },
@@ -187,7 +204,7 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 30,
+        "Frame": 11,
         "DamageDistributeRate": 0,
         "Entity": null
       }

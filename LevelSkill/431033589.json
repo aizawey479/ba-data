@@ -7,7 +7,7 @@
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
         "Tag": "ActionStart",
-        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverride": "ToTarget",
         "InvokerDirectionOverrideWorldPosition": {
           "x": 0,
           "y": 0
@@ -19,7 +19,31 @@
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
         "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverride": "ToTarget",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 30,
+        "DamageDistributeRate": 0,
+        "Entity": null
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "ToTarget",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 60,
+        "DamageDistributeRate": 0,
+        "Entity": null
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "ToTarget",
         "InvokerDirectionOverrideWorldPosition": {
           "x": 0,
           "y": 0
@@ -86,6 +110,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "None",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "None"
           },
@@ -140,7 +165,7 @@
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
         "Tag": "ActionRelease",
-        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverride": "ToTarget",
         "InvokerDirectionOverrideWorldPosition": {
           "x": 0,
           "y": 0
@@ -207,6 +232,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "None",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "None"
           },
@@ -271,11 +297,11 @@
         "Entity": null
       }
     ],
-    "Range": 1500,
+    "Range": 2000,
     "Angle": 0,
     "CheckCanUseSkillPoint": false,
     "IsWeaponMountAfterSkill": false,
-    "InvokerDirection": "Invoker",
+    "InvokerDirection": "ToTarget",
     "InvokerDirectionWorldPosition": {
       "x": 0,
       "y": 0
@@ -341,6 +367,7 @@
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "None",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "None"
       },
@@ -393,9 +420,10 @@
     },
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-      "SortCriteria": "Distance",
+      "SortCriteria": "HPRate",
+      "SortStat": 0,
       "SortParameter": null,
-      "OrderBy": "Lowest"
+      "OrderBy": "Highest"
     },
     "EssentialCandidateRule": {
       "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",

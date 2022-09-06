@@ -12,14 +12,14 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 1,
-        "DamageDistributeRate": 100,
+        "Frame": 68,
+        "DamageDistributeRate": 10000,
         "Entity": {
           "$type": "MX.Logic.Data.LevelBattleItemEntityData, Assembly-CSharp",
           "RecognitionRadius": 400,
           "EffectRadius": 50,
-          "TargetCount": 4,
-          "ActiveDelayInFrame": 50,
+          "TargetCount": 5,
+          "ActiveDelayInFrame": 15,
           "LogicEffectGroupIds": [
             "CH0115_Ex01_Effect01"
           ],
@@ -52,6 +52,7 @@
           "TargetSortRule": {
             "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
             "SortCriteria": "Distance",
+            "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
@@ -97,7 +98,7 @@
             },
             "CoverState": 0
           },
-          "HighlightOption": 1,
+          "HighlightOption": 0,
           "CheckSpawnPositionMovable": true,
           "name": "CH0115_Ex01_LevelBattleItemEntity01",
           "hideFlags": 0
@@ -130,8 +131,8 @@
       "$type": "MX.Logic.Data.LevelBattleItemEntityData, Assembly-CSharp",
       "RecognitionRadius": 400,
       "EffectRadius": 50,
-      "TargetCount": 4,
-      "ActiveDelayInFrame": 50,
+      "TargetCount": 5,
+      "ActiveDelayInFrame": 15,
       "LogicEffectGroupIds": [
         "CH0115_Ex01_Effect01"
       ],
@@ -164,6 +165,7 @@
       "TargetSortRule": {
         "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
         "SortCriteria": "Distance",
+        "SortStat": 0,
         "SortParameter": null,
         "OrderBy": "Lowest"
       },
@@ -209,7 +211,7 @@
         },
         "CoverState": 0
       },
-      "HighlightOption": 1,
+      "HighlightOption": 0,
       "CheckSpawnPositionMovable": true,
       "name": "CH0115_Ex01_LevelBattleItemEntity01",
       "hideFlags": 0
@@ -217,6 +219,7 @@
     "TargetSortRule": {
       "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
       "SortCriteria": "Distance",
+      "SortStat": 0,
       "SortParameter": null,
       "OrderBy": "Lowest"
     },
