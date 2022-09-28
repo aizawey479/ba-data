@@ -55,14 +55,13 @@
               ],
               "Modifiers": [
                 {
-                  "$type": "MX.Logic.Data.CharacterIdConditionalModifierData, BlueArchive",
-                  "CharacterIdList": [
-                    10042
-                  ],
-                  "TargetSide": "Self",
+                  "$type": "MX.Logic.Data.TagConditionalModifierData, BlueArchive",
                   "IncludeType": 1,
+                  "TagConstraints": [
+                    "AtsukoOriginal"
+                  ],
                   "CheckTarget": 1,
-                  "name": "CH0104_Ex01_CharacterIdConditionalModifier01",
+                  "name": "CH0104_Ex01_TagConditionalModifier01",
                   "hideFlags": 0
                 }
               ],
@@ -136,7 +135,12 @@
               "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
               "IncludeType": 0
             },
-            "CoverState": 0
+            "CoverState": 0,
+            "HPRateConstraint": {
+              "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+              "ConstraintType": 0,
+              "HPRate": 0
+            }
           },
           "HighlightOption": 1,
           "CheckSpawnPositionMovable": false,
@@ -196,14 +200,13 @@
           ],
           "Modifiers": [
             {
-              "$type": "MX.Logic.Data.CharacterIdConditionalModifierData, BlueArchive",
-              "CharacterIdList": [
-                10042
-              ],
-              "TargetSide": "Self",
+              "$type": "MX.Logic.Data.TagConditionalModifierData, BlueArchive",
               "IncludeType": 1,
+              "TagConstraints": [
+                "AtsukoOriginal"
+              ],
               "CheckTarget": 1,
-              "name": "CH0104_Ex01_CharacterIdConditionalModifier01",
+              "name": "CH0104_Ex01_TagConditionalModifier01",
               "hideFlags": 0
             }
           ],
@@ -277,7 +280,12 @@
           "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
           "IncludeType": 0
         },
-        "CoverState": 0
+        "CoverState": 0,
+        "HPRateConstraint": {
+          "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+          "ConstraintType": 0,
+          "HPRate": 0
+        }
       },
       "HighlightOption": 1,
       "CheckSpawnPositionMovable": false,
@@ -331,7 +339,12 @@
         "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
         "IncludeType": 0
       },
-      "CoverState": 0
+      "CoverState": 0,
+      "HPRateConstraint": {
+        "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+        "ConstraintType": 0,
+        "HPRate": 0
+      }
     },
     "AutoUseRule": {
       "$type": "MX.Logic.Skills.AutoUseRule, BlueArchive",
