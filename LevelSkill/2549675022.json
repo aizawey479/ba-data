@@ -13,6 +13,413 @@
           "x": 0,
           "y": 0
         },
+        "Frame": 48,
+        "DamageDistributeRate": 10000,
+        "Entity": {
+          "$type": "MX.Logic.Data.SkillEntitySpawnerData, BlueArchive",
+          "Duration": 300,
+          "SpawnRule": "SpawnAll",
+          "EntityTimeline": [
+            {
+              "$type": "MX.Logic.Data.SkillEntitySpawnerTimelineData, BlueArchive",
+              "SpawnCondition": "Rate",
+              "SpawnConditionParameter": "10000",
+              "SpawnConditionCheckTarget": "Caster",
+              "Frame": 1,
+              "DamageDistributeRate": 10000,
+              "Entity": {
+                "$type": "MX.Logic.Data.LevelCircleAreaEntityData, BlueArchive",
+                "Radius": 400,
+                "AttachTarget": false,
+                "AllowDuplicateHit": false,
+                "ApplyOnStay": false,
+                "Duration": 300,
+                "RotateEntityDirectionEveryFrame": false,
+                "ApplyOffsetRotateEntityDirection": false,
+                "HitFrames": [
+                  1
+                ],
+                "CollisionProperty": {
+                  "$type": "MX.Logic.Data.AreaCollisionProperty, BlueArchive",
+                  "TransformType": "None",
+                  "TransformCount": 0
+                },
+                "CheckBlockHit": false,
+                "EntityName": "GozEx02Entity06_A",
+                "SpawnRate": 10000,
+                "SpawnDelay": 0,
+                "ApplyType": 4,
+                "DecideTiming": 1,
+                "EntitySpawnIncludeOutOfRangeInputTarget": false,
+                "SpawnPositionType": "WorldPosition",
+                "SpawnWorldPosition": {
+                  "x": 0,
+                  "y": 0
+                },
+                "PositionOffset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "PositionRandomOffsetRange": 0,
+                "OffsetDirectionType": "None",
+                "SpawnDirectionType": "None",
+                "OverrideTargetingRule": true,
+                "TargetSortRule": {
+                  "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+                  "SortCriteria": "Distance",
+                  "SortStat": 0,
+                  "SortParameter": null,
+                  "OrderBy": "Lowest"
+                },
+                "EssentialCandidateRule": {
+                  "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+                  "TargetSide": "Enemy",
+                  "TargetingType": "Position",
+                  "ApplyEntityType": 5,
+                  "MaxTargetCount": -1
+                },
+                "OptionalCandidateRule": {
+                  "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
+                  "AliveState": 0,
+                  "SchoolConstraint": {
+                    "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
+                    "School": 0,
+                    "IncludeType": 0
+                  },
+                  "WeaponConstraint": {
+                    "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
+                    "Weapon": 0,
+                    "IncludeType": 0
+                  },
+                  "SquadTypeConstraint": {
+                    "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
+                    "SquadType": 0,
+                    "IncludeType": 0
+                  },
+                  "AdaptationConstraint": {
+                    "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
+                    "AdaptationType": 0,
+                    "AdaptationValues": [],
+                    "IncludeType": 0
+                  },
+                  "BulletConstraint": {
+                    "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
+                    "BulletType": 5,
+                    "IncludeType": 0
+                  },
+                  "TagConstraint": {
+                    "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
+                    "IncludeType": 0
+                  },
+                  "CoverState": 0,
+                  "HPRateConstraint": {
+                    "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+                    "ConstraintType": 0,
+                    "HPRate": 0
+                  }
+                },
+                "HighlightOption": 0,
+                "CheckSpawnPositionMovable": false,
+                "name": "Goz01_Ex02_LevelCircleAreaEntity06_A",
+                "hideFlags": 0
+              }
+            },
+            {
+              "$type": "MX.Logic.Data.SkillEntitySpawnerTimelineData, BlueArchive",
+              "SpawnCondition": "Rate",
+              "SpawnConditionParameter": "10000",
+              "SpawnConditionCheckTarget": "Caster",
+              "Frame": 1,
+              "DamageDistributeRate": 10000,
+              "Entity": {
+                "$type": "MX.Logic.Data.LevelCircleAreaEntityData, BlueArchive",
+                "Radius": 0,
+                "AttachTarget": false,
+                "AllowDuplicateHit": false,
+                "ApplyOnStay": false,
+                "Duration": 300,
+                "RotateEntityDirectionEveryFrame": false,
+                "ApplyOffsetRotateEntityDirection": false,
+                "HitFrames": [
+                  1
+                ],
+                "CollisionProperty": {
+                  "$type": "MX.Logic.Data.AreaCollisionProperty, BlueArchive",
+                  "TransformType": "None",
+                  "TransformCount": 0
+                },
+                "CheckBlockHit": false,
+                "EntityName": "GozEx02Entity06_B",
+                "SpawnRate": 10000,
+                "SpawnDelay": 0,
+                "ApplyType": 4,
+                "DecideTiming": 1,
+                "EntitySpawnIncludeOutOfRangeInputTarget": false,
+                "SpawnPositionType": "WorldPosition",
+                "SpawnWorldPosition": {
+                  "x": 0,
+                  "y": 0
+                },
+                "PositionOffset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "PositionRandomOffsetRange": 0,
+                "OffsetDirectionType": "None",
+                "SpawnDirectionType": "None",
+                "OverrideTargetingRule": true,
+                "TargetSortRule": {
+                  "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+                  "SortCriteria": "Distance",
+                  "SortStat": 0,
+                  "SortParameter": null,
+                  "OrderBy": "Lowest"
+                },
+                "EssentialCandidateRule": {
+                  "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+                  "TargetSide": "Enemy",
+                  "TargetingType": "Position",
+                  "ApplyEntityType": 5,
+                  "MaxTargetCount": -1
+                },
+                "OptionalCandidateRule": {
+                  "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
+                  "AliveState": 0,
+                  "SchoolConstraint": {
+                    "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
+                    "School": 0,
+                    "IncludeType": 0
+                  },
+                  "WeaponConstraint": {
+                    "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
+                    "Weapon": 0,
+                    "IncludeType": 0
+                  },
+                  "SquadTypeConstraint": {
+                    "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
+                    "SquadType": 0,
+                    "IncludeType": 0
+                  },
+                  "AdaptationConstraint": {
+                    "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
+                    "AdaptationType": 0,
+                    "AdaptationValues": [],
+                    "IncludeType": 0
+                  },
+                  "BulletConstraint": {
+                    "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
+                    "BulletType": 5,
+                    "IncludeType": 0
+                  },
+                  "TagConstraint": {
+                    "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
+                    "IncludeType": 0
+                  },
+                  "CoverState": 0,
+                  "HPRateConstraint": {
+                    "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+                    "ConstraintType": 0,
+                    "HPRate": 0
+                  }
+                },
+                "HighlightOption": 0,
+                "CheckSpawnPositionMovable": false,
+                "name": "Goz01_Ex02_LevelCircleAreaEntity06_B",
+                "hideFlags": 0
+              }
+            },
+            {
+              "$type": "MX.Logic.Data.SkillEntitySpawnerTimelineData, BlueArchive",
+              "SpawnCondition": "Rate",
+              "SpawnConditionParameter": "10000",
+              "SpawnConditionCheckTarget": "Caster",
+              "Frame": 1,
+              "DamageDistributeRate": 10000,
+              "Entity": {
+                "$type": "MX.Logic.Data.LevelCircleAreaEntityData, BlueArchive",
+                "Radius": 0,
+                "AttachTarget": false,
+                "AllowDuplicateHit": false,
+                "ApplyOnStay": false,
+                "Duration": 300,
+                "RotateEntityDirectionEveryFrame": false,
+                "ApplyOffsetRotateEntityDirection": false,
+                "HitFrames": [
+                  1
+                ],
+                "CollisionProperty": {
+                  "$type": "MX.Logic.Data.AreaCollisionProperty, BlueArchive",
+                  "TransformType": "None",
+                  "TransformCount": 0
+                },
+                "CheckBlockHit": false,
+                "EntityName": "GozEx02Entity06_C",
+                "SpawnRate": 10000,
+                "SpawnDelay": 0,
+                "ApplyType": 4,
+                "DecideTiming": 1,
+                "EntitySpawnIncludeOutOfRangeInputTarget": false,
+                "SpawnPositionType": "WorldPosition",
+                "SpawnWorldPosition": {
+                  "x": 0,
+                  "y": 0
+                },
+                "PositionOffset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "PositionRandomOffsetRange": 0,
+                "OffsetDirectionType": "None",
+                "SpawnDirectionType": "None",
+                "OverrideTargetingRule": true,
+                "TargetSortRule": {
+                  "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+                  "SortCriteria": "Distance",
+                  "SortStat": 0,
+                  "SortParameter": null,
+                  "OrderBy": "Lowest"
+                },
+                "EssentialCandidateRule": {
+                  "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+                  "TargetSide": "Enemy",
+                  "TargetingType": "Position",
+                  "ApplyEntityType": 5,
+                  "MaxTargetCount": -1
+                },
+                "OptionalCandidateRule": {
+                  "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
+                  "AliveState": 0,
+                  "SchoolConstraint": {
+                    "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
+                    "School": 0,
+                    "IncludeType": 0
+                  },
+                  "WeaponConstraint": {
+                    "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
+                    "Weapon": 0,
+                    "IncludeType": 0
+                  },
+                  "SquadTypeConstraint": {
+                    "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
+                    "SquadType": 0,
+                    "IncludeType": 0
+                  },
+                  "AdaptationConstraint": {
+                    "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
+                    "AdaptationType": 0,
+                    "AdaptationValues": [],
+                    "IncludeType": 0
+                  },
+                  "BulletConstraint": {
+                    "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
+                    "BulletType": 5,
+                    "IncludeType": 0
+                  },
+                  "TagConstraint": {
+                    "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
+                    "IncludeType": 0
+                  },
+                  "CoverState": 0,
+                  "HPRateConstraint": {
+                    "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+                    "ConstraintType": 0,
+                    "HPRate": 0
+                  }
+                },
+                "HighlightOption": 0,
+                "CheckSpawnPositionMovable": false,
+                "name": "Goz01_Ex02_LevelCircleAreaEntity06_C",
+                "hideFlags": 0
+              }
+            }
+          ],
+          "EntityName": "GozEx02Entity07",
+          "SpawnRate": 10000,
+          "SpawnDelay": 0,
+          "ApplyType": 4,
+          "DecideTiming": 1,
+          "EntitySpawnIncludeOutOfRangeInputTarget": false,
+          "SpawnPositionType": "Invoker",
+          "SpawnWorldPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionRandomOffsetRange": 0,
+          "OffsetDirectionType": "Invoker",
+          "SpawnDirectionType": "Invoker",
+          "OverrideTargetingRule": true,
+          "TargetSortRule": {
+            "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+            "SortCriteria": "Distance",
+            "SortStat": 0,
+            "SortParameter": null,
+            "OrderBy": "Lowest"
+          },
+          "EssentialCandidateRule": {
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+            "TargetSide": "Enemy",
+            "TargetingType": "Position",
+            "ApplyEntityType": 5,
+            "MaxTargetCount": -1
+          },
+          "OptionalCandidateRule": {
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
+            "AliveState": 0,
+            "SchoolConstraint": {
+              "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
+              "School": 0,
+              "IncludeType": 0
+            },
+            "WeaponConstraint": {
+              "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
+              "Weapon": 0,
+              "IncludeType": 0
+            },
+            "SquadTypeConstraint": {
+              "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
+              "SquadType": 0,
+              "IncludeType": 0
+            },
+            "AdaptationConstraint": {
+              "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
+              "AdaptationType": 0,
+              "AdaptationValues": [],
+              "IncludeType": 0
+            },
+            "BulletConstraint": {
+              "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
+              "BulletType": 5,
+              "IncludeType": 0
+            },
+            "TagConstraint": {
+              "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
+              "IncludeType": 0
+            },
+            "CoverState": 0,
+            "HPRateConstraint": {
+              "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+              "ConstraintType": 0,
+              "HPRate": 0
+            }
+          },
+          "HighlightOption": 0,
+          "CheckSpawnPositionMovable": false,
+          "name": "Goz01_Ex02_SkillEntitySpawner02",
+          "hideFlags": 0
+        }
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
         "Frame": 49,
         "DamageDistributeRate": 10000,
         "Entity": {
@@ -50,38 +457,9 @@
                     "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
                     "StartDelay": 0,
                     "LogicEffectGroupIds": [
-                      "Goz_Ex02_Effect01"
-                    ],
-                    "Modifiers": [
-                      {
-                        "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                        "TemplateId": "Buff_Shield",
-                        "IncludeType": 2,
-                        "CheckTarget": 1,
-                        "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
-                        "hideFlags": 0
-                      }
+                      "Goz_Ex02_Effect06"
                     ],
                     "name": "Goz01_Ex02_LevelOneTimeAbility01",
-                    "hideFlags": 0
-                  },
-                  {
-                    "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
-                    "StartDelay": 0,
-                    "LogicEffectGroupIds": [
-                      "Goz_Ex02_Effect02"
-                    ],
-                    "Modifiers": [
-                      {
-                        "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                        "TemplateId": "Buff_Shield",
-                        "IncludeType": 1,
-                        "CheckTarget": 1,
-                        "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
-                        "hideFlags": 0
-                      }
-                    ],
-                    "name": "Goz01_Ex02_LevelOneTimeAbility02",
                     "hideFlags": 0
                   }
                 ],
@@ -93,8 +471,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": -0.7,
-                  "y": 78.84
+                  "x": -3.74,
+                  "y": 77.52
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -197,8 +575,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": 3.1,
-                  "y": 83.75
+                  "x": -0.7,
+                  "y": 83.46
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -301,8 +679,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": -3.52,
-                  "y": 83.6
+                  "x": 3.27,
+                  "y": 78.36
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -405,8 +783,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": -0.7,
-                  "y": 78.84
+                  "x": -3.74,
+                  "y": 77.52
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -506,38 +884,9 @@
                     "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
                     "StartDelay": 0,
                     "LogicEffectGroupIds": [
-                      "Goz_Ex02_Effect01"
-                    ],
-                    "Modifiers": [
-                      {
-                        "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                        "TemplateId": "Buff_Shield",
-                        "IncludeType": 2,
-                        "CheckTarget": 1,
-                        "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
-                        "hideFlags": 0
-                      }
+                      "Goz_Ex02_Effect06"
                     ],
                     "name": "Goz01_Ex02_LevelOneTimeAbility01",
-                    "hideFlags": 0
-                  },
-                  {
-                    "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
-                    "StartDelay": 0,
-                    "LogicEffectGroupIds": [
-                      "Goz_Ex02_Effect02"
-                    ],
-                    "Modifiers": [
-                      {
-                        "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                        "TemplateId": "Buff_Shield",
-                        "IncludeType": 1,
-                        "CheckTarget": 1,
-                        "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
-                        "hideFlags": 0
-                      }
-                    ],
-                    "name": "Goz01_Ex02_LevelOneTimeAbility02",
                     "hideFlags": 0
                   }
                 ],
@@ -549,8 +898,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": 3.1,
-                  "y": 83.75
+                  "x": -0.7,
+                  "y": 83.46
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -653,8 +1002,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": -3.52,
-                  "y": 83.6
+                  "x": 3.27,
+                  "y": 78.36
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -757,8 +1106,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": -0.7,
-                  "y": 78.84
+                  "x": -3.74,
+                  "y": 77.52
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -861,8 +1210,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": 3.1,
-                  "y": 83.75
+                  "x": -0.7,
+                  "y": 83.46
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -962,38 +1311,9 @@
                     "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
                     "StartDelay": 0,
                     "LogicEffectGroupIds": [
-                      "Goz_Ex02_Effect01"
-                    ],
-                    "Modifiers": [
-                      {
-                        "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                        "TemplateId": "Buff_Shield",
-                        "IncludeType": 2,
-                        "CheckTarget": 1,
-                        "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
-                        "hideFlags": 0
-                      }
+                      "Goz_Ex02_Effect06"
                     ],
                     "name": "Goz01_Ex02_LevelOneTimeAbility01",
-                    "hideFlags": 0
-                  },
-                  {
-                    "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
-                    "StartDelay": 0,
-                    "LogicEffectGroupIds": [
-                      "Goz_Ex02_Effect02"
-                    ],
-                    "Modifiers": [
-                      {
-                        "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                        "TemplateId": "Buff_Shield",
-                        "IncludeType": 1,
-                        "CheckTarget": 1,
-                        "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
-                        "hideFlags": 0
-                      }
-                    ],
-                    "name": "Goz01_Ex02_LevelOneTimeAbility02",
                     "hideFlags": 0
                   }
                 ],
@@ -1005,8 +1325,8 @@
                 "EntitySpawnIncludeOutOfRangeInputTarget": false,
                 "SpawnPositionType": "WorldPosition",
                 "SpawnWorldPosition": {
-                  "x": -3.52,
-                  "y": 83.6
+                  "x": 3.27,
+                  "y": 78.36
                 },
                 "PositionOffset": {
                   "x": 0,
@@ -1164,11 +1484,11 @@
           "x": 0,
           "y": 0
         },
-        "Frame": 300,
+        "Frame": 286,
         "DamageDistributeRate": 10000,
         "Entity": {
           "$type": "MX.Logic.Data.LevelCircleAreaEntityData, BlueArchive",
-          "Radius": 600,
+          "Radius": 1500,
           "AttachTarget": false,
           "AllowDuplicateHit": false,
           "ApplyOnStay": false,
@@ -1189,7 +1509,7 @@
               "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
               "StartDelay": 0,
               "LogicEffectGroupIds": [
-                "Goz_Ex02_Effect03"
+                "Goz_Ex02_Effect05"
               ],
               "name": "Goz01_Ex02_LevelOneTimeAbility03",
               "hideFlags": 0
@@ -1276,6 +1596,291 @@
       },
       {
         "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 300,
+        "DamageDistributeRate": 10000,
+        "Entity": {
+          "$type": "MX.Logic.Data.LevelCircleAreaEntityData, BlueArchive",
+          "Radius": 800,
+          "AttachTarget": false,
+          "AllowDuplicateHit": false,
+          "ApplyOnStay": false,
+          "Duration": 10,
+          "RotateEntityDirectionEveryFrame": false,
+          "ApplyOffsetRotateEntityDirection": false,
+          "HitFrames": [
+            1
+          ],
+          "CollisionProperty": {
+            "$type": "MX.Logic.Data.AreaCollisionProperty, BlueArchive",
+            "TransformType": "None",
+            "TransformCount": 0
+          },
+          "CheckBlockHit": false,
+          "AreaAbilities": [
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "Goz_Ex02_Effect01"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
+                  "TemplateId": "Dummy_Goz_AreaDamageCheck",
+                  "IncludeType": 2,
+                  "CheckTarget": 1,
+                  "name": "Goz01_Ex02_LogicEffectTemplateModifier03",
+                  "hideFlags": 0
+                },
+                {
+                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
+                  "TemplateId": "Buff_Shield",
+                  "IncludeType": 2,
+                  "CheckTarget": 1,
+                  "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "Goz01_Ex02_LevelOneTimeAbility05",
+              "hideFlags": 0
+            },
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "Goz_Ex02_Effect02"
+              ],
+              "Modifiers": [
+                {
+                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
+                  "TemplateId": "Dummy_Goz_AreaDamageCheck",
+                  "IncludeType": 2,
+                  "CheckTarget": 1,
+                  "name": "Goz01_Ex02_LogicEffectTemplateModifier03",
+                  "hideFlags": 0
+                },
+                {
+                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
+                  "TemplateId": "Buff_Shield",
+                  "IncludeType": 1,
+                  "CheckTarget": 1,
+                  "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
+                  "hideFlags": 0
+                }
+              ],
+              "name": "Goz01_Ex02_LevelOneTimeAbility06",
+              "hideFlags": 0
+            }
+          ],
+          "EntityName": "GozEx02Entity07",
+          "SpawnRate": 10000,
+          "SpawnDelay": 0,
+          "ApplyType": 4,
+          "DecideTiming": 0,
+          "EntitySpawnIncludeOutOfRangeInputTarget": false,
+          "SpawnPositionType": "WorldPosition",
+          "SpawnWorldPosition": {
+            "x": -0.29,
+            "y": 79.32
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionRandomOffsetRange": 0,
+          "OffsetDirectionType": "None",
+          "SpawnDirectionType": "None",
+          "OverrideTargetingRule": true,
+          "TargetSortRule": {
+            "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+            "SortCriteria": "Distance",
+            "SortStat": 0,
+            "SortParameter": null,
+            "OrderBy": "Lowest"
+          },
+          "EssentialCandidateRule": {
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+            "TargetSide": "Enemy",
+            "TargetingType": "Target",
+            "ApplyEntityType": 5,
+            "MaxTargetCount": -1
+          },
+          "OptionalCandidateRule": {
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
+            "AliveState": 0,
+            "SchoolConstraint": {
+              "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
+              "School": 0,
+              "IncludeType": 0
+            },
+            "WeaponConstraint": {
+              "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
+              "Weapon": 0,
+              "IncludeType": 0
+            },
+            "SquadTypeConstraint": {
+              "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
+              "SquadType": 0,
+              "IncludeType": 0
+            },
+            "AdaptationConstraint": {
+              "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
+              "AdaptationType": 0,
+              "AdaptationValues": [],
+              "IncludeType": 0
+            },
+            "BulletConstraint": {
+              "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
+              "BulletType": 5,
+              "IncludeType": 0
+            },
+            "TagConstraint": {
+              "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
+              "IncludeType": 0
+            },
+            "CoverState": 0,
+            "HPRateConstraint": {
+              "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+              "ConstraintType": 0,
+              "HPRate": 0
+            }
+          },
+          "HighlightOption": 0,
+          "CheckSpawnPositionMovable": false,
+          "name": "Goz01_Ex02_LevelCircleAreaEntity07_Big",
+          "hideFlags": 0
+        }
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
+        "Tag": "ActionRelease",
+        "InvokerDirectionOverride": "None",
+        "InvokerDirectionOverrideWorldPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "Frame": 301,
+        "DamageDistributeRate": 10000,
+        "Entity": {
+          "$type": "MX.Logic.Data.LevelCircleAreaEntityData, BlueArchive",
+          "Radius": 1500,
+          "AttachTarget": false,
+          "AllowDuplicateHit": false,
+          "ApplyOnStay": false,
+          "Duration": 2,
+          "RotateEntityDirectionEveryFrame": false,
+          "ApplyOffsetRotateEntityDirection": false,
+          "HitFrames": [
+            1
+          ],
+          "CollisionProperty": {
+            "$type": "MX.Logic.Data.AreaCollisionProperty, BlueArchive",
+            "TransformType": "None",
+            "TransformCount": 0
+          },
+          "CheckBlockHit": false,
+          "AreaAbilities": [
+            {
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
+              "StartDelay": 0,
+              "LogicEffectGroupIds": [
+                "Goz_Ex02_Effect03",
+                "Goz_Ex02_Effect03",
+                "Goz_Ex02_Effect03",
+                "Goz_Ex02_Effect03",
+                "Goz_Ex02_Effect03"
+              ],
+              "name": "Goz01_Ex02_LevelOneTimeAbility04",
+              "hideFlags": 0
+            }
+          ],
+          "EntityName": "GozEx02Entity05",
+          "SpawnRate": 10000,
+          "SpawnDelay": 0,
+          "ApplyType": 4,
+          "DecideTiming": 0,
+          "EntitySpawnIncludeOutOfRangeInputTarget": false,
+          "SpawnPositionType": "Invoker",
+          "SpawnWorldPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "PositionRandomOffsetRange": 0,
+          "OffsetDirectionType": "None",
+          "SpawnDirectionType": "None",
+          "OverrideTargetingRule": true,
+          "TargetSortRule": {
+            "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+            "SortCriteria": "Distance",
+            "SortStat": 0,
+            "SortParameter": null,
+            "OrderBy": "Lowest"
+          },
+          "EssentialCandidateRule": {
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+            "TargetSide": "Ally_Except_Self",
+            "TargetingType": "Target",
+            "ApplyEntityType": 1,
+            "MaxTargetCount": -1
+          },
+          "OptionalCandidateRule": {
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
+            "AliveState": 0,
+            "SchoolConstraint": {
+              "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
+              "School": 0,
+              "IncludeType": 0
+            },
+            "WeaponConstraint": {
+              "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
+              "Weapon": 0,
+              "IncludeType": 0
+            },
+            "SquadTypeConstraint": {
+              "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
+              "SquadType": 0,
+              "IncludeType": 0
+            },
+            "AdaptationConstraint": {
+              "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
+              "AdaptationType": 0,
+              "AdaptationValues": [],
+              "IncludeType": 0
+            },
+            "BulletConstraint": {
+              "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
+              "BulletType": 5,
+              "IncludeType": 0
+            },
+            "TagConstraint": {
+              "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
+              "IncludeType": 0
+            },
+            "CoverState": 0,
+            "HPRateConstraint": {
+              "$type": "MX.Logic.Data.HPRateConstraint, BlueArchive",
+              "ConstraintType": 0,
+              "HPRate": 0
+            }
+          },
+          "HighlightOption": 0,
+          "CheckSpawnPositionMovable": false,
+          "name": "Goz01_Ex02_LevelCircleAreaEntity05",
+          "hideFlags": 0
+        }
+      },
+      {
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
         "Tag": "ActionEnd",
         "InvokerDirectionOverride": "None",
         "InvokerDirectionOverrideWorldPosition": {
@@ -1333,38 +1938,9 @@
                 "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
                 "StartDelay": 0,
                 "LogicEffectGroupIds": [
-                  "Goz_Ex02_Effect01"
-                ],
-                "Modifiers": [
-                  {
-                    "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                    "TemplateId": "Buff_Shield",
-                    "IncludeType": 2,
-                    "CheckTarget": 1,
-                    "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
-                    "hideFlags": 0
-                  }
+                  "Goz_Ex02_Effect06"
                 ],
                 "name": "Goz01_Ex02_LevelOneTimeAbility01",
-                "hideFlags": 0
-              },
-              {
-                "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
-                "StartDelay": 0,
-                "LogicEffectGroupIds": [
-                  "Goz_Ex02_Effect02"
-                ],
-                "Modifiers": [
-                  {
-                    "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                    "TemplateId": "Buff_Shield",
-                    "IncludeType": 1,
-                    "CheckTarget": 1,
-                    "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
-                    "hideFlags": 0
-                  }
-                ],
-                "name": "Goz01_Ex02_LevelOneTimeAbility02",
                 "hideFlags": 0
               }
             ],
@@ -1376,8 +1952,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": -0.7,
-              "y": 78.84
+              "x": -3.74,
+              "y": 77.52
             },
             "PositionOffset": {
               "x": 0,
@@ -1480,8 +2056,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": 3.1,
-              "y": 83.75
+              "x": -0.7,
+              "y": 83.46
             },
             "PositionOffset": {
               "x": 0,
@@ -1584,8 +2160,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": -3.52,
-              "y": 83.6
+              "x": 3.27,
+              "y": 78.36
             },
             "PositionOffset": {
               "x": 0,
@@ -1688,8 +2264,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": -0.7,
-              "y": 78.84
+              "x": -3.74,
+              "y": 77.52
             },
             "PositionOffset": {
               "x": 0,
@@ -1789,38 +2365,9 @@
                 "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
                 "StartDelay": 0,
                 "LogicEffectGroupIds": [
-                  "Goz_Ex02_Effect01"
-                ],
-                "Modifiers": [
-                  {
-                    "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                    "TemplateId": "Buff_Shield",
-                    "IncludeType": 2,
-                    "CheckTarget": 1,
-                    "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
-                    "hideFlags": 0
-                  }
+                  "Goz_Ex02_Effect06"
                 ],
                 "name": "Goz01_Ex02_LevelOneTimeAbility01",
-                "hideFlags": 0
-              },
-              {
-                "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
-                "StartDelay": 0,
-                "LogicEffectGroupIds": [
-                  "Goz_Ex02_Effect02"
-                ],
-                "Modifiers": [
-                  {
-                    "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                    "TemplateId": "Buff_Shield",
-                    "IncludeType": 1,
-                    "CheckTarget": 1,
-                    "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
-                    "hideFlags": 0
-                  }
-                ],
-                "name": "Goz01_Ex02_LevelOneTimeAbility02",
                 "hideFlags": 0
               }
             ],
@@ -1832,8 +2379,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": 3.1,
-              "y": 83.75
+              "x": -0.7,
+              "y": 83.46
             },
             "PositionOffset": {
               "x": 0,
@@ -1936,8 +2483,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": -3.52,
-              "y": 83.6
+              "x": 3.27,
+              "y": 78.36
             },
             "PositionOffset": {
               "x": 0,
@@ -2040,8 +2587,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": -0.7,
-              "y": 78.84
+              "x": -3.74,
+              "y": 77.52
             },
             "PositionOffset": {
               "x": 0,
@@ -2144,8 +2691,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": 3.1,
-              "y": 83.75
+              "x": -0.7,
+              "y": 83.46
             },
             "PositionOffset": {
               "x": 0,
@@ -2245,38 +2792,9 @@
                 "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
                 "StartDelay": 0,
                 "LogicEffectGroupIds": [
-                  "Goz_Ex02_Effect01"
-                ],
-                "Modifiers": [
-                  {
-                    "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                    "TemplateId": "Buff_Shield",
-                    "IncludeType": 2,
-                    "CheckTarget": 1,
-                    "name": "Goz01_Ex02_LogicEffectTemplateModifier01",
-                    "hideFlags": 0
-                  }
+                  "Goz_Ex02_Effect06"
                 ],
                 "name": "Goz01_Ex02_LevelOneTimeAbility01",
-                "hideFlags": 0
-              },
-              {
-                "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
-                "StartDelay": 0,
-                "LogicEffectGroupIds": [
-                  "Goz_Ex02_Effect02"
-                ],
-                "Modifiers": [
-                  {
-                    "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, BlueArchive",
-                    "TemplateId": "Buff_Shield",
-                    "IncludeType": 1,
-                    "CheckTarget": 1,
-                    "name": "Goz01_Ex02_LogicEffectTemplateModifier02",
-                    "hideFlags": 0
-                  }
-                ],
-                "name": "Goz01_Ex02_LevelOneTimeAbility02",
                 "hideFlags": 0
               }
             ],
@@ -2288,8 +2806,8 @@
             "EntitySpawnIncludeOutOfRangeInputTarget": false,
             "SpawnPositionType": "WorldPosition",
             "SpawnWorldPosition": {
-              "x": -3.52,
-              "y": 83.6
+              "x": 3.27,
+              "y": 78.36
             },
             "PositionOffset": {
               "x": 0,
