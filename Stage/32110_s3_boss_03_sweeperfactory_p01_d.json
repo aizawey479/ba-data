@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 9,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -38,12 +38,12 @@
                   "y": 0,
                   "z": 17.56
                 },
-                "MinCameraDistance": 35.00049,
-                "MaxCameraDistance": 42.00081,
+                "MinCameraDistance": 35,
+                "MaxCameraDistance": 42,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               },
               {
@@ -53,12 +53,12 @@
                   "y": 0,
                   "z": 42.47
                 },
-                "MinCameraDistance": 35.00049,
-                "MaxCameraDistance": 42.00081,
+                "MinCameraDistance": 35,
+                "MaxCameraDistance": 42,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               }
             ],
@@ -66,14 +66,14 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandOperator, BlueArchive",
             "GroupId": "WeekDungeonCombatStart_03_02",
             "CommandID": "0",
             "WaitExecuteEnd": false
@@ -85,13 +85,13 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": ""
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "1-1Area",
             "CommandID": "",
@@ -115,20 +115,20 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
               "ConditionID": "0"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWave, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWave, BlueArchive",
               "UniqueId": "",
               "ClearCondition": 1,
               "Waves": [
                 {
                   "SpawnPointCommandId": "1",
                   "EndCount": 99,
-                  "WaveDelay": 0,
+                  "WaveDelay": 1000,
                   "StartOperator": "",
                   "ClearOperator": ""
                 },
@@ -186,7 +186,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionEndWave, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionEndWave, BlueArchive",
               "UniqueName": "",
               "Step": 6,
               "ConditionID": "0"
@@ -194,7 +194,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
               "BattleEndType": 4,
               "CommandID": "0",
               "WaitExecuteEnd": false
@@ -319,9 +319,9 @@
             "z": 22.6829987
           },
           "Forward": {
-            "x": 0.5000041,
+            "x": 0.5000051,
             "y": 0,
-            "z": -0.866023
+            "z": -0.8660224
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -445,9 +445,9 @@
             "z": 27.943
           },
           "Forward": {
-            "x": 0.5000041,
+            "x": 0.5000051,
             "y": 0,
-            "z": -0.866023
+            "z": -0.8660224
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -481,9 +481,9 @@
             "z": 43.563
           },
           "Forward": {
-            "x": 0.05931098,
+            "x": 0.0593121722,
             "y": 0,
-            "z": -0.9982396
+            "z": -0.998239458
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -499,9 +499,9 @@
             "z": 30.483
           },
           "Forward": {
-            "x": 0.5000041,
+            "x": 0.5000051,
             "y": 0,
-            "z": -0.866023
+            "z": -0.8660224
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -607,7 +607,7 @@
             "z": 34.653
           },
           "Forward": {
-            "x": -0.0279216543,
+            "x": -0.027921658,
             "y": 0,
             "z": 0.9996101
           },
@@ -713,7 +713,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -780,7 +780,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -846,7 +846,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -915,7 +915,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -982,7 +982,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1048,7 +1048,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1116,7 +1116,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1185,7 +1185,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1253,7 +1253,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1322,7 +1322,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1391,7 +1391,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1460,7 +1460,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1528,7 +1528,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1595,7 +1595,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1664,7 +1664,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1732,7 +1732,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1798,7 +1798,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1863,7 +1863,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1929,7 +1929,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -1994,7 +1994,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2063,7 +2063,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2129,7 +2129,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2196,7 +2196,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2262,7 +2262,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2330,7 +2330,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2398,7 +2398,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2465,7 +2465,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2533,7 +2533,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2597,7 +2597,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2693,7 +2693,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {

@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 1,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -35,7 +35,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -48,15 +48,15 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead1-3"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 2,
             "SetConditionCommandOnly": false,
             "CommandID": "",
@@ -69,15 +69,15 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2-2"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 3,
             "SetConditionCommandOnly": false,
             "CommandID": "",
@@ -90,15 +90,15 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead3-2"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -121,13 +121,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn1-1",
               "WaitExecuteEnd": false
@@ -139,15 +139,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead1-1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn1-2",
               "WaitExecuteEnd": false
@@ -159,15 +159,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead1-2"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn1-3",
               "WaitExecuteEnd": false
@@ -306,7 +306,7 @@
           "GroupName": "SpawnPointParent1-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -345,7 +345,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -384,7 +384,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -428,7 +428,7 @@
           "GroupName": "SpawnPointParent1-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -467,7 +467,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -506,7 +506,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -545,7 +545,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -589,7 +589,7 @@
           "GroupName": "SpawnPointParent1-3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -628,7 +628,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -667,7 +667,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -706,7 +706,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -761,13 +761,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-1",
               "WaitExecuteEnd": false
@@ -779,27 +779,27 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2-1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 8000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-3",
               "WaitExecuteEnd": false
@@ -1019,7 +1019,7 @@
           "GroupName": "SpawnPointParent2-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1058,7 +1058,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1097,7 +1097,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_E_805Event_Challenge2",
                 "AIId": 0,
@@ -1136,7 +1136,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1180,7 +1180,7 @@
           "GroupName": "SpawnPointParent2-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1219,7 +1219,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1258,7 +1258,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1297,7 +1297,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1341,7 +1341,7 @@
           "GroupName": "SpawnPointParent2-3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1380,7 +1380,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1419,7 +1419,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_E_805Event_Challenge2",
                 "AIId": 0,
@@ -1458,7 +1458,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1513,13 +1513,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-1",
               "WaitExecuteEnd": false
@@ -1531,27 +1531,27 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 10000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaveLoop, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaveLoop, BlueArchive",
               "UniqueId": "",
               "Waves": [
                 {
@@ -1575,15 +1575,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": true,
               "ConditionID": "ConditionDead3-2"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "CommandKillWave3-2"
               ],
@@ -1598,15 +1598,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "GenbuDead"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": false,
               "PointCommandID": "51",
@@ -1775,7 +1775,7 @@
           "GroupName": "SpawnPointParent3-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1814,7 +1814,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1853,7 +1853,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1892,7 +1892,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_E_805Event_Challenge2",
                 "AIId": 0,
@@ -1931,7 +1931,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -1975,7 +1975,7 @@
           "GroupName": "SpawnPointParent3-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -2014,7 +2014,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "FoodTruck_GenbuStore_MG_E_811Event_06",
                 "AIId": 0,
@@ -2055,7 +2055,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_E_805Event_Challenge2",
                 "AIId": 0,
@@ -2094,7 +2094,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_M_805Event_Challenge2_02",
                 "AIId": 0,
@@ -2133,7 +2133,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Cook_GenbuStore_MG_E_805Event_Challenge2",
                 "AIId": 0,
@@ -2172,7 +2172,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Wakamo_default_C_811Event_01",
                 "AIId": 0,
@@ -2239,7 +2239,7 @@
           "GroupName": "SpawnPointParentWave3-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2305,7 +2305,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2371,7 +2371,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2437,7 +2437,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.RandomSpawnPoint, BlueArchive",
               "Delay": 0,
               "SpawnList": [
                 {
@@ -2508,7 +2508,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "",
                 "AIId": 0,

@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 11,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -38,12 +38,12 @@
                   "y": 1.45,
                   "z": 19.7199841
                 },
-                "MinCameraDistance": 52.0001678,
-                "MaxCameraDistance": 52.0001678,
+                "MinCameraDistance": 52,
+                "MaxCameraDistance": 52,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               },
               {
@@ -53,12 +53,12 @@
                   "y": 1.45,
                   "z": 28.4199886
                 },
-                "MinCameraDistance": 52.0001678,
-                "MaxCameraDistance": 52.0001678,
+                "MinCameraDistance": 52,
+                "MaxCameraDistance": 52,
                 "CameraForward": {
-                  "x": -0.8034655,
-                  "y": -0.426620662,
-                  "z": 0.4152567
+                  "x": -0.8034657,
+                  "y": -0.426617682,
+                  "z": 0.4152592
                 }
               }
             ],
@@ -66,7 +66,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -79,7 +79,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
             "SpawnTemplateId": "",
             "Shape": 0,
             "Target": 1,
@@ -107,7 +107,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, BlueArchive",
             "heroStatus": "ImmuneGroggyGaugeAdd",
             "isAdd": false,
             "CommandID": "Hieronymus",
@@ -120,7 +120,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDeadHieronymus"
@@ -128,7 +128,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -151,13 +151,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 0,
               "CommandID": "CommandSpawnHieronymus",
               "WaitExecuteEnd": false
@@ -169,13 +169,18 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand05",
               "SkillLevel": 1,
@@ -185,7 +190,12 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
               "Interval": 0,
               "SkillGroupId": "HieronymusRelicGroundCommand10",
               "SkillLevel": 1,
@@ -201,7 +211,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharacterPhaseChanged, BlueArchive",
               "Phase": 1,
               "MaxTriggerCount": 1,
               "ConditionID": "Hieronymus"
@@ -209,20 +219,20 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSetStatusImmune, BlueArchive",
               "heroStatus": "ImmuneGroggyGaugeAdd",
               "isAdd": true,
               "CommandID": "Hieronymus",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 2,
               "SetConditionCommandOnly": false,
               "CommandID": "",
@@ -250,7 +260,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_CarBlack",
@@ -260,15 +271,16 @@
             "z": 34.08
           },
           "Forward": {
-            "x": 0.338805884,
+            "x": 0.33881104,
             "y": 0,
-            "z": -0.9408563
+            "z": -0.94085443
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_IronPipe",
@@ -288,7 +300,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_CarBlack",
@@ -308,7 +321,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Baricade",
@@ -318,9 +332,9 @@
             "z": 23.81
           },
           "Forward": {
-            "x": 0.6018841,
+            "x": 0.6018881,
             "y": 0,
-            "z": -0.798583448
+            "z": -0.7985804
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [
@@ -328,7 +342,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Baricade",
@@ -348,7 +363,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Baricade",
@@ -368,7 +384,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         }
       ],
       "EnemySpawnPointGroupList": [
@@ -376,16 +393,16 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Hieronymus_Street_Extreme",
                 "AIId": 0,
                 "AppearAction": false,
                 "SkillLevel": {
-                  "ExSkill": null,
-                  "PublicSkill": null,
-                  "PassiveSkill": null,
-                  "ExtraPassiveSkill": null
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
                 }
               },
               "SpawnAIGroupId": "C",
@@ -418,7 +435,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -460,13 +477,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "GroundCommandFadeOutIn, Assembly-CSharp",
+              "$type": "GroundCommandFadeOutIn, BlueArchive",
               "DelayBeforeFadeOut": 0,
               "DelayBeforeFadeIn": 1.8,
               "VisualDelayFadeInStart": 0.2,
@@ -474,7 +491,7 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToGroundPoint, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
               "PointCommandID": "2PhaseHieronymusPoint",
@@ -484,14 +501,14 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandForceMoveToFormationBeacon, BlueArchive",
               "IsInstantMove": true,
               "IsInterruptCurrentAction": true,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+              "$type": "GroundCommandLocateCamera, BlueArchive",
               "ID": 11,
               "MaxCameraSpeed": 3,
               "RotationSpeed": 1,
@@ -504,12 +521,12 @@
                     "y": 1.45,
                     "z": 93.34
                   },
-                  "MinCameraDistance": 52.0001678,
-                  "MaxCameraDistance": 52.0001678,
+                  "MinCameraDistance": 52,
+                  "MaxCameraDistance": 52,
                   "CameraForward": {
-                    "x": -0.8034655,
-                    "y": -0.426620662,
-                    "z": 0.4152567
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
                   }
                 },
                 {
@@ -519,12 +536,12 @@
                     "y": 1.45,
                     "z": 102.04
                   },
-                  "MinCameraDistance": 52.0001678,
-                  "MaxCameraDistance": 52.0001678,
+                  "MinCameraDistance": 52,
+                  "MaxCameraDistance": 52,
                   "CameraForward": {
-                    "x": -0.8034655,
-                    "y": -0.426620662,
-                    "z": 0.4152567
+                    "x": -0.8034657,
+                    "y": -0.426617682,
+                    "z": 0.4152592
                   }
                 }
               ],
@@ -532,20 +549,20 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
               "propKey": 1,
               "animationName": "hieronymus_light2",
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 200,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "GroundCommandPlayTimeline, Assembly-CSharp",
+              "$type": "GroundCommandPlayTimeline, BlueArchive",
               "TimelinePath": "timeline/timeline_hieronymus_street_phasechange",
               "UseGameTime": false,
               "CanSkip": true,
@@ -559,7 +576,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -587,13 +604,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1550,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
               "SectionID": 3,
               "SetConditionCommandOnly": false,
               "CommandID": "0",
@@ -606,68 +623,14 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandDestroyObstacle, BlueArchive",
               "CommandID": "DestoryObstacle",
-              "WaitExecuteEnd": false
-            }
-          ]
-        },
-        {
-          "EventName": "UseSKill",
-          "Operator": 0,
-          "Conditions": [
-            {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
-              "SpawnTemplateId": "",
-              "Shape": 0,
-              "Target": 0,
-              "Trigger": 0,
-              "StayTime": 0,
-              "Position": {
-                "x": 0,
-                "y": 0,
-                "z": 92.7599945
-              },
-              "Rect": {
-                "Direction": {
-                  "x": 0,
-                  "y": 0
-                },
-                "Width": 13,
-                "Height": 5
-              },
-              "Circle": {
-                "Radius": 1
-              },
-              "InactivateWhenStart": false,
-              "ConditionID": "0"
-            }
-          ],
-          "Commands": [
-            {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
-              "Interval": 0,
-              "SkillGroupId": "HieronymusRelicGroundCommand05",
-              "SkillLevel": 1,
-              "ExecuterLevel": 70,
-              "CharacterGroup": 1,
-              "CommandID": "2phase_HieronymusSkill05",
-              "WaitExecuteEnd": false
-            },
-            {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
-              "Interval": 0,
-              "SkillGroupId": "HieronymusRelicGroundCommand10",
-              "SkillLevel": 1,
-              "ExecuterLevel": 70,
-              "CharacterGroup": 1,
-              "CommandID": "2phase_HieronymusSkill10",
               "WaitExecuteEnd": false
             }
           ]
@@ -692,7 +655,8 @@
           "CommandIdList": [
             "DestoryObstacle"
           ],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_CarBlack",
@@ -702,9 +666,9 @@
             "z": 107.9
           },
           "Forward": {
-            "x": 0.338805884,
+            "x": 0.33881104,
             "y": 0,
-            "z": -0.9408563
+            "z": -0.94085443
           },
           "ActiveEnemyPointIndices": [],
           "ActivePlayerPointIndices": [],
@@ -712,15 +676,165 @@
           "CommandIdList": [
             "DestoryObstacle"
           ],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         }
       ],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent",
+          "SpawnPoints": []
+        }
+      ]
+    },
+    {
+      "SectionID": 3,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 112.6
+      },
+      "Events": [
+        {
+          "EventName": "UseSKill_RelicCount1",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, BlueArchive",
+              "SpawnTemplateIds": [
+                "Hieronymus_HolyRelic_Extreme"
+              ],
+              "AliveCharacterCount": 1,
+              "TriggerMaxCount": 1,
+              "StartCharacterCountBeforeCheck": 0,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand05",
+              "SkillLevel": 1,
+              "ExecuterLevel": 70,
+              "CharacterGroup": 1,
+              "CommandID": "2phase_HieronymusSkill05",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand10",
+              "SkillLevel": 1,
+              "ExecuterLevel": 70,
+              "CharacterGroup": 1,
+              "CommandID": "2phase_HieronymusSkill10",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
+              "SectionID": 4,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        },
+        {
+          "EventName": "UseSKill_RelicCount0",
+          "Operator": 0,
+          "Conditions": [
+            {
+              "$type": "MX.Logic.Battles.GroundConditionAliveCharacterCountCheckBySpawnTemplateId, BlueArchive",
+              "SpawnTemplateIds": [
+                "Hieronymus_HolyRelic_Extreme"
+              ],
+              "AliveCharacterCount": 0,
+              "TriggerMaxCount": 1,
+              "StartCharacterCountBeforeCheck": 0,
+              "ConditionID": ""
+            }
+          ],
+          "Commands": [
+            {
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
+              "TargetCharacterCommandId": [],
+              "CreateCharacterStat": false,
+              "CharacterId": 0,
+              "CharacterLevel": 0,
+              "CharacterGrade": 0,
+              "Interval": 0,
+              "SkillGroupId": "HieronymusRelicGroundCommand10",
+              "SkillLevel": 1,
+              "ExecuterLevel": 70,
+              "CharacterGroup": 1,
+              "CommandID": "2phase_HieronymusSkill10",
+              "WaitExecuteEnd": false
+            },
+            {
+              "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
+              "SectionID": 4,
+              "SetConditionCommandOnly": false,
+              "CommandID": "0",
+              "WaitExecuteEnd": false
+            }
+          ]
+        }
+      ],
+      "Obstacles": [],
+      "EnemySpawnPointGroupList": [
+        {
+          "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
+              "SpawnData": {
+                "SpawnTemplateId": "",
+                "AIId": 0,
+                "AppearAction": false,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "\u0000",
+              "SpawnConditionIdList": [],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 55,
+              "TileY": 518,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0,
+                "y": 103.670006
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "2PhaseHieronymusPoint"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -746,7 +860,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -776,7 +890,7 @@
       ]
     },
     {
-      "SectionID": 3,
+      "SectionID": 4,
       "Position": {
         "x": 0,
         "y": 0,
@@ -802,7 +916,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Tires",
@@ -822,7 +937,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Stone1",
@@ -842,7 +958,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Stone2",
@@ -862,7 +979,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Tires",
@@ -882,7 +1000,8 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         },
         {
           "UniqueName": "Hieronymus_Stone1",
@@ -902,51 +1021,14 @@
           ],
           "ConditionIdList": [],
           "CommandIdList": [],
-          "SubObstacles": []
+          "SubObstacles": [],
+          "IsDummy": false
         }
       ],
       "EnemySpawnPointGroupList": [
         {
           "GroupName": "SpawnPointParent",
-          "SpawnPoints": [
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "",
-                "AIId": 0,
-                "AppearAction": false,
-                "SkillLevel": {
-                  "ExSkill": null,
-                  "PublicSkill": null,
-                  "PassiveSkill": null,
-                  "ExtraPassiveSkill": null
-                }
-              },
-              "SpawnAIGroupId": "\u0000",
-              "SpawnConditionIdList": [],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 55,
-              "TileY": 518,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 0,
-                "y": 103.670006
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "2PhaseHieronymusPoint"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            }
-          ]
+          "SpawnPoints": []
         }
       ]
     }
@@ -999,6 +1081,21 @@
     },
     {
       "SectionIndex": 3,
+      "IgnorePathFind": false,
+      "Index": 0,
+      "Position": {
+        "x": 0,
+        "y": 102.4
+      },
+      "Forward": {
+        "x": 0,
+        "y": 1
+      },
+      "Height": 0,
+      "IsEnemy": false
+    },
+    {
+      "SectionIndex": 4,
       "IgnorePathFind": false,
       "Index": 0,
       "Position": {

@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 8,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -66,14 +66,14 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandOperator, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandOperator, BlueArchive",
             "GroupId": "WeekDungeonCombatStart_03_03",
             "CommandID": "0",
             "WaitExecuteEnd": false
@@ -96,7 +96,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
@@ -124,7 +124,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandFindGift, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandFindGift, BlueArchive",
               "UniqueName": "WeekDungeon_FindGift_Stage09",
               "SpawnPointCommandIdList": [
                 "1",
@@ -144,13 +144,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
               "ConditionID": "0"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "50",
               "WaitExecuteEnd": false
@@ -162,7 +162,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": null,
               "Shape": 0,
               "Target": 0,
@@ -190,13 +190,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 2000,
               "CommandID": "0",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "50"
               ],
@@ -211,7 +211,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionEndFindGift, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionEndFindGift, BlueArchive",
               "UniqueName": "WeekDungeon_FindGift_Stage09",
               "Compare": 0,
               "ClearCount": 4,
@@ -220,7 +220,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
               "BattleEndType": 2,
               "CommandID": "0",
               "WaitExecuteEnd": false
@@ -232,7 +232,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionEndFindGift, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionEndFindGift, BlueArchive",
               "UniqueName": "WeekDungeon_FindGift_Stage09",
               "Compare": 1,
               "ClearCount": 1,
@@ -241,7 +241,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
               "BattleEndType": 4,
               "CommandID": "0",
               "WaitExecuteEnd": false
@@ -255,7 +255,7 @@
           "GroupName": "SpawnPointParent",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_StartDummy",
                 "AIId": 0,
@@ -292,7 +292,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_01",
                 "AIId": 0,
@@ -329,7 +329,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_02",
                 "AIId": 0,
@@ -366,7 +366,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_03",
                 "AIId": 0,
@@ -403,7 +403,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_04",
                 "AIId": 0,
@@ -440,7 +440,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Boxcat_01_Terror_C_WEEK_05",
                 "AIId": 0,

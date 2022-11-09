@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 1,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -35,7 +35,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 3,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -48,7 +48,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "Boss_Last"
@@ -56,7 +56,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
             "CharacterCommandIdList": [
               "CommandYustina"
             ],
@@ -65,7 +65,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -77,13 +77,13 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": ""
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "3-2Area",
             "CommandID": "",
@@ -127,11 +127,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 4,
@@ -159,7 +159,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-1",
               "WaitExecuteEnd": false
@@ -171,15 +171,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2-1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-2",
               "WaitExecuteEnd": false
@@ -203,15 +203,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "Boss_Last"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "CommandYustina"
               ],
@@ -226,11 +226,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 4,
@@ -258,7 +258,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-1",
               "WaitExecuteEnd": false
@@ -270,7 +270,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-1"
@@ -278,7 +278,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-2",
               "WaitExecuteEnd": false
@@ -290,7 +290,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-2"
@@ -298,7 +298,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-3",
               "WaitExecuteEnd": false
@@ -310,7 +310,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-3"
@@ -318,25 +318,25 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawnBoss_First",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-4-1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-4-2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-4-3",
               "WaitExecuteEnd": false
@@ -348,7 +348,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "Boss_First"
@@ -356,7 +356,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "CommandYustina"
               ],
@@ -365,49 +365,49 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-5-1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawnBoss_Second",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 3000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-5-2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-5-4",
               "WaitExecuteEnd": false
@@ -419,7 +419,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "Boss_Second"
@@ -427,13 +427,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "CommandYustina"
               ],
@@ -442,67 +442,67 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-6-1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-6-2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-6-3",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawnBoss_Third",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 3000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-6-4",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-6-6",
               "WaitExecuteEnd": false
@@ -514,7 +514,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "Boss_Third"
@@ -522,13 +522,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
               "CharacterCommandIdList": [
                 "CommandYustina"
               ],
@@ -537,31 +537,31 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-7-1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-7-2",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 1500,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-7-3",
               "WaitExecuteEnd": false
@@ -573,7 +573,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDeadCallBoss"
@@ -581,19 +581,19 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawnLastBoss",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 3000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8",
               "WaitExecuteEnd": false
@@ -605,7 +605,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-1-1"
@@ -613,7 +613,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-1-2",
               "WaitExecuteEnd": false
@@ -625,7 +625,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-1-2"
@@ -633,7 +633,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-1-3",
               "WaitExecuteEnd": false
@@ -645,7 +645,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-1-3"
@@ -653,7 +653,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-1-4",
               "WaitExecuteEnd": false
@@ -665,7 +665,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-1-4"
@@ -673,7 +673,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-1-5",
               "WaitExecuteEnd": false
@@ -685,7 +685,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-2-1"
@@ -693,7 +693,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-2-2",
               "WaitExecuteEnd": false
@@ -705,7 +705,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-2-2"
@@ -713,7 +713,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-2-3",
               "WaitExecuteEnd": false
@@ -725,7 +725,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-2-3"
@@ -733,7 +733,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-2-4",
               "WaitExecuteEnd": false
@@ -745,7 +745,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-2-4"
@@ -753,7 +753,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-2-5",
               "WaitExecuteEnd": false
@@ -765,7 +765,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-3-1"
@@ -773,7 +773,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-3-2",
               "WaitExecuteEnd": false
@@ -785,7 +785,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-3-2"
@@ -793,7 +793,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-3-3",
               "WaitExecuteEnd": false
@@ -805,7 +805,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-3-3"
@@ -813,7 +813,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-3-4",
               "WaitExecuteEnd": false
@@ -825,7 +825,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-3-4"
@@ -833,7 +833,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-3-5",
               "WaitExecuteEnd": false
@@ -845,7 +845,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-4-1"
@@ -853,7 +853,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-4-2",
               "WaitExecuteEnd": false
@@ -865,7 +865,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-4-2"
@@ -873,7 +873,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-4-3",
               "WaitExecuteEnd": false
@@ -885,7 +885,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-4-3"
@@ -893,7 +893,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-4-4",
               "WaitExecuteEnd": false
@@ -905,7 +905,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-4-4"
@@ -913,7 +913,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-4-5",
               "WaitExecuteEnd": false
@@ -925,7 +925,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-5-1"
@@ -933,7 +933,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-5-2",
               "WaitExecuteEnd": false
@@ -945,7 +945,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-5-2"
@@ -953,7 +953,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-5-3",
               "WaitExecuteEnd": false
@@ -965,7 +965,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-5-3"
@@ -973,7 +973,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-5-4",
               "WaitExecuteEnd": false
@@ -985,7 +985,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-5-4"
@@ -993,7 +993,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-5-5",
               "WaitExecuteEnd": false
@@ -1005,7 +1005,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-6-1"
@@ -1013,7 +1013,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-6-2",
               "WaitExecuteEnd": false
@@ -1025,7 +1025,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-6-2"
@@ -1033,7 +1033,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-6-3",
               "WaitExecuteEnd": false
@@ -1045,7 +1045,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-6-3"
@@ -1053,7 +1053,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-6-4",
               "WaitExecuteEnd": false
@@ -1065,7 +1065,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-8-6-4"
@@ -1073,7 +1073,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-8-6-5",
               "WaitExecuteEnd": false
@@ -1178,7 +1178,7 @@
           "GroupName": "SpawnPointParent3-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1220,7 +1220,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1267,7 +1267,7 @@
           "GroupName": "SpawnPointParent3-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1309,7 +1309,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1351,7 +1351,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1393,7 +1393,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1435,7 +1435,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1477,7 +1477,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1524,7 +1524,7 @@
           "GroupName": "SpawnPointParent3-3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1566,7 +1566,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1608,7 +1608,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1650,7 +1650,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1697,7 +1697,7 @@
           "GroupName": "SpawnPointParent3-4_BossFIrst",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Barbara_Yustina_MG_C_812Event05",
                 "AIId": 0,
@@ -1740,7 +1740,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1782,7 +1782,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -1824,7 +1824,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1866,7 +1866,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1908,7 +1908,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1950,7 +1950,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -1992,7 +1992,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -2034,7 +2034,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -2076,7 +2076,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -2118,7 +2118,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -2165,7 +2165,7 @@
           "GroupName": "SpawnPointParent3-5-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -2207,7 +2207,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -2249,7 +2249,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -2291,7 +2291,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2333,7 +2333,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2380,7 +2380,7 @@
           "GroupName": "SideSpawnPointParent3-5-2_BossSecond",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Barbara_Yustina_MG_C_812Event05",
                 "AIId": 0,
@@ -2423,7 +2423,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2465,7 +2465,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2507,7 +2507,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2549,7 +2549,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2591,7 +2591,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2633,7 +2633,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2675,7 +2675,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2717,7 +2717,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2764,7 +2764,7 @@
           "GroupName": "SideSpawnPointParent3-6_BossThird",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2806,7 +2806,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2848,7 +2848,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2890,7 +2890,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -2932,7 +2932,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Barbara_Yustina_MG_C_812Event05",
                 "AIId": 0,
@@ -2975,7 +2975,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -3017,7 +3017,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -3059,7 +3059,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3101,7 +3101,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3143,7 +3143,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -3185,7 +3185,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -3227,7 +3227,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3269,7 +3269,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3311,7 +3311,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3353,7 +3353,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3400,7 +3400,7 @@
           "GroupName": "SpawnPointParent3-7",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -3442,7 +3442,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -3484,7 +3484,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3526,7 +3526,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -3568,7 +3568,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -3610,7 +3610,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SMG_E_812Event05",
                 "AIId": 0,
@@ -3652,7 +3652,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3694,7 +3694,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -3741,7 +3741,7 @@
           "GroupName": "SpawnPointParent3-8 ",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Barbara_Yustina_MG_C_812Event05_02",
                 "AIId": 0,
@@ -3788,7 +3788,7 @@
           "GroupName": "SpawnPointParent3-8_Jyaco_1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3830,7 +3830,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -3872,7 +3872,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -3914,7 +3914,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -3961,7 +3961,7 @@
           "GroupName": "SpawnPointParent3-8_Jyaco_2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4003,7 +4003,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4045,7 +4045,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4087,7 +4087,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4134,7 +4134,7 @@
           "GroupName": "SpawnPointParent3-8_Jyaco_3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4176,7 +4176,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4218,7 +4218,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4260,7 +4260,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4307,7 +4307,7 @@
           "GroupName": "SpawnPointParent3-8_Jyaco_4",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4349,7 +4349,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4391,7 +4391,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4433,7 +4433,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4480,7 +4480,7 @@
           "GroupName": "SpawnPointParent3-8_Jyaco_5",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4522,7 +4522,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_AR_E_812Event05",
                 "AIId": 0,
@@ -4564,7 +4564,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,
@@ -4606,7 +4606,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Terror_Nun_Yustina_SR_E_812Event05",
                 "AIId": 0,

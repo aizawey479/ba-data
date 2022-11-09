@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 1,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -35,7 +35,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 2,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -48,15 +48,15 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2-4"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 3,
             "SetConditionCommandOnly": false,
             "CommandID": "",
@@ -69,15 +69,21 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead4-4"
+          },
+          {
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
+            "CheckSummonedCharacterDead": false,
+            "ConditionID": "ConditionDead4-1"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -90,7 +96,7 @@
         "Conditions": [],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "1-1Area",
             "CommandID": "",
@@ -103,22 +109,22 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead1-1"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "1-1Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "1-2Area",
             "CommandID": "",
@@ -131,20 +137,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": ""
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "1-2Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "2-1Area",
             "CommandID": "",
@@ -157,22 +163,22 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2-4"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "2-1Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "2-2Area",
             "CommandID": "",
@@ -185,22 +191,22 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-            "DeadCheck": 0,
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+            "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead3-3"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "2-2Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "3-2Area",
             "CommandID": "",
@@ -244,11 +250,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -276,7 +282,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-2",
               "WaitExecuteEnd": false
@@ -288,21 +294,21 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2-2"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 7000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-3",
               "WaitExecuteEnd": false
@@ -314,15 +320,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2-2"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-3-1",
               "WaitExecuteEnd": false
@@ -545,7 +551,7 @@
           "GroupName": "SpawnPointParent2-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -605,7 +611,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -665,7 +671,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -725,7 +731,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -785,7 +791,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -845,7 +851,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -905,7 +911,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -965,7 +971,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1025,7 +1031,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1085,7 +1091,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1145,7 +1151,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1205,7 +1211,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1270,7 +1276,7 @@
           "GroupName": "SpawnPointParent2-3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -1330,7 +1336,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -1390,7 +1396,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -1450,7 +1456,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1510,7 +1516,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1570,7 +1576,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1635,7 +1641,7 @@
           "GroupName": "SpawnPointParent2-3-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1695,7 +1701,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1755,7 +1761,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1815,7 +1821,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1875,7 +1881,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1935,7 +1941,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -1995,7 +2001,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -2055,7 +2061,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -2115,7 +2121,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -2175,7 +2181,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -2235,7 +2241,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -2295,7 +2301,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -2371,11 +2377,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -2403,7 +2409,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-1",
               "WaitExecuteEnd": false
@@ -2415,15 +2421,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-2",
               "WaitExecuteEnd": false
@@ -2435,21 +2441,21 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-1"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 6000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-3",
               "WaitExecuteEnd": false
@@ -2461,13 +2467,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-3"
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 0,
               "Target": 0,
@@ -2495,19 +2501,19 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn4-1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 4000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn4-2",
               "WaitExecuteEnd": false
@@ -2519,8 +2525,8 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead4-1"
             }
@@ -2532,15 +2538,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead4-2"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn4-3",
               "WaitExecuteEnd": false
@@ -2552,15 +2558,15 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
-              "DeadCheck": 0,
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
+              "DeadCheck": 1,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead4-3"
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "SpawnPointParent4-3-1",
               "WaitExecuteEnd": false
@@ -2753,9 +2759,9 @@
             "z": 57.387
           },
           "Forward": {
-            "x": 0.7046428,
+            "x": 0.7046436,
             "y": 0,
-            "z": -0.709562242
+            "z": -0.7095614
           },
           "ActiveEnemyPointIndices": [
             1
@@ -3023,7 +3029,7 @@
           "GroupName": "SpawnPointParent3-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3083,7 +3089,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3143,7 +3149,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3203,7 +3209,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3263,7 +3269,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3323,7 +3329,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3383,7 +3389,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3448,7 +3454,7 @@
           "GroupName": "SpawnPointParent3-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -3487,7 +3493,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -3526,7 +3532,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -3554,7 +3560,7 @@
                     "y": 47.43633
                   },
                   "Direction": {
-                    "x": -0.05233588,
+                    "x": -0.052335877,
                     "y": -0.99862957
                   },
                   "ConditionIdList": [],
@@ -3573,7 +3579,7 @@
                 "y": 47.741
               },
               "Direction": {
-                "x": -0.05233588,
+                "x": -0.052335877,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
@@ -3586,7 +3592,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3646,7 +3652,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3706,7 +3712,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3771,7 +3777,7 @@
           "GroupName": "SpawnPointParent3-3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -3831,7 +3837,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -3891,7 +3897,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -3951,7 +3957,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -4011,7 +4017,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -4071,7 +4077,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -4136,7 +4142,7 @@
           "GroupName": "SpawnPointParent4-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -4216,7 +4222,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -4296,7 +4302,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -4376,7 +4382,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -4456,7 +4462,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -4536,7 +4542,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -4616,7 +4622,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -4696,7 +4702,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -4776,7 +4782,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -4856,7 +4862,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -4941,7 +4947,7 @@
           "GroupName": "SpawnPointParent4-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -5021,7 +5027,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -5101,7 +5107,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -5181,7 +5187,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -5261,7 +5267,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -5341,7 +5347,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -5421,7 +5427,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -5501,7 +5507,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -5581,7 +5587,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -5661,7 +5667,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -5746,7 +5752,7 @@
           "GroupName": "SpawnPointParent4-3",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -5826,7 +5832,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -5906,7 +5912,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -5986,7 +5992,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -6066,7 +6072,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -6146,7 +6152,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -6226,7 +6232,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -6306,7 +6312,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -6386,7 +6392,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -6466,7 +6472,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -6551,7 +6557,7 @@
           "GroupName": "SpawnPointParent4-4",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -6579,7 +6585,7 @@
                     "y": 58.093
                   },
                   "Direction": {
-                    "x": -0.01745246,
+                    "x": -0.0174524616,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -6595,11 +6601,11 @@
                   "TileY": 298,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.89659071,
+                    "x": -1.89659119,
                     "y": 55.15965
                   },
                   "Direction": {
-                    "x": -0.0174524467,
+                    "x": -0.0174524486,
                     "y": -0.999847651
                   },
                   "ConditionIdList": [],
@@ -6618,7 +6624,7 @@
                 "y": 58.11
               },
               "Direction": {
-                "x": -0.0174524467,
+                "x": -0.0174524486,
                 "y": -0.999847651
               },
               "ConditionIdList": [],
@@ -6631,7 +6637,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Black_E_Special",
                 "AIId": 0,
@@ -6659,7 +6665,7 @@
                     "y": 58.0985
                   },
                   "Direction": {
-                    "x": 0.052335605,
+                    "x": 0.0523356,
                     "y": -0.99862957
                   },
                   "ConditionIdList": [],
@@ -6675,11 +6681,11 @@
                   "TileY": 295,
                   "PositionHeight": 0,
                   "Position": {
-                    "x": -1.58395386,
+                    "x": -1.58395433,
                     "y": 54.5947571
                   },
                   "Direction": {
-                    "x": 0.0523357056,
+                    "x": 0.0523357019,
                     "y": -0.99862957
                   },
                   "ConditionIdList": [],
@@ -6698,7 +6704,7 @@
                 "y": 58.11
               },
               "Direction": {
-                "x": 0.0523357056,
+                "x": 0.0523357019,
                 "y": -0.99862957
               },
               "ConditionIdList": [],
@@ -6711,7 +6717,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -6791,7 +6797,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -6871,7 +6877,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -6910,7 +6916,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -6949,7 +6955,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -6988,7 +6994,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_Yellow_E_Special",
                 "AIId": 0,
@@ -7027,7 +7033,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -7107,7 +7113,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,
@@ -7187,7 +7193,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "Sweeper_Decagram_Taser_White_M_Special",
                 "AIId": 0,

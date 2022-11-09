@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 1,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -35,7 +35,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -48,7 +48,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2-2"
@@ -56,7 +56,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 2,
             "SetConditionCommandOnly": false,
             "CommandID": "",
@@ -69,7 +69,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead3-2"
@@ -77,7 +77,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -89,7 +89,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
             "SpawnTemplateId": "",
             "Shape": 1,
             "Target": 4,
@@ -115,20 +115,20 @@
             "ConditionID": ""
           },
           {
-            "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
             "ConditionID": ""
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "1-2Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "2-1Area",
             "CommandID": "",
@@ -141,7 +141,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2-1"
@@ -149,14 +149,14 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "2-1Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "2-2Area",
             "CommandID": "",
@@ -169,13 +169,13 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead2-2"
           },
           {
-            "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
             "SpawnTemplateId": "",
             "Shape": 1,
             "Target": 4,
@@ -203,14 +203,14 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "2-2Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "3-1Area",
             "CommandID": "",
@@ -223,7 +223,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": false,
             "ConditionID": "ConditionDead3-1"
@@ -231,14 +231,14 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": false,
             "TemporaryCanUseSkillAreaCommandId": "3-1Area",
             "CommandID": "",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "3-2Area",
             "CommandID": "",
@@ -262,11 +262,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 4,
@@ -294,7 +294,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-1",
               "WaitExecuteEnd": false
@@ -306,7 +306,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead2-1"
@@ -314,7 +314,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn2-2",
               "WaitExecuteEnd": false
@@ -353,9 +353,9 @@
             "z": 30.1266155
           },
           "Forward": {
-            "x": 0.6324095,
+            "x": 0.6324123,
             "y": 0,
-            "z": -0.774634242
+            "z": -0.774632
           },
           "ActiveEnemyPointIndices": [
             0
@@ -439,7 +439,7 @@
           "GroupName": "SpawnPointParent2-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_MG_E",
                 "AIId": 0,
@@ -478,7 +478,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -517,7 +517,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -556,7 +556,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -595,7 +595,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -639,7 +639,7 @@
           "GroupName": "SpawnPointParent2-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_MG_E",
                 "AIId": 0,
@@ -678,7 +678,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -717,7 +717,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -756,7 +756,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -795,7 +795,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_MG_E",
                 "AIId": 0,
@@ -850,11 +850,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 4,
@@ -882,7 +882,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-1",
               "WaitExecuteEnd": false
@@ -894,7 +894,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
               "DeadCheck": 0,
               "CheckSummonedCharacterDead": false,
               "ConditionID": "ConditionDead3-1"
@@ -902,7 +902,7 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn3-2",
               "WaitExecuteEnd": false
@@ -985,9 +985,9 @@
             "z": 62.98
           },
           "Forward": {
-            "x": 0.0248838887,
+            "x": 0.02488794,
             "y": 0,
-            "z": -0.999690354
+            "z": -0.999690235
           },
           "ActiveEnemyPointIndices": [
             1
@@ -1007,9 +1007,9 @@
             "z": 52.96
           },
           "Forward": {
-            "x": 0.0248838887,
+            "x": 0.02488794,
             "y": 0,
-            "z": -0.999690354
+            "z": -0.999690235
           },
           "ActiveEnemyPointIndices": [
             1
@@ -1051,9 +1051,9 @@
             "z": 49.66
           },
           "Forward": {
-            "x": 0.70433563,
+            "x": 0.7043382,
             "y": 0,
-            "z": -0.7098671
+            "z": -0.709864557
           },
           "ActiveEnemyPointIndices": [
             1
@@ -1161,9 +1161,9 @@
             "z": 60.7399979
           },
           "Forward": {
-            "x": 0.173649877,
+            "x": 0.173653871,
             "y": 0,
-            "z": -0.984807432
+            "z": -0.9848068
           },
           "ActiveEnemyPointIndices": [
             1
@@ -1183,9 +1183,9 @@
             "z": 61.29
           },
           "Forward": {
-            "x": 0.07985268,
+            "x": 0.0798567161,
             "y": 0,
-            "z": -0.9968067
+            "z": -0.9968063
           },
           "ActiveEnemyPointIndices": [
             1
@@ -1203,7 +1203,7 @@
           "GroupName": "SpawnPointParent3-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1242,7 +1242,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1281,7 +1281,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_MG_E",
                 "AIId": 0,
@@ -1320,7 +1320,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_MG_E",
                 "AIId": 0,
@@ -1359,7 +1359,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1398,7 +1398,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1442,7 +1442,7 @@
           "GroupName": "SpawnPointParent3-2",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1460,12 +1460,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 38,
-              "TileY": 323,
+              "TileX": 55,
+              "TileY": 324,
               "PositionHeight": 0,
               "Position": {
-                "x": -0.43,
-                "y": 60.15
+                "x": 3.04,
+                "y": 60.2600021
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1481,7 +1481,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1520,7 +1520,46 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
+              "SpawnData": {
+                "SpawnTemplateId": "MikaEnemy_C_STORY_2",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 51,
+              "TileY": 346,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 2.23,
+                "y": 64.78
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_SMG_M",
                 "AIId": 0,
@@ -1538,12 +1577,12 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 44,
+              "TileX": 50,
               "TileY": 322,
               "PositionHeight": 0,
               "Position": {
-                "x": 0.88,
-                "y": 59.97
+                "x": 2.07,
+                "y": 59.95
               },
               "Direction": {
                 "x": -8.742278e-08,
@@ -1559,46 +1598,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
-              "SpawnData": {
-                "SpawnTemplateId": "GasMask_Arius_SMG_M",
-                "AIId": 0,
-                "AppearAction": true,
-                "SkillLevel": {
-                  "ExSkill": [],
-                  "PublicSkill": [],
-                  "PassiveSkill": [],
-                  "ExtraPassiveSkill": []
-                }
-              },
-              "SpawnAIGroupId": "F",
-              "SpawnConditionIdList": [
-                "ConditionDead3-2"
-              ],
-              "SpawnCommandIdList": [],
-              "MovePoints": [],
-              "TileX": 52,
-              "TileY": 325,
-              "PositionHeight": 0,
-              "Position": {
-                "x": 2.36,
-                "y": 60.47
-              },
-              "Direction": {
-                "x": -8.742278e-08,
-                "y": -1
-              },
-              "ConditionIdList": [],
-              "CommandIdList": [
-                "CommandSpawn3-2"
-              ],
-              "EntityId": {
-                "uniqueId": 0
-              },
-              "Active": false
-            },
-            {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "GasMask_Arius_MG_E",
                 "AIId": 0,
@@ -1637,9 +1637,9 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
-                "SpawnTemplateId": "GasMask_Arius_GL_C",
+                "SpawnTemplateId": "GasMask_Arius_GL_E",
                 "AIId": 0,
                 "AppearAction": true,
                 "SkillLevel": {
@@ -1655,12 +1655,51 @@
               ],
               "SpawnCommandIdList": [],
               "MovePoints": [],
-              "TileX": 48,
-              "TileY": 349,
+              "TileX": 49,
+              "TileY": 338,
               "PositionHeight": 0,
               "Position": {
-                "x": 1.66,
-                "y": 65.28
+                "x": 1.71,
+                "y": 63.07
+              },
+              "Direction": {
+                "x": -8.742278e-08,
+                "y": -1
+              },
+              "ConditionIdList": [],
+              "CommandIdList": [
+                "CommandSpawn3-2"
+              ],
+              "EntityId": {
+                "uniqueId": 0
+              },
+              "Active": false
+            },
+            {
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
+              "SpawnData": {
+                "SpawnTemplateId": "GasMask_Arius_SMG_M",
+                "AIId": 0,
+                "AppearAction": true,
+                "SkillLevel": {
+                  "ExSkill": [],
+                  "PublicSkill": [],
+                  "PassiveSkill": [],
+                  "ExtraPassiveSkill": []
+                }
+              },
+              "SpawnAIGroupId": "F",
+              "SpawnConditionIdList": [
+                "ConditionDead3-2"
+              ],
+              "SpawnCommandIdList": [],
+              "MovePoints": [],
+              "TileX": 41,
+              "TileY": 323,
+              "PositionHeight": 0,
+              "Position": {
+                "x": 0.12,
+                "y": 60.1
               },
               "Direction": {
                 "x": -8.742278e-08,

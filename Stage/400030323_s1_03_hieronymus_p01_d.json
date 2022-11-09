@@ -12,20 +12,20 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandSpawnPlayer, BlueArchive",
             "IsEnemy": false,
             "IgnoreSkillCardShuffle": false,
             "CommandID": "0",
             "WaitExecuteEnd": false
           },
           {
-            "$type": "GroundCommandLocateCamera, Assembly-CSharp",
+            "$type": "GroundCommandLocateCamera, BlueArchive",
             "ID": 1,
             "MaxCameraSpeed": 3,
             "RotationSpeed": 1,
@@ -66,7 +66,7 @@
             "WaitExecuteEnd": false
           },
           {
-            "$type": "MX.Logic.Battles.GroundCommandStartSection, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandStartSection, BlueArchive",
             "SectionID": 1,
             "SetConditionCommandOnly": false,
             "CommandID": "0",
@@ -79,13 +79,13 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": ""
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandTemporaryCanUseSkillArea, BlueArchive",
             "OnOff": true,
             "TemporaryCanUseSkillAreaCommandId": "1-1Area",
             "CommandID": "",
@@ -98,13 +98,13 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
             "ConditionID": "0"
           }
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandPlayPropAnimation, BlueArchive",
             "propKey": 1,
             "animationName": "hieronymus_light2",
             "CommandID": "",
@@ -117,7 +117,7 @@
         "Operator": 0,
         "Conditions": [
           {
-            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 0,
             "CheckSummonedCharacterDead": true,
             "ConditionID": "ConditionDead1-1"
@@ -125,7 +125,7 @@
         ],
         "Commands": [
           {
-            "$type": "MX.Logic.Battles.GroundCommandEndBattle, Assembly-CSharp",
+            "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
             "CommandID": "",
             "WaitExecuteEnd": false
@@ -148,11 +148,11 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionBattleStarted, BlueArchive",
               "ConditionID": "0"
             },
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 4,
@@ -180,13 +180,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandSpawnEntity, BlueArchive",
               "Interval": 100,
               "CommandID": "CommandSpawn1-1",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaveLoop, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaveLoop, BlueArchive",
               "UniqueId": "",
               "Waves": [
                 {
@@ -217,7 +217,7 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionArea, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionArea, BlueArchive",
               "SpawnTemplateId": "",
               "Shape": 1,
               "Target": 4,
@@ -245,13 +245,13 @@
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 10000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -266,13 +266,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -287,13 +287,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -308,13 +308,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -329,13 +329,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -350,13 +350,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -371,13 +371,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -392,13 +392,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -413,13 +413,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -434,13 +434,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -455,13 +455,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -476,13 +476,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -497,13 +497,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -518,13 +518,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -539,13 +539,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -560,13 +560,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -581,13 +581,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -602,13 +602,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -623,13 +623,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -644,13 +644,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -665,13 +665,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -686,13 +686,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -707,13 +707,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -728,13 +728,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -749,13 +749,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -770,13 +770,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -791,13 +791,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -812,13 +812,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -833,13 +833,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -854,13 +854,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -875,13 +875,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -896,13 +896,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -917,13 +917,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -938,13 +938,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -959,13 +959,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -980,13 +980,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1001,13 +1001,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1022,13 +1022,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1043,13 +1043,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1064,13 +1064,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1085,13 +1085,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1106,13 +1106,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1127,13 +1127,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1148,13 +1148,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1169,13 +1169,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1190,13 +1190,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1211,13 +1211,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1232,13 +1232,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1253,13 +1253,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1274,13 +1274,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1295,13 +1295,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1316,13 +1316,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1337,13 +1337,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1358,13 +1358,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1379,13 +1379,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1400,13 +1400,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1421,13 +1421,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1442,13 +1442,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1463,13 +1463,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1484,13 +1484,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1505,13 +1505,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1526,13 +1526,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1547,13 +1547,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1568,13 +1568,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1589,13 +1589,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1610,13 +1610,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1631,13 +1631,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1652,13 +1652,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1673,13 +1673,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1694,13 +1694,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1715,13 +1715,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1736,13 +1736,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1757,13 +1757,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1778,13 +1778,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1799,13 +1799,13 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandWaitSeconds, BlueArchive",
               "Milliseconds": 5000,
               "CommandID": "",
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1826,13 +1826,13 @@
           "Operator": 0,
           "Conditions": [
             {
-              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundConditionSectionStarted, BlueArchive",
               "ConditionID": ""
             }
           ],
           "Commands": [
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1847,7 +1847,7 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [],
               "CreateCharacterStat": false,
               "CharacterId": 0,
@@ -1862,7 +1862,7 @@
               "WaitExecuteEnd": false
             },
             {
-              "$type": "MX.Logic.Battles.GroundCommandUseSkill, Assembly-CSharp",
+              "$type": "MX.Logic.Battles.GroundCommandUseSkill, BlueArchive",
               "TargetCharacterCommandId": [
                 "SpawnCommandSkill1-1"
               ],
@@ -1887,7 +1887,7 @@
           "GroupName": "SpawnPointParent1-1",
           "SpawnPoints": [
             {
-              "$type": "MX.Logic.BattleEntities.SpawnPoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SpawnPoint, BlueArchive",
               "SpawnData": {
                 "SpawnTemplateId": "SaoriEnemy_C_STORY",
                 "AIId": 0,
@@ -1928,7 +1928,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -1954,7 +1954,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -1980,7 +1980,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -2006,7 +2006,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -2032,7 +2032,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -2058,7 +2058,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -2084,7 +2084,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],
@@ -2110,7 +2110,7 @@
               "Active": false
             },
             {
-              "$type": "MX.Logic.BattleEntities.SkillUsePoint, Assembly-CSharp",
+              "$type": "MX.Logic.BattleEntities.SkillUsePoint, BlueArchive",
               "SpawnAIGroupId": "\u0000",
               "SpawnConditionIdList": [],
               "SpawnCommandIdList": [],

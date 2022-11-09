@@ -1,29 +1,29 @@
 [
   {
-    "$type": "MX.Logic.Data.PassiveSkillData, Assembly-CSharp",
+    "$type": "MX.Logic.Data.PassiveSkillData, BlueArchive",
     "Duration": -1,
-    "MaxTriggerCount": -1,
-    "TryCount": 0,
+    "MaxTriggerCount": 1,
+    "TryCount": 1,
     "TriggerCondition": {
-      "$type": "MX.Logic.Data.PassiveTriggerData, Assembly-CSharp",
-      "Event": 105,
-      "Parameters": "15",
+      "$type": "MX.Logic.Data.PassiveTriggerData, BlueArchive",
+      "Event": 1,
+      "Parameters": "",
       "ConditionExpression": "",
       "TriggerRate": 10000,
       "EchelonConstraint": {
-        "$type": "MX.Logic.Data.EchelonConstraint, Assembly-CSharp",
+        "$type": "MX.Logic.Data.EchelonConstraint, BlueArchive",
         "CountConstraint": {
-          "$type": "MX.Logic.Data.CountConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.CountConstraint, BlueArchive",
           "Count": 0,
           "DiffOperator": 0
         },
         "SchoolConstraint": {
-          "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
           "School": 0,
           "IncludeType": 0
         },
         "WeaponConstraint": {
-          "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
           "Weapon": 0,
           "IncludeType": 0
         },
@@ -31,52 +31,52 @@
       }
     },
     "TriggerSourceFindRule": {
-      "$type": "MX.Logic.Skills.TargetFindRule, Assembly-CSharp",
+      "$type": "MX.Logic.Skills.TargetFindRule, BlueArchive",
       "Sort": {
-        "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
-        "SortCriteria": "Distance",
+        "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
+        "SortCriteria": "None",
         "SortStat": 0,
         "SortParameter": null,
-        "OrderBy": "Lowest"
+        "OrderBy": "None"
       },
       "EssentialCandidate": {
-        "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
-        "TargetSide": "Self",
-        "TargetingType": "Target",
-        "ApplyEntityType": 1,
-        "MaxTargetCount": 1
+        "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
+        "TargetSide": "None",
+        "TargetingType": "None",
+        "ApplyEntityType": 0,
+        "MaxTargetCount": 0
       },
       "OptionalCandidate": {
-        "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+        "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
         "AliveState": 0,
         "SchoolConstraint": {
-          "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
           "School": 0,
           "IncludeType": 0
         },
         "WeaponConstraint": {
-          "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
           "Weapon": 0,
           "IncludeType": 0
         },
         "SquadTypeConstraint": {
-          "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
           "SquadType": 0,
           "IncludeType": 0
         },
         "AdaptationConstraint": {
-          "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
           "AdaptationType": 0,
           "AdaptationValues": [],
           "IncludeType": 0
         },
         "BulletConstraint": {
-          "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
           "BulletType": 5,
           "IncludeType": 0
         },
         "TagConstraint": {
-          "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+          "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
           "IncludeType": 0
         },
         "CoverState": 0
@@ -85,7 +85,7 @@
     "SkillTargetType": 3,
     "EntityTimeline": [
       {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
         "Tag": "ActionRelease",
         "InvokerDirectionOverride": "None",
         "InvokerDirectionOverrideWorldPosition": {
@@ -95,121 +95,19 @@
         "Frame": 1,
         "DamageDistributeRate": 0,
         "Entity": {
-          "$type": "MX.Logic.Data.LevelTargetSkillEntityData, Assembly-CSharp",
+          "$type": "MX.Logic.Data.LevelTargetAttachedEntityData, BlueArchive",
           "Abilities": [
             {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
+              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, BlueArchive",
               "StartDelay": 0,
               "LogicEffectGroupIds": [
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect01"
-              ],
-              "Modifiers": [
-                {
-                  "$type": "MX.Logic.Data.CountLogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "Buff_StatChange_NormalAttackSpeed_Self",
-                  "CountMin": 1,
-                  "CountMax": 1,
-                  "IncludeType": 1,
-                  "CheckTarget": 2,
-                  "name": "CH0104_Passive01_TESTCountLogicEffectTemplateModifier01",
-                  "hideFlags": 0
-                },
-                {
-                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "ArmoredCar_Buff_Ratio01",
-                  "IncludeType": 2,
-                  "CheckTarget": 0,
-                  "name": "CH0104_Passive01_TESTLogicEffectTemplateModifier01",
-                  "hideFlags": 0
-                }
+                "CH0104_Passive01_Effect01"
               ],
               "name": "CH0104_Passive01_LevelOneTimeAbility01",
               "hideFlags": 0
-            },
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect02"
-              ],
-              "Modifiers": [
-                {
-                  "$type": "MX.Logic.Data.CountLogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "Buff_StatChange_NormalAttackSpeed_Self",
-                  "CountMin": 2,
-                  "CountMax": 2,
-                  "IncludeType": 1,
-                  "CheckTarget": 2,
-                  "name": "CH0104_Passive01_TESTCountLogicEffectTemplateModifier02",
-                  "hideFlags": 0
-                },
-                {
-                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "ArmoredCar_Buff_Ratio02",
-                  "IncludeType": 2,
-                  "CheckTarget": 0,
-                  "name": "CH0104_Passive01_TESTLogicEffectTemplateModifier02",
-                  "hideFlags": 0
-                }
-              ],
-              "name": "CH0104_Passive01_LevelOneTimeAbility02",
-              "hideFlags": 0
-            },
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect03"
-              ],
-              "Modifiers": [
-                {
-                  "$type": "MX.Logic.Data.CountLogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "Buff_StatChange_NormalAttackSpeed_Self",
-                  "CountMin": 3,
-                  "CountMax": 99,
-                  "IncludeType": 1,
-                  "CheckTarget": 2,
-                  "name": "CH0104_Passive01_TESTCountLogicEffectTemplateModifier03",
-                  "hideFlags": 0
-                },
-                {
-                  "$type": "MX.Logic.Data.LogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "ArmoredCar_Buff_Ratio03",
-                  "IncludeType": 2,
-                  "CheckTarget": 0,
-                  "name": "CH0104_Passive01_TESTLogicEffectTemplateModifier03",
-                  "hideFlags": 0
-                }
-              ],
-              "name": "CH0104_Passive01_LevelOneTimeAbility03",
-              "hideFlags": 0
-            },
-            {
-              "$type": "MX.Logic.Data.LevelOneTimeAbilityData, Assembly-CSharp",
-              "StartDelay": 0,
-              "LogicEffectGroupIds": [
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect05",
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect06",
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect07",
-                "ArmoredCar_Valkyrie_MG_Passive01_Effect08"
-              ],
-              "Modifiers": [
-                {
-                  "$type": "MX.Logic.Data.CountLogicEffectTemplateModifierData, Assembly-CSharp",
-                  "TemplateId": "Buff_StatChange_NormalAttackSpeed_Self",
-                  "CountMin": 0,
-                  "CountMax": 0,
-                  "IncludeType": 1,
-                  "CheckTarget": 2,
-                  "name": "CH0104_Passive01_TESTCountLogicEffectTemplateModifier04",
-                  "hideFlags": 0
-                }
-              ],
-              "name": "CH0104_Passive01_LevelOneTimeAbility04",
-              "hideFlags": 0
             }
           ],
-          "EntityName": "",
+          "EntityName": "CH0104Passive01Entity01",
           "SpawnRate": 10000,
           "SpawnDelay": 0,
           "ApplyType": 4,
@@ -229,62 +127,62 @@
           "SpawnDirectionType": "None",
           "OverrideTargetingRule": true,
           "TargetSortRule": {
-            "$type": "MX.Logic.Skills.TargetSortRule, Assembly-CSharp",
+            "$type": "MX.Logic.Skills.TargetSortRule, BlueArchive",
             "SortCriteria": "Distance",
             "SortStat": 0,
             "SortParameter": null,
             "OrderBy": "Lowest"
           },
           "EssentialCandidateRule": {
-            "$type": "MX.Logic.Skills.EssentialCandidateRule, Assembly-CSharp",
+            "$type": "MX.Logic.Skills.EssentialCandidateRule, BlueArchive",
             "TargetSide": "Self",
             "TargetingType": "Target",
             "ApplyEntityType": 1,
             "MaxTargetCount": 1
           },
           "OptionalCandidateRule": {
-            "$type": "MX.Logic.Skills.OptionalCandidateRule, Assembly-CSharp",
+            "$type": "MX.Logic.Skills.OptionalCandidateRule, BlueArchive",
             "AliveState": 0,
             "SchoolConstraint": {
-              "$type": "MX.Logic.Data.SchoolConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.SchoolConstraint, BlueArchive",
               "School": 0,
               "IncludeType": 0
             },
             "WeaponConstraint": {
-              "$type": "MX.Logic.Data.WeaponConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.WeaponConstraint, BlueArchive",
               "Weapon": 0,
               "IncludeType": 0
             },
             "SquadTypeConstraint": {
-              "$type": "MX.Logic.Data.SquadTypeConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.SquadTypeConstraint, BlueArchive",
               "SquadType": 0,
               "IncludeType": 0
             },
             "AdaptationConstraint": {
-              "$type": "MX.Logic.Data.AdaptationConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.AdaptationConstraint, BlueArchive",
               "AdaptationType": 0,
               "AdaptationValues": [],
               "IncludeType": 0
             },
             "BulletConstraint": {
-              "$type": "MX.Logic.Data.BulletConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.BulletConstraint, BlueArchive",
               "BulletType": 5,
               "IncludeType": 0
             },
             "TagConstraint": {
-              "$type": "MX.Logic.Data.TagConstraint, Assembly-CSharp",
+              "$type": "MX.Logic.Data.TagConstraint, BlueArchive",
               "IncludeType": 0
             },
             "CoverState": 0
           },
           "HighlightOption": 0,
           "CheckSpawnPositionMovable": false,
-          "name": "CH0104_Passive01_LevelTargetSkillEntity01",
+          "name": "CH0104_Passive01_LevelTargetAttachedEntity01",
           "hideFlags": 0
         }
       },
       {
-        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, Assembly-CSharp",
+        "$type": "MX.Logic.Data.ExSkillEntityTimelineData, BlueArchive",
         "Tag": "ActionEnd",
         "InvokerDirectionOverride": "None",
         "InvokerDirectionOverrideWorldPosition": {
