@@ -5255,6 +5255,55 @@
     "name": "Hanae01_Public01_SkillVisual01"
   },
   {
+    "SkillIdToBind": 368115576,
+    "SkillUniqueNameToBind": "CH0195Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_CH0195_Original_01",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "EntityName": "CH0195Ex01Entity01",
+        "CreationEffect": {
+          "PositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 6
+          },
+          "PrefabPath": "FX_CH0195_EX01_Spawn_Variant",
+          "name": "CH0195_Ex01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0195_Ex01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": 7513308,
+    "SkillUniqueNameToBind": "CH0195Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "EntityName": "CH0195Public01Entity01",
+        "CreationEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "IsAttachToTarget": true,
+            "IsKeepDirectionUnchanged": true
+          },
+          "PrefabPath": "FX_CH0195_Public_Buff_Start_Variant",
+          "name": "CH0195_Public01_VisualEffect01"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0195_Public01_SkillVisual01"
+  },
+  {
     "SkillIdToBind": 269363893,
     "SkillUniqueNameToBind": "CH0055Ex01",
     "MaxLevelToBind": 10,
@@ -19612,6 +19661,439 @@
     "LogicEffectVisuals": [],
     "BattleItems": [],
     "name": "CH0153_Ex01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": 418361113,
+    "SkillUniqueNameToBind": "CH0194Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_CH0194_Original_01",
+    "ActionEffects": [],
+    "EntityEffects": [],
+    "LogicEffectVisuals": [
+      {
+        "LogicEffectName": "CH0194_Ex01_Effect01",
+        "StartEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Ex01_Buff_01_Variant",
+          "name": "CH0194_Ex01_VisualEffect01"
+        },
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
+      }
+    ],
+    "BattleItems": [],
+    "name": "CH0194_Ex01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": -797613285,
+    "SkillUniqueNameToBind": "CH0194Normal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "EntityName": "AR_BulletEntity",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "PositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect01_Fire"
+        },
+        "HitWoodEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect04_HitStone"
+        },
+        "HitStoneEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Stone_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect04_HitStone"
+        },
+        "HitFleshEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Common_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect02_HitFlesh"
+        },
+        "HitMetalEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0,
+              "y": 0,
+              "z": 0.3
+            }
+          },
+          "PrefabPath": "FX_Metal_Hit_AR_Normal_Variant",
+          "name": "AR01_Normal01_VisualEffect03_HitMetal"
+        },
+        "MissEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "PositionOffset": {
+              "x": 0.2,
+              "y": 0,
+              "z": 0.05
+            }
+          },
+          "PrefabPath": "FX_Common_Dodge_AR_Variant",
+          "name": "AR01_Normal01_VisualEffect06_HitMiss"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0194_Normal01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": -2039828099,
+    "SkillUniqueNameToBind": "CH0194Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "EntityName": "CH0194Public01_Projectile01",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 5,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Public_Projectile_01_Variant",
+          "name": "CH0194_Public01_VisualSkillEntity01"
+        }
+      },
+      {
+        "EntityName": "CH0194Public01_Projectile02",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 5,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Public_Projectile_02_Variant",
+          "name": "CH0194_Public01_VisualSkillEntity02"
+        }
+      },
+      {
+        "EntityName": "CH0194Public01_Projectile03",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 5,
+            "BoneNameCustom": "",
+            "AlignDirection": 3
+          },
+          "EndPositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Public_Projectile_03_Variant",
+          "name": "CH0194_Public01_VisualSkillEntity03"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [
+      {
+        "LogicEffectName": "CH0194_Public01_Effect01",
+        "StartEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Public_Buff_01_Variant",
+          "name": "CH0194_Public01_VisaulEffect01"
+        },
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
+      },
+      {
+        "LogicEffectName": "CH0194_Public01_Effect02",
+        "StartEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Public_Buff_02_Variant",
+          "name": "CH0194_Public01_VisaulEffect02"
+        },
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
+      },
+      {
+        "LogicEffectName": "CH0194_Public01_Effect03",
+        "StartEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_CH0194_Public_Buff_03_Variant",
+          "name": "CH0194_Public01_VisaulEffect03"
+        },
+        "StackCountEffectList": [],
+        "AccumulateEffectList": []
+      }
+    ],
+    "BattleItems": [],
+    "name": "CH0194_Public01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": 2014393198,
+    "SkillUniqueNameToBind": "CH0122Ex01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "SkillRange_CH0122_Original_01",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "EntityName": "CH0122Ex01Entity02",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Shigure_Original_Ex01_Projectile_Variant",
+          "name": "CH0122_Ex01_VisualSkillEntity01"
+        },
+        "SplashEffect": {
+          "PositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Shigure_Original_Ex01_Water_Splash_Variant",
+          "name": "CH0122_Ex01_VisaulEffect01"
+        }
+      },
+      {
+        "EntityName": "CH0122Ex01Entity03",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_GL_Normal_Variant",
+          "name": "CH0122_Ex01_VisualSkillEntity02"
+        },
+        "SplashEffect": {
+          "PositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Shigure_Original_Ex01_Water_Explosion_Variant",
+          "name": "CH0122_Ex01_VisaulEffect02"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0122_Ex01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": 1737942188,
+    "SkillUniqueNameToBind": "CH0122Normal01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [],
+    "EntityEffects": [
+      {
+        "EntityName": "CH0122Normal01Entity05",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "EndPositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Projectile_GL_Normal_Variant",
+          "name": "CH0122_Normal01_VisualSkillEntity01_Bullet"
+        },
+        "FireEffect": {
+          "PositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 1,
+            "BoneNameCustom": "",
+            "AlignDirection": 1
+          },
+          "PrefabPath": "FX_Muzzle_GL_Variant",
+          "name": "CH0122_Normal01_VisualEffect01_Fire 1"
+        }
+      },
+      {
+        "EntityName": "CH0122Normal01Entity02",
+        "FireEffect": {
+          "PositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_GL_Normal_1.5M_Variant",
+          "name": "CH0122_Normal01_VisualEffect02_Circle"
+        }
+      },
+      {
+        "EntityName": "CH0122Normal01Entity03",
+        "FireEffect": {
+          "PositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_GL_Normal_1.5M_Variant",
+          "name": "CH0122_Normal01_VisualEffect02_Circle"
+        }
+      },
+      {
+        "EntityName": "CH0122Normal01Entity04",
+        "FireEffect": {
+          "PositionSetting": {
+            "PositionSource": 3,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Common_Hit_GL_Normal_2M_Variant",
+          "name": "CH0122_Normal01_VisualEffect03_Circle"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0122_Normal01_SkillVisual01"
+  },
+  {
+    "SkillIdToBind": -805038398,
+    "SkillUniqueNameToBind": "CH0122Public01",
+    "MaxLevelToBind": 10,
+    "GuidePrefabPath": "",
+    "ActionEffects": [
+      {
+        "Frame": 41,
+        "TriggerTag": "ActionStart",
+        "StartEffect": {
+          "PositionSetting": {
+            "PositionSource": 1,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Shigure_Original_Public_Start_Variant",
+          "name": "CH0122_Public01_VisaulEffect01"
+        }
+      }
+    ],
+    "EntityEffects": [
+      {
+        "EntityName": "CH0122Public01Entity01",
+        "FireEffect": {
+          "PositionSetting": {
+            "PositionSource": 1,
+            "BoneNameCustom": ""
+          },
+          "PrefabPath": "FX_Shigure_Original_Public_Start_Variant",
+          "name": "CH0122_Public01_VisaulEffect01"
+        }
+      },
+      {
+        "EntityName": "CH0122Public01Entity02",
+        "SkillEntity": {
+          "StartPositionSetting": {
+            "PositionSource": 1,
+            "BoneName": 3,
+            "BoneNameCustom": ""
+          },
+          "EndPositionSetting": {
+            "PositionSource": 2,
+            "BoneName": 3,
+            "BoneNameCustom": "",
+            "AlignDirection": 5
+          },
+          "PrefabPath": "FX_Shigure_Original_Public_Projectile_Variant",
+          "name": "CH0122_Public01_VisualSkillEntity01"
+        },
+        "SplashEffect": {
+          "PositionSetting": {
+            "PositionSource": 2,
+            "BoneNameCustom": "",
+            "IsAttachToTarget": true
+          },
+          "PrefabPath": "FX_Shigure_Original_Public_Buff_Start_Variant",
+          "name": "CH0122_Public01_VisaulEffect02"
+        }
+      }
+    ],
+    "LogicEffectVisuals": [],
+    "BattleItems": [],
+    "name": "CH0122_Public01_SkillVisual01"
   },
   {
     "SkillIdToBind": 617530148,

@@ -72,10 +72,19 @@
             "$type": "MX.Logic.Battles.GroundConditionCharactersDead, BlueArchive",
             "DeadCheck": 1,
             "CheckSummonedCharacterDead": false,
-            "ConditionID": "ConditionOnsen"
+            "ConditionID": "ConditionMegu"
           }
         ],
         "Commands": [
+          {
+            "$type": "MX.Logic.Battles.GroundCommandCharacterDie, BlueArchive",
+            "CharacterCommandIdList": [
+              "CommandOnsen"
+            ],
+            "CharacterSpawnTemplateIdList": [],
+            "CommandID": "",
+            "WaitExecuteEnd": false
+          },
           {
             "$type": "MX.Logic.Battles.GroundCommandEndBattle, BlueArchive",
             "BattleEndType": 4,
@@ -889,7 +898,7 @@
                   "PositionHeight": 0,
                   "Position": {
                     "x": 1.01999855,
-                    "y": 30.1900024
+                    "y": 30.1900043
                   },
                   "Direction": {
                     "x": 0.99999994,
@@ -952,7 +961,7 @@
                   "PositionHeight": 0,
                   "Position": {
                     "x": -1.07000113,
-                    "y": 30.1900024
+                    "y": 30.1900043
                   },
                   "Direction": {
                     "x": 0.99999994,

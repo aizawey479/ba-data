@@ -330,13 +330,19 @@
     "PhaseData": {
       "$type": "MX.Logic.Data.NormalAttackPhaseData, BlueArchive",
       "Description": "",
-      "PhaseDataId": -1703298052,
+      "PhaseDataId": -896767587,
       "OnEnterNormalAttack": [
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 4,
           "ConditionSecond": 0,
           "NextPhase": 2147483647
+        },
+        {
+          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
+          "Condition": 2,
+          "ConditionSecond": 0,
+          "NextPhase": 0
         },
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
@@ -347,32 +353,14 @@
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 5,
-          "ConditionSecond": 1,
+          "ConditionSecond": 0,
           "NextPhase": 1
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 1,
-          "ConditionSecond": 0,
-          "NextPhase": 3
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 2,
-          "ConditionSecond": 0,
-          "NextPhase": 0
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 5,
-          "ConditionSecond": 0,
-          "NextPhase": 7
         },
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 0,
           "ConditionSecond": 0,
-          "NextPhase": 7
+          "NextPhase": 3
         }
       ],
       "AfterAttackEnter": [
@@ -391,26 +379,14 @@
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 5,
-          "ConditionSecond": 1,
+          "ConditionSecond": 0,
           "NextPhase": 1
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 5,
-          "ConditionSecond": 0,
-          "NextPhase": 7
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 1,
-          "ConditionSecond": 0,
-          "NextPhase": 3
         },
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 0,
           "ConditionSecond": 0,
-          "NextPhase": 7
+          "NextPhase": 3
         }
       ],
       "AfterReload": [
@@ -418,19 +394,25 @@
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 4,
           "ConditionSecond": 0,
-          "NextPhase": 8
+          "NextPhase": 2147483647
+        },
+        {
+          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
+          "Condition": 3,
+          "ConditionSecond": 0,
+          "NextPhase": 2147483647
         },
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 8,
           "ConditionSecond": 0,
-          "NextPhase": 8
+          "NextPhase": 2147483647
         },
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 0,
           "ConditionSecond": 0,
-          "NextPhase": 2147483646
+          "NextPhase": 3
         }
       ],
       "AfterAttackStart": [
@@ -531,13 +513,9 @@
           "NextPhase": 2147483647
         }
       ],
-      "AfterMountWeapon": [
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 4,
-          "ConditionSecond": 0,
-          "NextPhase": 8
-        },
+      "AfterMountWeapon": [],
+      "AfterUnmountWeapon": [],
+      "AfterSearchNewTarget": [
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 3,
@@ -552,34 +530,6 @@
         },
         {
           "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 0,
-          "ConditionSecond": 0,
-          "NextPhase": 3
-        }
-      ],
-      "AfterUnmountWeapon": [
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 0,
-          "ConditionSecond": 0,
-          "NextPhase": 2147483647
-        }
-      ],
-      "AfterSearchNewTarget": [
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 4,
-          "ConditionSecond": 0,
-          "NextPhase": 8
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
-          "Condition": 3,
-          "ConditionSecond": 0,
-          "NextPhase": 6
-        },
-        {
-          "$type": "MX.Logic.Data.NormalAttackPhaseControl, BlueArchive",
           "Condition": 6,
           "ConditionSecond": 0,
           "NextPhase": 5
@@ -591,7 +541,7 @@
           "NextPhase": 4
         }
       ],
-      "name": "SwitchTargetMountWeapon",
+      "name": "SwitchTargetNoMountWeapon",
       "hideFlags": 0
     },
     "Range": 0,
